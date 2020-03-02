@@ -45,23 +45,30 @@ html, body {
 
 .profile-back {
   position: fixed;
-  display: flex;
   width: 100%;
   height: 200px;
   bottom: 0;
   background-color: rgba(16, 21, 54);
 }
 
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 170px;
+  background-color: green;
+}
+
 .icon img {
-  position: absolute;
+  /* position: absolute; */
+  /* left: 15px;
   top: 50%;
-  left: 3%;
-  transform: translateY(-50%);
+  transform: translateY(-50%); */
   border-radius: 50%;
 }
 
-h1 {
-  position: absolute;
+.info h1 {
+  position: relative;
   margin: 0;
   color: white;
   font-family: "Noto Serif JP" , sans-serif;
@@ -70,11 +77,11 @@ h1 {
 
 .copylight {
   position: fixed;
+  background-color: pink;
+  align-items: center;
   margin: 0;
-  left: 0;
-  bottom: 10px;
   width: 100%;
-  padding: 0;
+  height: 30px;
   color: white;
   font-weight: normal;
   text-align: center;
