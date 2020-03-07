@@ -43,8 +43,7 @@ html, body {
   background-color: white;
 }
 
-.profile-back {
-  position: fixed;
+footer {
   width: 100%;
   height: 200px;
   bottom: 0;
@@ -120,7 +119,6 @@ form {
 }
 
 .copylight {
-  position: fixed;
   align-items: center;
   border-top: solid 1.5px  white;
   margin: 0;
