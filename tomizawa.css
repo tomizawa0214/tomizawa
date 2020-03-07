@@ -48,37 +48,52 @@ html, body {
   width: 100%;
   height: 200px;
   bottom: 0;
-  background-color: rgba(16, 21, 54);
+  background-color: rgb(16, 21, 54);
 }
 
 .container {
   position: relative;
   display: flex;
-  align-items: center;
+  vertical-align: top;
   height: 170px;
-  background-color: green;
+}
+
+.icon {
+  height: 140px;
+  margin-left: 15px;
+  margin-top: 15px;
 }
 
 .icon img {
-  /* position: absolute; */
-  /* left: 15px;
-  top: 50%;
-  transform: translateY(-50%); */
   border-radius: 50%;
 }
 
+.info {
+ margin-top: 15px;
+ margin-left: 20px;
+ display: flex;
+}
+
 .info h1 {
-  position: relative;
   margin: 0;
   color: white;
   font-family: "Noto Serif JP" , sans-serif;
-  font-size: 20px;
+  font-size: 30px;
+}
+
+.info p {
+  margin: 0;
+  margin-top: 18px;
+  margin-left: 10px;
+  color: white;
+  font-family: "Noto Serif JP" , sans-serif;
+  font-size: 15px;
 }
 
 .copylight {
   position: fixed;
-  background-color: pink;
   align-items: center;
+  border-top: solid 1.5px  white;
   margin: 0;
   width: 100%;
   height: 30px;
