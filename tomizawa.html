@@ -22,22 +22,49 @@
       <div class="service"></div>
       <div class="works"></div>
     </section>
+
     <footer>
       <div class="profile-back">
         <div class="container">
+
           <div class="icon">
             <img src="photo/taro.png" width="140" height="140" alt="冨澤潤 TOMIZAWA JUNです">
           </div>
+
           <div class="info">
             <h1>冨澤　潤</h1>
             <p>TOMIZAWA Jun</p>
           </div>
+
+          <p class="contact">Contact Me</p>
+
+          <form action="confilrm.php" method="post">
+              <div class="name">
+                <label for="yourname">Name：</label>
+                <input class="yourname" type="text" name="yourname" placeholder="冨澤　潤">
+              </div>
+              <div class="mail">
+                <label for="mail">Mail：</label>
+                <input class="mail" type="email" name="mail" placeholder=xx@xxxx.xx>
+              </div>
+              <div class="comment">
+                <label for="comment">Comment：</label>
+                <textarea id="comment" name="comment" placeholder="ここには自由にコメントを記入してください"></textarea>
+              </div>
+              <div class="submit">
+                <input type="submit" value="送信">
+              </div>
+            </div>
+          </form>
+
         </div>
+
         <div class="copylight">
           <p>©2020 JUN TOMIZAWA</p>
         </div>
+
       </div>
     </footer>
-  </body>
 
+  </body>
 </html>
