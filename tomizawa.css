@@ -53,23 +53,29 @@ footer {
 .container {
   position: relative;
   display: flex;
-  vertical-align: top;
+  justify-content: space-between;
   height: 170px;
 }
 
 .icon {
-  height: 140px;
-  margin-left: 15px;
-  margin-top: 15px;
+  position: relative;
+  width: 15%;
+  height: 170px;
+  /* text-align: center; */
 }
 
 .icon img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   border-radius: 50%;
 }
 
 .info {
  margin-top: 15px;
- margin-left: 20px;
+ text-align: center;
+ width: 15%;
+ /* margin-left: 20px; */
 }
 
 .info h1 {
@@ -81,53 +87,82 @@ footer {
 
 .info p {
   margin: 0;
-  margin-left: 5px;
   color: white;
   font-family: "Noto Serif JP" , sans-serif;
   font-size: 15px;
 }
 
+form {
+  width: 70%;
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact, .name, .mail, .comment, .submit {
+  width: 33.3333%;
+}
+
 .contact {
+  margin: 0;
+  width: 200px;
   font-size: 20px;
   color: white;
   font-family: "Noto Serif JP" , sans-serif;
 }
 
-form {
-  margin: 0 0 0  auto;
-  display: flex;
+label {
+  vertical-align: top;
 }
 
 .name {
+  width: 250px;
   color: white;
   font-family: "Noto Serif JP" , sans-serif;
+}
+
+input.yourname {
+  width: 150px;
 }
 
 .mail {
+  width: 330px;
   color: white;
   font-family: "Noto Serif JP" , sans-serif;
+}
+
+input.yourmail {
+  width: 250px;
 }
 
 .comment {
+  width: 550px;
   color: white;
   font-family: "Noto Serif JP" , sans-serif;
 }
 
+textarea.yourcomment {
+  width: 400px;
+  height: 80px;
+}
+
 .submit {
+  width: 50px;
   color: white;
   font-family: "Noto Serif JP" , sans-serif;
 }
 
 .copylight {
-  align-items: center;
   border-top: solid 1.5px  white;
   margin: 0;
-  width: 100%;
+  margin: 0 auto;
+  width: 98%;
   height: 30px;
   color: white;
   font-weight: normal;
   text-align: center;
   font-size: 10px;
   font-style: italic;
-  font-family:  Georgia,"Georgia","ヒラギノ明朝 Pro W3","Hiragino Mincho Pro","HGS明朝E","ＭＳ Ｐ明朝",serif;
+  font-family:  Georgia,"ヒラギノ明朝 Pro W3","Hiragino Mincho Pro","HGS明朝E","ＭＳ Ｐ明朝",serif;
 }
