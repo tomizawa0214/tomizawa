@@ -45,7 +45,7 @@ html, body {
 
 footer {
   width: 100%;
-  height: 200px;
+  height: 250px;
   bottom: 0;
   background-color: rgb(16, 21, 54);
 }
@@ -54,14 +54,13 @@ footer {
   position: relative;
   display: flex;
   justify-content: space-between;
-  height: 170px;
+  height: 220px;
 }
 
 .icon {
   position: relative;
   width: 15%;
-  height: 170px;
-  /* text-align: center; */
+  height: 220px;
 }
 
 .icon img {
@@ -69,51 +68,69 @@ footer {
   top: 50%;
   transform: translateY(-50%);
   border-radius: 50%;
+  display: block;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .info {
  margin-top: 15px;
  text-align: center;
- width: 15%;
- /* margin-left: 20px; */
-}
-
-.info h1 {
-  margin: 0;
-  color: white;
-  font-family: "Noto Serif JP" , sans-serif;
-  font-size: 30px;
+ width: 30%;
 }
 
 .info p {
   margin: 0;
+  vertical-align: bottom;
   color: white;
   font-family: "Noto Serif JP" , sans-serif;
-  font-size: 15px;
+  font-size: 20px;
+  display: inline-block;
 }
 
 form {
-  width: 70%;
-  margin-top: 15px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  width: 55%;
+  /* margin-top: 15px; */
+  /* display: flex; */
+  /* flex-wrap: wrap;
+  justify-content: space-between; */
 }
 
-.contact, .name, .mail, .comment, .submit {
+/* .contact, .name, .mail, .comment, .submit {
   width: 33.3333%;
-}
+} */
 
 .contact {
+  position: relative;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 92%;
+  height: 80%;
+  text-align: center;
+  background-color: #E7F3F7;
+}
+
+.contact p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   margin: 0;
-  width: 200px;
-  font-size: 20px;
-  color: white;
+  padding: 8px 10px 10px;
+  border: solid 1px;
+  font-size: 30px;
+  color:  rgb(16, 21, 54);
   font-family: "Noto Serif JP" , sans-serif;
 }
 
 label {
   vertical-align: top;
+}
+
+.namemail {
+  display: flex;
 }
 
 .name {
@@ -136,13 +153,13 @@ input.yourmail {
   width: 250px;
 }
 
-.comment {
+.message {
   width: 550px;
   color: white;
   font-family: "Noto Serif JP" , sans-serif;
 }
 
-textarea.yourcomment {
+textarea.yourmessage {
   width: 400px;
   height: 80px;
 }
