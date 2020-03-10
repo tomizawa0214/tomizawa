@@ -3,7 +3,7 @@
 	width: 27.33%;
 	margin: 40px 3%;
 }
-.cp_iptxt input[type='text'] {
+.cp_iptxt input {
 	font: 15px/24px sans-serif;
 	box-sizing: border-box;
 	width: 100%;
@@ -26,6 +26,7 @@
 	transition: 0.3s;
 	color: #aaaaaa;
 }
+
 .cp_iptxt::after {
 	display: block;
 	width: 100%;

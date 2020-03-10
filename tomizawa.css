@@ -45,7 +45,7 @@ html, body {
 
 footer {
   width: 100%;
-  height: 250px;
+  height: 350px;
   bottom: 0;
   background-color: rgb(16, 21, 54);
 }
@@ -54,7 +54,7 @@ footer {
   position: relative;
   display: flex;
   justify-content: space-between;
-  height: 220px;
+  height: 88%;
 }
 
 .icon {
@@ -141,10 +141,7 @@ form {
   /* rotateX(180deg); */
   width: 92%;
   height: 80%;
-  background:rgb(16, 21, 54);
-  border-left: double 7px #7FFFD4;
-  border-right: double 7px #7FFFD4;
-  box-sizing: border-box;
+  background:white;
   backface-visibility: hidden;
   display: flex;
   flex-direction: column;
@@ -158,24 +155,53 @@ label {
 .namemail {
   display: flex;
   justify-content: space-between;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .name {
-  color: white;
-  font-family: "Noto Serif JP" , sans-serif;
+  width: 30%;
+  margin-top: 2%;
 }
 
 .mail {
-  color: white;
-  font-family: "Noto Serif JP" , sans-serif;
+  width: 60%;
+  margin-top: 2%;
 }
 
 .message {
-  color: white;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.name,
+.mail,
+.message {
+  position: relative;
+}
+
+.name input,
+.mail input,
+.message textarea {
+  font-size: 16px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.3em;
+  padding-left: 40px;
+  border: 0;
+  background:white;
   font-family: "Noto Serif JP" , sans-serif;
 }
 
-.i {
+.name input:focus,
+.mail input:focus,
+.message textarea:focus {
+  outline: none;
+}
+
+.name i,
+.mail i,
+.message i {
   position: absolute;
   top: 0;
   left: 0;
@@ -184,7 +210,9 @@ label {
   color: #aaaaaa;
 }
 
-.name, .mail, .message::after {
+.name::after,
+.mail::after,
+.message::after {
   display: block;
   width: 100%;
   height: 4px;
@@ -192,12 +220,15 @@ label {
   content: '';
   border-width: 0 1px 1px 1px;
   border-style: solid;
-  border-color: #da3c41;
+  border-color: rgb(16, 21, 54);
 }
 
 .submit {
   margin: 0 auto;
-  color: white;
+  margin-bottom: 2%;
+}
+
+.submit input {
   font-family: "Noto Serif JP" , sans-serif;
   cursor: pointer;
 }
@@ -206,8 +237,14 @@ label {
   border-top: solid 1.5px  white;
   margin: 0;
   margin: 0 auto;
+  width: 100%;
+  height: 12%;
+}
+
+.copylight p {
+  margin: 0;
+  margin: 0 auto;
   width: 98%;
-  height: 30px;
   color: white;
   font-weight: normal;
   text-align: center;
