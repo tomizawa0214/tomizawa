@@ -5,6 +5,29 @@ html, body {
   padding: 0;
 }
 
+header nav {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-end;
+}
+
+header nav ul {
+  display: flex;
+  width: 40%;
+  padding: 0 40px;
+  list-style: none;
+  justify-content: space-between;
+}
+
+header nav ul li {
+  text-align: center;
+  color: white;
+  font-family: "Noto Serif JP" , sans-serif;
+  cursor: pointer;
+}
+
 .bluefilter-base {
   position: relative;
   background-color: rgba(16, 21, 54, 1);
@@ -33,7 +56,7 @@ html, body {
   position: relative;
   width: 100%;
   height: 500px;
-  background-color: white;
+  background-color: gray;
 }
 
 .works {
