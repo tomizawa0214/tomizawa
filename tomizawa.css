@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,700&display=swap&subset=japanese');
+@import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
 
 html, body {
   margin: 0;
@@ -16,7 +17,7 @@ header nav {
 header nav ul {
   display: flex;
   width: 40%;
-  padding: 0 40px;
+  padding: 10px 40px;
   list-style: none;
   justify-content: space-between;
 }
@@ -52,18 +53,82 @@ header nav ul li {
   display: block;
 }
 
-.service {
+#service {
   position: relative;
   width: 100%;
-  height: 500px;
-  background-color: gray;
+  margin-bottom: 130px;
+}
+
+.service {
+  font-size: 50px;
+  margin-top: 80px;
+  margin-bottom: 65px;
+  text-align: center;
+  font-family:"Lato", sans-serif;
+  font-weight: 100;
+  color: #333;
+  letter-spacing: 0.05em;
+}
+
+.d-d-c {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
+
+section {
+  width: 20%;
+  text-align: center;
+}
+
+.service-title {
+  margin-bottom: 16px;
+  line-height: 1;
+  font-size: 25px;
+  font-weight: normal;
+  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+  color: #505050;
+}
+
+.service-entitle {
+  margin-bottom: 45px;
+  letter-spacing: 0.1em;
+  line-height: 1.0;
+  font-size: 14px;
+  font-family:"Lato", sans-serif;
+  font-weight: 400;
+  color: #a5a5a5;
+}
+
+section > i {
+  margin-bottom: 40px;
+}
+
+.text01 {
+  margin: 0;
+  text-align: left;
+  line-height: 1.9;
+  font-size: 14px;
+  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+  color: #333;
+}
+
+#works {
+  position: relative;
+  width: 100%;
+  margin-bottom: 130px;
 }
 
 .works {
-  position: relative;
-  width: 100%;
-  height: 500px;
-  background-color: white;
+  font-size: 50px;
+  margin-top: 80px;
+  margin-bottom: 65px;
+  text-align: center;
+  font-family:"Lato", sans-serif;
+  font-weight: 100;
+  color: #333;
+  letter-spacing: 0.05em;
 }
 
 footer {
