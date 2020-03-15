@@ -173,9 +173,60 @@ section {
   position: relative;
   width: 80%;
   margin: 0 auto;
+  padding: 0;
   list-style: none;
-  background-color: skyblue;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.workslist li {
+  width: 24%;
+  height: 270px;
+  margin-bottom: 20px;
+  border: solid 1px #CCCCCC;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.works1 {
+  background-image:url(photo/works1.jpg);
+  background-size: contain;
+}
+
+.works2 {
+  background-image:url(photo/works2.jpg);
+  background-size: contain;
+}
+
+.works3 {
+  background-image:url(photo/works3.jpg);
+  background-size: contain;
+}
+
+.works4 {
+  background-image:url(photo/works4.jpg);
+  background-size: contain;
+}
+
+.works5 {
+  background-image:url(photo/works3.jpg);
+  background-size: contain;
+}
+
+.works6 {
+  background-image:url(photo/works4.jpg);
+  background-size: contain;
+}
+
+.works7 {
+  background-image:url(photo/works1.jpg);
+  background-size: contain;
+}
+
+.works8 {
+  background-image:url(photo/works2.jpg);
+  background-size: contain;
 }
 
 footer {
