@@ -30,7 +30,22 @@ header nav ul li {
   color: white;
   font-family: "Noto Serif JP" , sans-serif;
   cursor: pointer;
-  animation: down-for-fade-in 1s ease-out 0.5s forwards;
+  animation: fade-in1 1.5s ease-out forwards;
+}
+
+header nav ul li:hover {
+  border-bottom: solid 1px white;
+}
+
+@keyframes fade-in1 {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 30px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 header nav ul li a {
@@ -78,6 +93,17 @@ header nav ul li a {
   font-weight: 100;
   color: #333;
   letter-spacing: 0.05em;
+  opacity: 0;
+  transform: translate(0, 30px);
+  transition: 1.5s all ease-out;
+}
+
+.service.active,
+.service-message.active,
+.works.active,
+.works-message.active {
+  opacity: 1;
+  transform: translate(0, 0);
 }
 
 .service-message {
@@ -87,6 +113,9 @@ header nav ul li a {
   font-size: 14px;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
   color: #333;
+  opacity: 0;
+  transform: translate(0, 30px);
+  transition: 1.5s all ease-out;
 }
 
 section {
@@ -166,6 +195,9 @@ section {
   font-weight: 100;
   color: #333;
   letter-spacing: 0.05em;
+  opacity: 0;
+  transform: translate(0, 30px);
+  transition: 1.5s all ease-out;
 }
 
 .works-message {
@@ -175,6 +207,9 @@ section {
   font-size: 14px;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
   color: #333;
+  opacity: 0;
+  transform: translate(0, 30px);
+  transition: 1.5s all ease-out;
 }
 
 .workslist {
