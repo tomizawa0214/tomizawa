@@ -26,26 +26,29 @@ header nav ul {
 }
 
 header nav ul li {
+  position: relative;
+  display: inline-block;
   text-align: center;
   color: white;
   font-family: "Noto Serif JP" , sans-serif;
-  cursor: pointer;
-  animation: fade-in1 1.5s ease-out forwards;
+  transition: .3s ease-out;
 }
 
-header nav ul li:hover {
-  border-bottom: solid 1px white;
+header nav ul li::after {
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  opacity: 0;
+  transition: .3s ease-out;
 }
 
-@keyframes fade-in1 {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, 30px, 0);
-  }
-  100% {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
+header nav ul li:hover::after {
+  bottom: 0;
+  opacity: 1;
 }
 
 header nav ul li a {
