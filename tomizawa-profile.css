@@ -72,10 +72,9 @@ header nav ul li a:hover::after {
   position: relative;
   width: 80%;
   height: 500px;
-  /* background: green; */
   margin: 0 auto;
   margin-top: 80px;
-  margin-bottom: 130px;
+  margin-bottom: 50px;
 }
 
 .inner {
@@ -151,6 +150,50 @@ header nav ul li a:hover::after {
 
 .appeal {
   padding-top: 10px;
+}
+
+#skill {
+  position: relative;
+  width: 80%;
+  height: 500px;
+  margin: 0 auto;
+  margin-bottom: 130px;
+  /* background: green; */
+}
+
+.web {
+  display: flex;
+  margin: 0;
+  margin-top: -20px;
+  padding: 0;
+}
+
+.graphic,
+.license,
+.spirit {
+  display: flex;
+  margin: 0;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.web > li,
+.graphic > li,
+.license > li,
+.spirit > li {
+  font-size: 20px;
+  margin: 0;
+  margin-right: 30px;
+  padding-left: 10px;
+  width: 100%;
+  line-height: 3em;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 100;
+  color: #333;
+  border-left: solid 6px  rgb(16, 21, 54);
+  background: rgb(217, 222, 255);
+  letter-spacing: 0.05em;
+  list-style: none;
 }
 
 footer {
