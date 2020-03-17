@@ -7,6 +7,12 @@
 html, body {
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  height: 72px;
 }
 
 header nav {
@@ -60,4 +66,112 @@ header nav ul li a::after {
 header nav ul li a:hover::after {
   bottom: -5px;
   opacity: 1;
+}
+
+#profile {
+  position: relative;
+  width: 80%;
+  height: 500px;
+  /* background: green; */
+  margin: 0 auto;
+  margin-top: 80px;
+  margin-bottom: 130px;
+}
+
+.inner {
+  font-size: 46px;
+  margin: 0;
+  text-align: left;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 100;
+  color: #333;
+  letter-spacing: 0.05em;
+  margin-bottom: 65px;
+}
+
+.profile {
+  display: flex;
+}
+
+.icon {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon > a {
+  position: relative;
+  display: inline-block;
+  color: #333;
+}
+
+.icon > a::before {
+  position: absolute;
+  bottom: -5px;
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 1px;
+  background-color: #ED6D4C;
+  transition: 0.3s ease-in-out;
+}
+
+.icon > a::before {
+  left: 50%;
+}
+
+.icon > a::after {
+  right: 50%;
+}
+
+.icon > a:hover::before,
+.icon > a:hover::after {
+  left: 0;
+  width: 100%;
+}
+
+.introduction {
+  margin-left: 80px;
+}
+
+.name,
+.history,
+.appeal {
+  margin: 0;
+  line-height: 1.9;
+  font-size: 14px;
+  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+  color: #333;
+}
+
+.history {
+  border-bottom: solid 1px #333;
+  padding-bottom: 10px;
+}
+
+.appeal {
+  padding-top: 10px;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  height: 42px;
+  bottom: 0;
+  background: rgb(16, 21, 54);
+}
+
+footer p {
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  line-height: 100%;
+  color: white;
+  font-weight: normal;
+  text-align: center;
+  font-size: 10px;
+  font-style: italic;
+  font-family:  Georgia,"ヒラギノ明朝 Pro W3","Hiragino Mincho Pro","HGS明朝E","ＭＳ Ｐ明朝",serif;
 }

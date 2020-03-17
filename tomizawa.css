@@ -125,6 +125,7 @@ header nav ul li a:hover::after {
   margin-top: 65px;
   margin-bottom: 65px;
   text-align: center;
+  line-height: 1.9;
   font-size: 14px;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
   color: #333;
@@ -239,6 +240,7 @@ header nav ul li a:hover::after {
   margin-top: 65px;
   margin-bottom: 65px;
   text-align: center;
+  line-height: 1.9;
   font-size: 14px;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
   color: #333;
@@ -552,7 +554,8 @@ label {
 .copylight {
   position: relative;
   width: 100%;
-  height: 12%;
+  height: 42px;
+  bottom: 0;
 }
 
 .border {
