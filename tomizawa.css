@@ -19,15 +19,13 @@ header nav {
 
 header nav ul {
   display: flex;
-  width: 40%;
-  padding: 10px 70px;
+  padding: 10px 0;
   list-style: none;
   justify-content: space-between;
 }
 
 header nav ul li {
-  position: relative;
-  display: inline-block;
+  padding-right: 80px;
   text-align: center;
   color: white;
   font-family: 'Quicksand', sans-serif;
@@ -35,27 +33,33 @@ header nav ul li {
   transition: 0.3s ease-in-out;
 }
 
-header nav ul li::after {
+header nav ul li a {
+  position: relative;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+header nav ul li a:hover {
+  color: #09f059;
+}
+
+header nav ul li a::after {
   position: absolute;
   bottom: -30px;
   left: 0;
   content: '';
   width: 100%;
   height: 1px;
-  background-color: white;
+  background-color: #09f059;
   opacity: 0;
   transition: 0.3s ease-in-out;
 }
 
-header nav ul li:hover::after {
+header nav ul li a:hover::after {
   bottom: -5px;
   opacity: 1;
-}
-
-header nav ul li a {
-  color: white;
-  text-decoration: none;
-  cursor: pointer;
 }
 
 .bluefilter-base {
@@ -348,7 +352,6 @@ footer {
   font-family: 'Noto Serif JP' , sans-serif;
   font-size: 22px;
   display: inline-block;
-  border-bottom: solid 1.5px  white;
 }
 
 .info > .comment {
@@ -357,17 +360,43 @@ footer {
   color: white;
   font-family: 'Noto Serif JP' , sans-serif;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
-  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
   font-size: 15px;
   display: inline-block;
 }
 
 .info > a {
+  position: relative;
+  display: inline-block;
   padding: 0 15px;
   color: white;
-  font-family: 'Noto Serif JP' , sans-serif;
   font-family: 'Quicksand', sans-serif;
   letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.info > a::before {
+  position: absolute;
+  bottom: -5px;
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 1px;
+  background-color: white;
+  transition: 0.3s ease-in-out;
+}
+
+.info > a::before {
+  left: 50%;
+}
+
+.info > a::after {
+  right: 50%;
+}
+
+.info > a:hover::before,
+.info > a:hover::after {
+  left: 0;
+  width: 100%;
 }
 
 form {
