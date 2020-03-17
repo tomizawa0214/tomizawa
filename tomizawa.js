@@ -1,6 +1,6 @@
 $(function() {
   $(window).scroll(function() {
-    $('.service, .service-message, .works, .works-message').each(function() {
+    $('.service, .service-message, .section1, .section2, .section3, .works, .works-message').each(function() {
       var position = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
