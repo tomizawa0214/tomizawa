@@ -77,7 +77,7 @@ header nav ul li a:hover::after {
   margin-bottom: 50px;
 }
 
-.inner {
+.inner1 {
   font-size: 46px;
   margin: 0;
   text-align: left;
@@ -86,6 +86,18 @@ header nav ul li a:hover::after {
   color: #333;
   letter-spacing: 0.05em;
   margin-bottom: 65px;
+  animation: fade-in1 1s ease-out;
+}
+
+@keyframes fade-in1 {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0,0);
+  }
 }
 
 .profile {
@@ -160,6 +172,25 @@ header nav ul li a:hover::after {
   margin-bottom: 130px;
 }
 
+.inner2 {
+  font-size: 46px;
+  margin: 0;
+  text-align: left;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 100;
+  color: #333;
+  letter-spacing: 0.05em;
+  margin-bottom: 65px;
+  opacity: 0;
+  transform: translate(0, -30px);
+  transition: 1s all ease-out;
+}
+
+.inner2.active {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
 .web {
   display: flex;
   margin: 0;
@@ -193,6 +224,10 @@ header nav ul li a:hover::after {
   background: rgb(217, 222, 255);
   letter-spacing: 0.05em;
   list-style: none;
+  transition: transform 0.6s;
+  &:hover {
+    transform: rotateX(360deg);
+  }
 }
 
 footer {
