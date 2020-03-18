@@ -11,6 +11,8 @@ html {
 body {
   width: 100%;
   margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 header {
@@ -67,11 +69,9 @@ header a:hover::after {
 }
 
 #profile {
-  position: relative;
-  width: 80%;
-  margin: 0 auto;
-  margin-top: 80px;
-  margin-bottom: 50px;
+  display: inline-block;
+  margin-top: 13.8vh;
+  margin-bottom: 8.65vh;
 }
 
 .inner1 {
@@ -146,6 +146,7 @@ header a:hover::after {
 .history,
 .appeal {
   margin: 0;
+  text-align: left;
   line-height: 1.9;
   font-size: 1.4rem;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
