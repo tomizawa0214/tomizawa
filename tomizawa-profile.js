@@ -1,8 +1,15 @@
 $(function() {
-  $("#slide_button").on("click", function() {
-    $("#slide_menu").slideToggle();
-    $("#slide_menu").toggleClass("active");
+  $("#accordion_menu").click(function() {
+    $("#navlist").slideToggle();
+    return false;
   });
+  // $(window).resize(function() {
+  //   if ($('.menulist').css('float') == 'left') {
+  //       $("#navlist").show();
+  // } else {
+  //       $("#navlist").hide();
+  //       }
+  // });
 });
 
 $(function() {

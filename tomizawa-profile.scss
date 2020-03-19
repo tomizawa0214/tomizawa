@@ -23,14 +23,28 @@ header {
   height: 18vh;
   display: table-cell;
   vertical-align: middle;
-  ul {
+  #accordion_menu {
+    display: none;
+  }
+  @media screen and (max-width: 559px) {
+    #accordion_menu {
+      display: block;
+      text-align: right;
+    }
+    #navlist {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  #navlist {
+    display: block;
     display: flex;
     justify-content: flex-end;
     margin: 0;
     padding: 0;
     list-style: none;
   }
-  li {
+  .menulist {
     padding-right: 6.25vw;
     text-align: center;
     color: #333;

@@ -22,7 +22,23 @@ header {
   vertical-align: middle;
 }
 
-header ul {
+header #accordion_menu {
+  display: none;
+}
+
+@media screen and (max-width: 559px) {
+  header #accordion_menu {
+    display: block;
+    text-align: right;
+  }
+  header #navlist {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+header #navlist {
+  display: block;
   display: flex;
   justify-content: flex-end;
   margin: 0;
@@ -30,7 +46,7 @@ header ul {
   list-style: none;
 }
 
-header li {
+header .menulist {
   padding-right: 6.25vw;
   text-align: center;
   color: #333;
