@@ -3,13 +3,15 @@ $(function() {
     $("#navlist").slideToggle();
     return false;
   });
-  // $(window).resize(function() {
-  //   if ($('.menulist').css('float') == 'left') {
-  //       $("#navlist").show();
-  // } else {
-  //       $("#navlist").hide();
-  //       }
-  // });
+  $(window).resize(function() {
+    var win = $(window).width();
+    var p = 559;
+    if (win > p) {
+        $("#navlist").show();
+    } else {
+        $("#navlist").hide();
+    }
+  });
 });
 
 $(function() {
