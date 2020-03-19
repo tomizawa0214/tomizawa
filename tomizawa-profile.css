@@ -172,25 +172,29 @@ main #skill .inner2 {
   color: #333;
   letter-spacing: 0.05em;
   margin-bottom: 7vh;
+  opacity: 0;
+  transform: translate(0, -5vh);
+  transition: 1s all ease-out;
 }
 
-main #skill .web,
-main #skill .graphic,
-main #skill .license,
-main #skill .spirit {
-  display: flex;
+main #skill .inner2.active {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+main #skill ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 1fr);
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 2vw;
+  grid-template-areas: "a b c" "d e f" "g g g" "h i j";
   margin: 0;
   margin-top: 3.5vh;
   padding: 0;
 }
 
-main #skill .web li,
-main #skill .graphic li,
-main #skill .license li,
-main #skill .spirit li {
-  width: 100%;
+main #skill ul li {
   margin: 0;
-  margin-right: 2vw;
   padding-left: 1vw;
   text-align: left;
   line-height: 3em;
@@ -204,11 +208,48 @@ main #skill .spirit li {
   transition: transform 0.6s;
 }
 
-main #skill .web li:hover,
-main #skill .graphic li:hover,
-main #skill .license li:hover,
-main #skill .spirit li:hover {
+main #skill ul li:hover {
   transform: rotateX(360deg);
+}
+
+main #skill ul .a {
+  grid-area: a;
+}
+
+main #skill ul .b {
+  grid-area: b;
+}
+
+main #skill ul .c {
+  grid-area: c;
+}
+
+main #skill ul .d {
+  grid-area: d;
+}
+
+main #skill ul .e {
+  grid-area: e;
+}
+
+main #skill ul .f {
+  grid-area: f;
+}
+
+main #skill ul .g {
+  grid-area: g;
+}
+
+main #skill ul .h {
+  grid-area: h;
+}
+
+main #skill ul .i {
+  grid-area: i;
+}
+
+main #skill ul .j {
+  grid-area: j;
 }
 
 footer {

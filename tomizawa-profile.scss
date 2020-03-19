@@ -154,26 +154,30 @@ main {
       color: #333;
       letter-spacing: 0.05em;
       margin-bottom: 7vh;
-      // opacity: 0;
-      // transform: translate(0, -5vh);
-      // transition: 1s all ease-out;
-      // .active {
-      //   opacity: 1;
-      //   transform: translate(0, 0);
-      // }
+      opacity: 0;
+      transform: translate(0, -5vh);
+      transition: 1s all ease-out;
+      &.active {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
     }
-    .web,
-    .graphic,
-    .license,
-    .spirit {
-      display: flex;
+    ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 1fr);
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      gap: 2vw;
+      grid-template-areas:
+        "a b c"
+        "d e f"
+        "g g g"
+        "h i j";
       margin: 0;
       margin-top: 3.5vh;
       padding: 0;
       li {
-        width: 100%;
+        // width: 100%;
         margin: 0;
-        margin-right: 2vw;
         padding-left: 1vw;
         text-align: left;
         line-height: 3em;
@@ -188,6 +192,36 @@ main {
         &:hover {
           transform: rotateX(360deg);
         }
+      }
+      .a {
+        grid-area: a;
+      }
+      .b {
+        grid-area: b;
+      }
+      .c {
+        grid-area: c;
+      }
+      .d {
+        grid-area: d;
+      }
+      .e {
+        grid-area: e;
+      }
+      .f {
+        grid-area: f;
+      }
+      .g {
+        grid-area: g;
+      }
+      .h {
+        grid-area: h;
+      }
+      .i {
+        grid-area: i;
+      }
+      .j {
+        grid-area: j;
       }
     }
   }
