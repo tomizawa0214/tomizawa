@@ -7,7 +7,7 @@
 html {
   width: 100%;
   font-size: 62.5%;
-  // width: 1263px;
+  // width: 1280px;
   // height: 578px;
 }
 
@@ -65,185 +65,152 @@ header {
   }
 }
 
-#profile {
+main {
   display: inline-block;
   margin-top: 13.8vh;
   margin-bottom: 8.65vh;
-}
-
-.inner1 {
-  font-size: 4.6rem;
-  margin: 0;
-  text-align: left;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 100;
-  color: #333;
-  letter-spacing: 0.05em;
-  margin-bottom: 65px;
-  animation: fade-in1 1s ease-out;
-}
-
-@keyframes fade-in1 {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, -30px, 0);
+  .inner1 {
+    font-size: 4.6rem;
+    margin: 0;
+    text-align: left;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 100;
+    color: #333;
+    letter-spacing: 0.05em;
+    margin-bottom: 11.24vh;
+    animation: fade-in1 1s ease-out;
+    @keyframes fade-in1 {
+      0% {
+        opacity: 0;
+        transform: translate3d(0, -5vh, 0);
+      }
+      100% {
+        opacity: 1;
+        transform: translate3d(0, 0,0);
+      }
+    }
   }
-  100% {
-    opacity: 1;
-    transform: translate3d(0, 0,0);
+  #profile {
+    display: flex;
+    margin-bottom: 11.24vh;
+    .icon {
+      margin-top: 3.5vh;
+      display: flex;
+      justify-content: space-between;
+      a {
+        position: relative;
+        display: inline-block;
+        color: #333;
+        &::before {
+          position: absolute;
+          bottom: -0.8vh;
+          content: "";
+          display: inline-block;
+          width: 0;
+          height: 1px;
+          left: 50%;
+          background-color: #ED6D4C;
+          transition: 0.3s ease-in-out;
+        }
+        &::after {
+          right: 50%;
+        }
+        &:hover::before,
+        &:hover::after {
+          left: 0;
+          width: 100%;
+        }
+      }
+    }
+    .introduction {
+      margin-left: 6.25vw;
+      .name,
+      .history,
+      .appeal {
+        margin: 0;
+        text-align: left;
+        line-height: 1.9;
+        font-size: 1.4rem;
+        font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+        color: #333;
+      }
+      .history {
+        border-bottom: solid 1px #333;
+        padding-bottom: 1.7vh;
+      }
+      .appeal {
+        padding-top: 1.7vh;
+      }
+    }
   }
-}
-
-.profile {
-  display: flex;
-}
-
-.icon {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.icon > a {
-  position: relative;
-  display: inline-block;
-  color: #333;
-}
-
-.icon > a::before {
-  position: absolute;
-  bottom: -5px;
-  content: "";
-  display: inline-block;
-  width: 0;
-  height: 1px;
-  background-color: #ED6D4C;
-  transition: 0.3s ease-in-out;
-}
-
-.icon > a::before {
-  left: 50%;
-}
-
-.icon > a::after {
-  right: 50%;
-}
-
-.icon > a:hover::before,
-.icon > a:hover::after {
-  left: 0;
-  width: 100%;
-}
-
-.introduction {
-  margin-left: 80px;
-}
-
-.name,
-.history,
-.appeal {
-  margin: 0;
-  text-align: left;
-  line-height: 1.9;
-  font-size: 1.4rem;
-  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
-  color: #333;
-}
-
-.history {
-  border-bottom: solid 1px #333;
-  padding-bottom: 10px;
-}
-
-.appeal {
-  padding-top: 10px;
-}
-
-#skill {
-  position: relative;
-  width: 80%;
-  height: 500px;
-  margin: 0 auto;
-  margin-bottom: 130px;
-}
-
-.inner2 {
-  font-size: 4.6rem;
-  margin: 0;
-  text-align: left;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 100;
-  color: #333;
-  letter-spacing: 0.05em;
-  margin-bottom: 65px;
-  opacity: 0;
-  transform: translate(0, -30px);
-  transition: 1s all ease-out;
-}
-
-.inner2.active {
-  opacity: 1;
-  transform: translate(0, 0);
-}
-
-.web {
-  display: flex;
-  margin: 0;
-  margin-top: -20px;
-  padding: 0;
-}
-
-.graphic,
-.license,
-.spirit {
-  display: flex;
-  margin: 0;
-  margin-top: 20px;
-  padding: 0;
-}
-
-.web > li,
-.graphic > li,
-.license > li,
-.spirit > li {
-  font-size: 2rem;
-  margin: 0;
-  margin-right: 30px;
-  padding-left: 10px;
-  width: 100%;
-  line-height: 3em;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 100;
-  color: #333;
-  border-left: solid 6px  rgb(16, 21, 54);
-  background: rgb(217, 222, 255);
-  letter-spacing: 0.05em;
-  list-style: none;
-  transition: transform 0.6s;
-  &:hover {
-    transform: rotateX(360deg);
+  #skill {
+    margin-bottom: 8.65vh;
+    .inner2 {
+      font-size: 4.6rem;
+      margin: 0;
+      text-align: left;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 100;
+      color: #333;
+      letter-spacing: 0.05em;
+      margin-bottom: 7vh;
+      // opacity: 0;
+      // transform: translate(0, -5vh);
+      // transition: 1s all ease-out;
+      // .active {
+      //   opacity: 1;
+      //   transform: translate(0, 0);
+      // }
+    }
+    .web,
+    .graphic,
+    .license,
+    .spirit {
+      display: flex;
+      margin: 0;
+      margin-top: 3.5vh;
+      padding: 0;
+      li {
+        width: 100%;
+        margin: 0;
+        margin-right: 2vw;
+        padding-left: 1vw;
+        text-align: left;
+        line-height: 3em;
+        font-size: 2rem;
+        font-family: 'Quicksand', sans-serif;
+        color: #333;
+        letter-spacing: 0.05em;
+        border-left: solid 6px  rgb(16, 21, 54);
+        background: rgb(217, 222, 255);
+        list-style: none;
+        transition: transform 0.6s;
+        &:hover {
+          transform: rotateX(360deg);
+        }
+      }
+    }
   }
 }
 
 footer {
   position: relative;
   width: 100%;
-  height: 42px;
+  height: 7vh;
   bottom: 0;
   background: rgb(16, 21, 54);
-}
-
-footer p {
-  position: absolute;
-  margin: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  line-height: 100%;
-  color: white;
-  font-weight: normal;
-  text-align: center;
-  font-size: 1rem;
-  font-style: italic;
-  font-family:  Georgia,"ヒラギノ明朝 Pro W3","Hiragino Mincho Pro","HGS明朝E","ＭＳ Ｐ明朝",serif;
+  p {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    line-height: 100%;
+    color: white;
+    font-weight: normal;
+    text-align: center;
+    font-size: 1rem;
+    font-style: italic;
+    font-family:  Georgia,"ヒラギノ明朝 Pro W3","Hiragino Mincho Pro","HGS明朝E","ＭＳ Ｐ明朝",serif;
+  }
 }
