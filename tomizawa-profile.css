@@ -184,10 +184,8 @@ main #skill .inner2.active {
 
 main #skill ul {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 1fr);
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  gap: 2vw;
   grid-template-areas: "a b c" "d e f" "g g g" "h i j";
+  gap: 2vw;
   margin: 0;
   margin-top: 3.5vh;
   padding: 0;
@@ -273,4 +271,84 @@ footer p {
   font-size: 1rem;
   font-style: italic;
   font-family: Georgia,"ヒラギノ明朝 Pro W3","Hiragino Mincho Pro","HGS明朝E","ＭＳ Ｐ明朝",serif;
+}
+
+@media screen and (max-width: 559px) {
+  header {
+    width: 100vw;
+    height: 18vh;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  header ul {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  header li {
+    padding-right: 6.25vw;
+    text-align: center;
+    color: #333;
+    font-size: 1.6rem;
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 1px;
+    transition: 0.3s ease-in-out;
+  }
+  header a {
+    position: relative;
+    display: inline-block;
+    color: #333;
+    text-decoration: none;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  header {
+    width: 100vw;
+    height: 18vh;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  header ul {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  header li {
+    padding-right: 6.25vw;
+    text-align: center;
+    color: #333;
+    font-size: 1.6rem;
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 1px;
+    transition: 0.3s ease-in-out;
+  }
+  header a {
+    position: relative;
+    display: inline-block;
+    color: #333;
+    text-decoration: none;
+  }
+  header a:hover {
+    color: #EE6c4d;
+  }
+  header a::after {
+    position: absolute;
+    bottom: -5vh;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #EE6C4D;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+  }
+  header a:hover::after {
+    bottom: -0.8vh;
+    opacity: 1;
+  }
 }
