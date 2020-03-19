@@ -119,25 +119,25 @@ main #profile .icon a {
   color: #333;
 }
 
-main #profile .icon a::before {
-  position: absolute;
-  bottom: -0.8vh;
-  content: "";
-  display: inline-block;
-  width: 0;
-  height: 1px;
-  left: 50%;
-  background-color: #ED6D4C;
-  transition: 0.3s ease-in-out;
-}
-
-main #profile .icon a::after {
-  right: 50%;
-}
-
-main #profile .icon a:hover::before, main #profile .icon a:hover::after {
-  left: 0;
-  width: 100%;
+@media screen and (min-width: 560px) {
+  main #profile .icon a::before {
+    position: absolute;
+    bottom: -0.8vh;
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 1px;
+    left: 50%;
+    background-color: #ED6D4C;
+    transition: 0.3s ease-in-out;
+  }
+  main #profile .icon a::after {
+    right: 50%;
+  }
+  main #profile .icon a:hover::before, main #profile .icon a:hover::after {
+    left: 0;
+    width: 100%;
+  }
 }
 
 main #profile .introduction {
@@ -307,5 +307,19 @@ footer p {
   }
   main #profile {
     flex-direction: column;
+  }
+  main #profile .icon {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  main #profile .introduction {
+    margin: 0;
+  }
+  main #profile .introduction .name,
+  main #profile .introduction .history,
+  main #profile .introduction .appeal {
+    text-align: center;
   }
 }

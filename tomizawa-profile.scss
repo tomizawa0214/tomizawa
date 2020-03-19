@@ -108,24 +108,26 @@ main {
         position: relative;
         display: inline-block;
         color: #333;
-        &::before {
-          position: absolute;
-          bottom: -0.8vh;
-          content: "";
-          display: inline-block;
-          width: 0;
-          height: 1px;
-          left: 50%;
-          background-color: #ED6D4C;
-          transition: 0.3s ease-in-out;
-        }
-        &::after {
-          right: 50%;
-        }
-        &:hover::before,
-        &:hover::after {
-          left: 0;
-          width: 100%;
+        @media screen and (min-width: 560px) {
+          &::before {
+            position: absolute;
+            bottom: -0.8vh;
+            content: "";
+            display: inline-block;
+            width: 0;
+            height: 1px;
+            left: 50%;
+            background-color: #ED6D4C;
+            transition: 0.3s ease-in-out;
+          }
+          &::after {
+            right: 50%;
+          }
+          &:hover::before,
+          &:hover::after {
+            left: 0;
+            width: 100%;
+          }
         }
       }
     }
@@ -283,6 +285,20 @@ footer {
     }
     #profile {
       flex-direction: column;
+      .icon {
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      .introduction {
+        margin: 0;
+        .name,
+        .history,
+        .appeal {
+        text-align: center;
+        }
+      }
     }
   }
 }
