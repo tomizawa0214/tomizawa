@@ -76,6 +76,7 @@ main {
   display: inline-block;
   margin-top: 13.8vh;
   margin-bottom: 8.65vh;
+  padding: 0 30px;
   .inner1 {
     font-size: 4.6rem;
     margin: 0;
@@ -134,7 +135,8 @@ main {
     .introduction {
       margin-left: 6.25vw;
       .name,
-      .history,
+      .history1,
+      .history2,
       .appeal {
         margin: 0;
         text-align: left;
@@ -143,7 +145,7 @@ main {
         font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
         color: #333;
       }
-      .history {
+      .history2 {
         border-bottom: solid 1px #333;
         padding-bottom: 1.7vh;
       }
@@ -294,15 +296,33 @@ footer {
       .introduction {
         margin: 0;
         .name,
-        .history,
-        .appeal {
+        .history1 {
         text-align: center;
+        }
+        .br-pc { display:none; }
+        .br-sp { display:block; }
+      }
+    }
+    #skill {
+      .inner2 {
+        text-align: center;
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        li {
+          margin-top: 20px;
         }
       }
     }
   }
 }
 
+@media screen and (min-width: 960px) {
+  .br-pc { display:block; }
+  .br-sp { display:none; }
+}
 
 // -----タブレット用-----
 @media screen and (max-width: 959px) {
