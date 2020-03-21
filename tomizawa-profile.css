@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:100&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap&subset=latin-ext");
 @import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Archivo+Black&display=swap");
 html {
   width: 100%;
   font-size: 62.5%;
@@ -16,18 +17,33 @@ body {
 }
 
 header {
+  padding: 0 30px;
   width: 100vw;
   height: 18vh;
   display: table-cell;
   vertical-align: middle;
 }
 
-header #accordion_menu {
+header #container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header #container h1 {
+  display: inline-block;
+  margin: 0;
+  text-align: left;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 3rem;
+  letter-spacing: 0.5px;
+}
+
+header #container #accordion_menu {
   display: none;
 }
 
-header #navlist {
-  display: block;
+header #container #navlist {
   display: flex;
   justify-content: flex-end;
   margin: 0;
@@ -35,8 +51,8 @@ header #navlist {
   list-style: none;
 }
 
-header .menulist {
-  padding-right: 6.25vw;
+header #container .menulist {
+  padding-right: 5vw;
   text-align: center;
   color: #333;
   font-size: 1.6rem;
@@ -45,7 +61,7 @@ header .menulist {
   transition: 0.3s ease-in-out;
 }
 
-header a {
+header #container a {
   position: relative;
   display: inline-block;
   color: #333;
@@ -53,10 +69,10 @@ header a {
 }
 
 @media screen and (min-width: 560px) {
-  header a:hover {
+  header #container a:hover {
     color: #EE6c4d;
   }
-  header a::after {
+  header #container a::after {
     position: absolute;
     bottom: -5vh;
     left: 0;
@@ -67,7 +83,7 @@ header a {
     opacity: 0;
     transition: 0.3s ease-in-out;
   }
-  header a:hover::after {
+  header #container a:hover::after {
     bottom: -0.8vh;
     opacity: 1;
   }
@@ -109,6 +125,7 @@ main #profile {
 }
 
 main #profile .icon {
+  width: 200px;
   margin-top: 3.5vh;
   display: flex;
   justify-content: space-between;
@@ -311,7 +328,6 @@ footer p {
     flex-direction: column;
   }
   main #profile .icon {
-    width: 50%;
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 20px;

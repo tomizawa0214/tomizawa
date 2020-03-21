@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap&subset=latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black&display=swap');
 
 html {
   width: 100%;
@@ -19,53 +20,66 @@ body {
 }
 
 header {
+  padding: 0 30px;
   width: 100vw;
   height: 18vh;
   display: table-cell;
   vertical-align: middle;
-  #accordion_menu {
-    display: none;
-  }
-  #navlist {
-    display: block;
+  #container {
     display: flex;
-    justify-content: flex-end;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  .menulist {
-    padding-right: 6.25vw;
-    text-align: center;
-    color: #333;
-    font-size: 1.6rem;
-    font-family: 'Quicksand', sans-serif;
-    letter-spacing: 1px;
-    transition: 0.3s ease-in-out;
-  }
-  a {
-    position: relative;
-    display: inline-block;
-    color: #333;
-    text-decoration: none;
-    @media screen and (min-width: 560px) {
-      &:hover {
-        color: #EE6c4d;
-      }
-      &::after {
-        position: absolute;
-        bottom: -5vh;
-        left: 0;
-        content: '';
-        width: 100%;
-        height: 1px;
-        background-color: #EE6C4D;
-        opacity: 0;
-        transition: 0.3s ease-in-out;
-      }
-      &:hover::after {
-        bottom: -0.8vh;
-        opacity: 1;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+      display: inline-block;
+      margin: 0;
+      text-align: left;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 3rem;
+      letter-spacing: 0.5px;
+    }
+    #accordion_menu {
+      display: none;
+    }
+    #navlist {
+      display: flex;
+      justify-content: flex-end;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .menulist {
+      padding-right: 5vw;
+      text-align: center;
+      color: #333;
+      font-size: 1.6rem;
+      font-family: 'Quicksand', sans-serif;
+      letter-spacing: 1px;
+      transition: 0.3s ease-in-out;
+    }
+    a {
+      position: relative;
+      display: inline-block;
+      color: #333;
+      text-decoration: none;
+      @media screen and (min-width: 560px) {
+        &:hover {
+          color: #EE6c4d;
+        }
+        &::after {
+          position: absolute;
+          bottom: -5vh;
+          left: 0;
+          content: '';
+          width: 100%;
+          height: 1px;
+          background-color: #EE6C4D;
+          opacity: 0;
+          transition: 0.3s ease-in-out;
+        }
+        &:hover::after {
+          bottom: -0.8vh;
+          opacity: 1;
+        }
       }
     }
   }
@@ -102,6 +116,7 @@ main {
     display: flex;
     margin-bottom: 11.24vh;
     .icon {
+      width: 200px;
       margin-top: 3.5vh;
       display: flex;
       justify-content: space-between;
@@ -288,7 +303,6 @@ footer {
     #profile {
       flex-direction: column;
       .icon {
-        width: 50%;
         margin: 0 auto;
         margin-top: 20px;
         margin-bottom: 20px;
