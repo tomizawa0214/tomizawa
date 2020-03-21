@@ -25,9 +25,15 @@ header {
 }
 
 header #container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header #container h1 {
@@ -39,13 +45,19 @@ header #container h1 {
   letter-spacing: 0.5px;
 }
 
-header #container #accordion_menu {
-  display: none;
+@media screen and (min-width: 560px) {
+  header #container #accordion_menu {
+    display: none;
+  }
 }
 
 header #container #navlist {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -58,6 +70,7 @@ header #container .menulist {
   font-size: 1.6rem;
   font-family: 'Quicksand', sans-serif;
   letter-spacing: 1px;
+  -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
 
@@ -81,6 +94,7 @@ header #container a {
     height: 1px;
     background-color: #EE6C4D;
     opacity: 0;
+    -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
   }
   header #container a:hover::after {
@@ -105,21 +119,39 @@ main .inner1 {
   color: #333;
   letter-spacing: 0.05em;
   margin-bottom: 11.24vh;
-  animation: fade-in1 1s ease-out;
+  -webkit-animation: fade-in1 1s ease-out;
+          animation: fade-in1 1s ease-out;
+}
+
+@-webkit-keyframes fade-in1 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -5vh, 0);
+            transform: translate3d(0, -5vh, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
 }
 
 @keyframes fade-in1 {
   0% {
     opacity: 0;
-    transform: translate3d(0, -5vh, 0);
+    -webkit-transform: translate3d(0, -5vh, 0);
+            transform: translate3d(0, -5vh, 0);
   }
   100% {
     opacity: 1;
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
   }
 }
 
 main #profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-bottom: 11.24vh;
 }
@@ -127,8 +159,12 @@ main #profile {
 main #profile .icon {
   width: 200px;
   margin-top: 3.5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 main #profile .icon a {
@@ -147,6 +183,7 @@ main #profile .icon a {
     height: 1px;
     left: 50%;
     background-color: #ED6D4C;
+    -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
   }
   main #profile .icon a::after {
@@ -197,18 +234,22 @@ main #skill .inner2 {
   letter-spacing: 0.05em;
   margin-bottom: 7vh;
   opacity: 0;
-  transform: translate(0, -5vh);
+  -webkit-transform: translate(0, -5vh);
+          transform: translate(0, -5vh);
+  -webkit-transition: 1s all ease-out;
   transition: 1s all ease-out;
 }
 
 main #skill .inner2.active {
   opacity: 1;
-  transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 main #skill ul {
+  display: -ms-grid;
   display: grid;
-  grid-template-areas: "a b c" "d e f" "g g g" "h i j";
+      grid-template-areas: "a b c" "d e f" "g g g" "h i j";
   gap: 2vw;
   margin: 0;
   margin-top: 3.5vh;
@@ -227,50 +268,75 @@ main #skill ul li {
   border-left: solid 6px #101536;
   background: #d9deff;
   list-style: none;
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: -webkit-transform 0.6s;
   transition: transform 0.6s;
+  transition: transform 0.6s, -webkit-transform 0.6s;
 }
 
 main #skill ul li:hover {
-  transform: rotateX(360deg);
+  -webkit-transform: rotateX(360deg);
+          transform: rotateX(360deg);
 }
 
 main #skill ul .a {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: a;
 }
 
 main #skill ul .b {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: b;
 }
 
 main #skill ul .c {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
   grid-area: c;
 }
 
 main #skill ul .d {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: d;
 }
 
 main #skill ul .e {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
   grid-area: e;
 }
 
 main #skill ul .f {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
   grid-area: f;
 }
 
 main #skill ul .g {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
   grid-area: g;
 }
 
 main #skill ul .h {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
   grid-area: h;
 }
 
 main #skill ul .i {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
   grid-area: i;
 }
 
 main #skill ul .j {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
   grid-area: j;
 }
 
@@ -286,7 +352,8 @@ footer p {
   position: absolute;
   margin: 0;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   width: 100%;
   line-height: 100%;
   color: white;
@@ -302,14 +369,11 @@ footer p {
     height: 0;
     vertical-align: top;
   }
-  header #accordion_menu {
-    display: block;
-    text-align: right;
-    margin-top: 30px;
-    margin-right: 30px;
-  }
   header #navlist {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   header .menulist {
     padding: 0;
@@ -325,7 +389,10 @@ footer p {
     margin-bottom: 40px;
   }
   main #profile {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   main #profile .icon {
     margin: 0 auto;
@@ -349,8 +416,13 @@ footer p {
     text-align: center;
   }
   main #skill ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin: 0;
   }
   main #skill ul li {
@@ -366,3 +438,4 @@ footer p {
     display: none;
   }
 }
+/*# sourceMappingURL=tomizawa-profile.css.map */
