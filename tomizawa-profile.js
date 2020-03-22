@@ -14,15 +14,26 @@ $(function() {
   });
 });
 
-$(function() {
-  $(window).scroll(function() {
-    $('.inner2').each(function() {
-      var position = $(this).offset().top;
-      var scroll = $(window).scrollTop();
-      var windowHeight = $(window).height();
-      if (scroll > position - windowHeight + 70) {
-        $(this).addClass('active');
-      }
-    });
-  });
+// $(function() {
+//   $(window).scroll(function() {
+//     $('.inner2').each(function() {
+//       var position = $(this).offset().top;
+//       var scroll = $(window).scrollTop();
+//       var windowHeight = $(window).height();
+//       if (scroll > position - windowHeight + 70) {
+//         $(this).addClass('active');
+//       }
+//     });
+//   });
+// });
+
+window.addEventListener('scroll', () => {
+  const Skill = document.querySelector('.inner2');
+  let scrollTop = document.scrollingElement.scrollTop;
+
+  if (scrollTop > 70) {
+    Skill.classList.add('active');
+  } else {
+    Skill.classList.remove('active');
+  }
 });
