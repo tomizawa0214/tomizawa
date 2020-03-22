@@ -25,12 +25,10 @@ header {
 }
 
 header #container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -49,6 +47,9 @@ header #container h1 {
   header #container #accordion_menu {
     display: none;
   }
+  header #container .menulist {
+    padding-right: 5vw;
+  }
 }
 
 header #container #navlist {
@@ -63,8 +64,7 @@ header #container #navlist {
   list-style: none;
 }
 
-header #container .menulist {
-  padding-right: 5vw;
+header #container #navlist .menulist {
   text-align: center;
   color: #333;
   font-size: 1.6rem;
@@ -74,7 +74,7 @@ header #container .menulist {
   transition: 0.3s ease-in-out;
 }
 
-header #container a {
+header #container #navlist a {
   position: relative;
   display: inline-block;
   color: #333;
@@ -82,10 +82,10 @@ header #container a {
 }
 
 @media screen and (min-width: 560px) {
-  header #container a:hover {
+  header #container #navlist a:hover {
     color: #EE6c4d;
   }
-  header #container a::after {
+  header #container #navlist a::after {
     position: absolute;
     bottom: -5vh;
     left: 0;
@@ -97,7 +97,7 @@ header #container a {
     -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
   }
-  header #container a:hover::after {
+  header #container #navlist a:hover::after {
     bottom: -0.8vh;
     opacity: 1;
   }
@@ -365,23 +365,28 @@ footer p {
 }
 
 @media screen and (max-width: 559px) {
-  header {
-    height: 0;
-    vertical-align: top;
+  header #accordion_menu {
+    text-align: right;
+  }
+  header #accordion_menu i {
+    color: #333;
   }
   header #navlist {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / 3;
   }
-  header .menulist {
+  header #navlist .menulist {
+    display: block;
     padding: 0;
-    text-align: center;
-    line-height: 3em;
+    line-height: 2.5em;
   }
   main {
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 0;
   }
   main .inner1 {
@@ -430,6 +435,12 @@ footer p {
   }
 }
 
+@media screen and (max-width: 392px) {
+  .br-sp {
+    display: block;
+  }
+}
+
 @media screen and (min-width: 960px) {
   .br-pc {
     display: block;
@@ -438,4 +449,3 @@ footer p {
     display: none;
   }
 }
-/*# sourceMappingURL=tomizawa-profile.css.map */
