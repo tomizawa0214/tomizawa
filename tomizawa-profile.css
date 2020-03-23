@@ -62,6 +62,17 @@ header #container #navlist {
   margin: 0;
   padding: 0;
   list-style: none;
+  max-height: 0;
+  opacity: 0;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+header #container #navlist.open {
+  max-height: 100%;
+  opacity: 1;
 }
 
 header #container #navlist .menulist {

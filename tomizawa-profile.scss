@@ -51,6 +51,16 @@ header {
       margin: 0;
       padding: 0;
       list-style: none;
+      max-height: 0;
+      // transform: scaleY(0);
+      opacity: 0;
+      transition: 1s ease-in-out;
+      transform-origin: top;
+      &.open {
+        max-height: 100%;
+        // transform: scaleY(1);
+        opacity: 1;
+      }
       .menulist {
         text-align: center;
         color: #333;
