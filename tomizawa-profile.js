@@ -14,6 +14,15 @@ $(function() {
   });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const accordionTrigger = document.getElementById('accordion_menu');
+
+  for (let i = 0; 1 < accordionTrigger.length; i++) {
+
+    accordionTrigger[i].nextElementSibling.style.height = accordionTrigger[i].nextElementSibling.scrollHeight + 'px';
+  }
+}
+
 // $(function() {
 //   $(window).scroll(function() {
 //     $('.inner2').each(function() {
