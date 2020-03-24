@@ -24,7 +24,6 @@ header {
   width: 100vw;
   height: 18vh;
   display: table-cell;
-  // vertical-align: middle;
   #container {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -32,22 +31,12 @@ header {
     h1 {
       display: inline-block;
       margin: 0;
-      text-align: left;
       font-family: 'Archivo Black', sans-serif;
       font-size: 3rem;
       letter-spacing: 0.5px;
     }
-    // @media screen and (min-width: 560px) {
-    //   #accordion_menu {
-    //     display: none;
-    //   }
-    //   .menulist {
-    //     padding-right: 5vw;
-    //   }
-    // }
     #navlist {
       display: flex;
-      justify-content: flex-end;
       margin: 0;
       padding: 0;
       list-style: none;
@@ -56,7 +45,7 @@ header {
         overflow: hidden;
         transition: 0.5s ease-in-out;
         &.open {
-          height: 200px;
+          height: 170px;
           transition: 0.5s ease-in-out;
         }
       } 
@@ -138,7 +127,7 @@ main {
         display: inline-block;
         color: #333;
         @media screen and (min-width: 560px) {
-        &::before {
+          &::before {
             position: absolute;
             bottom: -0.8vh;
             content: "";
@@ -172,6 +161,9 @@ main {
         font-size: 1.4rem;
         font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
         color: #333;
+      }
+      .history1-sp {
+        display: none;
       }
       .history2 {
         border-bottom: solid 1px #333;
@@ -287,9 +279,12 @@ footer {
 
 // -----スマホ用-----
 @media screen and (max-width: 559px) {
+  html {
+    font-size: 50%;
+  }
   header {
+    height: 10vh;
     #accordion_menu {
-      // display: inline-block;
       text-align: right;
       i {
         color: #333;
@@ -321,12 +316,22 @@ footer {
       }
       .introduction {
         margin: 0;
-        .name,
-        .history1 {
+        .name {
         text-align: center;
         }
+        .history1 {
+          display: none;
+        }
+        .history1-sp {
+          display: inline-block;
+          margin: 0;
+          text-align: left;
+          line-height: 1.9;
+          font-size: 1.4rem;
+          font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+          color: #333;
+        }
         .br-pc { display:none; }
-        // .br-sp { display:block; }
       }
     }
     #skill {
@@ -345,27 +350,54 @@ footer {
   }
 }
 
-// @media screen and (max-width: 392px) {
-//   .br-sp { display:block; }
-// }
-
-// -----スマホ以外-----
-@media screen and (min-width: 560px) {
-  #accordion_menu {
-    display: none;
-  }
-  .menulist {
-    padding-right: 5vw;
-  }
-}
-
 // -----タブレット用-----
-@media screen and (max-width: 959px) {
-  
+@media screen and (min-width: 560px) and (max-width: 959px) {
+  header {
+    height: 13vh;
+    h1 {
+      height: 80px;
+      grid-column: 1 / 3;
+      text-align: center;
+    }
+    #accordion_menu {
+      display: none;
+    }
+    #navlist {
+      grid-column: 1 / 3;
+      justify-content: space-evenly;
+    }
+  }
+
+  main {
+    margin-top: 5vh;
+    .inner1 {
+      margin-bottom: 5vh;
+    }
+    #profile {
+      margin-bottom: 5vh;
+    }
+    #skill {
+      margin-bottom: 0;
+      .inner2 {
+        margin-bottom: 5vh;
+      }
+    }
+  }
 }
 
 // -----PC用-----
 @media screen and (min-width: 960px) {
+  h1 {
+    text-align: left;
+  }
+  #accordion_menu {
+    display: none;
+  }
+  #navlist {
+    justify-content: flex-end;
+    .menulist {
+      padding-right: 5vw;
+    }
+  }
   .br-pc { display:block; }
-  // .br-sp { display:none; }
 }
