@@ -42,15 +42,6 @@ header #container h1 {
   letter-spacing: 0.5px;
 }
 
-@media screen and (min-width: 560px) {
-  header #container #accordion_menu {
-    display: none;
-  }
-  header #container .menulist {
-    padding-right: 5vw;
-  }
-}
-
 header #container #navlist {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -65,12 +56,15 @@ header #container #navlist {
 
 @media screen and (max-width: 559px) {
   header #container #navlist {
-    display: none;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
   }
   header #container #navlist.open {
-    display: block;
-    -webkit-transition: 1s ease-in-out;
-    transition: 1s ease-in-out;
+    height: 200px;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
   }
 }
 
@@ -80,8 +74,6 @@ header #container #navlist .menulist {
   font-size: 1.6rem;
   font-family: 'Quicksand', sans-serif;
   letter-spacing: 1px;
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
 }
 
 header #container #navlist a {
@@ -391,7 +383,6 @@ footer p {
     grid-column: 1 / 3;
   }
   header #navlist .menulist {
-    display: block;
     padding: 0;
     line-height: 2.5em;
   }
@@ -439,6 +430,15 @@ footer p {
   }
   main #skill ul li {
     margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 560px) {
+  #accordion_menu {
+    display: none;
+  }
+  .menulist {
+    padding-right: 5vw;
   }
 }
 
