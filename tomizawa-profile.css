@@ -63,7 +63,7 @@ header #container #navlist {
     transition: 0.5s ease-in-out;
   }
   header #container #navlist.open {
-    height: 190px;
+    height: 283.35px;
     -webkit-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
   }
@@ -237,6 +237,7 @@ main #aboutme .introduction .history1-sp {
 
 main #aboutme .introduction .name {
   margin-top: -10px;
+  font-weight: 550;
 }
 
 main #aboutme .introduction .history2 {
@@ -279,12 +280,6 @@ main #skill .inner2 {
           transform: translate(0, -40px);
   -webkit-transition: 1s all ease-out;
   transition: 1s all ease-out;
-}
-
-main #skill .inner2.active {
-  opacity: 1;
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
 }
 
 main #skill ul {
@@ -411,7 +406,9 @@ footer p {
     font-size: 50%;
   }
   header {
-    height: 60px;
+    height: 62px;
+    vertical-align: top;
+    padding-top: 30px;
   }
   header #accordion_menu {
     text-align: right;
@@ -430,36 +427,24 @@ footer p {
   }
   header #navlist .menulist {
     padding: 0;
-    line-height: 3em;
+    line-height: 4em;
   }
-  main {
-    margin-bottom: 0;
+  main #aboutme {
+        grid-template-areas: "inner1" "profile-image" "introduction";
   }
-  main .inner1 {
+  main #aboutme .inner1 {
     text-align: center;
-    margin-bottom: 40px;
   }
-  main #profile {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  main #profile .icon {
+  main #aboutme .icon {
     margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
   }
-  main #profile .introduction {
-    margin: 0;
-  }
-  main #profile .introduction .name {
+  main #aboutme .introduction .name {
     text-align: center;
   }
-  main #profile .introduction .history1 {
+  main #aboutme .introduction .history1 {
     display: none;
   }
-  main #profile .introduction .history1-sp {
+  main #aboutme .introduction .history1-sp {
     display: inline-block;
     margin: 0;
     text-align: left;
@@ -474,17 +459,8 @@ footer p {
     text-align: center;
   }
   main #skill ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin: 0;
-  }
-  main #skill ul li {
-    margin-top: 20px;
+        grid-template-areas: "a" "b" "c" "d" "e" "f" "g" "h" "i" "j";
+    gap: 4vw;
   }
 }
 
