@@ -14,13 +14,18 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
+  background: #efefef;
 }
 
 header {
-  padding: 30px 30px 0;
+  padding: 0 30px 0;
   width: 100vw;
   height: 100px;
   display: table-cell;
+  vertical-align: middle;
+  background: white;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
 }
 
 header #container {
@@ -66,7 +71,6 @@ header #container #navlist {
 
 header #container #navlist .menulist {
   text-align: center;
-  color: #333;
   font-size: 1.6rem;
   font-family: 'Quicksand', sans-serif;
   letter-spacing: 1px;
@@ -75,13 +79,13 @@ header #container #navlist .menulist {
 header #container #navlist a {
   position: relative;
   display: inline-block;
-  color: #333;
+  color: #000;
   text-decoration: none;
 }
 
 @media screen and (min-width: 560px) {
   header #container #navlist a:hover {
-    color: #EE6c4d;
+    color: #e8676b;
   }
   header #container #navlist a::after {
     position: absolute;
@@ -90,7 +94,7 @@ header #container #navlist a {
     content: '';
     width: 100%;
     height: 1px;
-    background-color: #EE6C4D;
+    background-color: #e8676b;
     opacity: 0;
     -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
@@ -103,20 +107,35 @@ header #container #navlist a {
 
 main {
   display: inline-block;
-  margin-top: 80px;
-  margin-bottom: 50px;
-  padding: 0 30px;
+  width: 100%;
 }
 
-main .inner1 {
+main #aboutme {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "inner1 inner1" "profile-image introduction";
+  gap: 10vmin;
+  margin-top: 12vmin;
+  margin-right: 8%;
+  margin-left: 8%;
+  padding: 10vmin;
+  background: white;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+}
+
+main #aboutme .inner1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: inner1;
   font-size: 4.6rem;
   margin: 0;
   text-align: left;
   font-family: 'Quicksand', sans-serif;
   font-weight: 100;
-  color: #333;
+  color: #3D4451;
   letter-spacing: 0.05em;
-  margin-bottom: 65px;
   -webkit-animation: fade-in1 1s ease-out;
           animation: fade-in1 1s ease-out;
 }
@@ -124,8 +143,8 @@ main .inner1 {
 @-webkit-keyframes fade-in1 {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, -30px, 0);
-            transform: translate3d(0, -30px, 0);
+    -webkit-transform: translate3d(0, -40px, 0);
+            transform: translate3d(0, -40px, 0);
   }
   100% {
     opacity: 1;
@@ -137,8 +156,8 @@ main .inner1 {
 @keyframes fade-in1 {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, -30px, 0);
-            transform: translate3d(0, -30px, 0);
+    -webkit-transform: translate3d(0, -40px, 0);
+            transform: translate3d(0, -40px, 0);
   }
   100% {
     opacity: 1;
@@ -147,14 +166,13 @@ main .inner1 {
   }
 }
 
-main #profile {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 65px;
+main #aboutme .profile-image {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: profile-image;
 }
 
-main #profile .icon {
+main #aboutme .profile-image .icon {
   width: 200px;
   margin-top: 20px;
   display: -webkit-box;
@@ -165,14 +183,14 @@ main #profile .icon {
           justify-content: space-between;
 }
 
-main #profile .icon a {
+main #aboutme .profile-image .icon a {
   position: relative;
   display: inline-block;
-  color: #333;
+  color: #3D4451;
 }
 
 @media screen and (min-width: 560px) {
-  main #profile .icon a::before {
+  main #aboutme .profile-image .icon a::before {
     position: absolute;
     bottom: -5px;
     content: "";
@@ -180,64 +198,85 @@ main #profile .icon a {
     width: 0;
     height: 1px;
     left: 50%;
-    background-color: #ED6D4C;
+    background-color: #e8676b;
     -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
   }
-  main #profile .icon a::after {
+  main #aboutme .profile-image .icon a::after {
     right: 50%;
   }
-  main #profile .icon a:hover::before, main #profile .icon a:hover::after {
+  main #aboutme .profile-image .icon a:hover::before, main #aboutme .profile-image .icon a:hover::after {
     left: 0;
     width: 100%;
   }
 }
 
-main #profile .introduction {
-  margin-left: 6.25vw;
+main #aboutme .introduction {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: introduction;
 }
 
-main #profile .introduction .name,
-main #profile .introduction .history1,
-main #profile .introduction .history2,
-main #profile .introduction .appeal {
+main #aboutme .introduction .name,
+main #aboutme .introduction .history1,
+main #aboutme .introduction .history2,
+main #aboutme .introduction .appeal {
   margin: 0;
   text-align: left;
   line-height: 1.9;
   font-size: 1.4rem;
+  font-weight: 500;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
-  color: #333;
+  color: #3D4451;
+  letter-spacing: 0.03em;
 }
 
-main #profile .introduction .history1-sp {
+main #aboutme .introduction .history1-sp {
   display: none;
 }
 
-main #profile .introduction .history2 {
-  border-bottom: solid 1px #333;
+main #aboutme .introduction .name {
+  margin-top: -10px;
+}
+
+main #aboutme .introduction .history2 {
+  border-bottom: solid 1px #3D4451;
   padding-bottom: 10px;
 }
 
-main #profile .introduction .appeal {
+main #aboutme .introduction .appeal {
   padding-top: 10px;
 }
 
 main #skill {
-  margin-bottom: 50px;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "inner2" "ul";
+  gap: 10vmin;
+  margin-top: 12vmin;
+  margin-right: 8%;
+  margin-bottom: 12vmin;
+  margin-left: 8%;
+  padding: 10vmin;
+  background: white;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
 }
 
 main #skill .inner2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: inner2;
   font-size: 4.6rem;
   margin: 0;
   text-align: left;
   font-family: 'Quicksand', sans-serif;
   font-weight: 100;
-  color: #333;
+  color: #3D4451;
   letter-spacing: 0.05em;
-  margin-bottom: 40px;
   opacity: 0;
-  -webkit-transform: translate(0, -30px);
-          transform: translate(0, -30px);
+  -webkit-transform: translate(0, -40px);
+          transform: translate(0, -40px);
   -webkit-transition: 1s all ease-out;
   transition: 1s all ease-out;
 }
@@ -249,12 +288,14 @@ main #skill .inner2.active {
 }
 
 main #skill ul {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: ul;
   display: -ms-grid;
   display: grid;
       grid-template-areas: "a b c" "d e f" "g g g" "h i j";
   gap: 2vw;
   margin: 0;
-  margin-top: 20px;
   padding: 0;
 }
 
@@ -265,10 +306,10 @@ main #skill ul li {
   line-height: 3em;
   font-size: 2rem;
   font-family: 'Quicksand', sans-serif;
-  color: #333;
+  color: #000;
   letter-spacing: 0.05em;
   border-left: solid 6px #101536;
-  background: #d9deff;
+  background: #C5CAE9;
   list-style: none;
   -webkit-transition: -webkit-transform 0.6s;
   transition: -webkit-transform 0.6s;
@@ -347,7 +388,7 @@ footer {
   width: 100%;
   height: 40px;
   bottom: 0;
-  background: #101536;
+  background: #E0E0E0;
 }
 
 footer p {
@@ -358,12 +399,11 @@ footer p {
           transform: translateY(-50%);
   width: 100%;
   line-height: 100%;
-  color: white;
+  color: #3D4451;
   font-weight: normal;
   text-align: center;
   font-size: 1rem;
-  font-style: italic;
-  font-family: Georgia,"ヒラギノ明朝 Pro W3","Hiragino Mincho Pro","HGS明朝E","ＭＳ Ｐ明朝",serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 @media screen and (max-width: 559px) {
@@ -377,7 +417,7 @@ footer p {
     text-align: right;
   }
   header #accordion_menu i {
-    color: #333;
+    color: #3D4451;
   }
   header #navlist {
     -webkit-box-orient: vertical;
@@ -393,7 +433,6 @@ footer p {
     line-height: 3em;
   }
   main {
-    margin-top: 20px;
     margin-bottom: 0;
   }
   main .inner1 {
@@ -426,11 +465,10 @@ footer p {
     text-align: left;
     line-height: 1.9;
     font-size: 1.4rem;
+    font-weight: 500;
     font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
-    color: #333;
-  }
-  main #profile .introduction .br-pc {
-    display: none;
+    color: #3D4451;
+    letter-spacing: 0.03em;
   }
   main #skill .inner2 {
     text-align: center;
@@ -472,9 +510,6 @@ footer p {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
-  main {
-    margin-top: 30px;
-  }
   main .inner1 {
     margin-bottom: 30px;
   }
@@ -507,7 +542,10 @@ footer p {
   #navlist .menulist {
     padding-right: 5vw;
   }
+}
+
+@media screen and (max-width: 1169px) {
   .br-pc {
-    display: block;
+    display: none;
   }
 }

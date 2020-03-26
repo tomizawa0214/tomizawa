@@ -5,6 +5,8 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Archivo+Black&display=swap');
 
+$textColor: #3D4451;
+
 html {
   width: 100%;
   font-size: 62.5%;
@@ -17,13 +19,17 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
+  background: #efefef;
 }
 
 header {
-  padding: 30px 30px 0;
+  padding: 0 30px 0;
   width: 100vw;
   height: 100px;
   display: table-cell;
+  vertical-align: middle;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.26);
   #container {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -51,7 +57,6 @@ header {
       } 
       .menulist {
         text-align: center;
-        color: #333;
         font-size: 1.6rem;
         font-family: 'Quicksand', sans-serif;
         letter-spacing: 1px;
@@ -60,11 +65,11 @@ header {
       a {
         position: relative;
         display: inline-block;
-        color: #333;
+        color: #000;
         text-decoration: none;
         @media screen and (min-width: 560px) {
           &:hover {
-            color: #EE6c4d;
+            color: #e8676b;
           }
           &::after {
             position: absolute;
@@ -73,7 +78,7 @@ header {
             content: '';
             width: 100%;
             height: 1px;
-            background-color: #EE6C4D;
+            background-color: #e8676b;
             opacity: 0;
             transition: 0.3s ease-in-out;
           }
@@ -87,70 +92,80 @@ header {
   }
 }
 
-
 main {
   display: inline-block;
-  margin-top: 80px;
-  margin-bottom: 50px;
-  padding: 0 30px;
-  .inner1 {
-    font-size: 4.6rem;
-    margin: 0;
-    text-align: left;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 100;
-    color: #333;
-    letter-spacing: 0.05em;
-    margin-bottom: 65px;
-    animation: fade-in1 1s ease-out;
-    @keyframes fade-in1 {
-      0% {
-        opacity: 0;
-        transform: translate3d(0, -30px, 0);
-      }
-      100% {
-        opacity: 1;
-        transform: translate3d(0, 0,0);
+  width: 100%;
+  #aboutme {
+    display: grid;
+    grid-template-areas:
+    "inner1 inner1"
+    "profile-image introduction";
+    gap: 10vmin;
+    margin-top: 12vmin;
+    margin-right: 8%;
+    margin-left: 8%;
+    padding: 10vmin;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+    .inner1 {
+      grid-area: inner1;
+      font-size: 4.6rem;
+      margin: 0;
+      text-align: left;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 100;
+      color: $textColor;
+      letter-spacing: 0.05em;
+      animation: fade-in1 1s ease-out;
+      @keyframes fade-in1 {
+        0% {
+          opacity: 0;
+          transform: translate3d(0, -40px, 0);
+        }
+        100% {
+          opacity: 1;
+          transform: translate3d(0, 0,0);
+        }
       }
     }
-  }
-  #profile {
-    display: flex;
-    margin-bottom: 65px;
-    .icon {
-      width: 200px;
-      margin-top: 20px;
-      display: flex;
-      justify-content: space-between;
-      a {
-        position: relative;
-        display: inline-block;
-        color: #333;
-        @media screen and (min-width: 560px) {
-          &::before {
-            position: absolute;
-            bottom: -5px;
-            content: "";
-            display: inline-block;
-            width: 0;
-            height: 1px;
-            left: 50%;
-            background-color: #ED6D4C;
-            transition: 0.3s ease-in-out;
-          }
-          &::after {
-            right: 50%;
-          }
-          &:hover::before,
-          &:hover::after {
-            left: 0;
-            width: 100%;
+    .profile-image {
+      grid-area: profile-image;
+      .icon {
+        width: 200px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        a {
+          position: relative;
+          display: inline-block;
+          color: $textColor;
+          @media screen and (min-width: 560px) {
+            &::before {
+              position: absolute;
+              bottom: -5px;
+              content: "";
+              display: inline-block;
+              width: 0;
+              height: 1px;
+              left: 50%;
+              background-color: #e8676b;
+              transition: 0.3s ease-in-out;
+            }
+            &::after {
+              right: 50%;
+            }
+            &:hover::before,
+            &:hover::after {
+              left: 0;
+              width: 100%;
+            }
           }
         }
       }
     }
     .introduction {
-      margin-left: 6.25vw;
+      grid-area: introduction;
+      // .br-pc { display: none; }
       .name,
       .history1,
       .history2,
@@ -159,14 +174,19 @@ main {
         text-align: left;
         line-height: 1.9;
         font-size: 1.4rem;
+        font-weight: 500;
         font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
-        color: #333;
+        color: $textColor;
+        letter-spacing: 0.03em;
       }
       .history1-sp {
         display: none;
       }
+      .name {
+        margin-top: -10px;
+      }
       .history2 {
-        border-bottom: solid 1px #333;
+        border-bottom: solid 1px $textColor;
         padding-bottom: 10px;
       }
       .appeal {
@@ -174,84 +194,76 @@ main {
       }
     }
   }
+
   #skill {
-    margin-bottom: 50px;
-    .inner2 {
-      font-size: 4.6rem;
-      margin: 0;
-      text-align: left;
-      font-family: 'Quicksand', sans-serif;
-      font-weight: 100;
-      color: #333;
-      letter-spacing: 0.05em;
-      margin-bottom: 40px;
-      opacity: 0;
-      transform: translate(0, -30px);
-      transition: 1s all ease-out;
-      &.active {
-        opacity: 1;
-        transform: translate(0, 0);
-      }
-    }
-    ul {
       display: grid;
       grid-template-areas:
-        "a b c"
-        "d e f"
-        "g g g"
-        "h i j";
-      gap: 2vw;
-      margin: 0;
-      margin-top: 20px;
-      padding: 0;
-      li {
+      "inner2"
+      "ul";
+      gap: 10vmin;
+      margin-top: 12vmin;
+      margin-right: 8%;
+      margin-bottom: 12vmin;
+      margin-left: 8%;
+      padding: 10vmin;
+      background: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+      .inner2 {
+        grid-area: inner2;
+        font-size: 4.6rem;
         margin: 0;
-        padding-left: 1vw;
         text-align: left;
-        line-height: 3em;
-        font-size: 2rem;
         font-family: 'Quicksand', sans-serif;
-        color: #333;
+        font-weight: 100;
+        color: $textColor;
         letter-spacing: 0.05em;
-        border-left: solid 6px  rgb(16, 21, 54);
-        background: rgb(217, 222, 255);
-        list-style: none;
-        transition: transform 0.6s;
-        &:hover {
-          transform: rotateX(360deg);
+        opacity: 0;
+        transform: translate(0, -40px);
+        transition: 1s all ease-out;
+        &.active {
+          opacity: 1;
+          transform: translate(0, 0);
         }
       }
-      .a {
-        grid-area: a;
+      ul {
+        grid-area: ul;
+        display: grid;
+        grid-template-areas:
+          "a b c"
+          "d e f"
+          "g g g"
+          "h i j";
+        gap: 2vw;
+        margin: 0;
+        padding: 0;
+        li {
+          margin: 0;
+          padding-left: 1vw;
+          text-align: left;
+          line-height: 3em;
+          font-size: 2rem;
+          font-family: 'Quicksand', sans-serif;
+          color: #000;
+          letter-spacing: 0.05em;
+          border-left: solid 6px  rgb(16, 21, 54);
+          background: #C5CAE9;
+          list-style: none;
+          transition: transform 0.6s;
+          &:hover {
+            transform: rotateX(360deg);
+          }
+        }
+        .a { grid-area: a; }
+        .b { grid-area: b; }
+        .c { grid-area: c; }
+        .d { grid-area: d; }
+        .e { grid-area: e; }
+        .f { grid-area: f; }
+        .g { grid-area: g; }
+        .h { grid-area: h; }
+        .i { grid-area: i; }
+        .j { grid-area: j; }
       }
-      .b {
-        grid-area: b;
-      }
-      .c {
-        grid-area: c;
-      }
-      .d {
-        grid-area: d;
-      }
-      .e {
-        grid-area: e;
-      }
-      .f {
-        grid-area: f;
-      }
-      .g {
-        grid-area: g;
-      }
-      .h {
-        grid-area: h;
-      }
-      .i {
-        grid-area: i;
-      }
-      .j {
-        grid-area: j;
-      }
-    }
   }
 }
 
@@ -260,7 +272,7 @@ footer {
   width: 100%;
   height: 40px;
   bottom: 0;
-  background: rgb(16, 21, 54);
+  background: #E0E0E0;
   p {
     position: absolute;
     margin: 0;
@@ -268,12 +280,11 @@ footer {
     transform: translateY(-50%);
     width: 100%;
     line-height: 100%;
-    color: white;
+    color: $textColor;
     font-weight: normal;
     text-align: center;
     font-size: 1rem;
-    font-style: italic;
-    font-family:  Georgia,"ヒラギノ明朝 Pro W3","Hiragino Mincho Pro","HGS明朝E","ＭＳ Ｐ明朝",serif;
+    font-family: 'Quicksand', sans-serif;
   }
 }
 
@@ -287,7 +298,7 @@ footer {
     #accordion_menu {
       text-align: right;
       i {
-        color: #333;
+        color: $textColor;
       }
     }
     #navlist {
@@ -301,7 +312,6 @@ footer {
   }
 
   main {
-    margin-top: 20px;
     margin-bottom: 0;
     .inner1 {
       text-align: center;
@@ -328,10 +338,11 @@ footer {
           text-align: left;
           line-height: 1.9;
           font-size: 1.4rem;
+          font-weight: 500;
           font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
-          color: #333;
+          color: $textColor;
+          letter-spacing: 0.03em;
         }
-        .br-pc { display:none; }
       }
     }
     #skill {
@@ -369,7 +380,7 @@ footer {
   }
 
   main {
-    margin-top: 30px;
+    // margin-top: 30px;
     .inner1 {
       margin-bottom: 30px;
     }
@@ -400,5 +411,9 @@ footer {
       padding-right: 5vw;
     }
   }
-  .br-pc { display:block; }
+}
+
+// -----ワイド幅用-----
+@media screen and (max-width: 1169px) {
+  .br-pc { display: none; }
 }
