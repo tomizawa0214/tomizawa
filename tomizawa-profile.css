@@ -429,6 +429,33 @@ footer p {
     padding: 0;
     line-height: 4em;
   }
+}
+
+@media screen and (min-width: 560px) and (max-width: 959px) {
+  header {
+    height: 150px;
+  }
+  header h1 {
+    height: 70px;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / 3;
+    text-align: center;
+  }
+  header #accordion_menu {
+    display: none;
+  }
+  header #navlist {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / 3;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 959px) {
   main #aboutme {
         grid-template-areas: "inner1" "profile-image" "introduction";
   }
@@ -461,45 +488,6 @@ footer p {
   main #skill ul {
         grid-template-areas: "a" "b" "c" "d" "e" "f" "g" "h" "i" "j";
     gap: 4vw;
-  }
-}
-
-@media screen and (min-width: 560px) and (max-width: 959px) {
-  header {
-    height: 140px;
-  }
-  header h1 {
-    height: 70px;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-column: 1 / 3;
-    text-align: center;
-  }
-  header #accordion_menu {
-    display: none;
-  }
-  header #navlist {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-column: 1 / 3;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
-  main .inner1 {
-    margin-bottom: 30px;
-  }
-  main #profile {
-    margin-bottom: 30px;
-  }
-  main #profile .br-pc {
-    display: none;
-  }
-  main #skill {
-    margin-bottom: 30px;
-  }
-  main #skill .inner2 {
-    margin-bottom: 30px;
   }
 }
 
