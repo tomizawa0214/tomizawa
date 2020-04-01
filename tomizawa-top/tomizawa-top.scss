@@ -3,46 +3,34 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap&subset=latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+$textColor: #3D4451;
+@mixin Japanese-font {
+  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+}
 
 html, body {
   width: 100%;
   height: 100%;
-}
-
-.navbar-light .navbar-toggler {
-  border-color: rgba(0, 0, 0, 0);
-}
-button.navbar-toggler:focus{
-  outline:none;
-}
-.nav-link {
-  padding-top: .8rem;
-  padding-bottom: .8rem;
-}
-
-
-header nav {
-  position: absolute;
-  width: 100%;
-  z-index: 2;
-  display: flex;
-  justify-content: flex-end;
-}
-
-header nav ul {
-  display: flex;
-  padding: 10px 0;
-  list-style: none;
-  justify-content: space-between;
-}
-
-header nav ul li {
-  padding-right: 80px;
-  text-align: center;
-  color: white;
+  font-size: 62.5%;
   font-family: 'Quicksand', sans-serif;
-  letter-spacing: 1px;
-  transition: 0.3s ease-in-out;
+  background: #efefef;
+}
+
+.navbar {
+  background-color: white; 
+  box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+  z-index: 4;
+  .navbar-toggler {
+    border-color: rgba(0, 0, 0, 0);
+    &:focus {
+      outline: none;
+    }
+  }
+  .nav-link {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.6rem;
+  }
 }
 
 header nav ul li a {
@@ -66,7 +54,7 @@ header nav ul li a::after {
   height: 1px;
   background-color: #09f059;
   opacity: 0;
-  transition: 0.3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
 header nav ul li a:hover::after {
@@ -88,6 +76,8 @@ header nav ul li a:hover::after {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 2px;
   }
   .title-picture {
     z-index: 1;
@@ -97,176 +87,127 @@ header nav ul li a:hover::after {
     .responsive-image {
       width: 100%;
       height: auto;
-      opacity: 0.4;
+      opacity: .4;
     }
   }
 }
 
-
-// .jumbotron {
-//   border-radius: 0;
-// }
-// .jumbotron-extend {
-//   position: relative;
-//   height: 100vh;
-//   background:url('../photo/ダミーTOP.jpg') no-repeat center center;
-//   background-size: cover;
-// }
-// .jumbotron-container {
-//   position: relative;
-//   top: 50%;
-//   transform: translateY(-50%);
-// }
-
-// .cover-img {
-//   // width: 100%;
-//   // height: 100vh;
-//   // background-size: cover;
-//   opacity: 0.4;
-// }
-
-// .bluefilter-base p {
-//   position: absolute;
-//   width: 100%;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   margin: 0;
-//   color: white;
-//   text-align: center;
-//   font-size: 50px;
-//   font-weight: normal;
-//   font-family: 'Quicksand', sans-serif;
-//   letter-spacing: 2px;
-// }
-
-
-#service {
-  position: relative;
-  width: 100%;
-  background-color: #fffaec;
-  padding-top: 80px;
-  padding-bottom: 130px;
+.service hr {
+  border-top: 1px solid #b4b4b4;
+  width: 50%;
+  margin-top: .3rem;
+  margin-bottom: 1rem;
 }
 
-.service {
+.container-fluid.service {
+  width: 85%;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  padding: 3rem;
+  background-color: white; 
+  box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+  .service-title {
+    margin-bottom: 1rem;
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 100;
+    color: #333;
+    letter-spacing: .05em;
+    // opacity: 0;
+    // transform: translate(0, 30px);
+    // transition: 1.5s all ease-out;
+    // .active {
+    //   opacity: 1;
+    //   transform: translate(0, 0);
+    // }
+  }
+  .lead {
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    line-height: 1.9;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: $textColor;
+    @include Japanese-font;
+    letter-spacing: .03em;
+    // opacity: 0;
+    // transform: translate(0, 30px);
+    // transition: 1.5s all ease-out;
+  }
+  h3 {
+    margin-bottom: 1rem;
+    line-height: 1;
+    font-size: 2.5rem;
+    color: $textColor;
+    @include Japanese-font;
+  }
+  p.en-sub {
   margin: 0;
-  font-size: 50px;
-  text-align: center;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 100;
-  color: #333;
-  letter-spacing: 0.05em;
-  opacity: 0;
-  transform: translate(0, 30px);
-  transition: 1.5s all ease-out;
-}
-
-.service.active,
-.service-message.active,
-.section1.active,
-.section2.active,
-.section3.active,
-.works.active,
-.works-message.active {
-  opacity: 1;
-  transform: translate(0, 0);
-}
-
-.service-message {
-  margin-top: 65px;
-  margin-bottom: 65px;
-  text-align: center;
-  line-height: 1.9;
-  font-size: 14px;
-  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
-  color: #333;
-  opacity: 0;
-  transform: translate(0, 30px);
-  transition: 1.5s all ease-out;
-}
-
-.section1,
-.section2,
-.section3 {
-  width: 20%;
-  text-align: center;
-}
-
-.section1 {
-  opacity: 0;
-  transform: translate(-100px, 0);
-  transition: 1.5s all ease-out;
-}
-
-.section2 {
-  opacity: 0;
-  transform: translate(0, 100px);
-  transition: 1.5s all ease-out;
-}
-
-.section3 {
-  opacity: 0;
-  transform: translate(100px, 0);
-  transition: 1.5s all ease-out;
-}
-
-.d-d-c {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.service-title {
-  margin-bottom: 16px;
+  letter-spacing: .1em;
   line-height: 1;
-  font-size: 25px;
-  font-weight: normal;
-  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
-  color: #505050;
-}
-
-.service-entitle {
-  margin: 0;
-  letter-spacing: 0.1em;
-  line-height: 1.0;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-family:'Lato', sans-serif;
   font-weight: 400;
   color: #a5a5a5;
+  }
+  .fa-compass,
+  .fa-paint-brush,
+  .fa-code,
+  .fa-image {
+    font-size: 8rem;
+    margin: 2rem;
+  }
+  .fa-plus {
+    font-size: 3rem;
+    margin: 1rem 0;
+    padding: 3rem 0;
+  }
+  p.text-left {
+    margin: 0;
+    line-height: 1.9;
+    font-size: 1.4rem;
+    color: $textColor;
+    @include Japanese-font;
+  }
 }
 
-#icon {
-  margin-top: 45px;
-  margin-bottom: 45px;
-}
 
-#plus1 {
-  position: absolute;
-  width: 10%;
-  height: 100%;
-  top: 34%;
-  left: 30%;
-}
 
-#plus2 {
-  position: absolute;
-  width: 10%;
-  height: 100%;
-  top: 34%;
-  right: 30%;
-}
 
-.text01 {
-  margin: 0;
-  text-align: left;
-  line-height: 1.9;
-  font-size: 14px;
-  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
-  color: #333;
-}
+// .section1,
+// .section2,
+// .section3 {
+//   width: 20%;
+//   text-align: center;
+// }
+
+// .section1 {
+//   opacity: 0;
+//   transform: translate(-100px, 0);
+//   transition: 1.5s all ease-out;
+// }
+
+// .section2 {
+//   opacity: 0;
+//   transform: translate(0, 100px);
+//   transition: 1.5s all ease-out;
+// }
+
+// .section3 {
+//   opacity: 0;
+//   transform: translate(100px, 0);
+//   transition: 1.5s all ease-out;
+// }
+
+// .text01 {
+//   margin: 0;
+//   text-align: left;
+//   line-height: 1.9;
+//   font-size: 14px;
+//   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+//   color: #333;
+// }
 
 #works {
   position: relative;

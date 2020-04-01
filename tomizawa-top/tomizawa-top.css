@@ -6,52 +6,30 @@
 html, body {
   width: 100%;
   height: 100%;
+  font-size: 62.5%;
+  font-family: 'Quicksand', sans-serif;
+  background: #efefef;
 }
 
-.navbar-light .navbar-toggler {
+.navbar {
+  background-color: white;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  z-index: 4;
+}
+
+.navbar .navbar-toggler {
   border-color: rgba(0, 0, 0, 0);
 }
 
-button.navbar-toggler:focus {
+.navbar .navbar-toggler:focus {
   outline: none;
 }
 
-.nav-link {
-  padding-top: .8rem;
-  padding-bottom: .8rem;
-}
-
-header nav {
-  position: absolute;
-  width: 100%;
-  z-index: 2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-header nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 10px 0;
-  list-style: none;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-header nav ul li {
-  padding-right: 80px;
-  text-align: center;
-  color: white;
-  font-family: 'Quicksand', sans-serif;
-  letter-spacing: 1px;
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+.navbar .nav-link {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1.6rem;
 }
 
 header nav ul li a {
@@ -75,8 +53,8 @@ header nav ul li a::after {
   height: 1px;
   background-color: #09f059;
   opacity: 0;
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
 header nav ul li a:hover::after {
@@ -102,6 +80,8 @@ header nav ul li a:hover::after {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  font-family: 'Quicksand', sans-serif;
+  letter-spacing: 2px;
 }
 
 .title .title-picture {
@@ -115,149 +95,85 @@ header nav ul li a:hover::after {
 .title .title-picture .responsive-image {
   width: 100%;
   height: auto;
-  opacity: 0.4;
+  opacity: .4;
 }
 
-#service {
-  position: relative;
-  width: 100%;
-  background-color: #fffaec;
-  padding-top: 80px;
-  padding-bottom: 130px;
+.service hr {
+  border-top: 1px solid #b4b4b4;
+  width: 50%;
+  margin-top: .3rem;
+  margin-bottom: 1rem;
 }
 
-.service {
-  margin: 0;
-  font-size: 50px;
+.container-fluid.service {
+  width: 85%;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  padding: 3rem;
+  background-color: white;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+}
+
+.container-fluid.service .service-title {
+  margin-bottom: 1rem;
+  font-size: 4rem;
   text-align: center;
-  font-family: 'Quicksand', sans-serif;
   font-weight: 100;
   color: #333;
-  letter-spacing: 0.05em;
-  opacity: 0;
-  -webkit-transform: translate(0, 30px);
-          transform: translate(0, 30px);
-  -webkit-transition: 1.5s all ease-out;
-  transition: 1.5s all ease-out;
+  letter-spacing: .05em;
 }
 
-.service.active,
-.service-message.active,
-.section1.active,
-.section2.active,
-.section3.active,
-.works.active,
-.works-message.active {
-  opacity: 1;
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
-}
-
-.service-message {
-  margin-top: 65px;
-  margin-bottom: 65px;
+.container-fluid.service .lead {
+  margin-top: 1rem;
+  margin-bottom: 5rem;
   text-align: center;
   line-height: 1.9;
-  font-size: 14px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #3D4451;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
-  color: #333;
-  opacity: 0;
-  -webkit-transform: translate(0, 30px);
-          transform: translate(0, 30px);
-  -webkit-transition: 1.5s all ease-out;
-  transition: 1.5s all ease-out;
+  letter-spacing: .03em;
 }
 
-.section1,
-.section2,
-.section3 {
-  width: 20%;
-  text-align: center;
-}
-
-.section1 {
-  opacity: 0;
-  -webkit-transform: translate(-100px, 0);
-          transform: translate(-100px, 0);
-  -webkit-transition: 1.5s all ease-out;
-  transition: 1.5s all ease-out;
-}
-
-.section2 {
-  opacity: 0;
-  -webkit-transform: translate(0, 100px);
-          transform: translate(0, 100px);
-  -webkit-transition: 1.5s all ease-out;
-  transition: 1.5s all ease-out;
-}
-
-.section3 {
-  opacity: 0;
-  -webkit-transform: translate(100px, 0);
-          transform: translate(100px, 0);
-  -webkit-transition: 1.5s all ease-out;
-  transition: 1.5s all ease-out;
-}
-
-.d-d-c {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-.service-title {
-  margin-bottom: 16px;
+.container-fluid.service h3 {
+  margin-bottom: 1rem;
   line-height: 1;
-  font-size: 25px;
-  font-weight: normal;
+  font-size: 2.5rem;
+  color: #3D4451;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
-  color: #505050;
 }
 
-.service-entitle {
+.container-fluid.service p.en-sub {
   margin: 0;
-  letter-spacing: 0.1em;
-  line-height: 1.0;
-  font-size: 14px;
+  letter-spacing: .1em;
+  line-height: 1;
+  font-size: 1.4rem;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   color: #a5a5a5;
 }
 
-#icon {
-  margin-top: 45px;
-  margin-bottom: 45px;
+.container-fluid.service .fa-compass,
+.container-fluid.service .fa-paint-brush,
+.container-fluid.service .fa-code,
+.container-fluid.service .fa-image {
+  font-size: 8rem;
+  margin: 2rem;
 }
 
-#plus1 {
-  position: absolute;
-  width: 10%;
-  height: 100%;
-  top: 34%;
-  left: 30%;
+.container-fluid.service .fa-plus {
+  font-size: 3rem;
+  margin: 1rem 0;
+  padding: 3rem 0;
 }
 
-#plus2 {
-  position: absolute;
-  width: 10%;
-  height: 100%;
-  top: 34%;
-  right: 30%;
-}
-
-.text01 {
+.container-fluid.service p.text-left {
   margin: 0;
-  text-align: left;
   line-height: 1.9;
-  font-size: 14px;
+  font-size: 1.4rem;
+  color: #3D4451;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
-  color: #333;
 }
 
 #works {
