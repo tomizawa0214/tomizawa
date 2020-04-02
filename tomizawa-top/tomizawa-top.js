@@ -1,3 +1,5 @@
+'use strict';
+
 // $(function() {
 //   $(window).scroll(function() {
 //     $('.service, .service-message, .section1, .section2, .section3, .works, .works-message').each(function() {

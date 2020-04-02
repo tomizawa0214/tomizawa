@@ -69,22 +69,22 @@
       <div class="col-md-3">
         <h3>ヒアリング</h3>
         <p class="en-sub">DIRECTION</p>
-        <i class="far fa-compass"></i>
+        <i class="far fa-compass" aria-hidden="true"></i>
         <p class="text-left">最適なご提案をさせていただく為の土台を作ります。お客様のご要望・お悩み事をヒアリングさせていただき、効果的なプランをご提案させていただきます。</p>
       </div>
       <i class="fas fa-plus col-md-1 d-flex align-items-center justify-content-center"></i>
       <div class="col-md-3">
         <h3>デザイン</h3>
         <p class="en-sub">DESIGN</p>
-        <i class="fas fa-paint-brush"></i>
+        <i class="fas fa-paint-brush" aria-hidden="true"></i>
         <p class="text-left">ヒアリングに基づいたプランに沿って、デザインを作成いたします。お客様の視点はもちろん、その先のエンドユーザーの視点にも立ってデザインを行います。</p>
       </div>
       <i class="fas fa-plus col-md-1 d-flex align-items-center justify-content-center"></i>
       <div class="col-md-4">
         <h3>プロダクション</h3>
         <p class="en-sub">WEB & GRAPHIC</p>
-        <i class="fas fa-code"></i>
-        <i class="far fa-image"></i>
+        <i class="fas fa-code" aria-hidden="true"></i>
+        <i class="far fa-image" aria-hidden="true"></i>
         <p class="text-left">webページ制作からポスター、チラシ、パンフレット、カタログ等々のグラフィック制作まで、お客様のご要望に応じてデザインを形にします。</p>
       </div>
     </div>
@@ -135,38 +135,35 @@
         <h1 class="myname">冨澤 潤<span>TOMIZAWA Jun</span></h1>
         <hr>
         <p class="text-left comment">美術学校を卒業➡️23歳で未経験から広告デザインを学ぶ➡️26歳で会社創業来初の正社員登用➡️進行管理・チームリーダーを経験➡️30歳で独立（現フリーランス）。侍エンジニア塾でHTML・CSS・JavaScript・Pythonのプログラミングスキル習得に挑戦中！</p>
-        <div class="col-12">
-          <a href="https://twitter.com/tomizawa0214"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.facebook.com/tomizawa0214"><i class="fab fa-facebook"></i></a>
-          <a href="https://github.com/tomizawa0214"><i class="fab fa-github"></i></a>
-          <a href="tomizawa-profile/tomizawa-profile.html" class="about-me">About me</a>
+        <div class="col-12 p-0">
+          <a href="https://twitter.com/tomizawa0214"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+          <a href="https://www.facebook.com/tomizawa0214"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+          <a href="https://github.com/tomizawa0214"><i class="fab fa-github" aria-hidden="true"></i></a>
+          <a href="tomizawa-profile/tomizawa-profile.html" class="about-me" aria-hidden="true">About me</a>
         </div>
       </div>
-      <form action="" method="post" class="col-12 col-lg-6 contact">
-        <div class="contact-front">
-          <img src="../photo/letter.jpg" alt="お問い合わせフォーム" class="img-fluid">
-          <p>CONTACT ME</p>
-        </div>
-        <div class="contact-back">
-          <div class="namemail">
-            <div class="name">
+      <!-- Contact Form -->
+      <div class="col-12 col-lg-6 contact">
+        <div class="contact-flip">
+          <div class="front">
+            <img src="../photo/letter.jpg" alt="お問い合わせフォーム" class="img-fluid">
+            <a href="#" class="d-block contact-me">CONTACT ME</a>
+          </div>
+          <div class="back">
+            <img src="../photo/letter-paper.jpg" alt="お問い合わせフォームの記入欄です" class="img-fluid">
+            <a href="#" class="flip close"></a>
+            <form class="contact-form" action="">
               <input type="text" placeholder="吾妻　太郎">
-              <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
-            </div>
-            <div class="mail">
+              <i class="fa fa-user" aria-hidden="true"></i>
               <input type="email" placeholder=xx@xxxx.xx>
-              <i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>
-            </div>
-          </div>
-          <div class="message">
-            <textarea placeholder="自由にコメントをご記入ください"></textarea>
-            <i class="fas fa-edit fa-lg fa-fw" aria-hidden="true"></i>
-          </div>
-          <div class="submit">
-            <input type="submit" value="Send">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <textarea placeholder="自由にコメントをご記入ください"></textarea>
+              <i class="fas fa-edit" aria-hidden="true"></i>
+              <input type="submit" value="Send">
+            </form>
           </div>
         </div>
-      </form>
+      </div>
 
       <div class="col-12">
         <hr>

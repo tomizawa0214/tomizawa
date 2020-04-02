@@ -212,24 +212,43 @@ footer .comment {
 footer .fa-twitter,
 footer .fa-facebook,
 footer .fa-github {
-  padding: 2rem;
-  font-size: 3rem;
+  padding-top: 2rem;
+  padding-right: 3rem;
+  font-size: 4rem;
   color: white;
 }
 
 footer .about-me {
-  padding: 1rem;
   font-size: 2rem;
   color: white;
   letter-spacing: .1rem;
+  text-decoration: none;
 }
 
-footer .contact-front {
+footer .contact {
   position: relative;
+  -webkit-perspective: 800px;
+          perspective: 800px;
 }
 
-footer .contact-front p {
+footer .contact .contact-flip {
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+footer .contact .contact-flip .front, footer .contact .contact-flip .back {
   position: absolute;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+footer .contact .contact-flip .contact-me {
+  position: absolute;
+  z-index: 3;
   padding: 1rem;
   top: 50%;
   left: 50%;
@@ -238,4 +257,16 @@ footer .contact-front p {
   border: solid 1px;
   font-size: 2.5rem;
   letter-spacing: .2rem;
+  text-decoration: none;
+}
+
+footer .contact .contact-flip.flipped {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
+@media screen and (max-width: 991px) {
+  .contact {
+    padding-top: 2rem;
+  }
 }
