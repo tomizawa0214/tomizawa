@@ -98,14 +98,14 @@ header nav ul li a:hover::after {
   opacity: .4;
 }
 
-.service hr {
+hr.section {
   border-top: 1px solid #b4b4b4;
   width: 50%;
   margin-top: .3rem;
   margin-bottom: 1rem;
 }
 
-.container-fluid.service {
+.container-fluid.section {
   width: 85%;
   margin-top: 5rem;
   margin-bottom: 5rem;
@@ -115,7 +115,7 @@ header nav ul li a:hover::after {
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
 }
 
-.container-fluid.service .service-title {
+.container-fluid.section .section-title {
   margin-bottom: 1rem;
   font-size: 4rem;
   text-align: center;
@@ -124,7 +124,7 @@ header nav ul li a:hover::after {
   letter-spacing: .05em;
 }
 
-.container-fluid.service .lead {
+.container-fluid.section .lead {
   margin-top: 1rem;
   margin-bottom: 5rem;
   text-align: center;
@@ -136,7 +136,7 @@ header nav ul li a:hover::after {
   letter-spacing: .03em;
 }
 
-.container-fluid.service h3 {
+.container-fluid.section h3 {
   margin-bottom: 1rem;
   line-height: 1;
   font-size: 2.5rem;
@@ -144,7 +144,7 @@ header nav ul li a:hover::after {
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
 }
 
-.container-fluid.service p.en-sub {
+.container-fluid.section p.en-sub {
   margin: 0;
   letter-spacing: .1em;
   line-height: 1;
@@ -154,21 +154,21 @@ header nav ul li a:hover::after {
   color: #a5a5a5;
 }
 
-.container-fluid.service .fa-compass,
-.container-fluid.service .fa-paint-brush,
-.container-fluid.service .fa-code,
-.container-fluid.service .fa-image {
+.container-fluid.section .fa-compass,
+.container-fluid.section .fa-paint-brush,
+.container-fluid.section .fa-code,
+.container-fluid.section .fa-image {
   font-size: 8rem;
   margin: 2rem;
 }
 
-.container-fluid.service .fa-plus {
+.container-fluid.section .fa-plus {
   font-size: 3rem;
   margin: 1rem 0;
   padding: 3rem 0;
 }
 
-.container-fluid.service p.text-left {
+.container-fluid.section p.text-left {
   margin: 0;
   line-height: 1.9;
   font-size: 1.4rem;
@@ -176,107 +176,8 @@ header nav ul li a:hover::after {
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
 }
 
-#works {
-  position: relative;
-  width: 100%;
-  margin-bottom: 130px;
-}
-
-.works {
-  font-size: 50px;
-  margin-top: 80px;
-  margin-bottom: 65px;
-  text-align: center;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 100;
-  color: #333;
-  letter-spacing: 0.05em;
-  opacity: 0;
-  -webkit-transform: translate(0, 30px);
-          transform: translate(0, 30px);
-  -webkit-transition: 1.5s all ease-out;
-  transition: 1.5s all ease-out;
-}
-
-.works-message {
-  margin-top: 65px;
-  margin-bottom: 65px;
-  text-align: center;
-  line-height: 1.9;
-  font-size: 14px;
-  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
-  color: #333;
-  opacity: 0;
-  -webkit-transform: translate(0, 30px);
-          transform: translate(0, 30px);
-  -webkit-transition: 1.5s all ease-out;
-  transition: 1.5s all ease-out;
-}
-
-.workslist {
-  position: relative;
-  width: 80%;
-  margin: 0 auto;
-  padding: 0;
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.workslist li {
-  width: 24%;
-  height: 270px;
-  margin-bottom: 20px;
-  border: solid 1px #CCCCCC;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  cursor: pointer;
-}
-
-.works1 {
-  background-image: url(photo/works1.jpg);
-  background-size: contain;
-}
-
-.works2 {
-  background-image: url(photo/works2.jpg);
-  background-size: contain;
-}
-
-.works3 {
-  background-image: url(photo/works3.jpg);
-  background-size: contain;
-}
-
-.works4 {
-  background-image: url(photo/works4.jpg);
-  background-size: contain;
-}
-
-.works5 {
-  background-image: url(photo/works3.jpg);
-  background-size: contain;
-}
-
-.works6 {
-  background-image: url(photo/works4.jpg);
-  background-size: contain;
-}
-
-.works7 {
-  background-image: url(photo/works1.jpg);
-  background-size: contain;
-}
-
-.works8 {
-  background-image: url(photo/works2.jpg);
-  background-size: contain;
+.works-column {
+  padding-bottom: 3rem;
 }
 
 footer {
