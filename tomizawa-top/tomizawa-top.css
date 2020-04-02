@@ -172,6 +172,7 @@ hr.section {
   margin: 0;
   line-height: 1.9;
   font-size: 1.4rem;
+  font-weight: 500;
   color: #3D4451;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
 }
@@ -181,301 +182,60 @@ hr.section {
 }
 
 footer {
-  width: 100%;
-  height: 350px;
-  bottom: 0;
-  background-color: #101536;
+  padding-top: 2rem;
+  background-color: #283593;
 }
 
-.container {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 88%;
-}
-
-.icon {
-  position: relative;
-  width: 25%;
-  height: 100%;
-}
-
-.icon img {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  border-radius: 50%;
-  display: block;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-
-.info {
-  margin-top: 20px;
-  text-align: left;
-  width: 30%;
-  margin-left: -3%;
-}
-
-.info > .myname {
-  margin: 0;
-  vertical-align: bottom;
+footer .myname {
   color: white;
-  font-family: 'Noto Serif JP' , sans-serif;
-  font-size: 22px;
-  display: inline-block;
+  font-size: 4.5rem;
 }
 
-.info > .comment {
-  margin: 0;
-  padding: 10px 0 40px;
+footer .myname span {
+  font-size: 2rem;
+  padding-left: 2rem;
+}
+
+footer hr {
+  border-top: 1px solid white;
+  margin-top: .3rem;
+}
+
+footer .comment {
+  line-height: 1.9;
+  font-size: 1.6rem;
+  font-weight: 500;
   color: white;
-  font-family: 'Noto Serif JP' , sans-serif;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
-  font-size: 15px;
-  display: inline-block;
 }
 
-.info > a {
-  position: relative;
-  display: inline-block;
-  padding: 0 15px;
+footer .fa-twitter,
+footer .fa-facebook,
+footer .fa-github {
+  padding: 2rem;
+  font-size: 3rem;
   color: white;
-  font-family: 'Quicksand', sans-serif;
-  letter-spacing: 1px;
-  text-decoration: none;
 }
 
-.info > a::before {
-  position: absolute;
-  bottom: -5px;
-  content: "";
-  display: inline-block;
-  width: 0;
-  height: 1px;
-  background-color: white;
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+footer .about-me {
+  padding: 1rem;
+  font-size: 2rem;
+  color: white;
+  letter-spacing: .1rem;
 }
 
-.info > a::before {
-  left: 50%;
-}
-
-.info > a::after {
-  right: 50%;
-}
-
-.info > a:hover::before,
-.info > a:hover::after {
-  left: 0;
-  width: 100%;
-}
-
-form {
-  width: 45%;
-}
-
-form:hover .contact {
-  -webkit-transform: rotateX(-180deg);
-          transform: rotateX(-180deg);
-}
-
-.contact {
+footer .contact-front {
   position: relative;
-  width: 100%;
-  height: 100%;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-transition-duration: .6s;
-          transition-duration: .6s;
 }
 
-.contact-front img {
+footer .contact-front p {
   position: absolute;
+  padding: 1rem;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 92%;
-  height: 80%;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  background-size: cover;
-}
-
-.contact-front p {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  margin: 0;
-  padding: 8px 50px 10px;
   border: solid 1px;
-  font-size: 25px;
-  color: #101536;
-  font-family: 'Quicksand', sans-serif;
-  letter-spacing: 2px;
-}
-
-.contact-back {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%) rotateX(180deg);
-          transform: translate(-50%, -50%) rotateX(180deg);
-  width: 92%;
-  height: 80%;
-  background: white;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-label {
-  vertical-align: top;
-}
-
-.namemail {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-left: 5%;
-  margin-right: 5%;
-}
-
-.name {
-  width: 30%;
-  margin-top: 3%;
-}
-
-.mail {
-  width: 60%;
-  margin-top: 3%;
-}
-
-.message {
-  width: 90%;
-  height: 42%;
-  margin: 0 auto;
-}
-
-.name,
-.mail,
-.message {
-  position: relative;
-}
-
-.name input,
-.mail input,
-.message textarea {
-  font-size: 16px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 100%;
-  padding: 0.3em;
-  padding-left: 40px;
-  border: 0;
-  background: white;
-  font-family: 'Noto Serif JP' , sans-serif;
-}
-
-.message textarea {
-  height: 100%;
-}
-
-.name input:focus,
-.mail input:focus,
-.message textarea:focus {
-  outline: none;
-}
-
-.name i,
-.mail i,
-.message i {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 9px 5px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  color: #aaaaaa;
-}
-
-.name::after,
-.mail::after,
-.message::after {
-  display: block;
-  width: 100%;
-  height: 4px;
-  margin-top: -1px;
-  content: '';
-  border-width: 0 1px 1px 1px;
-  border-style: solid;
-  border-color: #101536;
-}
-
-.submit {
-  margin: 0 auto;
-  margin-bottom: 3%;
-}
-
-.submit input {
-  font-family: 'Noto Serif JP' , sans-serif;
-  color: white;
-  background: #101536;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
-          box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
-  cursor: pointer;
-  border: solid 2px #0b1031;
-}
-
-.copylight {
-  position: relative;
-  width: 100%;
-  height: 42px;
-  bottom: 0;
-}
-
-.border {
-  position: relative;
-  border-top: solid 1.5px  white;
-  width: 98%;
-  margin: 0 auto;
-}
-
-.copylight p {
-  position: absolute;
-  margin: 0;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  width: 100%;
-  line-height: 100%;
-  color: white;
-  font-weight: normal;
-  text-align: center;
-  font-size: 10px;
-  font-style: italic;
-  font-family: Georgia,"ヒラギノ明朝 Pro W3","Hiragino Mincho Pro","HGS明朝E","ＭＳ Ｐ明朝",serif;
+  font-size: 2.5rem;
+  letter-spacing: .2rem;
 }
