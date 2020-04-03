@@ -120,7 +120,7 @@ hr.section {
   font-size: 4rem;
   text-align: center;
   font-weight: 100;
-  color: #333;
+  color: #3D4451;
   letter-spacing: .05em;
 }
 
@@ -238,6 +238,7 @@ footer .contact .contact-flip {
   transition: transform 0.5s, -webkit-transform 0.5s;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
+  padding-bottom: 50%;
 }
 
 footer .contact .contact-flip .front, footer .contact .contact-flip .back {
@@ -248,7 +249,6 @@ footer .contact .contact-flip .front, footer .contact .contact-flip .back {
 
 footer .contact .contact-flip .contact-me {
   position: absolute;
-  z-index: 3;
   padding: 1rem;
   top: 50%;
   left: 50%;
@@ -263,6 +263,53 @@ footer .contact .contact-flip .contact-me {
 footer .contact .contact-flip.flipped {
   -webkit-transform: rotateX(180deg);
           transform: rotateX(180deg);
+}
+
+footer .contact .contact-flip form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2rem;
+  padding-bottom: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+}
+
+footer .contact .contact-flip form .contact-form {
+  position: relative;
+}
+
+footer .contact .contact-flip form .contact-form p {
+  font-size: 3rem;
+  color: #3D4451;
+  letter-spacing: .2rem;
+}
+
+footer .contact .contact-flip form .text, footer .contact .contact-flip form .email, footer .contact .contact-flip form textarea {
+  font-size: 1.6rem;
+  padding: 0.3rem;
+  padding-left: 4rem;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 0;
+  background-color: white;
+}
+
+footer .contact .contact-flip form .text:focus, footer .contact .contact-flip form .email:focus, footer .contact .contact-flip form textarea:focus {
+  outline: none;
+}
+
+footer .contact .contact-flip form .text::after, footer .contact .contact-flip form .email::after, footer .contact .contact-flip form textarea::after {
+  display: block;
+  width: 100%;
+  height: 4px;
+  margin-top: -1px;
+  content: '';
+  border-width: 0 1px 1px 1px;
+  border-style: solid;
+  border-color: #101536;
 }
 
 @media screen and (max-width: 991px) {
