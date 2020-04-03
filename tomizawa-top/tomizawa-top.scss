@@ -195,7 +195,7 @@ hr.section {
   padding-bottom: 3rem;
 }
 
-footer {
+.footer {
   padding-top: 2rem;
   background-color: #283593;
   .myname {
@@ -252,33 +252,38 @@ footer {
     // }
   .contact {
     position: relative;
-    // width: 100%;
-    // height: 100%;
-    perspective: 800px;
+    padding: 3rem;
+    perspective: 100rem;
+    overflow-x: hidden;
     .contact-flip {
-      // position: absolute;
-      transition: transform 0.5s;
+      transition: transform .8s;
       transform-style: preserve-3d;
       padding-bottom: 50%;
-      // width: 100%;
-      // height: 100%;
       .front, .back {
         position: absolute;
-        // width: 100%;
-        // height: 100%;
-        backface-visibility: hidden;
+        width: 100%;
+        height: 100%;
+        // backface-visibility: hidden;
+      }
+      .back {
+        transform: rotateX(180deg);
       }
       .contact-me {
+        display: block;
         position: absolute;
-        // z-index: 2;
-        padding: 1rem;
+        margin: 0;
+        padding: 1.5rem;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        border: solid 1px;
+        border: solid 1px #e8676b;
+        color: #e8676b;
         font-size: 2.5rem;
         letter-spacing: .2rem;
-        text-decoration: none;
+        cursor: pointer;
+        &:hover {
+          background-color: rgba(255, 255, 255, .2);
+        }
       }
       &.flipped {
         transform: rotateX(180deg);
@@ -341,7 +346,6 @@ footer {
             height: 100%;
             box-sizing: border-box;
             border: 0;
-            // background-color: white;
             background-color: rgba(0, 0, 0, 0);
             &:focus {
               outline: none;
@@ -384,122 +388,11 @@ footer {
     }
   }
 }
-  // .submit input {
-  //   font-family: 'Noto Serif JP' , sans-serif;
-  //   color: white;
-  //   background: rgb(16, 21, 54);
-  //   border-radius: 4px;
-  //   box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
-  //   cursor: pointer;
-  //   border: solid 2px rgb(11, 16, 49);
-  // }
-        
-        // .contact {
-  //   position: relative;
-  //   width: 100%;
-  //   height: 100%;
-// }
 
-// .contact-front img {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   width: 92%;
-//   height: 80%;
-//   backface-visibility: hidden;
-//   background-size: cover;
-// }
-
-// .contact-back {
-  //   position: absolute;
-  //   top: 50%;
-  //   left: 50%;
-  //   transform: translate(-50%, -50%) rotateX(180deg);
-  //   width: 92%;
-//   height: 80%;
-//   background:white;
-//   backface-visibility: hidden;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-between;
-// }
-
-
-// .namemail {
-//   display: flex;
-//   justify-content: space-between;
-//   margin-left: 5%;
-//   margin-right: 5%;
-// }
-
-// .name {
-//   width: 30%;
-//   margin-top: 3%;
-// }
-
-// .mail {
-//   width: 60%;
-//   margin-top: 3%;
-// }
-
-// .message {
-//   width: 90%;
-//   height: 42%;
-//   margin: 0 auto;
-// }
-
-// .name,
-// .mail,
-// .message {
-//   position: relative;
-// }
-
-
-// .message textarea {
-//   height: 100%;
-// }
-
-
-// .name i,
-// .mail i,
-// .message i {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   padding: 9px 5px;
-//   transition: 0.3s;
-//   color: #aaaaaa;
-// }
-
-
-// .submit {
-//   margin: 0 auto;
-//   margin-bottom: 3%;
-// }
-
-
-// .copylight {
-//   position: relative;
-//   width: 100%;
-//   height: 42px;
-//   bottom: 0;
-// }
-
-// .copylight p {
-//   position: absolute;
-//   margin: 0;
-//   top: 50%;
-//   transform: translateY(-50%);
-//   width: 100%;
-//   line-height: 100%;
-//   color: white;
-//   font-weight: normal;
-//   text-align: center;
-//   font-size: 10px;
-//   font-style: italic;
-//   font-family:  Georgia,"ヒラギノ明朝 Pro W3","Hiragino Mincho Pro","HGS明朝E","ＭＳ Ｐ明朝",serif;
-// }
+footer {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 
 // -----XS(Extra Small)-----
 // @media screen and (max-width: 543px) {

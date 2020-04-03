@@ -181,27 +181,27 @@ hr.section {
   padding-bottom: 3rem;
 }
 
-footer {
+.footer {
   padding-top: 2rem;
   background-color: #283593;
 }
 
-footer .myname {
+.footer .myname {
   color: white;
   font-size: 4.5rem;
 }
 
-footer .myname span {
+.footer .myname span {
   font-size: 2rem;
   padding-left: 2rem;
 }
 
-footer hr {
+.footer hr {
   border-top: 1px solid white;
   margin-top: .3rem;
 }
 
-footer .comment {
+.footer .comment {
   line-height: 1.9;
   font-size: 1.6rem;
   font-weight: 500;
@@ -209,63 +209,77 @@ footer .comment {
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
 }
 
-footer .fa-twitter,
-footer .fa-facebook,
-footer .fa-github {
+.footer .fa-twitter,
+.footer .fa-facebook,
+.footer .fa-github {
   padding-top: 2rem;
   padding-right: 3rem;
   font-size: 4rem;
   color: white;
 }
 
-footer .about-me {
+.footer .about-me {
   font-size: 2rem;
   color: white;
   letter-spacing: .1rem;
   text-decoration: none;
 }
 
-footer .contact {
+.footer .contact {
   position: relative;
-  -webkit-perspective: 800px;
-          perspective: 800px;
+  padding: 3rem;
+  -webkit-perspective: 100rem;
+          perspective: 100rem;
+  overflow-x: hidden;
 }
 
-footer .contact .contact-flip {
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
+.footer .contact .contact-flip {
+  -webkit-transition: -webkit-transform .8s;
+  transition: -webkit-transform .8s;
+  transition: transform .8s;
+  transition: transform .8s, -webkit-transform .8s;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   padding-bottom: 50%;
 }
 
-footer .contact .contact-flip .front, footer .contact .contact-flip .back {
+.footer .contact .contact-flip .front, .footer .contact .contact-flip .back {
   position: absolute;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
 }
 
-footer .contact .contact-flip .contact-me {
-  position: absolute;
-  padding: 1rem;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  border: solid 1px;
-  font-size: 2.5rem;
-  letter-spacing: .2rem;
-  text-decoration: none;
-}
-
-footer .contact .contact-flip.flipped {
+.footer .contact .contact-flip .back {
   -webkit-transform: rotateX(180deg);
           transform: rotateX(180deg);
 }
 
-footer .contact .contact-flip .close {
+.footer .contact .contact-flip .contact-me {
+  display: block;
+  position: absolute;
+  margin: 0;
+  padding: 1.5rem;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: solid 1px #e8676b;
+  color: #e8676b;
+  font-size: 2.5rem;
+  letter-spacing: .2rem;
+  cursor: pointer;
+}
+
+.footer .contact .contact-flip .contact-me:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.footer .contact .contact-flip.flipped {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
+.footer .contact .contact-flip .close {
   position: absolute;
   z-index: 3;
   top: 0;
@@ -279,7 +293,7 @@ footer .contact .contact-flip .close {
   cursor: pointer;
 }
 
-footer .contact .contact-flip form {
+.footer .contact .contact-flip form {
   position: absolute;
   top: 0;
   left: 0;
@@ -288,11 +302,11 @@ footer .contact .contact-flip form {
   height: 100%;
 }
 
-footer .contact .contact-flip form .contact-form {
+.footer .contact .contact-flip form .contact-form {
   height: 100%;
 }
 
-footer .contact .contact-flip form p {
+.footer .contact .contact-flip form p {
   font-size: 2.5rem;
   color: #3D4451;
   letter-spacing: .2rem;
@@ -301,11 +315,11 @@ footer .contact .contact-flip form p {
   padding-top: 1.5rem;
 }
 
-footer .contact .contact-flip form .contact-form-name, footer .contact .contact-flip form .contact-form-email {
+.footer .contact .contact-flip form .contact-form-name, .footer .contact .contact-flip form .contact-form-email {
   height: 10%;
 }
 
-footer .contact .contact-flip form .contact-form-name::after, footer .contact .contact-flip form .contact-form-email::after {
+.footer .contact .contact-flip form .contact-form-name::after, .footer .contact .contact-flip form .contact-form-email::after {
   display: block;
   width: 100%;
   height: .4rem;
@@ -315,17 +329,17 @@ footer .contact .contact-flip form .contact-form-name::after, footer .contact .c
   border-color: #3D4451;
 }
 
-footer .contact .contact-flip form .contact-form-message {
+.footer .contact .contact-flip form .contact-form-message {
   height: 32%;
 }
 
-footer .contact .contact-flip form .contact-form-name, footer .contact .contact-flip form .contact-form-email, footer .contact .contact-flip form .contact-form-message {
+.footer .contact .contact-flip form .contact-form-name, .footer .contact .contact-flip form .contact-form-email, .footer .contact .contact-flip form .contact-form-message {
   position: relative;
   padding: 0 2rem;
   margin-bottom: 1.8rem;
 }
 
-footer .contact .contact-flip form .contact-form-name .text, footer .contact .contact-flip form .contact-form-name .email, footer .contact .contact-flip form .contact-form-name textarea, footer .contact .contact-flip form .contact-form-email .text, footer .contact .contact-flip form .contact-form-email .email, footer .contact .contact-flip form .contact-form-email textarea, footer .contact .contact-flip form .contact-form-message .text, footer .contact .contact-flip form .contact-form-message .email, footer .contact .contact-flip form .contact-form-message textarea {
+.footer .contact .contact-flip form .contact-form-name .text, .footer .contact .contact-flip form .contact-form-name .email, .footer .contact .contact-flip form .contact-form-name textarea, .footer .contact .contact-flip form .contact-form-email .text, .footer .contact .contact-flip form .contact-form-email .email, .footer .contact .contact-flip form .contact-form-email textarea, .footer .contact .contact-flip form .contact-form-message .text, .footer .contact .contact-flip form .contact-form-message .email, .footer .contact .contact-flip form .contact-form-message textarea {
   font-size: 1.6rem;
   padding: .3rem;
   padding-left: 4rem;
@@ -337,11 +351,11 @@ footer .contact .contact-flip form .contact-form-name .text, footer .contact .co
   background-color: rgba(0, 0, 0, 0);
 }
 
-footer .contact .contact-flip form .contact-form-name .text:focus, footer .contact .contact-flip form .contact-form-name .email:focus, footer .contact .contact-flip form .contact-form-name textarea:focus, footer .contact .contact-flip form .contact-form-email .text:focus, footer .contact .contact-flip form .contact-form-email .email:focus, footer .contact .contact-flip form .contact-form-email textarea:focus, footer .contact .contact-flip form .contact-form-message .text:focus, footer .contact .contact-flip form .contact-form-message .email:focus, footer .contact .contact-flip form .contact-form-message textarea:focus {
+.footer .contact .contact-flip form .contact-form-name .text:focus, .footer .contact .contact-flip form .contact-form-name .email:focus, .footer .contact .contact-flip form .contact-form-name textarea:focus, .footer .contact .contact-flip form .contact-form-email .text:focus, .footer .contact .contact-flip form .contact-form-email .email:focus, .footer .contact .contact-flip form .contact-form-email textarea:focus, .footer .contact .contact-flip form .contact-form-message .text:focus, .footer .contact .contact-flip form .contact-form-message .email:focus, .footer .contact .contact-flip form .contact-form-message textarea:focus {
   outline: none;
 }
 
-footer .contact .contact-flip form .contact-form-name .fa-user, footer .contact .contact-flip form .contact-form-name .fa-envelope, footer .contact .contact-flip form .contact-form-name .fa-edit, footer .contact .contact-flip form .contact-form-email .fa-user, footer .contact .contact-flip form .contact-form-email .fa-envelope, footer .contact .contact-flip form .contact-form-email .fa-edit, footer .contact .contact-flip form .contact-form-message .fa-user, footer .contact .contact-flip form .contact-form-message .fa-envelope, footer .contact .contact-flip form .contact-form-message .fa-edit {
+.footer .contact .contact-flip form .contact-form-name .fa-user, .footer .contact .contact-flip form .contact-form-name .fa-envelope, .footer .contact .contact-flip form .contact-form-name .fa-edit, .footer .contact .contact-flip form .contact-form-email .fa-user, .footer .contact .contact-flip form .contact-form-email .fa-envelope, .footer .contact .contact-flip form .contact-form-email .fa-edit, .footer .contact .contact-flip form .contact-form-message .fa-user, .footer .contact .contact-flip form .contact-form-message .fa-envelope, .footer .contact .contact-flip form .contact-form-message .fa-edit {
   position: absolute;
   padding: .3rem;
   padding-left: 2.8rem;
@@ -351,7 +365,7 @@ footer .contact .contact-flip form .contact-form-name .fa-user, footer .contact 
   font-size: 2.5rem;
 }
 
-footer .contact .contact-flip form .submit {
+.footer .contact .contact-flip form .submit {
   position: absolute;
   padding: 0;
   left: 0;
@@ -363,19 +377,24 @@ footer .contact .contact-flip form .submit {
   cursor: pointer;
 }
 
-footer .contact .contact-flip form .submit .fa-shipping-fast {
+.footer .contact .contact-flip form .submit .fa-shipping-fast {
   padding-right: .5rem;
   font-size: 3rem;
   color: #aaa;
 }
 
-footer .contact .contact-flip form .submit .submit-item {
+.footer .contact .contact-flip form .submit .submit-item {
   margin: 0;
   padding: 0;
   height: 100%;
   font-size: 3rem;
   font-style: italic;
   opacity: 0.4;
+}
+
+footer {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 @media screen and (max-width: 991px) {
