@@ -283,65 +283,107 @@ footer {
       &.flipped {
         transform: rotateX(180deg);
       }
+      .close {
+        position: absolute;
+        z-index: 3;
+        top: 0;
+        right: 0;
+        font-weight: 200;
+        font-size: 6rem;
+        color: red;
+        padding-top: 1rem;
+        padding-right: 1.5rem;
+        margin-top: -2rem;
+        cursor: pointer;
+      }
       form {
         position: absolute;
         top: 0;
         left: 0;
-        padding: 2rem;
-        padding-bottom: 0;
         z-index: 2;
         width: 100%;
         height: 100%;
         .contact-form {
-          position: relative;
-          p {
-            font-size: 3rem;
-            color: $textColor;
-            letter-spacing: .2rem;
-          }
+          height: 100%;
         }
-        .text, .email, textarea {
-          font-size: 1.6rem;
-          padding: 0.3rem;
-          padding-left: 4rem;
-          width: 100%;
-          box-sizing: border-box;
-          border: 0;
-          background-color: white;
-          // background-color: rgba(0, 0, 0, 0);
-          &:focus {
-            outline: none;
-          }
+        p {
+          font-size: 2.5rem;
+          color: $textColor;
+          letter-spacing: .2rem;
+          height: 15%;
+          margin-bottom: 1rem;
+          padding-top: 1.5rem; 
+        }
+        .contact-form-name, .contact-form-email {
+          height: 10%;
           &::after {
             display: block;
             width: 100%;
-            height: 4px;
-            margin-top: -1px;
+            height: .4rem;
             content: '';
             border-width: 0 1px 1px 1px;
             border-style: solid;
-            border-color: rgb(16, 21, 54);
+            border-color: $textColor;
           }
         }
-        // label {
-        //   vertical-align: top;
-        // }
+        .contact-form-message {
+          height: 32%;
+        }
+        .contact-form-name, .contact-form-email, .contact-form-message {
+          position: relative;
+          padding: 0 2rem;
+          margin-bottom: 1.8rem;
+          .text, .email, textarea {
+            font-size: 1.6rem;
+            padding: .3rem;
+            padding-left: 4rem;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            border: 0;
+            // background-color: white;
+            background-color: rgba(0, 0, 0, 0);
+            &:focus {
+              outline: none;
+            }
+          }
+          .fa-user, .fa-envelope, .fa-edit {
+            position: absolute;
+            padding: .3rem;
+            padding-left: 2.8rem;
+            top: 0;
+            left: 0;
+            color: #aaa;
+            font-size: 2.5rem;
+          }
+        }
+        .submit {
+          position: absolute;
+          padding: 0;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 12%;
+          background: linear-gradient(to right, #FFEBEE 0%, #EF9A9A 100%);
+          cursor: pointer;
+          .fa-shipping-fast {
+            padding-right: .5rem;
+            font-size: 3rem;
+            color: #aaa;
+          }
+          .submit-item {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-size: 3rem;
+            font-style: italic;
+            opacity: 0.4;
+          }
+        }
       }
     }
   }
 }
-  // .name::after,
-  // .mail::after,
-  // .message::after {
-  //   display: block;
-  //   width: 100%;
-  //   height: 4px;
-  //   margin-top: -1px;
-  //   content: '';
-  //   border-width: 0 1px 1px 1px;
-  //   border-style: solid;
-  //   border-color: rgb(16, 21, 54);
-  // }
   // .submit input {
   //   font-family: 'Noto Serif JP' , sans-serif;
   //   color: white;

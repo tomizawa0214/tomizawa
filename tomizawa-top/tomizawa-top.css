@@ -265,51 +265,117 @@ footer .contact .contact-flip.flipped {
           transform: rotateX(180deg);
 }
 
+footer .contact .contact-flip .close {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  font-weight: 200;
+  font-size: 6rem;
+  color: red;
+  padding-top: 1rem;
+  padding-right: 1.5rem;
+  margin-top: -2rem;
+  cursor: pointer;
+}
+
 footer .contact .contact-flip form {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 2rem;
-  padding-bottom: 0;
   z-index: 2;
   width: 100%;
   height: 100%;
 }
 
 footer .contact .contact-flip form .contact-form {
-  position: relative;
+  height: 100%;
 }
 
-footer .contact .contact-flip form .contact-form p {
-  font-size: 3rem;
+footer .contact .contact-flip form p {
+  font-size: 2.5rem;
   color: #3D4451;
   letter-spacing: .2rem;
+  height: 15%;
+  margin-bottom: 1rem;
+  padding-top: 1.5rem;
 }
 
-footer .contact .contact-flip form .text, footer .contact .contact-flip form .email, footer .contact .contact-flip form textarea {
-  font-size: 1.6rem;
-  padding: 0.3rem;
-  padding-left: 4rem;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border: 0;
-  background-color: white;
+footer .contact .contact-flip form .contact-form-name, footer .contact .contact-flip form .contact-form-email {
+  height: 10%;
 }
 
-footer .contact .contact-flip form .text:focus, footer .contact .contact-flip form .email:focus, footer .contact .contact-flip form textarea:focus {
-  outline: none;
-}
-
-footer .contact .contact-flip form .text::after, footer .contact .contact-flip form .email::after, footer .contact .contact-flip form textarea::after {
+footer .contact .contact-flip form .contact-form-name::after, footer .contact .contact-flip form .contact-form-email::after {
   display: block;
   width: 100%;
-  height: 4px;
-  margin-top: -1px;
+  height: .4rem;
   content: '';
   border-width: 0 1px 1px 1px;
   border-style: solid;
-  border-color: #101536;
+  border-color: #3D4451;
+}
+
+footer .contact .contact-flip form .contact-form-message {
+  height: 32%;
+}
+
+footer .contact .contact-flip form .contact-form-name, footer .contact .contact-flip form .contact-form-email, footer .contact .contact-flip form .contact-form-message {
+  position: relative;
+  padding: 0 2rem;
+  margin-bottom: 1.8rem;
+}
+
+footer .contact .contact-flip form .contact-form-name .text, footer .contact .contact-flip form .contact-form-name .email, footer .contact .contact-flip form .contact-form-name textarea, footer .contact .contact-flip form .contact-form-email .text, footer .contact .contact-flip form .contact-form-email .email, footer .contact .contact-flip form .contact-form-email textarea, footer .contact .contact-flip form .contact-form-message .text, footer .contact .contact-flip form .contact-form-message .email, footer .contact .contact-flip form .contact-form-message textarea {
+  font-size: 1.6rem;
+  padding: .3rem;
+  padding-left: 4rem;
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+footer .contact .contact-flip form .contact-form-name .text:focus, footer .contact .contact-flip form .contact-form-name .email:focus, footer .contact .contact-flip form .contact-form-name textarea:focus, footer .contact .contact-flip form .contact-form-email .text:focus, footer .contact .contact-flip form .contact-form-email .email:focus, footer .contact .contact-flip form .contact-form-email textarea:focus, footer .contact .contact-flip form .contact-form-message .text:focus, footer .contact .contact-flip form .contact-form-message .email:focus, footer .contact .contact-flip form .contact-form-message textarea:focus {
+  outline: none;
+}
+
+footer .contact .contact-flip form .contact-form-name .fa-user, footer .contact .contact-flip form .contact-form-name .fa-envelope, footer .contact .contact-flip form .contact-form-name .fa-edit, footer .contact .contact-flip form .contact-form-email .fa-user, footer .contact .contact-flip form .contact-form-email .fa-envelope, footer .contact .contact-flip form .contact-form-email .fa-edit, footer .contact .contact-flip form .contact-form-message .fa-user, footer .contact .contact-flip form .contact-form-message .fa-envelope, footer .contact .contact-flip form .contact-form-message .fa-edit {
+  position: absolute;
+  padding: .3rem;
+  padding-left: 2.8rem;
+  top: 0;
+  left: 0;
+  color: #aaa;
+  font-size: 2.5rem;
+}
+
+footer .contact .contact-flip form .submit {
+  position: absolute;
+  padding: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 12%;
+  background: -webkit-gradient(linear, left top, right top, from(#FFEBEE), to(#EF9A9A));
+  background: linear-gradient(to right, #FFEBEE 0%, #EF9A9A 100%);
+  cursor: pointer;
+}
+
+footer .contact .contact-flip form .submit .fa-shipping-fast {
+  padding-right: .5rem;
+  font-size: 3rem;
+  color: #aaa;
+}
+
+footer .contact .contact-flip form .submit .submit-item {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 3rem;
+  font-style: italic;
+  opacity: 0.4;
 }
 
 @media screen and (max-width: 991px) {

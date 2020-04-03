@@ -147,31 +147,39 @@
         <div class="contact-flip">
           <div class="front">
             <img src="../photo/letter.jpg" alt="お問い合わせフォーム" class="img-fluid">
-            <a href="#" class="d-block contact-me">CONTACT ME</a>
+            <a href="#" class="d-block contact-me flip">CONTACT ME</a>
           </div>
           <div class="back">
             <img src="../photo/letter-paper.jpg" alt="お問い合わせフォームの記入欄です" class="img-fluid">
-            <a href="#" class="flip close"></a>
-            <form class="container-fluid" action="">
-              <div class="row m-0">
-                <div class="col-12 contact-form p-0">
-                  <p>Contact Me</p>
+            <p class="close flip">×</p>
+            <form class="container-fluid p-0" action="">
+            <div class="row contact-form m-0">
+              <div class="col-12 contact-form p-0">
+                <p>Contact Me</p>
+                <div class="contact-form-name">
                   <input class="text" type="text" placeholder="Name">
                   <i class="fa fa-user" aria-hidden="true"></i>
+                </div>
+                <div class="contact-form-email">
                   <input class="email" type="email" placeholder=E-Mail>
                   <i class="fa fa-envelope" aria-hidden="true"></i>
+                </div>
+                <div class="contact-form-message">
                   <textarea placeholder="Message"></textarea>
                   <i class="fas fa-edit" aria-hidden="true"></i>
-                  <input class="submit" type="submit" value="Send">
+                </div>
+                <div class="submit d-flex align-items-center justify-content-center">
+                  <i class="fas fa-shipping-fast"></i>
+                  <p class="submit-item">submit</p>
                 </div>
               </div>
+            </div>
             </form>
           </div>
         </div>
       </div>
 
       <div class="col-12">
-        <hr>
         <h5>&copy; 2020 TOMIZAWA Jun</h5>
       </div>
     </div>
@@ -182,7 +190,7 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <!-- <script type="text/javascript" src="tomizawa-top.js"></script> -->
+    <script type="text/javascript" src="tomizawa-top.js"></script>
     <script src="https://kit.fontawesome.com/a29680248f.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>

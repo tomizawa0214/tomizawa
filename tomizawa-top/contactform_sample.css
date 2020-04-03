@@ -23,7 +23,7 @@
 	top: 0;
 	left: 0;
 	padding: 9px 5px;
-	transition: 0.3s;
+	/* transition: 0.3s; */
 	color: #aaaaaa;
 }
 .cp_iptxt::after {
