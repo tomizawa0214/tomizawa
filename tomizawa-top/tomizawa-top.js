@@ -24,7 +24,9 @@ window.addEventListener('DOMContentLoaded', () => {
   for (let i = 0; i < flip.length; i++) {
     flip[i].addEventListener('click', () => {
       const targets = document.getElementsByClassName('contact-flip');
-      for (let i = 0; i < targets.length; i++) targets[i].classList.toggle('flipped');
+      for (let i = 0; i < targets.length; i++) {
+        targets[i].classList.toggle('flipped');
+      }
     });
   }
 });
