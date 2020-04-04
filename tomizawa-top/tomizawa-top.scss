@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap&subset=latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black&display=swap');
 $textColor: #3D4451;
 @mixin Japanese-font {
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
@@ -17,19 +18,40 @@ html, body {
 }
 
 .navbar {
-  background-color: white; 
+  background-color: white;
   box-shadow: 0 2px 5px rgba(0,0,0,0.26);
   z-index: 4;
+  h1 {
+    margin: 0;
+    padding: 1rem 0;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 3rem;
+    color: #1A237E;
+    letter-spacing: .1rem;
+  }
   .navbar-toggler {
+    font-size: 2.5rem;
+    color: $textColor;
     border-color: rgba(0, 0, 0, 0);
+    &:hover {
+      color: #E8EAF6;
+    }
     &:focus {
       outline: none;
     }
   }
   .nav-link {
+    display: inline-block;
+    color: $textColor;
     padding-top: 1rem;
+    padding-right: 3rem;
     padding-bottom: 1rem;
+    padding-left: 0;
     font-size: 1.6rem;
+    &.home {
+      color: #E8EAF6;
+      pointer-events: none;
+    }
   }
 }
 
@@ -263,7 +285,7 @@ hr.section {
         position: absolute;
         width: 100%;
         height: 100%;
-        // backface-visibility: hidden;
+        backface-visibility: hidden;
       }
       .back {
         transform: rotateX(180deg);
