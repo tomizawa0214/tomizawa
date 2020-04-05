@@ -15,8 +15,8 @@ html, body {
 .navbar {
   padding: 1.5rem;
   background-color: white;
-  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   z-index: 4;
 }
 
@@ -94,15 +94,10 @@ html, body {
   background-color: #101536;
 }
 
-.title .title-mask-content {
+.title .title-text {
   z-index: 3;
-  color: white;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  font-family: 'Quicksand', sans-serif;
-  letter-spacing: 2px;
+  letter-spacing: .05rem;
+  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
 }
 
 .title .title-picture {
@@ -154,7 +149,7 @@ hr.section {
   font-weight: 500;
   color: #3D4451;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
-  letter-spacing: .03em;
+  letter-spacing: .05rem;
 }
 
 .container-fluid.section h3 {
@@ -167,7 +162,7 @@ hr.section {
 
 .container-fluid.section p.en-sub {
   margin: 0;
-  letter-spacing: .1em;
+  letter-spacing: .15rem;
   line-height: 1;
   font-size: 1.4rem;
   font-family: 'Lato', sans-serif;
@@ -195,6 +190,7 @@ hr.section {
   font-size: 1.4rem;
   font-weight: 500;
   color: #3D4451;
+  letter-spacing: .05rem;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
 }
 
@@ -418,9 +414,42 @@ footer {
   padding-bottom: 1rem;
 }
 
+@media screen and (max-width: 767px) {
+  .title-text {
+    text-align: center;
+    color: #3D4451;
+    background-color: #E8EAF6;
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  }
+  .title-text h2 {
+    padding-top: 1.5rem;
+    font-size: 4rem;
+  }
+  .title-text h3 {
+    font-size: 2rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .nav-item.right {
     padding-right: 4rem !important;
+  }
+  .title-text {
+    position: absolute;
+    color: white;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .title-text h2 {
+    font-size: 5rem;
+    margin-left: 1rem;
+  }
+  .title-text h3 {
+    font-size: 3rem;
+    margin-left: 2rem;
   }
   .contact {
     padding-top: 2rem;
