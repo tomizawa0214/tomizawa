@@ -94,24 +94,24 @@ html, body {
   background-color: #101536;
 }
 
+.title .title-mask .title-picture {
+  z-index: 1;
+}
+
+.title .title-mask .title-picture .title-picture img {
+  max-width: 100%;
+}
+
+.title .title-mask .title-picture .responsive-image {
+  width: 100%;
+  height: auto;
+  opacity: .4;
+}
+
 .title .title-text {
   z-index: 3;
   letter-spacing: .05rem;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
-}
-
-.title .title-picture {
-  z-index: 1;
-}
-
-.title .title-picture .title-picture img {
-  max-width: 100%;
-}
-
-.title .title-picture .responsive-image {
-  width: 100%;
-  height: auto;
-  opacity: .4;
 }
 
 hr.section {
@@ -138,6 +138,11 @@ hr.section {
   font-weight: 100;
   color: #3D4451;
   letter-spacing: .12rem;
+  opacity: 0;
+  -webkit-transform: translate(0, -30px);
+          transform: translate(0, -30px);
+  -webkit-transition: 1s all ease-out;
+  transition: 1s all ease-out;
 }
 
 .container-fluid.section .lead {

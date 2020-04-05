@@ -1,23 +1,19 @@
 'use strict';
 
-// $(function() {
-//   $(window).scroll(function() {
-//     $('.service, .service-message, .section1, .section2, .section3, .works, .works-message').each(function() {
-//       var position = $(this).offset().top;
-//       var scroll = $(window).scrollTop();
-//       var windowHeight = $(window).height();
-//       if (scroll > position - windowHeight + 70) {
-//         $(this).addClass('active');
-//       }
-//     });
-//   });
-// });
-// $(document).ready(function(){
-//   $('.flip').click(function(){
-//     $('.contact-flip').toggleClass('flipped');
-//     return false;
-//   });
-// });
+window.addEventListener('DOMContentLoaded', () => {
+  window.onscroll = () => {
+    const myFade = document.getElementsByClassName('section-title');
+    for (let i = 0; i < myFade.length; i++) {
+      const targetElement = myFade[i].getBoundingClientRect();
+      const scroll = document.documentElement.scrollTop || document.body.scrollTop;
+      const windowHeight = window.innerHeight;
+      if (scroll > scroll + targetElement.top - windowHeight + 70) {
+        myFade[i].style.opacity = '1';
+        myFade[i].style.transform = 'translateY(0)';
+      }
+    }
+  }
+});
 
 window.addEventListener('DOMContentLoaded', () => {
   const flip = document.getElementsByClassName('flip');
