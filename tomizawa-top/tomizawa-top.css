@@ -43,13 +43,16 @@ html, body {
   outline: none;
 }
 
-.navbar .nav-link {
-  display: inline-block;
-  color: #3D4451;
+.navbar .nav-item {
   padding-top: 1rem;
-  padding-right: 3rem;
   padding-bottom: 1rem;
-  padding-left: 0;
+}
+
+.navbar .nav-link {
+  position: relative;
+  display: inline-block;
+  padding: 0 !important;
+  color: #3D4451;
   font-size: 1.6rem;
 }
 
@@ -58,32 +61,24 @@ html, body {
   pointer-events: none;
 }
 
-header nav ul li a {
-  position: relative;
-  display: inline-block;
-  color: white;
-  text-decoration: none;
-  cursor: pointer;
+.navbar .nav-link:hover {
+  color: #e8676b;
 }
 
-header nav ul li a:hover {
-  color: #09f059;
-}
-
-header nav ul li a::after {
+.navbar .nav-link::after {
   position: absolute;
   bottom: -30px;
   left: 0;
   content: '';
   width: 100%;
   height: 1px;
-  background-color: #09f059;
+  background-color: #e8676b;
   opacity: 0;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
 }
 
-header nav ul li a:hover::after {
+.navbar .nav-link:hover::after {
   bottom: -5px;
   opacity: 1;
 }
@@ -147,7 +142,7 @@ hr.section {
   text-align: center;
   font-weight: 100;
   color: #3D4451;
-  letter-spacing: .05em;
+  letter-spacing: .12rem;
 }
 
 .container-fluid.section .lead {
@@ -423,7 +418,10 @@ footer {
   padding-bottom: 1rem;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (min-width: 768px) {
+  .nav-item.right {
+    padding-right: 4rem !important;
+  }
   .contact {
     padding-top: 2rem;
   }
