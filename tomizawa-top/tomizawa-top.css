@@ -114,11 +114,20 @@ html, body {
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
 }
 
+.title .title-text h2 {
+  font-weight: 700;
+}
+
 hr.section {
   border-top: 1px solid #b4b4b4;
   width: 50%;
   margin-top: .3rem;
   margin-bottom: 1rem;
+  opacity: 0;
+  -webkit-transform: translate(0, 30px);
+          transform: translate(0, 30px);
+  -webkit-transition: 1s all ease-out;
+  transition: 1s all ease-out;
 }
 
 .container-fluid.section {
@@ -139,8 +148,8 @@ hr.section {
   color: #3D4451;
   letter-spacing: .12rem;
   opacity: 0;
-  -webkit-transform: translate(0, -30px);
-          transform: translate(0, -30px);
+  -webkit-transform: translate(0, 30px);
+          transform: translate(0, 30px);
   -webkit-transition: 1s all ease-out;
   transition: 1s all ease-out;
 }
@@ -155,6 +164,11 @@ hr.section {
   color: #3D4451;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
   letter-spacing: .05rem;
+  opacity: 0;
+  -webkit-transform: translate(0, 30px);
+          transform: translate(0, 30px);
+  -webkit-transition: 1s all ease-out;
+  transition: 1s all ease-out;
 }
 
 .container-fluid.section h3 {
@@ -429,7 +443,7 @@ footer {
   }
   .title-text h2 {
     padding-top: 1.5rem;
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
   .title-text h3 {
     font-size: 2rem;
