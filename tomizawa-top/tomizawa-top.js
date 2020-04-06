@@ -34,7 +34,7 @@ window.addEventListener('DOMContentLoaded', () => {
     let targetElement = myFade[i].getBoundingClientRect(); // 要素の位置をブラウザの表示領域左上を起点とした値
     let scroll = document.documentElement.scrollTop || document.body.scrollTop;
     let windowHeight = window.innerHeight;
-    if (scroll > scroll + targetElement.top - windowHeight + 100) {
+    if (scroll > scroll + targetElement.top - windowHeight + 0) {
       myFade[i].style.opacity = '1';
       myFade[i].style.transform = 'translateY(0)';
     }
