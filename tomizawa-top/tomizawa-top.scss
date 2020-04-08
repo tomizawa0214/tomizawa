@@ -150,7 +150,7 @@ hr.section {
   h3 {
     margin-bottom: 1rem;
     line-height: 1;
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     color: $textColor;
     @include Japanese-font;
   }
@@ -167,15 +167,21 @@ hr.section {
   .fa-paint-brush,
   .fa-code,
   .fa-image {
-    font-size: 8rem;
-    margin: 2rem;
+    font-size: 7.1rem;
+    margin-top: 2.5rem;
+    margin-right: 0;
+    margin-bottom: 2.5rem;
+    margin-left: 0;
+  }
+  .fa-code {
+    margin-right: 1rem;
   }
   .fa-plus {
     font-size: 3rem;
     margin: 1rem 0;
     padding: 3rem 0;
   }
-  p.text-left {
+  .service-text {
     margin: 0;
     line-height: 1.9;
     font-size: 1.4rem;
@@ -185,24 +191,6 @@ hr.section {
     @include Japanese-font;
   }
 }
-
-// .section1 {
-//   opacity: 0;
-//   transform: translate(-100px, 0);
-//   transition: 1.5s all ease-out;
-// }
-
-// .section2 {
-//   opacity: 0;
-//   transform: translate(0, 100px);
-//   transition: 1.5s all ease-out;
-// }
-
-// .section3 {
-//   opacity: 0;
-//   transform: translate(100px, 0);
-//   transition: 1.5s all ease-out;
-// }
 
 .works-column {
   padding-bottom: 3rem;
@@ -431,6 +419,9 @@ footer {
       padding-bottom: 1.5rem;
     }
   }
+  .lead {
+    text-align: left;
+  }
 }
 
 // // -----md(Medium)-----
@@ -452,10 +443,14 @@ footer {
       margin-left: 2rem;
     }
   }
+  .section-text {
+    text-align: left;
+  }
   .contact {
     padding-top: 2rem;
   }
 }
+
 // // -----lg(Large)-----
 // @media screen and (min-width: 992px) {
 
