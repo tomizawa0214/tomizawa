@@ -130,17 +130,167 @@ hr.section {
   transition: 1s all ease-out;
 }
 
-.container-fluid.section {
+#service {
   width: 85%;
   margin-top: 5rem;
   margin-bottom: 5rem;
-  padding: 3rem;
+  padding-top: 3rem;
+  padding-right: 3rem;
+  padding-left: 3rem;
+  background-color: white;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  padding-bottom: 3rem;
+}
+
+#service h3 {
+  margin-bottom: 1rem;
+  line-height: 1;
+  font-size: 2.4rem;
+  color: #3D4451;
+  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+}
+
+#service p.en-sub {
+  margin: 0;
+  letter-spacing: .15rem;
+  line-height: 1;
+  font-size: 1.4rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #a5a5a5;
+}
+
+#service .fa-compass,
+#service .fa-paint-brush,
+#service .fa-code,
+#service .fa-image {
+  font-size: 7.1rem;
+  margin-top: 2.5rem;
+  margin-right: 0;
+  margin-bottom: 2.5rem;
+  margin-left: 0;
+}
+
+#service .fa-code {
+  margin-right: 1rem;
+}
+
+#service .fa-plus {
+  font-size: 3rem;
+  margin: 1rem 0;
+  padding: 3rem 0;
+}
+
+#service .service-text {
+  margin: 0;
+  line-height: 1.9;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #3D4451;
+  letter-spacing: .05rem;
+  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+}
+
+#works {
+  width: 85%;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  padding-top: 3rem;
+  padding-right: 3rem;
+  padding-left: 3rem;
   background-color: white;
   -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
 }
 
-.container-fluid.section .section-title {
+#works .works-column {
+  display: -ms-grid;
+  display: grid;
+  gap: 3rem;
+  padding: 0;
+  padding-bottom: 3rem;
+}
+
+#works .works-column .card-box {
+  position: relative;
+}
+
+#works .works-column .card-box .card-mask {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+#works .works-column .card-box .card-mask .card-caption {
+  position: absolute;
+  z-index: 2;
+  width: 40%;
+  padding-top: .5rem;
+  padding-right: 2rem;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+  color: white;
+  letter-spacing: .05rem;
+  opacity: 0;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+#works .works-column .card-box .card-mask .card-caption-back {
+  position: absolute;
+  left: 0;
+  width: 0;
+  border-left: 0;
+  border-top: solid 3rem #E8676B;
+  border-right: solid 2rem transparent;
+  border-bottom: 0;
+  opacity: 0;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+#works .works-column .card-box .card-mask .card-title {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  margin: 0;
+  padding: 1rem;
+  background: #E8676B;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+  color: white;
+  letter-spacing: .05rem;
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+#works .works-column .card-box .card-mask:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+#works .works-column .card-box .card-mask:hover .card-title {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+#works .works-column .card-box .card-mask:hover .card-caption, #works .works-column .card-box .card-mask:hover .card-caption-back {
+  opacity: 1;
+  width: 40%;
+}
+
+.section-title {
   margin-bottom: 1rem;
   font-size: 4rem;
   text-align: center;
@@ -154,7 +304,7 @@ hr.section {
   transition: 1s all ease-out;
 }
 
-.container-fluid.section .lead {
+.lead {
   margin-top: 1rem;
   margin-bottom: 5rem;
   text-align: center;
@@ -165,63 +315,10 @@ hr.section {
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
   letter-spacing: .05rem;
   opacity: 0;
-  -webkit-transform: translate(0, 30px);
-          transform: translate(0, 30px);
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
   -webkit-transition: 1s all ease-out;
   transition: 1s all ease-out;
-}
-
-.container-fluid.section h3 {
-  margin-bottom: 1rem;
-  line-height: 1;
-  font-size: 2.4rem;
-  color: #3D4451;
-  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
-}
-
-.container-fluid.section p.en-sub {
-  margin: 0;
-  letter-spacing: .15rem;
-  line-height: 1;
-  font-size: 1.4rem;
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
-  color: #a5a5a5;
-}
-
-.container-fluid.section .fa-compass,
-.container-fluid.section .fa-paint-brush,
-.container-fluid.section .fa-code,
-.container-fluid.section .fa-image {
-  font-size: 7.1rem;
-  margin-top: 2.5rem;
-  margin-right: 0;
-  margin-bottom: 2.5rem;
-  margin-left: 0;
-}
-
-.container-fluid.section .fa-code {
-  margin-right: 1rem;
-}
-
-.container-fluid.section .fa-plus {
-  font-size: 3rem;
-  margin: 1rem 0;
-  padding: 3rem 0;
-}
-
-.container-fluid.section .service-text {
-  margin: 0;
-  line-height: 1.9;
-  font-size: 1.4rem;
-  font-weight: 500;
-  color: #3D4451;
-  letter-spacing: .05rem;
-  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
-}
-
-.works-column {
-  padding-bottom: 3rem;
 }
 
 .footer {
@@ -440,6 +537,13 @@ footer {
   padding-bottom: 1rem;
 }
 
+@media screen and (min-width: 576px) {
+  .works-column {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .title-text {
     text-align: center;
@@ -455,9 +559,6 @@ footer {
   .title-text h3 {
     font-size: 2rem;
     padding-bottom: 1.5rem;
-  }
-  .lead {
-    text-align: left;
   }
 }
 
@@ -480,11 +581,22 @@ footer {
     font-size: 3rem;
     margin-left: 2rem;
   }
-  .section-text {
+  .service-text {
     text-align: left;
   }
   .contact {
     padding-top: 2rem;
+  }
+  .works-column {
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .works-column {
+    -ms-grid-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto auto;
   }
 }
 
