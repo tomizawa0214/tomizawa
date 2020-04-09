@@ -442,24 +442,49 @@ hr.section {
   height: 100%;
 }
 
-#footer .contact .contact-flip .contact-me {
-  display: block;
+#footer .contact .contact-flip .button {
   position: absolute;
-  width: 70%;
+  width: 150px;
+  height: 40px;
   margin: 0;
-  padding-top: .8rem;
-  padding-bottom: .8rem;
+  padding: 0;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  border: none;
+  background: #e8676b;
+  border-radius: 3%;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+#footer .contact .contact-flip .button:hover .hover-effect {
+  margin-left: 300px;
+}
+
+#footer .contact .contact-flip .button .contact-me {
+  display: inline;
+  margin: 0;
   color: white;
   font-size: 1.6rem;
   font-weight: 800;
   letter-spacing: .1rem;
-  background: #e8676b;
-  border-radius: 3%;
-  cursor: pointer;
+}
+
+#footer .contact .contact-flip .button .hover-effect {
+  margin: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#cccccc));
+  background: linear-gradient(white, #cccccc);
+  width: 150px;
+  height: 40px;
+  margin-top: -40px;
+  -webkit-transform: rotate(400deg);
+          transform: rotate(400deg);
+  margin-left: -300px;
+  opacity: 0.3;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 #footer .contact .contact-flip .back {

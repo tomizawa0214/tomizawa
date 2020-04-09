@@ -370,27 +370,44 @@ hr.section {
         width: 100%;
         height: 100%;
       }
-      .contact-me {
-        display: block;
+      .button {
         position: absolute;
-        width: 70%;
+        width: 150px;
+        height: 40px;
         margin: 0;
-        padding-top: .8rem;
-        padding-bottom: .8rem;
+        padding: 0;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        // border: solid 1px #e8676b;
-        color: white;
-        font-size: 1.6rem;
-        font-weight: 800;
-        letter-spacing: .1rem;
+        border: none;
         background: #e8676b;
         border-radius: 3%; 
         cursor: pointer;
-        // &:hover {
-          // background-color: rgba(255, 255, 255, .2);
-        // }
+        overflow: hidden;
+        &:hover {
+          .hover-effect {
+            margin-left: 300px;
+          }
+        }
+        .contact-me {
+          display: inline;
+          margin: 0;
+          color: white;
+          font-size: 1.6rem;
+          font-weight: 800;
+          letter-spacing: .1rem;
+        }
+        .hover-effect {
+          margin: 0;
+          background: linear-gradient(rgba(255, 255, 255, 255), rgba(204, 204, 204, 204));
+          width: 150px;
+          height: 40px;
+          margin-top: -40px;
+          transform: rotate(400deg);
+          margin-left: -300px;
+          opacity: 0.3;
+          transition: 1s;
+        }
       }
       .back {
         transform: rotateX(180deg);
