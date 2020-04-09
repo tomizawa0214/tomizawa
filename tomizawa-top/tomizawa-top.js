@@ -1,5 +1,10 @@
 'use strict';
 
+// window.addEventListener('load', () => {
+//   const change = document.getElementById('loading');
+//   change.classList.add('loaded');
+// });
+
 const myFunc = BottomHeight => {
   const myFade = document.querySelectorAll('.section, .section-title, .lead');
   for (let i = 0; i < myFade.length; i++) {
@@ -12,11 +17,9 @@ const myFunc = BottomHeight => {
     }
   }
 }
-
 window.addEventListener('scroll', () => {
   myFunc(100);
 });
-
 window.addEventListener('DOMContentLoaded', () => {
   myFunc(0);
 });
