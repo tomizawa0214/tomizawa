@@ -127,23 +127,50 @@ html, body {
   background-color: white;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19), 0 6px 10px rgba(0, 0, 0, 0.23);
   z-index: 4;
-  h1 {
-    margin: 0;
-    padding: 0;
-    font-family: 'Archivo Black', sans-serif;
-    font-size: 2.5rem;
-    color: #1A237E;
-    letter-spacing: .08rem;
-  }
-  .navbar-toggler {
-    font-size: 2.5rem;
-    color: $textColor;
-    border-color: rgba(0, 0, 0, 0);
-    &:hover {
-      color: #E8EAF6;
+  .nav {
+    position: relative;
+    h1 {
+      margin: 0;
+      padding: 0;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 2.5rem;
+      color: #1A237E;
+      letter-spacing: .08rem;
     }
-    &:focus {
-      outline: none;
+    .navbar-toggler {
+      #bar-open {
+        position: absolute;
+        right: 0;
+        top: .2rem;
+        font-size: 2.5rem;
+        color: $textColor;
+        border-color: rgba(0, 0, 0, 0);
+        visibility: visible;
+      }
+      #bar-close {
+        position: absolute;
+        margin-top: -2.5rem;
+        right: 0;
+        font-size: 4rem;
+        color: #e8676b;
+        visibility: hidden;
+        animation: showop 2s linear;
+
+        @keyframes showop {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+      }
+      &:hover {
+        color: #EEEEEE;
+      }
+      &:focus {
+        outline: none;
+      }
     }
   }
   .nav-item {
@@ -157,7 +184,7 @@ html, body {
     color: $textColor;
     font-size: 1.6rem;
     &.home {
-      color: #E8EAF6;
+      color: #EEEEEE;
       pointer-events: none;
     }
     &:hover {

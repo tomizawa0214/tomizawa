@@ -1,9 +1,16 @@
 'use strict';
 
-// window.addEventListener('load', () => {
-//   const change = document.getElementById('loading');
-//   change.classList.add('loaded');
-// });
+document.getElementById('bar-open').onclick = () => {
+  const open = document.getElementById('bar-open');
+  const close = document.getElementById('bar-close');
+  open.style.visibility = 'hidden';
+  close.style.visibility = 'visible';
+  close.onclick = () => {
+    open.style.visibility = 'visible';
+    close.style.visibility = 'hidden';
+  }
+}
+
 
 const myFunc = BottomHeight => {
   const myFade = document.querySelectorAll('.section, .section-title, .lead');
