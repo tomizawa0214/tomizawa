@@ -38,6 +38,16 @@ html, body {
   bottom: 0;
   z-index: 9997;
   animation: byeshutter 4.6s forwards;
+  @keyframes byeshutter {
+    70% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      display: none;
+      z-index: -1;
+    }
+  }
   &::before {
     content: '';
     position: absolute;
@@ -49,6 +59,24 @@ html, body {
     width: 0;
     height: 1px;
     animation: shutterOpen 4.6s forwards;
+    @keyframes shutterOpen {
+      0% {
+        width: 0;
+        height: 1px;
+      }
+      50% {
+        width: 100%;
+        height: 1px;
+      }
+      90% {
+        width: 100%;
+        height: 100%;
+      }
+      100% {
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
   .opening-text {
     display: inline-block;
@@ -77,48 +105,17 @@ html, body {
       margin: auto;
       z-index:9999;
       animation: textAnime1 2s linear forwards;
+      @keyframes textAnime1 {
+        0% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+        100% {
+          opacity: 0;
+          transform: translateX(100%);
+        }
+      }
     }
-  }
-}
-
-@keyframes byeshutter {
-  70% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    display: none;
-    z-index: -1;
-  }
-}
-
-@keyframes shutterOpen {
-  0% {
-    width: 0;
-    height: 1px;
-  }
-  50% {
-    width: 100%;
-    height: 1px;
-  }
-  90% {
-    width: 100%;
-    height: 100%;
-  }
-  100% {
-    width: 100%;
-    height: 100%;
-  }
-}
-
-@keyframes textAnime1 {
-  0% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(100%);
   }
 }
 
@@ -154,16 +151,6 @@ html, body {
         font-size: 4rem;
         color: #e8676b;
         visibility: hidden;
-        animation: showop 2s linear;
-
-        @keyframes showop {
-          from {
-            opacity: 0;
-          }
-          to {
-            opacity: 1;
-          }
-        }
       }
       &:hover {
         color: #EEEEEE;
@@ -228,23 +215,23 @@ html, body {
     }
   }
   .title-text {
+    z-index: 3;
+    opacity: 0;
+    transition: 1s all ease-out;
+    @include Japanese-font;
     h2 {
       font-weight: 700;
     }
-    z-index: 3;
-    letter-spacing: .05rem;
-    @include Japanese-font;
+    h3 {
+      font-weight: 500;
+      line-height: 1.9;
+      letter-spacing: .05rem;
+      .title-message {
+        font-size: 1.2rem;
+        line-height: 3.5;
+      }
+    }
   }
-}
-
-hr.section {
-  border-top: 1px solid #b4b4b4;
-  width: 70%;
-  margin-top: .3rem;
-  margin-bottom: 1rem;
-  opacity: 0;
-  transform: translate(0, 30px);
-  transition: 1s all ease-out;
 }
 
 #service {
@@ -258,7 +245,7 @@ hr.section {
     @include Japanese-font;
   }
   p.en-sub {
-  margin: 0;
+    margin: 0;
   letter-spacing: .15rem;
   line-height: 1;
   font-size: 1.4rem;
@@ -377,7 +364,16 @@ hr.section {
   color: $textColor;
   letter-spacing: .12rem;
   opacity: 0;
-  transform: translate(0, 30px);
+  transform: translateY(30px);
+  transition: 1s all ease-out;
+}
+hr.section {
+  border-top: 1px solid #b4b4b4;
+  width: 70%;
+  margin-top: .3rem;
+  margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(30px);
   transition: 1s all ease-out;
 }
 .lead {
@@ -666,17 +662,9 @@ footer {
     }
     h3 {
       font-size: 1.4rem;
-      font-weight: 500;
-      line-height: 1.9;
-      letter-spacing: .05rem;
-      @include Japanese-font;
       padding-left: 1.5rem;
       padding-right: 1.5rem;
       padding-bottom: 1.5rem;
-      .title-message {
-        font-size: 1.2rem;
-        line-height: 3.5;
-      }
     }
   }
 }
@@ -697,15 +685,7 @@ footer {
     }
     h3 {
       font-size: 1.6rem;
-      font-weight: 600;
-      line-height: 1.9;
-      letter-spacing: .05rem;
-      @include Japanese-font;
       margin-left: 2rem;
-      .title-message {
-        font-size: 1.2rem;
-        line-height: 3.5;
-      }
     }
   }
   .service-text {

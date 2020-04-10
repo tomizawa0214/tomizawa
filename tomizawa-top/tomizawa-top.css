@@ -26,52 +26,6 @@ html, body {
           animation: byeshutter 4.6s forwards;
 }
 
-#loading::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  margin: auto;
-  background-color: white;
-  width: 0;
-  height: 1px;
-  -webkit-animation: shutterOpen 4.6s forwards;
-          animation: shutterOpen 4.6s forwards;
-}
-
-#loading .opening-text {
-  display: inline-block;
-  position: absolute;
-  text-align: center;
-  font-size: 2.6rem;
-  color: white;
-  height: 1em;
-  line-height: 1.2;
-  top: 0;
-  left: 0;
-  bottom: 7%;
-  right: 0;
-  margin: auto;
-  z-index: 9998;
-}
-
-#loading .opening-text::after {
-  content: '';
-  width: 270px;
-  height: 40px;
-  background: #1e1e1e;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  margin: auto;
-  z-index: 9999;
-  -webkit-animation: textAnime1 2s linear forwards;
-          animation: textAnime1 2s linear forwards;
-}
-
 @-webkit-keyframes byeshutter {
   70% {
     opacity: 1;
@@ -92,6 +46,20 @@ html, body {
     display: none;
     z-index: -1;
   }
+}
+
+#loading::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: white;
+  width: 0;
+  height: 1px;
+  -webkit-animation: shutterOpen 4.6s forwards;
+          animation: shutterOpen 4.6s forwards;
 }
 
 @-webkit-keyframes shutterOpen {
@@ -130,6 +98,38 @@ html, body {
     width: 100%;
     height: 100%;
   }
+}
+
+#loading .opening-text {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+  font-size: 2.6rem;
+  color: white;
+  height: 1em;
+  line-height: 1.2;
+  top: 0;
+  left: 0;
+  bottom: 7%;
+  right: 0;
+  margin: auto;
+  z-index: 9998;
+}
+
+#loading .opening-text::after {
+  content: '';
+  width: 270px;
+  height: 40px;
+  background: #1e1e1e;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  z-index: 9999;
+  -webkit-animation: textAnime1 2s linear forwards;
+          animation: textAnime1 2s linear forwards;
 }
 
 @-webkit-keyframes textAnime1 {
@@ -196,26 +196,6 @@ html, body {
   font-size: 4rem;
   color: #e8676b;
   visibility: hidden;
-  -webkit-animation: showop 2s linear;
-          animation: showop 2s linear;
-}
-
-@-webkit-keyframes showop {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes showop {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .navbar .nav .navbar-toggler:hover {
@@ -293,7 +273,9 @@ html, body {
 
 .title .title-text {
   z-index: 3;
-  letter-spacing: .05rem;
+  opacity: 0;
+  -webkit-transition: 1s all ease-out;
+  transition: 1s all ease-out;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
 }
 
@@ -301,16 +283,15 @@ html, body {
   font-weight: 700;
 }
 
-hr.section {
-  border-top: 1px solid #b4b4b4;
-  width: 70%;
-  margin-top: .3rem;
-  margin-bottom: 1rem;
-  opacity: 0;
-  -webkit-transform: translate(0, 30px);
-          transform: translate(0, 30px);
-  -webkit-transition: 1s all ease-out;
-  transition: 1s all ease-out;
+.title .title-text h3 {
+  font-weight: 500;
+  line-height: 1.9;
+  letter-spacing: .05rem;
+}
+
+.title .title-text h3 .title-message {
+  font-size: 1.2rem;
+  line-height: 3.5;
 }
 
 #service {
@@ -481,8 +462,20 @@ hr.section {
   color: #3D4451;
   letter-spacing: .12rem;
   opacity: 0;
-  -webkit-transform: translate(0, 30px);
-          transform: translate(0, 30px);
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  -webkit-transition: 1s all ease-out;
+  transition: 1s all ease-out;
+}
+
+hr.section {
+  border-top: 1px solid #b4b4b4;
+  width: 70%;
+  margin-top: .3rem;
+  margin-bottom: 1rem;
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
   -webkit-transition: 1s all ease-out;
   transition: 1s all ease-out;
 }
@@ -809,17 +802,9 @@ footer {
   }
   .title-text h3 {
     font-size: 1.4rem;
-    font-weight: 500;
-    line-height: 1.9;
-    letter-spacing: .05rem;
-    font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     padding-bottom: 1.5rem;
-  }
-  .title-text h3 .title-message {
-    font-size: 1.2rem;
-    line-height: 3.5;
   }
 }
 
@@ -840,15 +825,7 @@ footer {
   }
   .title-text h3 {
     font-size: 1.6rem;
-    font-weight: 600;
-    line-height: 1.9;
-    letter-spacing: .05rem;
-    font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
     margin-left: 2rem;
-  }
-  .title-text h3 .title-message {
-    font-size: 1.2rem;
-    line-height: 3.5;
   }
   .service-text {
     text-align: left;
