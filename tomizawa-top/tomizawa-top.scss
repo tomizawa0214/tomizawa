@@ -28,80 +28,97 @@ html, body {
 }
 
 #loading {
-  width: 100vw;
-  height: 100vh;
-  background: #000;
-  animation: bgAnime 1s linear 2s forwards;
   position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #1e1e1e;
   top: 0;
   left: 0;
-  z-index: 9999;
-  // &.loaded {
-  //   opacity: 0;
-  //   visibility: hidden;
-  // }
-  .opening-text {
+  right: 0;
+  bottom: 0;
+  z-index: 9997;
+  animation: byeshutter 4.6s forwards;
+  &::before {
+    content: '';
     position: absolute;
     top: 0;
-    right: 0;
-    bottom: 0;
     left: 0;
+    bottom: 0;
     margin: auto;
-    z-index: 7;
+    background-color: white;
+    width: 0;
+    height: 1px;
+    animation: shutterOpen 4.6s forwards;
+  }
+  .opening-text {
+    display: inline-block;
+    position: absolute;
     text-align: center;
-    font-size: 4rem;
-    font-weight: 800;
+    font-size: 2.6rem;
     color: white;
     height: 1em;
     line-height: 1.2;
-    opacity: 0;
-    animation: textAnime1 .5s linear forwards;
-    span {
-      display: inline-block;
-      &:nth-child(1) {animation: textAnime2 .6s ease-in-out .5s forwards;}
-      &:nth-child(2) {animation: textAnime2 .6s ease-in-out .6s forwards;}
-      &:nth-child(3) {animation: textAnime2 .6s ease-in-out .7s forwards;}
-      &:nth-child(4) {animation: textAnime2 .6s ease-in-out .8s forwards;}
-      &:nth-child(5) {animation: textAnime2 .6s ease-in-out .9s forwards;}
-      &:nth-child(6) {animation: textAnime2 .6s ease-in-out 1s forwards;}
-      &:nth-child(7) {animation: textAnime2 .6s ease-in-out 1.1s forwards;}
-      &:nth-child(8) {animation: textAnime2 .6s ease-in-out 1.2s forwards;}
+    top: 0;
+    left: 0;
+    bottom: 7%;
+    right: 0;
+    margin: auto;
+    z-index: 9998;
+    &::after {
+      content: '';
+      width: 270px;
+      height: 40px;
+      background: #1e1e1e;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      z-index:9999;
+      animation: textAnime1 2s linear forwards;
     }
   }
 }
 
-@keyframes bgAnime {
-  0% {
+@keyframes byeshutter {
+  70% {
     opacity: 1;
-  }
-  99% {
-    opacity: 0;
   }
   100% {
     opacity: 0;
     display: none;
+    z-index: -1;
   }
 }
+
+@keyframes shutterOpen {
+  0% {
+    width: 0;
+    height: 1px;
+  }
+  50% {
+    width: 100%;
+    height: 1px;
+  }
+  90% {
+    width: 100%;
+    height: 100%;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+  }
+}
+
 @keyframes textAnime1 {
   0% {
-    opacity: 0;
-  }
-  100% {
     opacity: 1;
-  }
-}
-@keyframes textAnime2 {
-  0% {
-    transform: translateY(0);
-  }
-  25% {
-    transform: translateY(-30%);
-  }
-  75% {
-    transform: translateY(30%);
+    transform: translateX(0);
   }
   100% {
-    transform: translateY(0);
+    opacity: 0;
+    transform: translateX(100%);
   }
 }
 
@@ -601,7 +618,6 @@ footer {
 
 // -----xs(Extra Small)-----
 // @media screen and (max-width: 575px) {
-  
 // }
 
 // -----sm(Small)-----
@@ -669,5 +685,9 @@ footer {
 @media screen and (min-width: 1200px) {
   html, body {
     font-size: 80%;
+  }
+  .opening-text::after {
+    width: 350px !important;
+    height: 50px !important;
   }
 }
