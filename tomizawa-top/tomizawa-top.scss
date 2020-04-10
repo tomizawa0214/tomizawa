@@ -638,8 +638,18 @@ footer {
       font-size: 2.8rem;
     }
     h3 {
-      font-size: 2rem;
+      font-size: 1.4rem;
+      font-weight: 500;
+      line-height: 1.9;
+      letter-spacing: .05rem;
+      @include Japanese-font;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
       padding-bottom: 1.5rem;
+      .title-message {
+        font-size: 1.2rem;
+        line-height: 3.5;
+      }
     }
   }
 }
@@ -655,12 +665,20 @@ footer {
     top: 50%;
     transform: translateY(-50%);
     h2 {
-      font-size: 5rem;
-      margin-left: 1rem;
+      font-size: 3.2rem;
+      margin-left: 1.5rem;
     }
     h3 {
-      font-size: 3rem;
+      font-size: 1.6rem;
+      font-weight: 600;
+      line-height: 1.9;
+      letter-spacing: .05rem;
+      @include Japanese-font;
       margin-left: 2rem;
+      .title-message {
+        font-size: 1.2rem;
+        line-height: 3.5;
+      }
     }
   }
   .service-text {

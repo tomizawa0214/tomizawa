@@ -771,8 +771,18 @@ footer {
     font-size: 2.8rem;
   }
   .title-text h3 {
-    font-size: 2rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.9;
+    letter-spacing: .05rem;
+    font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     padding-bottom: 1.5rem;
+  }
+  .title-text h3 .title-message {
+    font-size: 1.2rem;
+    line-height: 3.5;
   }
 }
 
@@ -788,12 +798,20 @@ footer {
             transform: translateY(-50%);
   }
   .title-text h2 {
-    font-size: 5rem;
-    margin-left: 1rem;
+    font-size: 3.2rem;
+    margin-left: 1.5rem;
   }
   .title-text h3 {
-    font-size: 3rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.9;
+    letter-spacing: .05rem;
+    font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
     margin-left: 2rem;
+  }
+  .title-text h3 .title-message {
+    font-size: 1.2rem;
+    line-height: 3.5;
   }
   .service-text {
     text-align: left;
