@@ -1,18 +1,18 @@
 'use strict';
 
-document.querySelectorAll('.nav__toggler--open')[0].onclick = () => {
-  const open = document.querySelectorAll('.nav__toggler--open');
-  const close = document.querySelectorAll('.nav__toggler--close');
-    open[0].style.visibility = 'hidden';
-    close[0].style.visibility = 'visible';
-  close[0].onclick = () => {
-    open[0].style.visibility = 'visible';
-    close[0].style.visibility = 'hidden';
+document.querySelector('.nav__toggler--open').onclick = () => {
+  const open = document.querySelector('.nav__toggler--open');
+  const close = document.querySelector('.nav__toggler--close');
+    open.style.visibility = 'hidden';
+    close.style.visibility = 'visible';
+  close.onclick = () => {
+    open.style.visibility = 'visible';
+    close.style.visibility = 'hidden';
   }
 }
 
 const myFunc = BottomHeight => {
-  const myFade = document.querySelectorAll('.section, .section-title, .lead');
+  const myFade = document.querySelectorAll('div.service h2, div.service hr, .service__message, div.works h2, div.works hr, .works__message');
   for (let i = 0; i < myFade.length; i++) {
     let targetElement = myFade[i].getBoundingClientRect(); // 要素の位置をブラウザの表示領域左上を起点とした値
     let scroll = document.documentElement.scrollTop || document.body.scrollTop;
@@ -22,7 +22,7 @@ const myFunc = BottomHeight => {
       myFade[i].style.transform = 'translateY(0)';
     }
   }
-  const myFadeTitle = document.querySelectorAll('.title-text');
+  const myFadeTitle = document.querySelectorAll('.title__text');
   for (let i = 0; i < myFadeTitle.length; i++) {
     let targetElement = myFadeTitle[i].getBoundingClientRect(); // 要素の位置をブラウザの表示領域左上を起点とした値
     let scroll = document.documentElement.scrollTop || document.body.scrollTop;

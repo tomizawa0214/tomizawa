@@ -308,7 +308,9 @@ html, body {
   font-weight: 100;
   color: #3D4451;
   letter-spacing: .12rem;
-  opacity: 1;
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
   -webkit-transition: 1s all ease-out;
   transition: 1s all ease-out;
 }
@@ -318,7 +320,9 @@ html, body {
   width: 70%;
   margin-top: .3rem;
   margin-bottom: 1rem;
-  opacity: 1;
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
   -webkit-transition: 1s all ease-out;
   transition: 1s all ease-out;
 }
@@ -333,7 +337,9 @@ html, body {
   color: #3D4451;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
   letter-spacing: .05rem;
-  opacity: 1;
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
   -webkit-transition: 1s all ease-out;
   transition: 1s all ease-out;
 }
@@ -400,7 +406,9 @@ html, body {
   font-weight: 100;
   color: #3D4451;
   letter-spacing: .12rem;
-  opacity: 1;
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
   -webkit-transition: 1s all ease-out;
   transition: 1s all ease-out;
 }
@@ -410,7 +418,9 @@ html, body {
   width: 70%;
   margin-top: .3rem;
   margin-bottom: 1rem;
-  opacity: 1;
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
   -webkit-transition: 1s all ease-out;
   transition: 1s all ease-out;
 }
@@ -425,7 +435,9 @@ html, body {
   color: #3D4451;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
   letter-spacing: .05rem;
-  opacity: 1;
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
   -webkit-transition: 1s all ease-out;
   transition: 1s all ease-out;
 }
