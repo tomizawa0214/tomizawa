@@ -1,13 +1,13 @@
 'use strict';
 
-document.getElementById('bar-open').onclick = () => {
-  const open = document.getElementById('bar-open');
-  const close = document.getElementById('bar-close');
-    open.style.visibility = 'hidden';
-    close.style.visibility = 'visible';
-  close.onclick = () => {
-    open.style.visibility = 'visible';
-    close.style.visibility = 'hidden';
+document.querySelectorAll('.nav__toggler--open')[0].onclick = () => {
+  const open = document.querySelectorAll('.nav__toggler--open');
+  const close = document.querySelectorAll('.nav__toggler--close');
+    open[0].style.visibility = 'hidden';
+    close[0].style.visibility = 'visible';
+  close[0].onclick = () => {
+    open[0].style.visibility = 'visible';
+    close[0].style.visibility = 'hidden';
   }
 }
 
@@ -36,36 +36,6 @@ window.addEventListener('scroll', () => {
   myFunc(100);
 });
 window.setTimeout('myFunc(0)', 4000);
-
-// function isVerticalScrolledIntoView(elem) {
-//   let documentElement = null;
-//   documentElement = document.documentElement;
-//   let docViewTop = documentElement.scrollTop;
-//   let docViewBottom = docViewTop + documentElement.clientHeight;
-//   let elemTop = elem.offsetTop;
-//   let elemBottom = elemTop;
-//   return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-// }
-// window.addEventListener('DOMContentLoaded', () => {
-//   window.onscroll =() => {
-//     let elemObj = document.querySelectorAll('.section, .section-title, .lead');
-//     if (isVerticalScrolledIntoView(elemObj[1])) {
-//       elemObj.style.opacity = '1';
-//       elemObj.style.transform = 'translateY(0)';
-//     }
-//     const myFade = document.querySelectorAll('.section, .section-title, .lead');
-//     for (let i = 0; i < myFade.length; i++) {
-//       const targetElement = myFade[i].getBoundingClientRect();
-//       const scroll = document.documentElement.scrollTop || document.body.scrollTop;
-//       const windowHeight = window.innerHeight;
-//       if (scroll > scroll + targetElement.top - windowHeight + 70) {
-//         myFade[i].style.opacity = '1';
-//         myFade[i].style.transform = 'translateY(0)';
-//       }
-//     }
-//   }
-// });
-
 
 window.addEventListener('DOMContentLoaded', () => {
   const flip = document.getElementsByClassName('flip');
