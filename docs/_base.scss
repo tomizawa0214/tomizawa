@@ -59,6 +59,12 @@ $textColor: #3D4451;
   transition: 1s all ease-out;
 }
 
+@mixin slide--from-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: 1s all ease-out;
+}
+
 html, body {
   width: 100%;
   height: 100%;

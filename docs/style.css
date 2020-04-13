@@ -350,6 +350,11 @@ html, body {
   font-size: 2.4rem;
   color: #3D4451;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+  opacity: 0;
+  -webkit-transform: translateX(-60px);
+          transform: translateX(-60px);
+  -webkit-transition: 1s all ease-out;
+  transition: 1s all ease-out;
 }
 
 .service h4 {
@@ -360,6 +365,19 @@ html, body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   color: #a5a5a5;
+  opacity: 0;
+  -webkit-transform: translateX(-60px);
+          transform: translateX(-60px);
+  -webkit-transition: 1s all ease-out;
+  transition: 1s all ease-out;
+}
+
+.service i {
+  opacity: 0;
+  -webkit-transform: translateX(-60px);
+          transform: translateX(-60px);
+  -webkit-transition: 1s all ease-out;
+  transition: 1s all ease-out;
 }
 
 .service__icon--compass, .service__icon--paint-brush, .service__icon--code, .service__icon--image {
@@ -385,6 +403,11 @@ html, body {
   color: #3D4451;
   letter-spacing: .05rem;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+  opacity: 0;
+  -webkit-transform: translateX(-60px);
+          transform: translateX(-60px);
+  -webkit-transition: 1s all ease-out;
+  transition: 1s all ease-out;
 }
 
 .works {
