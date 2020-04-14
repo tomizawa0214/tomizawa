@@ -281,22 +281,32 @@ html, body {
   position: relative;
 }
 
-.title__photo {
+.title__mask {
+  position: absolute;
   z-index: 2;
   width: 100%;
   height: 100%;
-  background: #101536;
+  background: rgba(16, 21, 54, 0.6);
 }
 
-.title__photo img {
+.title__photo {
+  background-image: url(photo/main.png);
   max-width: 100%;
-  height: auto;
-  opacity: .4;
+  background-size: cover;
+  background-position: right 25% center;
+  height: 500px;
 }
 
 .title__text {
+  position: absolute;
+  width: 85%;
   z-index: 3;
   opacity: 0;
+  color: #fff;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   -webkit-transition: .4s all ease-out;
   transition: .4s all ease-out;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
@@ -304,17 +314,19 @@ html, body {
 
 .title__text h2 {
   font-weight: 700;
+  font-size: 3rem;
 }
 
 .title__text h3 {
   font-weight: 500;
   line-height: 1.9;
   letter-spacing: .05rem;
+  font-size: 1.4rem;
 }
 
 .title__text--byname {
   font-size: 1.2rem;
-  line-height: 3.5;
+  line-height: 4;
 }
 
 .service {
@@ -824,30 +836,21 @@ footer {
   padding-bottom: 1rem;
 }
 
-@media screen and (min-width: 576px) {
-  .works__item {
-    -ms-grid-columns: auto auto;
-        grid-template-columns: auto auto;
+@media screen and (max-width: 369px) {
+  .title__text h2 {
+    font-size: 2.5rem;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 576px) {
   .title__text {
-    text-align: center;
-    color: #3d4451;
-    background: #e8eaf6;
-    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
-  .title__text h2 {
-    padding-top: 1.5rem;
-    font-size: 2.8rem;
-  }
-  .title__text h3 {
-    font-size: 1.4rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    padding-bottom: 1.5rem;
+  .works__item {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
   }
 }
 
@@ -855,20 +858,14 @@ footer {
   .nav li:nth-child(-n+4) {
     padding-right: 4rem;
   }
-  .title__text {
-    position: absolute;
-    color: #fff;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+  .title__photo {
+    height: 700px;
   }
   .title__text h2 {
-    font-size: 3.2rem;
-    margin-left: 1.5rem;
+    font-size: 3.5rem;
   }
   .title__text h3 {
     font-size: 1.6rem;
-    margin-left: 2rem;
   }
   .service__text {
     text-align: left;
@@ -900,5 +897,8 @@ footer {
   .opening__text::after {
     width: 350px;
     height: 50px;
+  }
+  .title__photo {
+    background-position: right 25% bottom 30%;
   }
 }

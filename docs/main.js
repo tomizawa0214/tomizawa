@@ -57,14 +57,14 @@ window.addEventListener('scroll', () => {
 });
 window.setTimeout('myFunc(0)', 4000);
 
-window.addEventListener('DOMContentLoaded', () => {
-  const flip = document.getElementsByClassName('flip');
-  for (let i = 0; i < flip.length; i++) {
-    flip[i].addEventListener('click', () => {
-      const targets = document.getElementsByClassName('contact-flip');
-      for (let i = 0; i < targets.length; i++) {
-        targets[i].classList.toggle('flipped');
-      }
-    });
-  }
-});
+// window.addEventListener('DOMContentLoaded', () => {
+//   const flip = document.getElementsByClassName('flip');
+//   for (let i = 0; i < flip.length; i++) {
+//     flip[i].addEventListener('click', () => {
+//       const targets = document.getElementsByClassName('contact-flip');
+//       for (let i = 0; i < targets.length; i++) {
+//         targets[i].classList.toggle('flipped');
+//       }
+//     });
+//   }
+// });
