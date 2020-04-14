@@ -12,7 +12,7 @@ document.querySelector('.nav__toggler--open').onclick = () => {
 }
 
 const myFunc = BottomHeight => {
-  const myFade = document.querySelectorAll('div.service h2, div.service hr, .service__message, div.works h2, div.works hr, .works__message');
+  const myFade = document.querySelectorAll('.service, .works, .footer');
   let scroll = document.documentElement.scrollTop || document.body.scrollTop;
   let windowHeight = window.innerHeight;
   for (let i = 0; i < myFade.length; i++) {
@@ -26,14 +26,6 @@ const myFunc = BottomHeight => {
   let targetElement = myFadeTitle.getBoundingClientRect(); // 要素の位置をブラウザの表示領域左上を起点とした値
   if (scroll > scroll + targetElement.top - windowHeight + BottomHeight) {
     myFadeTitle.style.opacity = '1';
-  }
-  const myFadeService = document.querySelectorAll('div.service h3, div.service h4, div.service i, .service__text');
-  for (let j = 0; j < myFadeService.length; j++) {
-    let targetElement = myFadeService[j].getBoundingClientRect(); // 要素の位置をブラウザの表示領域左上を起点とした値
-    if (scroll > scroll + targetElement.top - windowHeight + BottomHeight) {
-      myFadeService[j].style.opacity = '1';
-      myFadeService[j].style.transform = 'translateX(0)';
-    }
   }
 }
 window.addEventListener('scroll', () => {

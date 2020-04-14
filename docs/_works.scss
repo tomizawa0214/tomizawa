@@ -1,5 +1,6 @@
 .works {
   @include section;
+  @include slide--from-bottom;
   h2 {
     @include section__title;
   }

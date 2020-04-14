@@ -268,8 +268,8 @@ html, body {
 .title__text {
   z-index: 3;
   opacity: 0;
-  -webkit-transition: 1s all ease-out;
-  transition: 1s all ease-out;
+  -webkit-transition: .4s all ease-out;
+  transition: .4s all ease-out;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
 }
 
@@ -299,6 +299,11 @@ html, body {
   background: #fff;
   -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  -webkit-transition: .4s all ease-out;
+  transition: .4s all ease-out;
 }
 
 .service h2 {
@@ -308,11 +313,6 @@ html, body {
   font-weight: 100;
   color: #3D4451;
   letter-spacing: .12rem;
-  opacity: 0;
-  -webkit-transform: translateY(30px);
-          transform: translateY(30px);
-  -webkit-transition: 1s all ease-out;
-  transition: 1s all ease-out;
 }
 
 .service hr {
@@ -320,11 +320,6 @@ html, body {
   width: 70%;
   margin-top: .3rem;
   margin-bottom: 1rem;
-  opacity: 0;
-  -webkit-transform: translateY(30px);
-          transform: translateY(30px);
-  -webkit-transition: 1s all ease-out;
-  transition: 1s all ease-out;
 }
 
 .service__message {
@@ -335,13 +330,8 @@ html, body {
   font-size: 1.4rem;
   font-weight: 500;
   color: #3D4451;
-  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
   letter-spacing: .05rem;
-  opacity: 0;
-  -webkit-transform: translateY(30px);
-          transform: translateY(30px);
-  -webkit-transition: 1s all ease-out;
-  transition: 1s all ease-out;
+  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
 }
 
 .service h3 {
@@ -350,11 +340,6 @@ html, body {
   font-size: 2.4rem;
   color: #3D4451;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
-  opacity: 0;
-  -webkit-transform: translateX(-60px);
-          transform: translateX(-60px);
-  -webkit-transition: 1s all ease-out;
-  transition: 1s all ease-out;
 }
 
 .service h4 {
@@ -365,19 +350,6 @@ html, body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   color: #a5a5a5;
-  opacity: 0;
-  -webkit-transform: translateX(-60px);
-          transform: translateX(-60px);
-  -webkit-transition: 1s all ease-out;
-  transition: 1s all ease-out;
-}
-
-.service i {
-  opacity: 0;
-  -webkit-transform: translateX(-60px);
-          transform: translateX(-60px);
-  -webkit-transition: 1s all ease-out;
-  transition: 1s all ease-out;
 }
 
 .service__icon--compass, .service__icon--paint-brush, .service__icon--code, .service__icon--image {
@@ -403,11 +375,6 @@ html, body {
   color: #3D4451;
   letter-spacing: .05rem;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
-  opacity: 0;
-  -webkit-transform: translateX(-60px);
-          transform: translateX(-60px);
-  -webkit-transition: 1s all ease-out;
-  transition: 1s all ease-out;
 }
 
 .works {
@@ -420,6 +387,11 @@ html, body {
   background: #fff;
   -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  -webkit-transition: .4s all ease-out;
+  transition: .4s all ease-out;
 }
 
 .works h2 {
@@ -429,11 +401,6 @@ html, body {
   font-weight: 100;
   color: #3D4451;
   letter-spacing: .12rem;
-  opacity: 0;
-  -webkit-transform: translateY(30px);
-          transform: translateY(30px);
-  -webkit-transition: 1s all ease-out;
-  transition: 1s all ease-out;
 }
 
 .works hr {
@@ -441,11 +408,6 @@ html, body {
   width: 70%;
   margin-top: .3rem;
   margin-bottom: 1rem;
-  opacity: 0;
-  -webkit-transform: translateY(30px);
-          transform: translateY(30px);
-  -webkit-transition: 1s all ease-out;
-  transition: 1s all ease-out;
 }
 
 .works__message {
@@ -456,13 +418,8 @@ html, body {
   font-size: 1.4rem;
   font-weight: 500;
   color: #3D4451;
-  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
   letter-spacing: .05rem;
-  opacity: 0;
-  -webkit-transform: translateY(30px);
-          transform: translateY(30px);
-  -webkit-transition: 1s all ease-out;
-  transition: 1s all ease-out;
+  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
 }
 
 .works__item {
@@ -549,35 +506,40 @@ html, body {
   width: 40%;
 }
 
-#footer {
+.footer {
   padding: 3rem;
-  background-color: #283593;
+  background: #283593;
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  -webkit-transition: .4s all ease-out;
+  transition: .4s all ease-out;
 }
 
-#footer .mypicture {
+.footer .mypicture {
   border-radius: 5%;
 }
 
-#footer .myname {
+.footer .myname {
   padding-top: 1.5rem;
   color: white;
   font-size: 3.5rem;
   letter-spacing: .1rem;
 }
 
-#footer .myname span {
+.footer .myname span {
   padding-left: 1rem;
   font-size: 1.4rem;
   font-weight: 800;
   letter-spacing: .1rem;
 }
 
-#footer hr {
+.footer hr {
   border-top: 1px solid white;
   margin-top: .8rem;
 }
 
-#footer .comment {
+.footer .comment {
   line-height: 1.9;
   font-size: 1.6rem;
   font-weight: 500;
@@ -586,7 +548,7 @@ html, body {
   letter-spacing: .05rem;
 }
 
-#footer .social {
+.footer .social {
   position: relative;
   margin-top: 1rem;
   margin-right: 1.8rem;
@@ -594,7 +556,7 @@ html, body {
   color: white;
 }
 
-#footer .social::before {
+.footer .social::before {
   position: absolute;
   bottom: -5px;
   content: "";
@@ -607,16 +569,16 @@ html, body {
   left: 50%;
 }
 
-#footer .social::after {
+.footer .social::after {
   right: 50%;
 }
 
-#footer .social:hover::before, #footer .social:hover::after {
+.footer .social:hover::before, .footer .social:hover::after {
   left: 0;
   width: 100%;
 }
 
-#footer .about-me {
+.footer .about-me {
   position: relative;
   font-size: 1.8rem;
   font-weight: 800;
@@ -625,7 +587,7 @@ html, body {
   text-decoration: none;
 }
 
-#footer .about-me::before {
+.footer .about-me::before {
   position: absolute;
   bottom: -5px;
   content: "";
@@ -638,22 +600,22 @@ html, body {
   left: 50%;
 }
 
-#footer .about-me::after {
+.footer .about-me::after {
   right: 50%;
 }
 
-#footer .about-me:hover::before, #footer .about-me:hover::after {
+.footer .about-me:hover::before, .footer .about-me:hover::after {
   left: 0;
   width: 100%;
 }
 
-#footer .contact {
+.footer .contact {
   position: relative;
   -webkit-perspective: 100rem;
           perspective: 100rem;
 }
 
-#footer .contact .contact-flip {
+.footer .contact .contact-flip {
   -webkit-transition: -webkit-transform .8s;
   transition: -webkit-transform .8s;
   transition: transform .8s;
@@ -664,13 +626,13 @@ html, body {
   padding-bottom: 50%;
 }
 
-#footer .contact .contact-flip .front, #footer .contact .contact-flip .back {
+.footer .contact .contact-flip .front, .footer .contact .contact-flip .back {
   position: absolute;
   width: 100%;
   height: 100%;
 }
 
-#footer .contact .contact-flip .button {
+.footer .contact .contact-flip .button {
   position: absolute;
   width: 150px;
   height: 40px;
@@ -687,11 +649,11 @@ html, body {
   overflow: hidden;
 }
 
-#footer .contact .contact-flip .button:hover .hover-effect {
+.footer .contact .contact-flip .button:hover .hover-effect {
   margin-left: 300px;
 }
 
-#footer .contact .contact-flip .button .contact-me {
+.footer .contact .contact-flip .button .contact-me {
   display: inline;
   margin: 0;
   color: white;
@@ -700,7 +662,7 @@ html, body {
   letter-spacing: .1rem;
 }
 
-#footer .contact .contact-flip .button .hover-effect {
+.footer .contact .contact-flip .button .hover-effect {
   margin: 0;
   background: -webkit-gradient(linear, left top, left bottom, from(white), to(#cccccc));
   background: linear-gradient(white, #cccccc);
@@ -715,7 +677,7 @@ html, body {
   transition: 1s;
 }
 
-#footer .contact .contact-flip .close {
+.footer .contact .contact-flip .close {
   position: absolute;
   z-index: 3;
   top: 0;
@@ -729,7 +691,7 @@ html, body {
   cursor: pointer;
 }
 
-#footer .contact .contact-flip form {
+.footer .contact .contact-flip form {
   position: absolute;
   top: 0;
   left: 0;
@@ -738,11 +700,11 @@ html, body {
   height: 100%;
 }
 
-#footer .contact .contact-flip form .contact-form {
+.footer .contact .contact-flip form .contact-form {
   height: 100%;
 }
 
-#footer .contact .contact-flip form p {
+.footer .contact .contact-flip form p {
   font-size: 2.5rem;
   color: #3D4451;
   letter-spacing: .2rem;
@@ -751,11 +713,11 @@ html, body {
   padding-top: 1.5rem;
 }
 
-#footer .contact .contact-flip form .contact-form-name, #footer .contact .contact-flip form .contact-form-email {
+.footer .contact .contact-flip form .contact-form-name, .footer .contact .contact-flip form .contact-form-email {
   height: 10%;
 }
 
-#footer .contact .contact-flip form .contact-form-name::after, #footer .contact .contact-flip form .contact-form-email::after {
+.footer .contact .contact-flip form .contact-form-name::after, .footer .contact .contact-flip form .contact-form-email::after {
   display: block;
   width: 100%;
   height: .4rem;
@@ -765,17 +727,17 @@ html, body {
   border-color: #3D4451;
 }
 
-#footer .contact .contact-flip form .contact-form-message {
+.footer .contact .contact-flip form .contact-form-message {
   height: 32%;
 }
 
-#footer .contact .contact-flip form .contact-form-name, #footer .contact .contact-flip form .contact-form-email, #footer .contact .contact-flip form .contact-form-message {
+.footer .contact .contact-flip form .contact-form-name, .footer .contact .contact-flip form .contact-form-email, .footer .contact .contact-flip form .contact-form-message {
   position: relative;
   padding: 0 2rem;
   margin-bottom: 1.8rem;
 }
 
-#footer .contact .contact-flip form .contact-form-name .text, #footer .contact .contact-flip form .contact-form-name .email, #footer .contact .contact-flip form .contact-form-name textarea, #footer .contact .contact-flip form .contact-form-email .text, #footer .contact .contact-flip form .contact-form-email .email, #footer .contact .contact-flip form .contact-form-email textarea, #footer .contact .contact-flip form .contact-form-message .text, #footer .contact .contact-flip form .contact-form-message .email, #footer .contact .contact-flip form .contact-form-message textarea {
+.footer .contact .contact-flip form .contact-form-name .text, .footer .contact .contact-flip form .contact-form-name .email, .footer .contact .contact-flip form .contact-form-name textarea, .footer .contact .contact-flip form .contact-form-email .text, .footer .contact .contact-flip form .contact-form-email .email, .footer .contact .contact-flip form .contact-form-email textarea, .footer .contact .contact-flip form .contact-form-message .text, .footer .contact .contact-flip form .contact-form-message .email, .footer .contact .contact-flip form .contact-form-message textarea {
   font-size: 1.6rem;
   padding: .3rem;
   padding-left: 4rem;
@@ -787,11 +749,11 @@ html, body {
   background-color: rgba(0, 0, 0, 0);
 }
 
-#footer .contact .contact-flip form .contact-form-name .text:focus, #footer .contact .contact-flip form .contact-form-name .email:focus, #footer .contact .contact-flip form .contact-form-name textarea:focus, #footer .contact .contact-flip form .contact-form-email .text:focus, #footer .contact .contact-flip form .contact-form-email .email:focus, #footer .contact .contact-flip form .contact-form-email textarea:focus, #footer .contact .contact-flip form .contact-form-message .text:focus, #footer .contact .contact-flip form .contact-form-message .email:focus, #footer .contact .contact-flip form .contact-form-message textarea:focus {
+.footer .contact .contact-flip form .contact-form-name .text:focus, .footer .contact .contact-flip form .contact-form-name .email:focus, .footer .contact .contact-flip form .contact-form-name textarea:focus, .footer .contact .contact-flip form .contact-form-email .text:focus, .footer .contact .contact-flip form .contact-form-email .email:focus, .footer .contact .contact-flip form .contact-form-email textarea:focus, .footer .contact .contact-flip form .contact-form-message .text:focus, .footer .contact .contact-flip form .contact-form-message .email:focus, .footer .contact .contact-flip form .contact-form-message textarea:focus {
   outline: none;
 }
 
-#footer .contact .contact-flip form .contact-form-name .fa-user, #footer .contact .contact-flip form .contact-form-name .fa-envelope, #footer .contact .contact-flip form .contact-form-name .fa-edit, #footer .contact .contact-flip form .contact-form-email .fa-user, #footer .contact .contact-flip form .contact-form-email .fa-envelope, #footer .contact .contact-flip form .contact-form-email .fa-edit, #footer .contact .contact-flip form .contact-form-message .fa-user, #footer .contact .contact-flip form .contact-form-message .fa-envelope, #footer .contact .contact-flip form .contact-form-message .fa-edit {
+.footer .contact .contact-flip form .contact-form-name .fa-user, .footer .contact .contact-flip form .contact-form-name .fa-envelope, .footer .contact .contact-flip form .contact-form-name .fa-edit, .footer .contact .contact-flip form .contact-form-email .fa-user, .footer .contact .contact-flip form .contact-form-email .fa-envelope, .footer .contact .contact-flip form .contact-form-email .fa-edit, .footer .contact .contact-flip form .contact-form-message .fa-user, .footer .contact .contact-flip form .contact-form-message .fa-envelope, .footer .contact .contact-flip form .contact-form-message .fa-edit {
   position: absolute;
   padding: .3rem;
   padding-left: 2.8rem;
@@ -801,7 +763,7 @@ html, body {
   font-size: 2.5rem;
 }
 
-#footer .contact .contact-flip form .submit {
+.footer .contact .contact-flip form .submit {
   position: absolute;
   padding: 0;
   left: 0;
@@ -813,13 +775,13 @@ html, body {
   cursor: pointer;
 }
 
-#footer .contact .contact-flip form .submit .fa-shipping-fast {
+.footer .contact .contact-flip form .submit .fa-shipping-fast {
   padding-right: .5rem;
   font-size: 3rem;
   color: #aaa;
 }
 
-#footer .contact .contact-flip form .submit .submit-item {
+.footer .contact .contact-flip form .submit .submit-item {
   margin: 0;
   padding: 0;
   height: 100%;

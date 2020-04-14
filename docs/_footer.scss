@@ -1,6 +1,7 @@
-#footer {
+.footer {
   padding: 3rem;
-  background-color: #283593;
+  background: #283593;
+  @include slide--from-bottom;
   .mypicture {
     border-radius: 5%;
   }

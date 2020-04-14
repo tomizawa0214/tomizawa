@@ -1,6 +1,7 @@
 .service {
   padding-bottom: 3rem;
   @include section;
+  @include slide--from-bottom;
   h2 {
     @include section__title;
   }
@@ -16,7 +17,6 @@
     font-size: 2.4rem;
     color: $textColor;
     @include Japanese-font;
-    @include slide--from-left;
   }
   h4 {
     margin: 0;
@@ -26,10 +26,6 @@
     font-family:'Lato', sans-serif;
     font-weight: 400;
     color: #a5a5a5;
-    @include slide--from-left;
-  }
-  i {
-    @include slide--from-left;
   }
   &__icon--compass,
   &__icon--paint-brush,
@@ -54,6 +50,5 @@
     color: $textColor;
     letter-spacing: .05rem;
     @include Japanese-font;
-    @include slide--from-left;
   }
 }

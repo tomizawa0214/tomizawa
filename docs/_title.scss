@@ -14,7 +14,7 @@
   &__text {
     z-index: 3;
     opacity: 0;
-    transition: 1s all ease-out;
+    transition: .4s all ease-out;
     @include Japanese-font;
     h2 {
       font-weight: 700;
