@@ -2,10 +2,10 @@
   padding: 3rem;
   background: #283593;
   @include slide--from-bottom;
-  .mypicture {
+  &__photo {
     border-radius: 5%;
   }
-  .myname {
+  &__name {
     padding-top: 1.5rem;
     color: white;
     font-size: 3.5rem;
@@ -21,7 +21,7 @@
     border-top: 1px solid white;
     margin-top: .8rem;
   }
-  .comment {
+  &__comment {
     line-height: 1.9;
     font-size: 1.6rem;
     font-weight: 500;

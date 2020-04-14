@@ -1,5 +1,28 @@
 'use strict';
 
+// スクロール量が300に達したらボタン表示。300未満は非表示
+window.addEventListener('scroll', () => {
+  const pageTopBtn = document.querySelector('.back-to-top');
+  let scroll = document.documentElement.scrollTop || document.body.scrollTop;
+  if (scroll > 300) {
+    pageTopBtn.style.opacity = '1';
+  } else {
+    pageTopBtn.style.opacity = '0';
+  }
+});
+
+// html,bodyのトップまでスムーズスクロール
+document.querySelector('.back-to-top').onclick = () => {
+  anime.remove('html, body');
+  anime({
+    targets: 'html, body',
+    scrollTop: 0,
+    dulation: 200,
+    easing: 'easeOutCubic',
+  });
+}
+
+// アコーディオンメニュー表示の付け替え
 document.querySelector('.nav__toggler--open').onclick = () => {
   const open = document.querySelector('.nav__toggler--open');
   const close = document.querySelector('.nav__toggler--close');
@@ -11,6 +34,7 @@ document.querySelector('.nav__toggler--open').onclick = () => {
   }
 }
 
+// 指定要素が画面内に入ったらフェードイン
 const myFunc = BottomHeight => {
   const myFade = document.querySelectorAll('.service, .works, .footer');
   let scroll = document.documentElement.scrollTop || document.body.scrollTop;
