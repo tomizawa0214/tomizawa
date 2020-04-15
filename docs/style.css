@@ -559,10 +559,12 @@ html, body {
 
 .footer__photo {
   border-radius: 5%;
+  text-align: center;
 }
 
 .footer__name {
   padding-top: 1.5rem;
+  text-align: center;
   color: white;
   font-size: 3.5rem;
   letter-spacing: .1rem;
@@ -589,246 +591,87 @@ html, body {
   letter-spacing: .05rem;
 }
 
-.footer .social {
-  position: relative;
-  margin-top: 1rem;
-  margin-right: 1.8rem;
-  font-size: 3rem;
-  color: white;
+.footer__item {
+  background: #fff;
 }
 
-.footer .social::before {
-  position: absolute;
-  bottom: -5px;
-  content: "";
-  display: inline-block;
-  width: 0;
-  height: 1.5px;
-  background-color: #F4FF81;
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
-  left: 50%;
-}
-
-.footer .social::after {
-  right: 50%;
-}
-
-.footer .social:hover::before, .footer .social:hover::after {
-  left: 0;
-  width: 100%;
-}
-
-.footer .about-me {
-  position: relative;
-  font-size: 1.8rem;
-  font-weight: 800;
-  color: white;
-  letter-spacing: .1rem;
-  text-decoration: none;
-}
-
-.footer .about-me::before {
-  position: absolute;
-  bottom: -5px;
-  content: "";
-  display: inline-block;
-  width: 0;
-  height: 1.5px;
-  background-color: #F4FF81;
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
-  left: 50%;
-}
-
-.footer .about-me::after {
-  right: 50%;
-}
-
-.footer .about-me:hover::before, .footer .about-me:hover::after {
-  left: 0;
-  width: 100%;
-}
-
-.footer .contact {
-  position: relative;
-  -webkit-perspective: 100rem;
-          perspective: 100rem;
-}
-
-.footer .contact .contact-flip {
-  -webkit-transition: -webkit-transform .8s;
-  transition: -webkit-transform .8s;
-  transition: transform .8s;
-  transition: transform .8s, -webkit-transform .8s;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  margin-top: 2rem;
-  padding-bottom: 50%;
-}
-
-.footer .contact .contact-flip .front, .footer .contact .contact-flip .back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.footer .contact .contact-flip .button {
-  position: absolute;
-  width: 150px;
-  height: 40px;
+.footer__item--profile-list {
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2rem;
   margin: 0;
-  padding: 0;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  border: none;
-  background: #e8676b;
-  border-radius: 3%;
-  cursor: pointer;
-  overflow: hidden;
-}
-
-.footer .contact .contact-flip .button:hover .hover-effect {
-  margin-left: 300px;
-}
-
-.footer .contact .contact-flip .button .contact-me {
-  display: inline;
-  margin: 0;
-  color: white;
-  font-size: 1.6rem;
-  font-weight: 800;
-  letter-spacing: .1rem;
-}
-
-.footer .contact .contact-flip .button .hover-effect {
-  margin: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#cccccc));
-  background: linear-gradient(white, #cccccc);
-  width: 150px;
-  height: 40px;
-  margin-top: -40px;
-  -webkit-transform: rotate(400deg);
-          transform: rotate(400deg);
-  margin-left: -300px;
-  opacity: 0.3;
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
-.footer .contact .contact-flip .close {
-  position: absolute;
-  z-index: 3;
-  top: 0;
-  right: 0;
-  font-weight: 200;
-  font-size: 6rem;
-  color: red;
-  padding-top: 1rem;
-  padding-right: 1.5rem;
-  margin-top: -2rem;
-  cursor: pointer;
-}
-
-.footer .contact .contact-flip form {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-}
-
-.footer .contact .contact-flip form .contact-form {
-  height: 100%;
-}
-
-.footer .contact .contact-flip form p {
-  font-size: 2.5rem;
+  padding: 2rem;
+  line-height: 1.4;
+  font-size: 1.4rem;
+  font-weight: 500;
   color: #3D4451;
-  letter-spacing: .2rem;
-  height: 15%;
-  margin-bottom: 1rem;
-  padding-top: 1.5rem;
+  letter-spacing: .05rem;
+  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
 }
 
-.footer .contact .contact-flip form .contact-form-name, .footer .contact .contact-flip form .contact-form-email {
-  height: 10%;
-}
-
-.footer .contact .contact-flip form .contact-form-name::after, .footer .contact .contact-flip form .contact-form-email::after {
-  display: block;
-  width: 100%;
-  height: .4rem;
-  content: '';
-  border-width: 0 1px 1px 1px;
-  border-style: solid;
-  border-color: #3D4451;
-}
-
-.footer .contact .contact-flip form .contact-form-message {
-  height: 32%;
-}
-
-.footer .contact .contact-flip form .contact-form-name, .footer .contact .contact-flip form .contact-form-email, .footer .contact .contact-flip form .contact-form-message {
-  position: relative;
-  padding: 0 2rem;
-  margin-bottom: 1.8rem;
-}
-
-.footer .contact .contact-flip form .contact-form-name .text, .footer .contact .contact-flip form .contact-form-name .email, .footer .contact .contact-flip form .contact-form-name textarea, .footer .contact .contact-flip form .contact-form-email .text, .footer .contact .contact-flip form .contact-form-email .email, .footer .contact .contact-flip form .contact-form-email textarea, .footer .contact .contact-flip form .contact-form-message .text, .footer .contact .contact-flip form .contact-form-message .email, .footer .contact .contact-flip form .contact-form-message textarea {
+.footer__item--profile-list span {
   font-size: 1.6rem;
-  padding: .3rem;
-  padding-left: 4rem;
-  width: 100%;
-  height: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border: 0;
-  background-color: rgba(0, 0, 0, 0);
+  color: #9da0a7;
 }
 
-.footer .contact .contact-flip form .contact-form-name .text:focus, .footer .contact .contact-flip form .contact-form-name .email:focus, .footer .contact .contact-flip form .contact-form-name textarea:focus, .footer .contact .contact-flip form .contact-form-email .text:focus, .footer .contact .contact-flip form .contact-form-email .email:focus, .footer .contact .contact-flip form .contact-form-email textarea:focus, .footer .contact .contact-flip form .contact-form-message .text:focus, .footer .contact .contact-flip form .contact-form-message .email:focus, .footer .contact .contact-flip form .contact-form-message textarea:focus {
-  outline: none;
+.footer__item hr {
+  width: 90%;
+  border-top: 1px solid #b4b4b4;
+  margin-top: .8rem;
 }
 
-.footer .contact .contact-flip form .contact-form-name .fa-user, .footer .contact .contact-flip form .contact-form-name .fa-envelope, .footer .contact .contact-flip form .contact-form-name .fa-edit, .footer .contact .contact-flip form .contact-form-email .fa-user, .footer .contact .contact-flip form .contact-form-email .fa-envelope, .footer .contact .contact-flip form .contact-form-email .fa-edit, .footer .contact .contact-flip form .contact-form-message .fa-user, .footer .contact .contact-flip form .contact-form-message .fa-envelope, .footer .contact .contact-flip form .contact-form-message .fa-edit {
-  position: absolute;
-  padding: .3rem;
-  padding-left: 2.8rem;
-  top: 0;
-  left: 0;
-  color: #aaa;
-  font-size: 2.5rem;
+.footer__item p {
+  width: 90%;
+  margin: 2rem auto;
+  line-height: 1.9;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #3D4451;
+  letter-spacing: .05rem;
+  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
 }
 
-.footer .contact .contact-flip form .submit {
-  position: absolute;
-  padding: 0;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 12%;
-  background: -webkit-gradient(linear, left top, right top, from(#FFEBEE), to(#EF9A9A));
-  background: linear-gradient(to right, #FFEBEE 0%, #EF9A9A 100%);
-  cursor: pointer;
-}
-
-.footer .contact .contact-flip form .submit .fa-shipping-fast {
-  padding-right: .5rem;
-  font-size: 3rem;
-  color: #aaa;
-}
-
-.footer .contact .contact-flip form .submit .submit-item {
+.footer__item--social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0;
   padding: 0;
-  height: 100%;
-  font-size: 3rem;
-  font-style: italic;
-  opacity: 0.4;
+  list-style: none;
+  background: #e8676b;
+}
+
+.footer__item--social a {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 4rem;
+  height: 4rem;
+  margin: 1rem .5rem;
+  font-size: 2rem;
+  color: #fff;
+  border-radius: 50%;
+  text-decoration: none;
+  -webkit-transition: .25s linear;
+  transition: .25s linear;
+}
+
+.footer__item--social a:hover {
+  background: rgba(0, 0, 0, 0.1);
 }
 
 footer {
