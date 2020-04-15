@@ -5,9 +5,6 @@
     }
   }
 }
-// -----xs(Extra Small)-----
-// @media screen and (max-width: 575px) {
-// }
 
 // -----sm(Small)-----
 @media screen and (min-width: 576px) {
@@ -18,9 +15,12 @@
   .works__item {
     grid-template-columns: auto auto;
   }
-}
-
-@media screen and (max-width: 767px) {
+  .profile__item--box {
+    li {
+      display: grid;
+      grid-template-columns: 40% 1fr;
+    }
+  }
 }
 
 // // -----md(Medium)-----

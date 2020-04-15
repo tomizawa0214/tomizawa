@@ -598,7 +598,7 @@ html, body {
   list-style: none;
   display: -ms-grid;
   display: grid;
-  gap: 2rem;
+  gap: 3rem;
   margin: 0;
   padding: 2rem;
   line-height: 1.4;
@@ -793,6 +793,12 @@ footer h5 {
   .works__item {
     -ms-grid-columns: auto auto;
         grid-template-columns: auto auto;
+  }
+  .profile__item--box li {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 40% 1fr;
+        grid-template-columns: 40% 1fr;
   }
 }
 
