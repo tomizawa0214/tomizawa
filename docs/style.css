@@ -547,7 +547,7 @@ html, body {
   width: 40%;
 }
 
-.footer {
+.profile {
   padding: 3rem;
   background: #283593;
   opacity: 0;
@@ -557,12 +557,12 @@ html, body {
   transition: .4s all ease-out;
 }
 
-.footer__photo {
+.profile__photo {
   border-radius: 5%;
   text-align: center;
 }
 
-.footer__name {
+.profile__name {
   padding-top: 1.5rem;
   text-align: center;
   color: white;
@@ -570,38 +570,34 @@ html, body {
   letter-spacing: .1rem;
 }
 
-.footer__name span {
+.profile__name span {
   padding-left: 1rem;
   font-size: 1.4rem;
   font-weight: 800;
   letter-spacing: .1rem;
 }
 
-.footer hr {
-  border-top: 1px solid white;
-  margin-top: .8rem;
+.profile hr {
+  border-top: 1px solid #fff;
 }
 
-.footer__comment {
+.profile__comment {
   line-height: 1.9;
   font-size: 1.6rem;
   font-weight: 500;
-  color: white;
+  color: #fff;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
   letter-spacing: .05rem;
 }
 
-.footer__item {
+.profile__item {
   background: #fff;
 }
 
-.footer__item--profile-list {
+.profile__item--box {
   list-style: none;
   display: -ms-grid;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   gap: 2rem;
   margin: 0;
   padding: 2rem;
@@ -613,20 +609,24 @@ html, body {
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
 }
 
-.footer__item--profile-list span {
+.profile__item--box span {
   font-size: 1.6rem;
   color: #9da0a7;
 }
 
-.footer__item hr {
+.profile__item--box span a {
+  color: #9da0a7;
+}
+
+.profile__item hr {
   width: 90%;
   border-top: 1px solid #b4b4b4;
   margin-top: .8rem;
 }
 
-.footer__item p {
+.profile__item--message {
   width: 90%;
-  margin: 2rem auto;
+  margin: 2rem auto 0;
   line-height: 1.9;
   font-size: 1.4rem;
   font-weight: 500;
@@ -635,7 +635,104 @@ html, body {
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
 }
 
-.footer__item--social {
+.profile__item--contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem 0 3rem;
+}
+
+.profile__item--contact-arrow {
+  display: block;
+  margin-right: -3px;
+  width: 15px;
+  height: 15px;
+  border-top: solid 3px #e8676b;
+  border-right: solid 3px #e8676b;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-animation: slide 1s linear infinite;
+          animation: slide 1s linear infinite;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    -webkit-transform: rotate(45deg) translate(0, 0);
+            transform: rotate(45deg) translate(0, 0);
+  }
+  20% {
+    -webkit-transform: rotate(45deg) translate(-10px, 10px);
+            transform: rotate(45deg) translate(-10px, 10px);
+  }
+  40% {
+    -webkit-transform: rotate(45deg) translate(0, 0);
+            transform: rotate(45deg) translate(0, 0);
+  }
+}
+
+@keyframes slide {
+  0% {
+    -webkit-transform: rotate(45deg) translate(0, 0);
+            transform: rotate(45deg) translate(0, 0);
+  }
+  20% {
+    -webkit-transform: rotate(45deg) translate(-10px, 10px);
+            transform: rotate(45deg) translate(-10px, 10px);
+  }
+  40% {
+    -webkit-transform: rotate(45deg) translate(0, 0);
+            transform: rotate(45deg) translate(0, 0);
+  }
+}
+
+.profile__item--contact-box {
+  display: block;
+  margin-left: 1.5rem;
+  width: 150px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  background: #e8676b;
+  border-radius: 3%;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.profile__item--contact-box:hover .profile__item--contact-box-effect {
+  margin-left: 300px;
+}
+
+.profile__item--contact-box-text {
+  display: inline;
+  margin: 0;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: .1rem;
+}
+
+.profile__item--contact-box-effect {
+  margin: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#cccccc));
+  background: linear-gradient(white, #cccccc);
+  width: 150px;
+  height: 40px;
+  margin-top: -40px;
+  -webkit-transform: rotate(400deg);
+          transform: rotate(400deg);
+  margin-left: -300px;
+  opacity: 0.3;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.profile__item--social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -648,7 +745,7 @@ html, body {
   background: #e8676b;
 }
 
-.footer__item--social a {
+.profile__item--social a {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -670,13 +767,15 @@ html, body {
   transition: .25s linear;
 }
 
-.footer__item--social a:hover {
+.profile__item--social a:hover {
   background: rgba(0, 0, 0, 0.1);
 }
 
-footer {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+footer h5 {
+  margin: 0;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 3;
 }
 
 @media screen and (max-width: 369px) {
