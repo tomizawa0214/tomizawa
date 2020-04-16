@@ -2,33 +2,37 @@
   padding: 3rem;
   background: #283593;
   @include slide--from-bottom;
-  &__photo {
-    border-radius: 5%;
-    text-align: center;
-  }
-  &__name {
-    padding-top: 1.5rem;
-    text-align: center;
-    color: white;
-    font-size: 3.5rem;
-    letter-spacing: .1rem;
-    span {
-      padding-left: 1rem;
-      font-size: 1.4rem;
-      font-weight: 800;
-      letter-spacing: .1rem;
+  &__introduction {
+    display: grid;
+    padding: 0 1.5rem 1.5rem;
+    img {
+      border-radius: 5%;
+      margin-bottom: 1.5rem;
     }
-  }
-  hr {
-    border-top: 1px solid #fff;
-  }
-  &__comment {
-    line-height: 1.9;
-    font-size: 1.6rem;
-    font-weight: 500;
-    color: #fff;
-    @include Japanese-font;
-    letter-spacing: .05rem;
+    h1 {
+      margin: 0;
+      text-align: center;
+      color: #fff;
+      font-size: 3.5rem;
+      letter-spacing: .1rem;
+      span {
+        padding-left: 1rem;
+        font-size: 1.4rem;
+        font-weight: 800;
+      }
+    }
+    hr {
+      border-top: 1px solid #fff;
+      width: 100%;
+    }
+    p {
+      line-height: 1.9;
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: #fff;
+      @include Japanese-font;
+      letter-spacing: .05rem;
+    }
   }
   &__item {
     background: #fff;
@@ -53,25 +57,24 @@
       }
     }
     hr {
-      width: 90%;
       border-top: 1px solid #b4b4b4;
-      margin-top: .8rem;
+      margin: 0 20px;
     }
     &--message {
-      width: 90%;
-      margin: 2rem auto 0;
+      margin: 20px 20px 0;
+      text-align: center;
       line-height: 1.9;
-      font-size: 1.4rem;
+      font-size: 14px;
       font-weight: 500;
       color: $textColor;
-      letter-spacing: .05rem;
+      letter-spacing: .5px;
       @include Japanese-font;
     }
     &--contact {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 1rem 0 3rem;
+      margin: 10px 0 30px;
       &-arrow {
         display: block;
         margin-right: -3px;
@@ -95,7 +98,7 @@
       }
       &-box {
         display: block;
-        margin-left: 1.5rem;
+        margin-left: 15px;
         width: 150px;
         height: 40px;
         padding: 0;
@@ -113,9 +116,9 @@
           display: inline;
           margin: 0;
           color: #fff;
-          font-size: 1.6rem;
+          font-size: 16px;
           font-weight: 800;
-          letter-spacing: .1rem;
+          letter-spacing: 1px;
         }
         &-effect {
           margin: 0;
