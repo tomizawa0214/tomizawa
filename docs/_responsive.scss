@@ -37,7 +37,7 @@
   .profile__item--box {
     li {
       display: grid;
-      grid-template-columns: 40% 1fr;
+      grid-template-columns: 180px auto;
     }
   }
 }
@@ -93,9 +93,6 @@
 
 // -----lg(Large)-----
 // @media screen and (min-width: 992px) {
-//   .works__item {
-//     grid-template-columns: auto auto auto auto;
-//   }
 // }
 
 // -----xl(Extra Large)-----

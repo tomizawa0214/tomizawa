@@ -1,23 +1,23 @@
 .profile {
-  padding: 3rem;
+  padding: 30px;
   background: #283593;
   @include slide--from-bottom;
   &__introduction {
     display: grid;
-    padding: 0 1.5rem 1.5rem;
+    padding: 0 15px 15px;
     img {
       border-radius: 5%;
-      margin-bottom: 1.5rem;
+      margin-bottom: 15px;
     }
     h1 {
       margin: 0;
       text-align: center;
       color: #fff;
-      font-size: 3.5rem;
-      letter-spacing: .1rem;
+      font-size: 35px;
+      letter-spacing: 1px;
       span {
-        padding-left: 1rem;
-        font-size: 1.4rem;
+        padding-left: 10px;
+        font-size: 14px;
         font-weight: 800;
       }
     }
@@ -27,11 +27,11 @@
     }
     p {
       line-height: 1.9;
-      font-size: 1.6rem;
+      font-size: 16px;
       font-weight: 500;
       color: #fff;
       @include Japanese-font;
-      letter-spacing: .05rem;
+      letter-spacing: .5px;
     }
   }
   &__item {
@@ -39,21 +39,21 @@
     &--box {
       list-style: none;
       display: grid;
-      gap: 3rem;
+      gap: 30px;
       margin: 0;
-      padding: 2rem;
+      padding: 20px;
       line-height: 1.4;
-      font-size: 1.4rem;
+      font-size: 14px;
       font-weight: 500;
       color: $textColor;
-      letter-spacing: .05rem;
+      letter-spacing: .5px;
       @include Japanese-font;
-      span {
-        font-size: 1.6rem;
+      span, p {
+        font-size: 16px;
         color: #9da0a7;
-        a {
-          color: #9da0a7;
-        }
+      }
+      p {
+        margin-bottom: 10px;
       }
     }
     hr {

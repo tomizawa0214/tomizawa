@@ -548,7 +548,7 @@ html, body {
 }
 
 .profile {
-  padding: 3rem;
+  padding: 30px;
   background: #283593;
   opacity: 0;
   -webkit-transform: translateY(50px);
@@ -560,25 +560,25 @@ html, body {
 .profile__introduction {
   display: -ms-grid;
   display: grid;
-  padding: 0 1.5rem 1.5rem;
+  padding: 0 15px 15px;
 }
 
 .profile__introduction img {
   border-radius: 5%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 15px;
 }
 
 .profile__introduction h1 {
   margin: 0;
   text-align: center;
   color: #fff;
-  font-size: 3.5rem;
-  letter-spacing: .1rem;
+  font-size: 35px;
+  letter-spacing: 1px;
 }
 
 .profile__introduction h1 span {
-  padding-left: 1rem;
-  font-size: 1.4rem;
+  padding-left: 10px;
+  font-size: 14px;
   font-weight: 800;
 }
 
@@ -589,11 +589,11 @@ html, body {
 
 .profile__introduction p {
   line-height: 1.9;
-  font-size: 1.6rem;
+  font-size: 16px;
   font-weight: 500;
   color: #fff;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
-  letter-spacing: .05rem;
+  letter-spacing: .5px;
 }
 
 .profile__item {
@@ -604,24 +604,24 @@ html, body {
   list-style: none;
   display: -ms-grid;
   display: grid;
-  gap: 3rem;
+  gap: 30px;
   margin: 0;
-  padding: 2rem;
+  padding: 20px;
   line-height: 1.4;
-  font-size: 1.4rem;
+  font-size: 14px;
   font-weight: 500;
   color: #3D4451;
-  letter-spacing: .05rem;
+  letter-spacing: .5px;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
 }
 
-.profile__item--box span {
-  font-size: 1.6rem;
+.profile__item--box span, .profile__item--box p {
+  font-size: 16px;
   color: #9da0a7;
 }
 
-.profile__item--box span a {
-  color: #9da0a7;
+.profile__item--box p {
+  margin-bottom: 10px;
 }
 
 .profile__item hr {
@@ -830,8 +830,8 @@ footer h5 {
   .profile__item--box li {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 40% 1fr;
-        grid-template-columns: 40% 1fr;
+    -ms-grid-columns: 180px auto;
+        grid-template-columns: 180px auto;
   }
 }
 
