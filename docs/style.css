@@ -626,7 +626,7 @@ html, body {
 }
 
 .profile {
-  padding: 30px;
+  padding: 3rem;
   background: #283593;
   opacity: 0;
   -webkit-transform: translateY(50px);
@@ -638,25 +638,25 @@ html, body {
 .profile__introduction {
   display: -ms-grid;
   display: grid;
-  padding: 0 15px 15px;
+  padding: 0 1.5rem 1.5rem;
 }
 
 .profile__introduction img {
   border-radius: 5%;
-  margin-bottom: 15px;
+  margin-bottom: 1.5rem;
 }
 
 .profile__introduction h1 {
   margin: 0;
   text-align: center;
   color: #fff;
-  font-size: 35px;
-  letter-spacing: 1px;
+  font-size: 3.5rem;
+  letter-spacing: .1rem;
 }
 
 .profile__introduction h1 span {
-  padding-left: 10px;
-  font-size: 14px;
+  padding-left: 1rem;
+  font-size: 1.4rem;
   font-weight: 800;
 }
 
@@ -667,11 +667,11 @@ html, body {
 
 .profile__introduction p {
   line-height: 1.9;
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 500;
   color: #fff;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
-  letter-spacing: .5px;
+  letter-spacing: .05rem;
 }
 
 .profile__item {
@@ -682,62 +682,56 @@ html, body {
   list-style: none;
   display: -ms-grid;
   display: grid;
-  gap: 30px;
+  row-gap: 3rem;
   margin: 0;
-  padding: 20px;
+  padding: 2rem;
   line-height: 1.4;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 500;
   color: #3D4451;
-  letter-spacing: .5px;
+  letter-spacing: .05rem;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
 }
 
 .profile__item--box span, .profile__item--box p {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #9da0a7;
 }
 
-.profile__item--box p {
-  margin-bottom: 10px;
+.profile__item--box p:last-child {
+  margin-bottom: 0;
 }
 
 .profile__item hr {
   border-top: 1px solid #b4b4b4;
-  margin: 0 20px;
-}
-
-.profile__item--message {
-  margin: 20px 20px 0;
-  text-align: center;
-  line-height: 1.9;
-  font-size: 14px;
-  font-weight: 500;
-  color: #3D4451;
-  letter-spacing: .5px;
-  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+  margin: 0 2rem;
 }
 
 .profile__item--contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 10px 0 30px;
+  margin: 2rem 2rem 3rem;
 }
 
-.profile__item--contact-arrow {
-  display: block;
-  margin-right: -3px;
-  width: 15px;
-  height: 15px;
-  border-top: solid 3px #e8676b;
-  border-right: solid 3px #e8676b;
+.profile__item--contact-message {
+  text-align: left;
+  line-height: 1.9;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #3D4451;
+  letter-spacing: .05rem;
+  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+}
+
+.profile__item--contact-box {
+  text-align: center;
+}
+
+.profile__item--contact-box-arrow {
+  display: inline-block;
+  margin-right: -.5rem;
+  width: 2rem;
+  height: 2rem;
+  border-top: solid .5rem #e8676b;
+  border-right: solid .5rem #e8676b;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   -webkit-animation: slide 1s linear infinite;
@@ -750,8 +744,8 @@ html, body {
             transform: rotate(45deg) translate(0, 0);
   }
   20% {
-    -webkit-transform: rotate(45deg) translate(-10px, 10px);
-            transform: rotate(45deg) translate(-10px, 10px);
+    -webkit-transform: rotate(45deg) translate(-1rem, 1rem);
+            transform: rotate(45deg) translate(-1rem, 1rem);
   }
   40% {
     -webkit-transform: rotate(45deg) translate(0, 0);
@@ -765,8 +759,8 @@ html, body {
             transform: rotate(45deg) translate(0, 0);
   }
   20% {
-    -webkit-transform: rotate(45deg) translate(-10px, 10px);
-            transform: rotate(45deg) translate(-10px, 10px);
+    -webkit-transform: rotate(45deg) translate(-1rem, 1rem);
+            transform: rotate(45deg) translate(-1rem, 1rem);
   }
   40% {
     -webkit-transform: rotate(45deg) translate(0, 0);
@@ -774,11 +768,11 @@ html, body {
   }
 }
 
-.profile__item--contact-box {
-  display: block;
-  margin-left: 15px;
-  width: 150px;
-  height: 40px;
+.profile__item--contact-box-button {
+  display: inline-block;
+  margin-left: 1.5rem;
+  width: 20rem;
+  height: 5rem;
   padding: 0;
   border: none;
   background: #e8676b;
@@ -787,29 +781,29 @@ html, body {
   overflow: hidden;
 }
 
-.profile__item--contact-box:hover .profile__item--contact-box-effect {
-  margin-left: 300px;
+.profile__item--contact-box-button:hover .profile__item--contact-box-button--effect {
+  margin-left: 30rem;
 }
 
-.profile__item--contact-box-text {
+.profile__item--contact-box-button--text {
   display: inline;
   margin: 0;
   color: #fff;
-  font-size: 16px;
+  font-size: 2rem;
   font-weight: 800;
-  letter-spacing: 1px;
+  letter-spacing: .1rem;
 }
 
-.profile__item--contact-box-effect {
+.profile__item--contact-box-button--effect {
   margin: 0;
   background: -webkit-gradient(linear, left top, left bottom, from(white), to(#cccccc));
   background: linear-gradient(white, #cccccc);
-  width: 150px;
-  height: 40px;
-  margin-top: -40px;
+  width: 20rem;
+  height: 5rem;
+  margin-top: -5rem;
   -webkit-transform: rotate(400deg);
           transform: rotate(400deg);
-  margin-left: -300px;
+  margin-left: -30rem;
   opacity: 0.3;
   -webkit-transition: 1s;
   transition: 1s;
@@ -887,8 +881,8 @@ footer h5 {
         grid-template-columns: auto auto;
   }
   .profile__introduction {
-    -ms-grid-columns: 60% 1fr;
-        grid-template-columns: 60% 1fr;
+    -ms-grid-columns: 55% 1fr;
+        grid-template-columns: 55% 1fr;
     grid-column-gap: 10px;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -899,6 +893,7 @@ footer h5 {
     -ms-grid-column-span: 1;
     grid-column: 1 / 2;
     border-radius: 50%;
+    margin-bottom: 30px;
   }
   .profile__introduction h1 {
     -ms-grid-column: 2;
@@ -959,7 +954,6 @@ footer h5 {
     -ms-grid-row: 1;
     -ms-grid-row-span: 3;
     grid-row: 1 / 4;
-    border-radius: 50%;
   }
   .profile__introduction h1 {
     -ms-grid-column: 2;
@@ -986,6 +980,138 @@ footer h5 {
     -ms-grid-column-span: 1;
     grid-column: 2 / 3;
   }
+  .profile__item--box {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 80px;
+            column-gap: 80px;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  .profile__item--box li {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .profile__item--box li:nth-child(3) {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 7;
+    grid-row: 1 / 8;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+  }
+  .profile__item--contact {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto 280px;
+        grid-template-columns: auto 280px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .profile__item--contact-message {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .profile__introduction {
+    -ms-grid-columns: 28% 1fr;
+        grid-template-columns: 28% 1fr;
+  }
+  .profile__item--contact-message {
+    text-align: left;
+    line-height: 1.9;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #3D4451;
+    letter-spacing: .05rem;
+    font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+  }
+  -box {
+    text-align: center;
+  }
+  -box-arrow {
+    display: inline-block;
+    margin-right: -.3rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-top: solid .3rem #e8676b;
+    border-right: solid .3rem #e8676b;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-animation: slide 1s linear infinite;
+            animation: slide 1s linear infinite;
+  }
+  @-webkit-keyframes slide {
+    0% {
+      -webkit-transform: rotate(45deg) translate(0, 0);
+              transform: rotate(45deg) translate(0, 0);
+    }
+    20% {
+      -webkit-transform: rotate(45deg) translate(-1rem, 1rem);
+              transform: rotate(45deg) translate(-1rem, 1rem);
+    }
+    40% {
+      -webkit-transform: rotate(45deg) translate(0, 0);
+              transform: rotate(45deg) translate(0, 0);
+    }
+  }
+  @keyframes slide {
+    0% {
+      -webkit-transform: rotate(45deg) translate(0, 0);
+              transform: rotate(45deg) translate(0, 0);
+    }
+    20% {
+      -webkit-transform: rotate(45deg) translate(-1rem, 1rem);
+              transform: rotate(45deg) translate(-1rem, 1rem);
+    }
+    40% {
+      -webkit-transform: rotate(45deg) translate(0, 0);
+              transform: rotate(45deg) translate(0, 0);
+    }
+  }
+  -box-button {
+    display: inline-block;
+    margin-left: 1.5rem;
+    width: 15rem;
+    height: 4rem;
+    padding: 0;
+    border: none;
+    background: #e8676b;
+    border-radius: 3%;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  -box-button:hover .profile__item--contact-box-button--effect {
+    margin-left: 30rem;
+  }
+  -box-button--text {
+    display: inline;
+    margin: 0;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: .1rem;
+  }
+  -box-button--effect {
+    margin: 0;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(#cccccc));
+    background: linear-gradient(white, #cccccc);
+    width: 15rem;
+    height: 4rem;
+    margin-top: -4rem;
+    -webkit-transform: rotate(400deg);
+            transform: rotate(400deg);
+    margin-left: -30rem;
+    opacity: 0.3;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1007,8 +1133,8 @@ footer h5 {
     -ms-grid-columns: auto auto auto auto;
         grid-template-columns: auto auto auto auto;
   }
-  .profile__introduction {
-    -ms-grid-columns: 30% 1fr;
-        grid-template-columns: 30% 1fr;
+  .profile__item--contact {
+    -ms-grid-columns: auto 400px;
+        grid-template-columns: auto 400px;
   }
 }

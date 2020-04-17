@@ -1,23 +1,23 @@
 .profile {
-  padding: 30px;
+  padding: 3rem;
   background: #283593;
   @include slide--from-bottom;
   &__introduction {
     display: grid;
-    padding: 0 15px 15px;
+    padding: 0 1.5rem 1.5rem;
     img {
       border-radius: 5%;
-      margin-bottom: 15px;
+      margin-bottom: 1.5rem;
     }
     h1 {
       margin: 0;
       text-align: center;
       color: #fff;
-      font-size: 35px;
-      letter-spacing: 1px;
+      font-size: 3.5rem;
+      letter-spacing: .1rem;
       span {
-        padding-left: 10px;
-        font-size: 14px;
+        padding-left: 1rem;
+        font-size: 1.4rem;
         font-weight: 800;
       }
     }
@@ -27,11 +27,11 @@
     }
     p {
       line-height: 1.9;
-      font-size: 16px;
+      font-size: 1.6rem;
       font-weight: 500;
       color: #fff;
       @include Japanese-font;
-      letter-spacing: .5px;
+      letter-spacing: .05rem;
     }
   }
   &__item {
@@ -39,97 +39,96 @@
     &--box {
       list-style: none;
       display: grid;
-      gap: 30px;
+      row-gap: 3rem;
       margin: 0;
-      padding: 20px;
+      padding: 2rem;
       line-height: 1.4;
-      font-size: 14px;
+      font-size: 1.4rem;
       font-weight: 500;
       color: $textColor;
-      letter-spacing: .5px;
+      letter-spacing: .05rem;
       @include Japanese-font;
       span, p {
-        font-size: 16px;
+        font-size: 1.6rem;
         color: #9da0a7;
       }
-      p {
-        margin-bottom: 10px;
+      p:last-child {
+        margin-bottom: 0;
       }
     }
     hr {
       border-top: 1px solid #b4b4b4;
-      margin: 0 20px;
-    }
-    &--message {
-      margin: 20px 20px 0;
-      text-align: center;
-      line-height: 1.9;
-      font-size: 14px;
-      font-weight: 500;
-      color: $textColor;
-      letter-spacing: .5px;
-      @include Japanese-font;
+      margin: 0 2rem;
     }
     &--contact {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 10px 0 30px;
-      &-arrow {
-        display: block;
-        margin-right: -3px;
-        width: 15px;
-        height: 15px;
-        border-top: solid 3px #e8676b;
-        border-right: solid 3px #e8676b;
-        transform: rotate(45deg);
-        animation: slide 1s linear infinite;
-        @keyframes slide {
-          0% {
-            transform: rotate(45deg) translate(0, 0);
-          }
-          20% {
-            transform: rotate(45deg) translate(-10px, 10px);
-          }
-          40% {
-            transform: rotate(45deg) translate(0, 0);
-          }
-        }
+      margin: 2rem 2rem 3rem;
+      &-message {
+        text-align: left;
+        line-height: 1.9;
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: $textColor;
+        letter-spacing: .05rem;
+        @include Japanese-font;
       }
       &-box {
-        display: block;
-        margin-left: 15px;
-        width: 150px;
-        height: 40px;
-        padding: 0;
-        border: none;
-        background: #e8676b;
-        border-radius: 3%;
-        cursor: pointer;
-        overflow: hidden;
-        &:hover {
-          .profile__item--contact-box-effect {
-            margin-left: 300px;
+        text-align: center;
+        &-arrow {
+          display: inline-block;
+          margin-right: -.5rem;
+          width: 2rem;
+          height: 2rem;
+          border-top: solid .5rem #e8676b;
+          border-right: solid .5rem #e8676b;
+          transform: rotate(45deg);
+          animation: slide 1s linear infinite;
+          @keyframes slide {
+            0% {
+              transform: rotate(45deg) translate(0, 0);
+            }
+            20% {
+              transform: rotate(45deg) translate(-1rem, 1rem);
+            }
+            40% {
+              transform: rotate(45deg) translate(0, 0);
+            }
           }
         }
-        &-text {
-          display: inline;
-          margin: 0;
-          color: #fff;
-          font-size: 16px;
-          font-weight: 800;
-          letter-spacing: 1px;
-        }
-        &-effect {
-          margin: 0;
-          background: linear-gradient(rgba(255, 255, 255, 255), rgba(204, 204, 204, 204));
-          width: 150px;
-          height: 40px;
-          margin-top: -40px;
-          transform: rotate(400deg);
-          margin-left: -300px;
-          opacity: 0.3;
-          transition: 1s;
+        &-button {
+          display: inline-block;
+          margin-left: 1.5rem;
+          width: 20rem;
+          height: 5rem;
+          padding: 0;
+          border: none;
+          background: #e8676b;
+          border-radius: 3%;
+          cursor: pointer;
+          overflow: hidden;
+          &:hover {
+            .profile__item--contact-box-button--effect {
+              margin-left: 30rem;
+            }
+          }
+          &--text {
+            display: inline;
+            margin: 0;
+            color: #fff;
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: .1rem;
+          }
+          &--effect {
+            margin: 0;
+            background: linear-gradient(rgba(255, 255, 255, 255), rgba(204, 204, 204, 204));
+            width: 20rem;
+            height: 5rem;
+            margin-top: -5rem;
+            transform: rotate(400deg);
+            margin-left: -30rem;
+            opacity: 0.3;
+            transition: 1s;
+          }
         }
       }
     }
