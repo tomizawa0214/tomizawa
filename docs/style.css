@@ -103,23 +103,49 @@ html, body {
 .opening__text {
   display: inline-block;
   position: absolute;
-  height: 1em;
+  height: 3.3rem;
   top: 0;
   left: 0;
-  bottom: 7%;
+  bottom: 4.5rem;
   right: 0;
   margin: auto;
   z-index: 9998;
   text-align: center;
   font-size: 2.6rem;
+  font-weight: 900;
+  font-style: italic;
   line-height: 1.2;
+  letter-spacing: .2rem;
   color: #fff;
+  background: -webkit-linear-gradient(#fff, #38495a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: textAnime1 .2s linear 2.3s forwards;
+          animation: textAnime1 .2s linear 2.3s forwards;
+}
+
+@-webkit-keyframes textAnime1 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes textAnime1 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .opening__text::after {
   position: absolute;
   content: '';
-  width: 270px;
+  width: 300px;
   height: 40px;
   z-index: 9999;
   top: 0;
@@ -128,11 +154,11 @@ html, body {
   right: 0;
   margin: auto;
   background: #1e1e1e;
-  -webkit-animation: textAnime 2s linear forwards;
-          animation: textAnime 2s linear forwards;
+  -webkit-animation: textAnime2 2s forwards;
+          animation: textAnime2 2s forwards;
 }
 
-@-webkit-keyframes textAnime {
+@-webkit-keyframes textAnime2 {
   0% {
     opacity: 1;
     -webkit-transform: translateX(0);
@@ -145,7 +171,7 @@ html, body {
   }
 }
 
-@keyframes textAnime {
+@keyframes textAnime2 {
   0% {
     opacity: 1;
     -webkit-transform: translateX(0);
@@ -301,10 +327,10 @@ html, body {
   position: absolute;
   width: 85%;
   z-index: 3;
-  opacity: 0;
   color: #fff;
   bottom: 0;
   left: 50%;
+  opacity: 0;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   -webkit-transition: .4s all ease-out;
@@ -317,16 +343,17 @@ html, body {
   font-size: 3rem;
 }
 
-.title__text h3 {
+.title__text h3, .title__text h4 {
+  margin: 0;
   font-weight: 500;
   line-height: 1.9;
   letter-spacing: .05rem;
   font-size: 1.4rem;
 }
 
-.title__text--byname {
+.title__text h4 {
+  margin: 1.5rem 0 2rem;
   font-size: 1.2rem;
-  line-height: 4;
 }
 
 .service {
@@ -791,9 +818,13 @@ footer h5 {
 
 @media screen and (min-width: 576px) {
   .title__text {
+    bottom: auto;
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
+  }
+  .title__text h4 {
+    margin: 1.5rem 0 0 0;
   }
   .works__item {
     -ms-grid-columns: auto auto;
