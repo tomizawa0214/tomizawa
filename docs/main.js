@@ -7,19 +7,41 @@ window.addEventListener('scroll', () => {
   if (scroll > 300) {
     pageTopBtn.style.opacity = '1';
   } else {
-    pageTopBtn.style.opacity = '0';
+    pageTopBtn.style.opacity = null;
   }
 });
 
-// html,bodyのトップまでスムーズスクロール
-document.querySelector('.back-to-top').onclick = () => {
-  anime.remove('html, body');
-  anime({
-    targets: 'html, body',
-    scrollTop: 0,
-    dulation: 200,
-    easing: 'easeOutCubic',
+// スムーススクロールのフォーマット
+const scrollFunc = Point => {
+  const point = document.querySelector(Point);　// スクロール先の対象を取得
+  const elemY = point.getBoundingClientRect().top;　// 対象Y軸の絶対座標を取得
+  const scrollY = window.pageYOffset; // 現在のスクロール量を取得
+  const top = elemY - scrollY + (-50); // 対象までのスクロール量を算出
+  
+  window.scroll({
+    top: top, // スクロール量の設定
+    behavior: 'smooth' // スクロール動作の設定
   });
+}
+// ページトップへスムーススクロール
+document.querySelector('.back-to-top').onclick = (e) => {　// クリックイベントを設定
+  e.preventDefault();
+  scrollFunc('html, body');
+}
+// Serviceへスムーススクロール
+document.querySelector('.nav__item--box--service').onclick = (e) => {　// クリックイベントを設定
+  e.preventDefault();
+  scrollFunc('.service');
+}
+// Worksへスムーススクロール
+document.querySelector('.nav__item--box--works').onclick = (e) => {　// クリックイベントを設定
+  e.preventDefault();
+  scrollFunc('.works');
+}
+// Profileへスムーススクロール
+document.querySelector('.nav__item--box--profile').onclick = (e) => {　// クリックイベントを設定
+  e.preventDefault();
+  scrollFunc('.profile');
 }
 
 // アコーディオンメニュー表示の付け替え
@@ -44,27 +66,15 @@ const myFunc = BottomHeight => {
     if (scroll > scroll + targetElement.top - windowHeight + BottomHeight) {
       myFade[i].style.opacity = '1';
       myFade[i].style.transform = 'translateY(0)';
+    } else {
+      myFade[i].style.opacity = null;
+      myFade[i].style.transform = null;
     }
   }
-  const myFadeTitle = document.querySelector('.title__text');
-  let targetElement = myFadeTitle.getBoundingClientRect(); // 要素の位置をブラウザの表示領域左上を起点とした値
-  if (scroll > scroll + targetElement.top - windowHeight + BottomHeight) {
-    myFadeTitle.style.opacity = '1';
-  }
 }
+// スクロールで発動
 window.addEventListener('scroll', () => {
   myFunc(100);
 });
+// 4秒後に発動
 window.setTimeout('myFunc(0)', 4000);
-
-// window.addEventListener('DOMContentLoaded', () => {
-//   const flip = document.getElementsByClassName('flip');
-//   for (let i = 0; i < flip.length; i++) {
-//     flip[i].addEventListener('click', () => {
-//       const targets = document.getElementsByClassName('contact-flip');
-//       for (let i = 0; i < targets.length; i++) {
-//         targets[i].classList.toggle('flipped');
-//       }
-//     });
-//   }
-// });

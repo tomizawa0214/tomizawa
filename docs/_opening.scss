@@ -66,13 +66,16 @@
     line-height: 1.2;
     letter-spacing: .2rem;
     color: #fff;
-    background: -webkit-linear-gradient(#fff, #38495a);
+    background: -webkit-linear-gradient(#fff 50%, #38495a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: textAnime1 .2s linear 2.3s forwards;
     @keyframes textAnime1 {
       0% {
         opacity: 1;
+      }
+      90% {
+        opacity: 0;
       }
       100% {
         opacity: 0;
@@ -95,6 +98,10 @@
         0% {
           opacity: 1;
           transform: translateX(0);
+        }
+        90% {
+          opacity: 0;
+          transform: translateX(100%);
         }
         100% {
           opacity: 0;

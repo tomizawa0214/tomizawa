@@ -1,5 +1,7 @@
 .title {
   position: relative;
+  display: flex;
+  justify-content: center;
   &__mask {
     position: absolute;
     z-index: 2;
@@ -8,38 +10,46 @@
     background: rgba(16, 21, 54, .6);
   }
   &__photo {
+    width: 100%;
+    height: 500px;
     background-image: url(photo/main.png);
-    max-width: 100%;
     background-size: cover;
     background-position: right 25% center;
-    height: 500px;
   }
   &__text {
     position: absolute;
     width: 85%;
     z-index: 3;
-    opacity: 0;
     color: #fff;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: .4s all ease-out;
     @include Japanese-font;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideIn .4s 4.3s forwards;
+    @keyframes slideIn {
+      0% {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
     h2 {
       font-weight: 700;
       font-size: 3rem;
-      // margin-left: 2rem;
     }
-    h3 {
+    h3, h4 {
+      margin: 0;
       font-weight: 500;
       line-height: 1.9;
       letter-spacing: .05rem;
       font-size: 1.4rem;
-      // margin-left: 2.5rem;
     }
-    &--byname {
+    h4 {
+      margin: 1.5rem 0 2rem;
       font-size: 1.2rem;
-      line-height: 4;
     }
   }
 }

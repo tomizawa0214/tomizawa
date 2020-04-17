@@ -1,4 +1,9 @@
 @media screen and (max-width: 369px) {
+  .nav {
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
   .title__text {
     h2 {
       font-size: 2.5rem;
@@ -8,9 +13,14 @@
 
 // -----sm(Small)-----
 @media screen and (min-width: 576px) {
-  .title__text {
-    top: 50%;
-    transform: translate(-50%, -50%);
+  .title {
+    align-items: center;
+    &__text {
+      bottom: auto;
+      h4 {
+        margin: 1.5rem 0 0 0;
+      }
+    }
   }
   .works__item {
     grid-template-columns: auto auto;
@@ -44,8 +54,11 @@
 
 // // -----md(Medium)-----
 @media screen and (min-width: 768px) {
-  .nav li:nth-child(-n+4) {
-    padding-right: 4rem;
+  .nav li {
+    padding: 0 7rem 0 0;
+    &:nth-child(3) {
+      padding: 0 3rem 0 0;
+    }
   }
   .title__photo {
     height: 700px;
