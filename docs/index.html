@@ -15,9 +15,9 @@
   <body>
 
     <!-- Opening Fake Shutter -->
-    <div class="opening">
+    <!-- <div class="opening">
       <p class="opening__text">Thank you for coming!</p>
-    </div>
+    </div> -->
 
     <!-- Back To Top -->
     <div class="back-to-top" data-toggle="tooltip" data-placement="left" title="Back to Top">
@@ -55,49 +55,40 @@
     </div>
 
     <!-- Service Section-->
-    <div class="container-fluid service" id="service">
-    <div class="row text-center">
-      <div class="col-12">
-        <h2>Service</h2>
-      </div>
+    <div class="service" id="service">
+      <h2>Service</h2>
       <hr>
-      <div class="col-12">
-        <p class="service__message">webページのデザインから<br class="d-none d-md-block">ポスター、チラシ、パンフレット、カタログ等々のグラフィックデザインまで<br class="d-none d-md-block">お客様のお悩み事に寄り添い、解決に向けて尽力させていただきます。</p>
-      </div>
+      <p class="service__message">webページのデザインから<br class="d-none d-md-block">ポスター、チラシ、パンフレット、カタログ等々のグラフィックデザインまで<br class="d-none d-md-block">お客様のお悩み事に寄り添い、解決に向けて尽力させていただきます。</p>
       <!-- Service Three Column Section -->
-      <div class="col-md-3">
-        <h3>ヒアリング</h3>
-        <h4>DIRECTION</h4>
-        <i class="service__icon--compass far fa-compass" aria-hidden="true"></i>
-        <p class="service__text">お客様のご要望・お悩み事をヒアリングさせていただき、効果的なプランをご提案させていただきます。</p>
+      <div class="service__icon">
+        <div class="service__icon--wrap">
+          <h3>ヒアリング</h3>
+          <h4>DIRECTION</h4>
+          <i class="service__icon--wrap--menu far fa-compass fa-fw" aria-hidden="true"></i>
+          <p class="service__icon--wrap--text">お客様のご要望・お悩み事をヒアリングさせていただき、効果的なプランをご提案させていただきます。</p>
+        </div>
+        <i class="service__icon--plus fas fa-plus" aria-hidden="true"></i>
+        <div class="service__icon--wrap">
+          <h3>デザイン</h3>
+          <h4>DESIGN</h4>
+          <i class="service__icon--wrap--menu fas fa-paint-brush fa-fw" aria-hidden="true"></i>
+          <p class="service__icon--wrap--text">ヒアリングに基づきデザインを作成いたします。お客様の視点はもちろん、その先のエンドユーザーの視点にも立ってデザインを行います。</p>
+        </div>
+        <i class="service__icon--plus fas fa-plus" aria-hidden="true"></i>
+        <div class="service__icon--wrap">
+          <h3>プロダクション</h3>
+          <h4>WEB & GRAPHIC</h4>
+          <i class="service__icon--wrap--menu far fa-image fa-fw" aria-hidden="true"></i>
+          <p class="service__icon--wrap--text">webページ制作からポスター、チラシ、パンフレット、カタログ等々のグラフィック制作まで、お客様のご要望に応じてデザインを形にします。</p>
+        </div>
       </div>
-      <i class="service__icon--plus fas fa-plus col-md-1 d-flex align-items-center justify-content-center"></i>
-      <div class="col-md-3">
-        <h3>デザイン</h3>
-        <h4>DESIGN</h4>
-        <i class="service__icon--paint-brush fas fa-paint-brush" aria-hidden="true"></i>
-        <p class="service__text">ヒアリングに基づいたプランに沿って、デザインを作成いたします。お客様の視点はもちろん、その先のエンドユーザーの視点にも立ってデザインを行います。</p>
-      </div>
-      <i class="service__icon--plus fas fa-plus col-md-1 d-flex align-items-center justify-content-center"></i>
-      <div class="col-md-4">
-        <h3>プロダクション</h3>
-        <h4>WEB & GRAPHIC</h4>
-        <i class="service__icon--image far fa-image" aria-hidden="true"></i>
-        <p class="service__text">webページ制作からポスター、チラシ、パンフレット、カタログ等々のグラフィック制作まで、お客様のご要望に応じてデザインを形にします。</p>
-      </div>
-    </div>
     </div>
 
     <!-- Works Section-->
-    <div class="container-fluid works" id="works">
-    <div class="row text-center">
-      <div class="col-12">
-        <h2>Works</h2>
-      </div>
+    <div class="works" id="works">
+      <h2>Works</h2>
       <hr>
-      <div class="col-12">
-        <p class="works__message">過去の制作実績の一部となります。<br>お力となれますよう最大限尽力させていただきます。</p>
-      </div>
+      <p class="works__message">過去の制作実績の一部となります。<br class="d-none d-md-block">お力となれますよう最大限尽力させていただきます。</p>
       <!-- Works Column Section -->
       <div class="works__item">
         <div class="works__item-card card">
@@ -149,7 +140,6 @@
           </a>
         </div>
       </div>
-    </div>
     </div>
 
     <!-- Profile -->

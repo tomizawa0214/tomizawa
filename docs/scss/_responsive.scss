@@ -1,20 +1,20 @@
 @media screen and (max-width: 369px) {
   .nav {
     h1 {
-      font-size: 2.5rem;
+      font-size: 25px;
     }
   }
 
   .opening {
     &__text {
-      font-size: 2.3rem;
+      font-size: 23px;
     }
   }
 
   .title {
     &__text {
       h2 {
-        font-size: 2.5rem;
+        font-size: 25px;
       }
     }
   }
@@ -27,10 +27,14 @@
     &__text {
       bottom: auto;
       h4 {
-        margin: 1.5rem 0 0 0;
+        margin: 15px 0 0 0;
       }
     }
   }
+
+  // .service, .works {
+  //   padding: 50px;
+  // }
 
   .works {
     &__item {
@@ -74,9 +78,9 @@
 @media screen and (min-width: 768px) {
   .nav {
     li {
-      padding: 0 7rem 0 0;
+      padding: 0 70px 0 0;
       &:nth-child(3) {
-        padding: 0 3rem 0 0;
+        padding: 0 30px 0 0;
       }
     }
   }
@@ -87,21 +91,41 @@
     }
     &__text {
       h2 {
-        font-size: 3.5rem;
+        font-size: 35px;
       }
       h3 {
-        font-size: 1.6rem;
+        font-size: 16px;
       }
     }
   }
 
+  .service, .works {
+    padding: 50px;
+  }
+
   .service {
-    &__text {
-      text-align: left;
+    &__message {
+      text-align: center;
+    }
+    &__icon {
+      grid-template-columns: auto auto auto auto auto;
+      column-gap: 20px;
+      &--wrap {
+        &--text {
+          width: 100%;
+          text-align: left;
+        }
+      }
+      &--plus {
+        margin-top: 90px;
+      }
     }
   }
 
   .works {
+    &__message {
+      text-align: center;
+    }
     &__item {
       grid-template-columns: auto auto auto;
     }
@@ -160,6 +184,10 @@
 
 // -----lg(Large)-----
 @media screen and (min-width: 992px) {
+  // .service, .works {
+  //   padding: 50px;
+  // }
+
   .profile {
     &__introduction {
       grid-template-columns: 28% 1fr;
@@ -264,6 +292,11 @@
     }
   }
   
+  .service, .works {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+
   .works {
     &__item {
       grid-template-columns: auto auto auto auto;

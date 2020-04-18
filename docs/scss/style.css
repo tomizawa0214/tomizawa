@@ -71,19 +71,19 @@ html, body {
 .opening__text {
   display: inline-block;
   position: absolute;
-  height: 3.3rem;
+  height: 33px;
   top: 0;
   left: 0;
-  bottom: 4.5rem;
+  bottom: 45px;
   right: 0;
   margin: auto;
   z-index: 9998;
   text-align: center;
-  font-size: 2.6rem;
+  font-size: 26px;
   font-weight: 900;
   font-style: italic;
   line-height: 1.2;
-  letter-spacing: .2rem;
+  letter-spacing: 2px;
   color: #fff;
   background: -webkit-linear-gradient(#fff 50%, #38495a);
   -webkit-background-clip: text;
@@ -161,7 +161,7 @@ html, body {
 }
 
 .navbar {
-  padding: 1.5rem;
+  padding: 15px;
   background: #fff;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.19), 0 6px 10px rgba(0, 0, 0, 0.23);
 }
@@ -174,9 +174,9 @@ html, body {
 .nav h1 {
   margin: 0;
   font-family: 'Archivo Black', sans-serif;
-  font-size: 3rem;
+  font-size: 30px;
   color: #1a237e;
-  letter-spacing: .08rem;
+  letter-spacing: .8px;
 }
 
 .nav__toggler {
@@ -185,8 +185,8 @@ html, body {
 
 .nav__toggler--open {
   right: 0;
-  top: .2rem;
-  font-size: 3rem;
+  top: 2px;
+  font-size: 30px;
   color: #3D4451;
   border-color: rgba(0, 0, 0, 0);
   visibility: visible;
@@ -196,8 +196,8 @@ html, body {
   position: absolute;
   top: 0;
   right: 0;
-  margin: -1.2rem 1rem 0 0;
-  font-size: 5rem;
+  margin: -12px 10px 0 0;
+  font-size: 50px;
   color: #e8676b;
   visibility: hidden;
 }
@@ -215,18 +215,18 @@ html, body {
 }
 
 .nav li {
-  padding-top: 3rem;
+  padding-top: 30px;
   text-align: center;
 }
 
 .nav li:nth-child(3) {
-  padding-bottom: 1.5rem;
+  padding-bottom: 15px;
 }
 
 .nav li a {
   position: relative;
   display: inline-block;
-  font-size: 1.6rem;
+  font-size: 16px;
   color: #3D4451;
 }
 
@@ -299,30 +299,27 @@ html, body {
 
 .title__text h2 {
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 30px;
 }
 
 .title__text h3, .title__text h4 {
   margin: 0;
   font-weight: 500;
   line-height: 1.9;
-  letter-spacing: .05rem;
-  font-size: 1.4rem;
+  letter-spacing: .5px;
+  font-size: 14px;
 }
 
 .title__text h4 {
-  margin: 1.5rem 0 2rem;
-  font-size: 1.2rem;
+  margin: 15px 0 20px;
+  font-size: 12px;
 }
 
 .service {
-  padding-bottom: 3rem;
-  width: 85%;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-  padding-top: 3rem;
-  padding-right: 3rem;
-  padding-left: 3rem;
+  width: 90%;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 30px;
   background: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
   opacity: 0;
@@ -331,83 +328,84 @@ html, body {
 }
 
 .service h2 {
-  margin-bottom: 1rem;
+  margin-bottom: 2px;
   text-align: center;
-  font-size: 4rem;
+  font-size: 40px;
   font-weight: 100;
   color: #3D4451;
-  letter-spacing: .12rem;
+  letter-spacing: 2px;
 }
 
 .service hr {
+  width: 200px;
   border-top: 1px solid #b4b4b4;
-  width: 70%;
-  margin-top: .3rem;
-  margin-bottom: 1rem;
+  margin: 0 auto;
 }
 
 .service__message {
-  margin-top: 1rem;
-  margin-bottom: 5rem;
-  text-align: center;
+  margin: 20px 0 80px;
   line-height: 1.9;
-  font-size: 1.4rem;
+  font-size: 14px;
   font-weight: 500;
   color: #3D4451;
-  letter-spacing: .05rem;
+  letter-spacing: .5px;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
 }
 
-.service h3 {
-  margin-bottom: 1rem;
+.service__icon {
+  display: grid;
+}
+
+.service__icon--wrap {
+  text-align: center;
+}
+
+.service__icon--wrap h3 {
+  margin-bottom: 10px;
   line-height: 1;
-  font-size: 2.4rem;
+  font-size: 20px;
   color: #3D4451;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
 }
 
-.service h4 {
+.service__icon--wrap h4 {
   margin: 0;
-  letter-spacing: .15rem;
+  letter-spacing: 1.5px;
   line-height: 1;
-  font-size: 1.4rem;
+  font-size: 12px;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   color: #a5a5a5;
 }
 
-.service__icon--compass, .service__icon--paint-brush, .service__icon--code, .service__icon--image {
-  font-size: 7.1rem;
-  margin: 2.5rem 0;
+.service__icon--wrap--menu {
+  font-size: 80px;
+  margin: 25px 0;
 }
 
-.service__icon--code {
-  margin-right: 1rem;
-}
-
-.service__icon--plus {
-  font-size: 3rem;
-  margin: 1rem 0;
-  padding: 3rem 0;
-}
-
-.service__text {
-  margin: 0;
+.service__icon--wrap--text {
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
   line-height: 1.9;
-  font-size: 1.4rem;
+  font-size: 14px;
   font-weight: 500;
   color: #3D4451;
-  letter-spacing: .05rem;
+  letter-spacing: .5px;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
 }
 
+.service__icon--plus {
+  text-align: center;
+  font-size: 30px;
+  margin: 40px 0;
+}
+
 .works {
-  width: 85%;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-  padding-top: 3rem;
-  padding-right: 3rem;
-  padding-left: 3rem;
+  width: 90%;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 30px;
   background: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
   opacity: 0;
@@ -416,37 +414,33 @@ html, body {
 }
 
 .works h2 {
-  margin-bottom: 1rem;
+  margin-bottom: 2px;
   text-align: center;
-  font-size: 4rem;
+  font-size: 40px;
   font-weight: 100;
   color: #3D4451;
-  letter-spacing: .12rem;
+  letter-spacing: 2px;
 }
 
 .works hr {
+  width: 200px;
   border-top: 1px solid #b4b4b4;
-  width: 70%;
-  margin-top: .3rem;
-  margin-bottom: 1rem;
+  margin: 0 auto;
 }
 
 .works__message {
-  margin-top: 1rem;
-  margin-bottom: 5rem;
-  text-align: center;
+  margin: 20px 0 80px;
   line-height: 1.9;
-  font-size: 1.4rem;
+  font-size: 14px;
   font-weight: 500;
   color: #3D4451;
-  letter-spacing: .05rem;
+  letter-spacing: .5px;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
 }
 
 .works__item {
   display: grid;
-  gap: 3rem;
-  padding: 0 1.5rem 3rem;
+  gap: 30px;
 }
 
 .works__item-card--box {
@@ -458,17 +452,17 @@ html, body {
   width: 100%;
   height: 100%;
   top: 0;
-  transition: all 0.4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
 .works__item-card--box--mask p {
   position: absolute;
   width: 40%;
   z-index: 2;
-  padding: .5rem 2rem 0 0;
+  padding: 5px 20px 0 0;
   text-align: center;
-  letter-spacing: .05rem;
-  font-size: 1.3rem;
+  letter-spacing: .5px;
+  font-size: 14px;
   font-weight: 600;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
   color: #fff;
@@ -481,8 +475,8 @@ html, body {
   width: 0;
   left: 0;
   border-left: 0;
-  border-top: solid 3rem #e8676b;
-  border-right: solid 2rem transparent;
+  border-top: solid 30px #e8676b;
+  border-right: solid 20px transparent;
   border-bottom: 0;
   opacity: 0;
   transition: all .4s ease-in-out;
@@ -495,11 +489,11 @@ html, body {
   padding: 1rem;
   bottom: 0;
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 14px;
   font-weight: 600;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
   color: #fff;
-  letter-spacing: .05rem;
+  letter-spacing: .5px;
   background: #e8676b;
   opacity: 0;
   transform: translateY(30px);
@@ -714,13 +708,13 @@ footer h5 {
 
 @media screen and (max-width: 369px) {
   .nav h1 {
-    font-size: 2.5rem;
+    font-size: 25px;
   }
   .opening__text {
-    font-size: 2.3rem;
+    font-size: 23px;
   }
   .title__text h2 {
-    font-size: 2.5rem;
+    font-size: 25px;
   }
 }
 
@@ -732,7 +726,7 @@ footer h5 {
     bottom: auto;
   }
   .title__text h4 {
-    margin: 1.5rem 0 0 0;
+    margin: 15px 0 0 0;
   }
   .works__item {
     grid-template-columns: auto auto;
@@ -765,22 +759,39 @@ footer h5 {
 
 @media screen and (min-width: 768px) {
   .nav li {
-    padding: 0 7rem 0 0;
+    padding: 0 70px 0 0;
   }
   .nav li:nth-child(3) {
-    padding: 0 3rem 0 0;
+    padding: 0 30px 0 0;
   }
   .title__photo {
     height: 700px;
   }
   .title__text h2 {
-    font-size: 3.5rem;
+    font-size: 35px;
   }
   .title__text h3 {
-    font-size: 1.6rem;
+    font-size: 16px;
   }
-  .service__text {
+  .service, .works {
+    padding: 50px;
+  }
+  .service__message {
+    text-align: center;
+  }
+  .service__icon {
+    grid-template-columns: auto auto auto auto auto;
+    column-gap: 20px;
+  }
+  .service__icon--wrap--text {
+    width: 100%;
     text-align: left;
+  }
+  .service__icon--plus {
+    margin-top: 90px;
+  }
+  .works__message {
+    text-align: center;
   }
   .works__item {
     grid-template-columns: auto auto auto;
@@ -919,6 +930,10 @@ footer h5 {
   }
   .title__photo {
     background-position: right 25% bottom 30%;
+  }
+  .service, .works {
+    margin-top: 80px;
+    margin-bottom: 80px;
   }
   .works__item {
     grid-template-columns: auto auto auto auto;

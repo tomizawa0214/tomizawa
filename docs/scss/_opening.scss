@@ -52,19 +52,19 @@
   &__text {
     display: inline-block;
     position: absolute;
-    height: 3.3rem;
+    height: 33px;
     top: 0;
     left: 0;
-    bottom: 4.5rem;
+    bottom: 45px;
     right: 0;
     margin: auto;
     z-index: 9998;
     text-align: center;
-    font-size: 2.6rem;
+    font-size: 26px;
     font-weight: 900;
     font-style: italic;
     line-height: 1.2;
-    letter-spacing: .2rem;
+    letter-spacing: 2px;
     color: #fff;
     background: -webkit-linear-gradient(#fff 50%, #38495a);
     -webkit-background-clip: text;
