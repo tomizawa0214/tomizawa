@@ -38,6 +38,11 @@ document.querySelector('.nav__item--box--works').onclick = (e) => {　// クリ�
   e.preventDefault();
   scrollFunc('.works');
 }
+// Skillへスムーススクロール
+document.querySelector('.nav__item--box--skill').onclick = (e) => {　// クリックイベントを設定
+  e.preventDefault();
+  scrollFunc('.skill');
+}
 // Profileへスムーススクロール
 document.querySelector('.nav__item--box--profile').onclick = (e) => {　// クリックイベントを設定
   e.preventDefault();
@@ -58,7 +63,7 @@ document.querySelector('.nav__toggler--open').onclick = () => {
 
 // 指定要素が画面内に入ったらフェードイン
 const myFunc = BottomHeight => {
-  const myFade = document.querySelectorAll('.service, .works, .profile');
+  const myFade = document.querySelectorAll('.service, .works, .skill, .profile');
   let scroll = document.documentElement.scrollTop || document.body.scrollTop;
   let windowHeight = window.innerHeight;
   for (let i = 0; i < myFade.length; i++) {

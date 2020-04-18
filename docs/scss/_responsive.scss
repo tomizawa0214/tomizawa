@@ -32,10 +32,6 @@
     }
   }
 
-  // .service, .works {
-  //   padding: 50px;
-  // }
-
   .works {
     &__item {
     grid-template-columns: auto auto;
@@ -79,7 +75,7 @@
   .nav {
     li {
       padding: 0 70px 0 0;
-      &:nth-child(3) {
+      &:nth-child(4) {
         padding: 0 30px 0 0;
       }
     }
@@ -98,12 +94,9 @@
       }
     }
   }
-
-  .service, .works {
-    padding: 50px;
-  }
-
+  
   .service {
+    padding: 50px;
     &__message {
       text-align: center;
     }
@@ -123,6 +116,7 @@
   }
 
   .works {
+    padding: 50px;
     &__message {
       text-align: center;
     }
@@ -184,10 +178,6 @@
 
 // -----lg(Large)-----
 @media screen and (min-width: 992px) {
-  // .service, .works {
-  //   padding: 50px;
-  // }
-
   .profile {
     &__introduction {
       grid-template-columns: 28% 1fr;
@@ -290,9 +280,20 @@
     &__photo {
       background-position: right 25% bottom 30%;
     }
+    &__text {
+      h2 {
+        font-size: 45px;
+      }
+      h3 {
+        font-size: 20px;
+      }
+      h4 {
+        font-size: 16px;
+      }
+    }
   }
   
-  .service, .works {
+  .service, .works, .skill {
     margin-top: 80px;
     margin-bottom: 80px;
   }

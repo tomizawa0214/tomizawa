@@ -219,7 +219,7 @@ html, body {
   text-align: center;
 }
 
-.nav li:nth-child(3) {
+.nav li:nth-child(4) {
   padding-bottom: 15px;
 }
 
@@ -514,6 +514,34 @@ html, body {
   width: 40%;
 }
 
+.skill {
+  width: 90%;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: .4s all ease-out;
+}
+
+.skill h2 {
+  margin-bottom: 2px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 100;
+  color: #3D4451;
+  letter-spacing: 2px;
+}
+
+.skill hr {
+  width: 200px;
+  border-top: 1px solid #b4b4b4;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+
 .profile {
   padding: 3rem;
   background: #283593;
@@ -761,7 +789,7 @@ footer h5 {
   .nav li {
     padding: 0 70px 0 0;
   }
-  .nav li:nth-child(3) {
+  .nav li:nth-child(4) {
     padding: 0 30px 0 0;
   }
   .title__photo {
@@ -773,7 +801,7 @@ footer h5 {
   .title__text h3 {
     font-size: 16px;
   }
-  .service, .works {
+  .service {
     padding: 50px;
   }
   .service__message {
@@ -789,6 +817,9 @@ footer h5 {
   }
   .service__icon--plus {
     margin-top: 90px;
+  }
+  .works {
+    padding: 50px;
   }
   .works__message {
     text-align: center;
@@ -931,7 +962,16 @@ footer h5 {
   .title__photo {
     background-position: right 25% bottom 30%;
   }
-  .service, .works {
+  .title__text h2 {
+    font-size: 45px;
+  }
+  .title__text h3 {
+    font-size: 20px;
+  }
+  .title__text h4 {
+    font-size: 16px;
+  }
+  .service, .works, .skill {
     margin-top: 80px;
     margin-bottom: 80px;
   }
