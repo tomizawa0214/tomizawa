@@ -378,8 +378,9 @@ html, body {
   color: #a5a5a5;
 }
 
-.service__icon--wrap--menu {
-  font-size: 80px;
+.service__icon--wrap img {
+  width: 80px;
+  height: 80px;
   margin: 25px 0;
 }
 
@@ -585,6 +586,7 @@ html, body {
 .skill__box--circle--inner {
   position: absolute;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   top: 10px;
@@ -599,6 +601,16 @@ html, body {
 .skill__box--circle--inner img {
   width: 50px;
   height: auto;
+}
+
+.skill__box--circle--inner span {
+  margin-top: 5px;
+  line-height: 1;
+  letter-spacing: 1.5px;
+  font-size: 12px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #a5a5a5;
 }
 
 .skill__box--html {
