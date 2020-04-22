@@ -539,7 +539,213 @@ html, body {
   width: 200px;
   border-top: 1px solid #b4b4b4;
   margin: 0 auto;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
+}
+
+.skill__box {
+  display: grid;
+  justify-content: center;
+  gap: 30px;
+}
+
+.skill__box--circle {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.skill__box--circle::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -75px;
+  width: 150px;
+  height: 150px;
+  transform-origin: right 75px;
+  z-index: 2;
+}
+
+.skill__box--circle::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 75px;
+  width: 150px;
+  height: 150px;
+  transform-origin: left 75px;
+  z-index: 3;
+}
+
+.skill__box--circle--inner {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 10px;
+  left: 10px;
+  width: 130px;
+  height: 130px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 4;
+}
+
+.skill__box--circle--inner img {
+  width: 50px;
+  height: auto;
+}
+
+.skill__box--html {
+  background: #f16529;
+}
+
+.skill__box--html::before {
+  background: #fdede7;
+  animation: rotate-circle-left-html 7s linear infinite;
+}
+
+@keyframes rotate-circle-left-html {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(0deg);
+  }
+  18% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+
+.skill__box--html::after {
+  background: #fdede7;
+  animation: rotate-circle-right-html 7s linear infinite;
+}
+
+@keyframes rotate-circle-right-html {
+  0% {
+    transform: rotate(0deg);
+    background: #fdede7;
+  }
+  15% {
+    transform: rotate(180deg);
+    background: #fdede7;
+  }
+  15.01% {
+    transform: rotate(360deg);
+    background: #f16529;
+  }
+  100% {
+    transform: rotate(360deg);
+    background: #f16529;
+  }
+}
+
+.skill__box--css {
+  background: #2965f1;
+}
+
+.skill__box--css::before {
+  background: #e7edfd;
+  animation: rotate-circle-left-css 7s linear infinite;
+}
+
+@keyframes rotate-circle-left-css {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(0deg);
+  }
+  18% {
+    transform: rotate(40deg);
+  }
+  100% {
+    transform: rotate(40deg);
+  }
+}
+
+.skill__box--css::after {
+  background: #e7edfd;
+  animation: rotate-circle-right-css 7s linear infinite;
+}
+
+@keyframes rotate-circle-right-css {
+  0% {
+    transform: rotate(0deg);
+    background: #e7edfd;
+  }
+  15% {
+    transform: rotate(180deg);
+    background: #e7edfd;
+  }
+  15.01% {
+    transform: rotate(360deg);
+    background: #2965f1;
+  }
+  100% {
+    transform: rotate(360deg);
+    background: #2965f1;
+  }
+}
+
+.skill__box--js {
+  background: #f7de1e;
+}
+
+.skill__box--js::before {
+  background: #fefbe6;
+}
+
+.skill__box--js::after {
+  background: #fefbe6;
+  animation: rotate-circle-right-js 7s linear infinite;
+}
+
+@keyframes rotate-circle-right-js {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(160deg);
+  }
+  100% {
+    transform: rotate(160deg);
+  }
+}
+
+.skill__box--python {
+  background: #366a94;
+}
+
+.skill__box--python::before {
+  background: #ecf3f8;
+  animation: rotate-circle-left-python 7s linear infinite;
+}
+
+.skill__box--python::after {
+  background: #ecf3f8;
+  animation: rotate-circle-right-python 7s linear infinite;
+}
+
+@keyframes rotate-circle-right-python {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(70deg);
+  }
+  100% {
+    transform: rotate(70deg);
+  }
 }
 
 .profile {
