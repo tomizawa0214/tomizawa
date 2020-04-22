@@ -545,7 +545,7 @@ html, body {
 .skill__box {
   display: grid;
   justify-content: center;
-  gap: 30px;
+  gap: 50px;
 }
 
 .skill__box--circle {
@@ -965,6 +965,9 @@ footer h5 {
   .works__item {
     grid-template-columns: auto auto;
   }
+  .skill__box {
+    grid-template-columns: auto auto;
+  }
   .profile__introduction {
     grid-template-columns: 55% 1fr;
     grid-column-gap: 10px;
@@ -1033,6 +1036,9 @@ footer h5 {
   .works__item {
     grid-template-columns: auto auto auto;
   }
+  .skill__box {
+    grid-template-columns: auto auto auto;
+  }
   .profile__introduction {
     grid-template-columns: 40% 1fr;
     grid-template-rows: auto 25px auto;
@@ -1081,6 +1087,9 @@ footer h5 {
 }
 
 @media screen and (min-width: 992px) {
+  .skill__box {
+    grid-template-columns: auto auto auto auto;
+  }
   .profile__introduction {
     grid-template-columns: 28% 1fr;
   }

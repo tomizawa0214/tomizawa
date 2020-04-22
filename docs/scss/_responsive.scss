@@ -38,6 +38,12 @@
     }
   }
 
+  .skill {
+    &__box {
+      grid-template-columns: auto auto;
+    }
+  }
+
   .profile {
     &__introduction {
       grid-template-columns: 55% 1fr;
@@ -125,6 +131,12 @@
     }
   }
 
+  .skill {
+    &__box {
+      grid-template-columns: auto auto auto;
+    }
+  }
+
   .profile {
     &__introduction {
       grid-template-columns: 40% 1fr;
@@ -178,6 +190,12 @@
 
 // -----lg(Large)-----
 @media screen and (min-width: 992px) {
+  .skill {
+    &__box {
+      grid-template-columns: auto auto auto auto;
+    }
+  }
+
   .profile {
     &__introduction {
       grid-template-columns: 28% 1fr;
