@@ -1,135 +1,122 @@
 .profile {
-  padding: 3rem;
-  background: #283593;
+  padding: 50px;
+  background: #e8eaf6;
   @include slide--from-bottom;
   &__introduction {
     display: grid;
-    padding: 0 1.5rem 1.5rem;
+    margin-bottom: 30px;
     img {
-      border-radius: 5%;
-      margin-bottom: 1.5rem;
+      margin: 0 auto 15px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
     }
     h1 {
       margin: 0;
       text-align: center;
-      color: #fff;
-      font-size: 3.5rem;
-      letter-spacing: .1rem;
-      span {
-        padding-left: 1rem;
-        font-size: 1.4rem;
-        font-weight: 800;
-      }
-    }
-    hr {
-      border-top: 1px solid #fff;
-      width: 100%;
-    }
-    p {
-      line-height: 1.9;
-      font-size: 1.6rem;
-      font-weight: 500;
-      color: #fff;
-      @include Japanese-font;
-      letter-spacing: .05rem;
-    }
-  }
-  &__item {
-    background: #fff;
-    &--box {
-      list-style: none;
-      display: grid;
-      row-gap: 3rem;
-      margin: 0;
-      padding: 2rem;
-      line-height: 1.4;
-      font-size: 1.4rem;
-      font-weight: 500;
       color: $textColor;
-      letter-spacing: .05rem;
-      @include Japanese-font;
-      span, p {
-        font-size: 1.6rem;
-        color: #9da0a7;
-      }
-      p:last-child {
-        margin-bottom: 0;
+      font-size: 25px;
+      letter-spacing: 1px;
+      span {
+        padding-left: 10px;
+        color: #a5a5a5;
+        font-size: 12px;
+        font-weight: 400;
+        font-family: 'Lato', sans-serif;
       }
     }
     hr {
       border-top: 1px solid #b4b4b4;
-      margin: 0 2rem;
+      width: 100%;
     }
-    &--contact {
-      margin: 2rem 2rem 3rem;
-      &-message {
-        text-align: left;
-        line-height: 1.9;
-        font-size: 1.6rem;
-        font-weight: 700;
-        color: $textColor;
-        letter-spacing: .05rem;
-        @include Japanese-font;
+    p {
+      margin: 0;
+      line-height: 1.9;
+      font-size: 14px;
+      font-weight: 500;
+      color: $textColor;
+      @include Japanese-font;
+      letter-spacing: .5px;
+    }
+    &--contact-box {
+      padding: 10px 0 0;
+      &-arrow {
+        display: inline-block;
+        margin-right: -5px;
+        width: 20px;
+        height: 20px;
+        border-top: solid 5px #e8676b;
+        border-right: solid 5px #e8676b;
+        transform: rotate(45deg);
+        animation: slide 1s linear infinite;
+        @keyframes slide {
+          0% {
+            transform: rotate(45deg) translate(0, 0);
+          }
+          20% {
+            transform: rotate(45deg) translate(-10px, 10px);
+          }
+          40% {
+            transform: rotate(45deg) translate(0, 0);
+          }
+        }
       }
-      &-box {
-        text-align: center;
-        &-arrow {
-          display: inline-block;
-          margin-right: -.5rem;
-          width: 2rem;
-          height: 2rem;
-          border-top: solid .5rem #e8676b;
-          border-right: solid .5rem #e8676b;
-          transform: rotate(45deg);
-          animation: slide 1s linear infinite;
-          @keyframes slide {
-            0% {
-              transform: rotate(45deg) translate(0, 0);
-            }
-            20% {
-              transform: rotate(45deg) translate(-1rem, 1rem);
-            }
-            40% {
-              transform: rotate(45deg) translate(0, 0);
-            }
+      &-button {
+        margin-left: 15px;
+        width: 150px;
+        height: 50px;
+        padding: 0;
+        border: none;
+        background: #e8676b;
+        border-radius: 3%;
+        cursor: pointer;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+        &:hover {
+          .profile__introduction--contact-box-button--effect {
+            margin-left: 300px;
           }
         }
-        &-button {
-          display: inline-block;
-          margin-left: 1.5rem;
-          width: 20rem;
-          height: 5rem;
-          padding: 0;
-          border: none;
-          background: #e8676b;
-          border-radius: 3%;
-          cursor: pointer;
-          overflow: hidden;
-          &:hover {
-            .profile__item--contact-box-button--effect {
-              margin-left: 30rem;
-            }
-          }
-          &--text {
-            display: inline;
-            margin: 0;
-            color: #fff;
-            font-size: 2rem;
-            font-weight: 800;
-            letter-spacing: .1rem;
-          }
-          &--effect {
-            margin: 0;
-            background: linear-gradient(rgba(255, 255, 255, 255), rgba(204, 204, 204, 204));
-            width: 20rem;
-            height: 5rem;
-            margin-top: -5rem;
-            transform: rotate(400deg);
-            margin-left: -30rem;
-            opacity: 0.3;
-            transition: 1s;
-          }
+        span {
+          display: inline;
+          margin: 0;
+          color: #fff;
+          font-size: 16px;
+          font-weight: 800;
+          letter-spacing: 1px;
         }
+        &--effect {
+          margin: 0;
+          background: linear-gradient(rgba(255, 255, 255, 255), rgba(204, 204, 204, 204));
+          width: 150px;
+          height: 50px;
+          margin-top: -50px;
+          transform: rotate(400deg);
+          margin-left: -300px;
+          opacity: 0.3;
+          transition: 1s;
+        }
+      }
+    }
+  }
+  &__card {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+    &--box {
+      list-style: none;
+      display: grid;
+      row-gap: 30px;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.4;
+      font-size: 14px;
+      font-weight: 500;
+      color: $textColor;
+      letter-spacing: .5px;
+      span {
+        font-size: 14px;
+        color: #a5a5a5;
+        @include Japanese-font;
       }
     }
     &--social {
@@ -138,7 +125,7 @@
       margin: 0;
       padding: 0;
       list-style: none;
-      background: #e8676b;
+      background: #c5cae9;
       a {
         position: relative;
         display: flex;
@@ -164,7 +151,7 @@ footer {
   h5 {
     margin: 0;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 12px;
     line-height: 3;
   }
 }
