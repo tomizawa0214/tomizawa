@@ -761,6 +761,7 @@ html, body {
 }
 
 .profile {
+  position: relative;
   padding: 50px;
   background: #e8eaf6;
   opacity: 0;
@@ -768,19 +769,19 @@ html, body {
   transition: .4s all ease-out;
 }
 
-.profile__introduction {
+.profile__container {
+  margin-bottom: 50px;
   display: grid;
-  margin-bottom: 30px;
 }
 
-.profile__introduction img {
+.profile__container img {
   margin: 0 auto 15px;
   width: 150px;
   height: 150px;
   border-radius: 50%;
 }
 
-.profile__introduction h1 {
+.profile__container h1 {
   margin: 0;
   text-align: center;
   color: #3D4451;
@@ -788,7 +789,7 @@ html, body {
   letter-spacing: 1px;
 }
 
-.profile__introduction h1 span {
+.profile__container h1 span {
   padding-left: 10px;
   color: #a5a5a5;
   font-size: 12px;
@@ -796,12 +797,12 @@ html, body {
   font-family: 'Lato', sans-serif;
 }
 
-.profile__introduction hr {
+.profile__container hr {
   border-top: 1px solid #b4b4b4;
   width: 100%;
 }
 
-.profile__introduction--contact p {
+.profile__container--contact p {
   line-height: 1.9;
   font-size: 14px;
   font-weight: 500;
@@ -810,7 +811,7 @@ html, body {
   letter-spacing: .5px;
 }
 
-.profile__introduction--contact-arrow {
+.profile__container--contact--box--arrow {
   display: inline-block;
   margin-right: -5px;
   width: 20px;
@@ -833,7 +834,7 @@ html, body {
   }
 }
 
-.profile__introduction--contact-button {
+.profile__container--contact--box--button {
   margin-left: 15px;
   width: 150px;
   height: 50px;
@@ -846,11 +847,11 @@ html, body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
 }
 
-.profile__introduction--contact-button:hover .profile__introduction--contact-button--effect {
+.profile__container--contact--box--button:hover .profile__container--contact--box--button--effect {
   margin-left: 300px;
 }
 
-.profile__introduction--contact-button span {
+.profile__container--contact--box--button span {
   display: inline;
   margin: 0;
   color: #fff;
@@ -859,7 +860,7 @@ html, body {
   letter-spacing: 1px;
 }
 
-.profile__introduction--contact-button--effect {
+.profile__container--contact--box--button--effect {
   margin: 0;
   background: linear-gradient(white, #cccccc);
   width: 150px;
@@ -871,55 +872,34 @@ html, body {
   transition: 1s;
 }
 
-.profile__card {
-  background: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
-}
-
-.profile__card--box {
-  list-style: none;
-  display: grid;
-  row-gap: 30px;
-  margin: 0;
-  padding: 20px;
-  line-height: 1.4;
-  font-size: 14px;
-  font-weight: 500;
-  color: #3D4451;
-  letter-spacing: .5px;
-}
-
-.profile__card--box span {
-  font-size: 14px;
-  color: #a5a5a5;
-  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
-}
-
-.profile__card--social {
+.profile__container--contact--social {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #c5cae9;
   display: flex;
   justify-content: center;
+  list-style: none;
   margin: 0;
   padding: 0;
-  list-style: none;
-  background: #c5cae9;
 }
 
-.profile__card--social a {
-  position: relative;
+.profile__container--contact--social a {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 4rem;
-  height: 4rem;
-  margin: 1rem .5rem;
-  font-size: 2rem;
+  width: 40px;
+  height: 40px;
+  margin: 5px 10px;
+  font-size: 20px;
   color: #fff;
   border-radius: 50%;
   text-decoration: none;
   transition: .25s linear;
 }
 
-.profile__card--social a:hover {
+.profile__container--contact--social a:hover {
   background: rgba(0, 0, 0, 0.1);
 }
 
@@ -958,23 +938,23 @@ footer h5 {
   .skill__box {
     grid-template-columns: auto auto;
   }
-  .profile__introduction {
+  .profile__container {
     grid-template-columns: 170px auto;
     grid-template-rows: 170px auto;
   }
-  .profile__introduction img {
+  .profile__container img {
     grid-column: 1 / 2;
     margin: 0 20px 0 0;
   }
-  .profile__introduction h1 {
+  .profile__container h1 {
     grid-column: 1 / 2;
     margin: 0 20px 0 0;
   }
-  .profile__introduction h1 span {
+  .profile__container h1 span {
     display: block;
     padding: 3px 0 0 0;
   }
-  .profile__introduction--contact {
+  .profile__container--contact {
     grid-column: 2 / 3;
     grid-row: 1 / 3;
   }

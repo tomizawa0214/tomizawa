@@ -1,10 +1,11 @@
 .profile {
+  position: relative;
   padding: 50px;
   background: #e8eaf6;
   @include slide--from-bottom;
-  &__introduction {
+  &__container {
+    margin-bottom: 50px;
     display: grid;
-    margin-bottom: 30px;
     img {
       margin: 0 auto 15px;
       width: 150px;
@@ -38,107 +39,93 @@
         @include Japanese-font;
         letter-spacing: .5px;
       }
-      &-arrow {
-        display: inline-block;
-        margin-right: -5px;
-        width: 20px;
-        height: 20px;
-        border-top: solid 5px #e8676b;
-        border-right: solid 5px #e8676b;
-        transform: rotate(45deg);
-        animation: slide 1s linear infinite;
-        @keyframes slide {
-          0% {
-            transform: rotate(45deg) translate(0, 0);
-          }
-          20% {
-            transform: rotate(45deg) translate(-10px, 10px);
-          }
-          40% {
-            transform: rotate(45deg) translate(0, 0);
-          }
-        }
-      }
-      &-button {
-        margin-left: 15px;
-        width: 150px;
-        height: 50px;
-        padding: 0;
-        border: none;
-        background: #e8676b;
-        border-radius: 3%;
-        cursor: pointer;
-        overflow: hidden;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.26);
-        &:hover {
-          .profile__introduction--contact-button--effect {
-            margin-left: 300px;
+      &--box {
+        &--arrow {
+          display: inline-block;
+          margin-right: -5px;
+          width: 20px;
+          height: 20px;
+          border-top: solid 5px #e8676b;
+          border-right: solid 5px #e8676b;
+          transform: rotate(45deg);
+          animation: slide 1s linear infinite;
+          @keyframes slide {
+            0% {
+              transform: rotate(45deg) translate(0, 0);
+            }
+            20% {
+              transform: rotate(45deg) translate(-10px, 10px);
+            }
+            40% {
+              transform: rotate(45deg) translate(0, 0);
+            }
           }
         }
-        span {
-          display: inline;
-          margin: 0;
-          color: #fff;
-          font-size: 16px;
-          font-weight: 800;
-          letter-spacing: 1px;
-        }
-        &--effect {
-          margin: 0;
-          background: linear-gradient(rgba(255, 255, 255, 255), rgba(204, 204, 204, 204));
+        &--button {
+          margin-left: 15px;
           width: 150px;
           height: 50px;
-          margin-top: -50px;
-          transform: rotate(400deg);
-          margin-left: -300px;
-          opacity: 0.3;
-          transition: 1s;
+          padding: 0;
+          border: none;
+          background: #e8676b;
+          border-radius: 3%;
+          cursor: pointer;
+          overflow: hidden;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+          &:hover {
+            .profile__container--contact--box--button--effect {
+              margin-left: 300px;
+            }
+          }
+          span {
+            display: inline;
+            margin: 0;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 800;
+            letter-spacing: 1px;
+          }
+          &--effect {
+            margin: 0;
+            background: linear-gradient(rgba(255, 255, 255, 255), rgba(204, 204, 204, 204));
+            width: 150px;
+            height: 50px;
+            margin-top: -50px;
+            transform: rotate(400deg);
+            margin-left: -300px;
+            opacity: 0.3;
+            transition: 1s;
+          }
         }
       }
-    }
-  }
-  &__card {
-    background: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.26);
-    &--box {
-      list-style: none;
-      display: grid;
-      row-gap: 30px;
-      margin: 0;
-      padding: 20px;
-      line-height: 1.4;
-      font-size: 14px;
-      font-weight: 500;
-      color: $textColor;
-      letter-spacing: .5px;
-      span {
-        font-size: 14px;
-        color: #a5a5a5;
-        @include Japanese-font;
-      }
-    }
-    &--social {
-      display: flex;
-      justify-content: center;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      background: #c5cae9;
-      a {
-        position: relative;
+      &--social {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #c5cae9;
+
         display: flex;
         justify-content: center;
-        align-items: center;
-        width: 4rem;
-        height: 4rem;
-        margin: 1rem .5rem;
-        font-size: 2rem;
-        color: #fff;
-        border-radius: 50%;
-        text-decoration: none;
-        transition: .25s linear;
-        &:hover {
-          background: rgba(0, 0, 0, 0.1);
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 40px;
+          height: 40px;
+          margin: 5px 10px;
+          font-size: 20px;
+          color: #fff;
+          // color: #c5cae9;
+          border-radius: 50%;
+          text-decoration: none;
+          transition: .25s linear;
+          &:hover {
+            background: rgba(0, 0, 0, 0.1);
+          }
         }
       }
     }

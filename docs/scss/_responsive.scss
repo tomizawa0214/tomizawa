@@ -45,7 +45,7 @@
   }
 
   .profile {
-    &__introduction {
+    &__container {
       grid-template-columns: 170px auto;
       grid-template-rows: 170px auto;
       img {
