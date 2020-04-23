@@ -29,17 +29,15 @@
       border-top: 1px solid #b4b4b4;
       width: 100%;
     }
-    p {
-      margin: 0;
-      line-height: 1.9;
-      font-size: 14px;
-      font-weight: 500;
-      color: $textColor;
-      @include Japanese-font;
-      letter-spacing: .5px;
-    }
-    &--contact-box {
-      padding: 10px 0 0;
+    &--contact {
+      p {
+        line-height: 1.9;
+        font-size: 14px;
+        font-weight: 500;
+        color: $textColor;
+        @include Japanese-font;
+        letter-spacing: .5px;
+      }
       &-arrow {
         display: inline-block;
         margin-right: -5px;
@@ -73,7 +71,7 @@
         overflow: hidden;
         box-shadow: 0 2px 5px rgba(0,0,0,0.26);
         &:hover {
-          .profile__introduction--contact-box-button--effect {
+          .profile__introduction--contact-button--effect {
             margin-left: 300px;
           }
         }
