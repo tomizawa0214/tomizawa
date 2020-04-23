@@ -18,6 +18,20 @@
       }
     }
   }
+
+  .profile {
+    &__container {
+      &--contact {
+        &--info {
+          &--box {
+            &--button {
+              width: 150px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 // -----sm(Small)-----
@@ -47,7 +61,7 @@
   .profile {
     &__container {
       grid-template-columns: 170px auto;
-      grid-template-rows: 170px auto;
+      grid-template-rows: 160px auto;
       img {
         grid-column: 1 / 2;
         margin: 0 20px 0 0;
@@ -63,14 +77,6 @@
       &--contact {
         grid-column: 2 / 3;
         grid-row: 1 / 3;
-      }
-    }
-    &__card {
-      &--box {
-        li {
-          display: grid;
-          grid-template-columns: 100px auto;
-        }
       }
     }
   }
@@ -139,50 +145,27 @@
   }
 
   .profile {
-    &__introduction {
-      grid-template-columns: 40% 1fr;
-      grid-template-rows: auto 25px auto;
-      grid-column-gap: 30px;
-      img {
-        grid-column: 1 / 2;
-        grid-row: 1 / 4;
-      }
-      h1 {
-        grid-column: 2 / 3;
-        align-self: end;
-        span {
-          display: inline;
-          padding-left: 10px;
-        }
-      }
-      hr {
-        grid-column: 2 / 3;
-      }
-      p {
-        align-self: start;
-        grid-column: 2 / 3;
-      }
-    }
-    &__item {
-      &--box {
-        grid-template-columns: 1fr 1fr;
-        column-gap: 80px;
-        align-items: baseline;
-        li {
-          grid-template-columns: 1fr;
-        }
-        li:nth-child(3) {
-          order: 2;
-          grid-row: 1 / 8;
-          grid-column: 2 / 3;
-        }
-      }
+    &__container {
+      margin: 0 auto;
       &--contact {
-        display: grid;
-        grid-template-columns: auto 280px;
-        align-items: center;
-        &-message {
-          margin: 0;
+        position: relative;
+        &--info {
+          display: flex;
+          justify-content: space-between;
+          &--social {
+            position: static;
+            left: auto;
+            right: auto;
+            bottom: auto;
+            background: transparent;
+            a {
+              width: 50px;
+              height: 50px;
+              margin: 0 10px;
+              font-size: 30px;
+              color: #c5cae9;
+            }
+          }
         }
       }
     }
@@ -194,85 +177,6 @@
   .skill {
     &__box {
       grid-template-columns: auto auto auto auto;
-    }
-  }
-
-  .profile {
-    &__introduction {
-      grid-template-columns: 28% 1fr;
-    }
-    &__item {
-      &--contact {
-        &-message {
-          text-align: left;
-          line-height: 1.9;
-          font-size: 1.6rem;
-          font-weight: 800;
-          color: $textColor;
-          letter-spacing: .05rem;
-          @include Japanese-font;
-        }
-        &-box {
-          text-align: center;
-          &-arrow {
-            display: inline-block;
-            margin-right: -.3rem;
-            width: 1.5rem;
-            height: 1.5rem;
-            border-top: solid .3rem #e8676b;
-            border-right: solid .3rem #e8676b;
-            transform: rotate(45deg);
-            animation: slide 1s linear infinite;
-            @keyframes slide {
-              0% {
-                transform: rotate(45deg) translate(0, 0);
-              }
-              20% {
-                transform: rotate(45deg) translate(-1rem, 1rem);
-              }
-              40% {
-                transform: rotate(45deg) translate(0, 0);
-              }
-            }
-          }
-          &-button {
-            display: inline-block;
-            margin-left: 1.5rem;
-            width: 15rem;
-            height: 4rem;
-            padding: 0;
-            border: none;
-            background: #e8676b;
-            border-radius: 3%;
-            cursor: pointer;
-            overflow: hidden;
-            &:hover {
-              .profile__item--contact-box-button--effect {
-                margin-left: 30rem;
-              }
-            }
-            &--text {
-              display: inline;
-              margin: 0;
-              color: #fff;
-              font-size: 1.6rem;
-              font-weight: 800;
-              letter-spacing: .1rem;
-            }
-            &--effect {
-              margin: 0;
-              background: linear-gradient(rgba(255, 255, 255, 255), rgba(204, 204, 204, 204));
-              width: 15rem;
-              height: 4rem;
-              margin-top: -4rem;
-              transform: rotate(400deg);
-              margin-left: -30rem;
-              opacity: 0.3;
-              transition: 1s;
-            }
-          }
-        }
-      }
     }
   }
 }
@@ -320,14 +224,6 @@
   .works {
     &__item {
       grid-template-columns: auto auto auto auto;
-    }
-  }
-
-  .profile {
-    &__item {
-      &--contact {
-        grid-template-columns: auto 400px;
-      }
     }
   }
 }

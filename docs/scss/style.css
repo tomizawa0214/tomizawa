@@ -770,7 +770,8 @@ html, body {
 }
 
 .profile__container {
-  margin-bottom: 50px;
+  max-width: 750px;
+  margin: 0 auto 50px;
   display: grid;
 }
 
@@ -791,7 +792,7 @@ html, body {
 
 .profile__container h1 span {
   padding-left: 10px;
-  color: #a5a5a5;
+  color: #3D4451;
   font-size: 12px;
   font-weight: 400;
   font-family: 'Lato', sans-serif;
@@ -811,7 +812,7 @@ html, body {
   letter-spacing: .5px;
 }
 
-.profile__container--contact--box--arrow {
+.profile__container--contact--info--box--arrow {
   display: inline-block;
   margin-right: -5px;
   width: 20px;
@@ -834,9 +835,9 @@ html, body {
   }
 }
 
-.profile__container--contact--box--button {
+.profile__container--contact--info--box--button {
   margin-left: 15px;
-  width: 150px;
+  width: 200px;
   height: 50px;
   padding: 0;
   border: none;
@@ -844,14 +845,18 @@ html, body {
   border-radius: 3%;
   cursor: pointer;
   overflow: hidden;
+  transition: .5s;
+}
+
+.profile__container--contact--info--box--button:hover {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
 }
 
-.profile__container--contact--box--button:hover .profile__container--contact--box--button--effect {
+.profile__container--contact--info--box--button:hover .profile__container--contact--info--box--button--effect {
   margin-left: 300px;
 }
 
-.profile__container--contact--box--button span {
+.profile__container--contact--info--box--button--text {
   display: inline;
   margin: 0;
   color: #fff;
@@ -860,10 +865,10 @@ html, body {
   letter-spacing: 1px;
 }
 
-.profile__container--contact--box--button--effect {
+.profile__container--contact--info--box--button--effect {
   margin: 0;
   background: linear-gradient(white, #cccccc);
-  width: 150px;
+  width: 200px;
   height: 50px;
   margin-top: -50px;
   transform: rotate(400deg);
@@ -872,7 +877,7 @@ html, body {
   transition: 1s;
 }
 
-.profile__container--contact--social {
+.profile__container--contact--info--social {
   position: absolute;
   left: 0;
   right: 0;
@@ -885,7 +890,7 @@ html, body {
   padding: 0;
 }
 
-.profile__container--contact--social a {
+.profile__container--contact--info--social a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -899,7 +904,7 @@ html, body {
   transition: .25s linear;
 }
 
-.profile__container--contact--social a:hover {
+.profile__container--contact--info--social a:hover {
   background: rgba(0, 0, 0, 0.1);
 }
 
@@ -919,6 +924,9 @@ footer h5 {
   }
   .title__text h2 {
     font-size: 25px;
+  }
+  .profile__container--contact--info--box--button {
+    width: 150px;
   }
 }
 
@@ -940,7 +948,7 @@ footer h5 {
   }
   .profile__container {
     grid-template-columns: 170px auto;
-    grid-template-rows: 170px auto;
+    grid-template-rows: 160px auto;
   }
   .profile__container img {
     grid-column: 1 / 2;
@@ -957,10 +965,6 @@ footer h5 {
   .profile__container--contact {
     grid-column: 2 / 3;
     grid-row: 1 / 3;
-  }
-  .profile__card--box li {
-    display: grid;
-    grid-template-columns: 100px auto;
   }
 }
 
@@ -1012,126 +1016,35 @@ footer h5 {
   .skill__box {
     grid-template-columns: auto auto auto;
   }
-  .profile__introduction {
-    grid-template-columns: 40% 1fr;
-    grid-template-rows: auto 25px auto;
-    grid-column-gap: 30px;
+  .profile__container {
+    margin: 0 auto;
   }
-  .profile__introduction img {
-    grid-column: 1 / 2;
-    grid-row: 1 / 4;
+  .profile__container--contact {
+    position: relative;
   }
-  .profile__introduction h1 {
-    grid-column: 2 / 3;
-    align-self: end;
+  .profile__container--contact--info {
+    display: flex;
+    justify-content: space-between;
   }
-  .profile__introduction h1 span {
-    display: inline;
-    padding-left: 10px;
+  .profile__container--contact--info--social {
+    position: static;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    background: transparent;
   }
-  .profile__introduction hr {
-    grid-column: 2 / 3;
-  }
-  .profile__introduction p {
-    align-self: start;
-    grid-column: 2 / 3;
-  }
-  .profile__item--box {
-    grid-template-columns: 1fr 1fr;
-    column-gap: 80px;
-    align-items: baseline;
-  }
-  .profile__item--box li {
-    grid-template-columns: 1fr;
-  }
-  .profile__item--box li:nth-child(3) {
-    order: 2;
-    grid-row: 1 / 8;
-    grid-column: 2 / 3;
-  }
-  .profile__item--contact {
-    display: grid;
-    grid-template-columns: auto 280px;
-    align-items: center;
-  }
-  .profile__item--contact-message {
-    margin: 0;
+  .profile__container--contact--info--social a {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    font-size: 30px;
+    color: #c5cae9;
   }
 }
 
 @media screen and (min-width: 992px) {
   .skill__box {
     grid-template-columns: auto auto auto auto;
-  }
-  .profile__introduction {
-    grid-template-columns: 28% 1fr;
-  }
-  .profile__item--contact-message {
-    text-align: left;
-    line-height: 1.9;
-    font-size: 1.6rem;
-    font-weight: 800;
-    color: #3D4451;
-    letter-spacing: .05rem;
-    font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
-  }
-  .profile__item--contact-box {
-    text-align: center;
-  }
-  .profile__item--contact-box-arrow {
-    display: inline-block;
-    margin-right: -.3rem;
-    width: 1.5rem;
-    height: 1.5rem;
-    border-top: solid .3rem #e8676b;
-    border-right: solid .3rem #e8676b;
-    transform: rotate(45deg);
-    animation: slide 1s linear infinite;
-  }
-  @keyframes slide {
-    0% {
-      transform: rotate(45deg) translate(0, 0);
-    }
-    20% {
-      transform: rotate(45deg) translate(-1rem, 1rem);
-    }
-    40% {
-      transform: rotate(45deg) translate(0, 0);
-    }
-  }
-  .profile__item--contact-box-button {
-    display: inline-block;
-    margin-left: 1.5rem;
-    width: 15rem;
-    height: 4rem;
-    padding: 0;
-    border: none;
-    background: #e8676b;
-    border-radius: 3%;
-    cursor: pointer;
-    overflow: hidden;
-  }
-  .profile__item--contact-box-button:hover .profile__item--contact-box-button--effect {
-    margin-left: 30rem;
-  }
-  .profile__item--contact-box-button--text {
-    display: inline;
-    margin: 0;
-    color: #fff;
-    font-size: 1.6rem;
-    font-weight: 800;
-    letter-spacing: .1rem;
-  }
-  .profile__item--contact-box-button--effect {
-    margin: 0;
-    background: linear-gradient(white, #cccccc);
-    width: 15rem;
-    height: 4rem;
-    margin-top: -4rem;
-    transform: rotate(400deg);
-    margin-left: -30rem;
-    opacity: 0.3;
-    transition: 1s;
   }
 }
 
@@ -1165,8 +1078,5 @@ footer h5 {
   }
   .works__item {
     grid-template-columns: auto auto auto auto;
-  }
-  .profile__item--contact {
-    grid-template-columns: auto 400px;
   }
 }
