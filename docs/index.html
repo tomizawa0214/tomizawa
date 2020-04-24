@@ -92,53 +92,65 @@
       <p class="works__message">過去の制作実績の一部となります。<br class="d-none d-md-block">お力となれますよう最大限尽力させていただきます。</p>
       <!-- Works Column Section -->
       <div class="works__item">
-        <div class="works__item-card card">
-          <a href="#">
-            <div class="works__item-card--box">
-              <img class="works__item-card--box--img card-img" src="photo/works1.jpg">
-              <div class="works__item-card--box--mask">
+        <div class="works__item--card card rounded-0">
+          <button class="works__item--card--open">
+            <div class="works__item--card--open--box">
+              <img src="photo/Bootstrap4.png">
+              <div class="works__item--card--open--box--mask">
                 <p>Web</p>
                 <span></span>
                 <h3>Bootstrap4 模写制作</h3>
               </div>
             </div>
-          </a>
+          </button>
+          <!-- Modal Area -->
+          <section class="works__item--card--area">
+            <div class="works__item--card--area--bg"></div>
+            <div class="works__item--card--area--wrap">
+              <div class="works__item--card--area--wrap--contents">
+                <h1>Here are modal without jQuery!</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              </div>
+              <div class="works__item--card--area--wrap--close">×</div>
+            </div>
+          </section>
         </div>
-        <div class="works__item-card card">
-          <a href="#">
-            <div class="works__item-card--box">
-              <img class="works__item-card--box--img card-img" src="photo/works2.jpg">
-              <div class="works__item-card--box--mask">
+
+        <div class="works__item--card card rounded-0">
+          <button class="works__item--card--open">
+            <div class="works__item--card--open--box">
+              <img src="photo/works2.jpg">
+              <div class="works__item--card--open--box--mask">
                 <p>Web</p>
                 <span></span>
                 <h3>Bootstrap4 模写制作</h3>
               </div>
             </div>
-          </a>
+          </button>
         </div>
-        <div class="works__item-card card">
-          <a href="#">
-            <div class="works__item-card--box">
-              <img class="works__item-card--box--img card-img" src="photo/works3.jpg">
-              <div class="works__item-card--box--mask">
+        <div class="works__item--card card rounded-0">
+          <button class="works__item--card--open">
+            <div class="works__item--card--open--box">
+              <img src="photo/works3.jpg">
+              <div class="works__item--card--open--box--mask">
                 <p>Web</p>
                 <span></span>
                 <h3>Bootstrap4 模写制作</h3>
               </div>
             </div>
-          </a>
+          </button>
         </div>
-        <div class="works__item-card card">
-          <a href="#">
-            <div class="works__item-card--box">
-              <img class="works__item-card--box--img card-img" src="photo/works4.jpg">
-              <div class="works__item-card--box--mask">
+        <div class="works__item--card card rounded-0">
+          <button class="works__item--card--open">
+            <div class="works__item--card--open--box">
+              <img src="photo/works4.jpg">
+              <div class="works__item--card--open--box--mask">
                 <p>Web</p>
                 <span></span>
                 <h3>Bootstrap4 模写制作</h3>
               </div>
             </div>
-          </a>
+          </button>
         </div>
       </div>
     </div>
@@ -184,19 +196,21 @@
         <hr class="d-block d-sm-none">
         <div class="profile__container--contact">
           <p>都内の美術学校を卒業後、地元企業にて広告制作に携わる。その企業での経験を機にプログラミングに興味を持ち、休日を利用して都内のプログラミングスクールへ通う。30歳の節目にフリーランスとしての独立を決意。現在侍エンジニア塾でプログラミングを学習中。どうぞお気軽にご連絡くださいませ。</p>
-          <div class="profile__container--contact--box">
-            <div class="profile__container--contact--box--arrow"></div>
-            <div class="profile__container--contact--box--arrow"></div>
-            <button class="profile__container--contact--box--button">
-              <span>CONTACT ME</span>
-              <div class="profile__container--contact--box--button--effect"></div>
-            </button>
+          <div class="profile__container--contact--info">
+            <div class="profile__container--contact--info--box">
+              <div class="profile__container--contact--info--box--arrow"></div>
+              <div class="profile__container--contact--info--box--arrow"></div>
+              <button class="profile__container--contact--info--box--button">
+                <span class="profile__container--contact--info--box--button--text">CONTACT ME</span>
+                <div class="profile__container--contact--info--box--button--effect"></div>
+              </button>
+            </div>
+            <ul class="profile__container--contact--info--social">
+              <li><a href="https://twitter.com/tomizawa0214" data-toggle="tooltip" data-placement="bottom" title="Twitter" target="_blank"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.facebook.com/tomizawa0214" data-toggle="tooltip" data-placement="bottom" title="Facebook" target="_blank"><i class="fab fa-facebook-f fa-fw" aria-hidden="true"></i></a></li>
+              <li><a href="https://github.com/tomizawa0214" data-toggle="tooltip" data-placement="bottom" title="GitHub" target="_blank"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a></li>
+            </ul>
           </div>
-          <ul class="profile__container--contact--social">
-            <li><a href="https://twitter.com/tomizawa0214" data-toggle="tooltip" data-placement="bottom" title="Twitter" target="_blank"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a></li>
-            <li><a href="https://www.facebook.com/tomizawa0214" data-toggle="tooltip" data-placement="bottom" title="Facebook" target="_blank"><i class="fab fa-facebook-f fa-fw" aria-hidden="true"></i></a></li>
-            <li><a href="https://github.com/tomizawa0214" data-toggle="tooltip" data-placement="bottom" title="GitHub" target="_blank"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a></li>
-          </ul>
         </div>
       </div>
     </div>
