@@ -11,6 +11,14 @@ $textColor: #3d4451;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
 }
 
+@mixin modal-bg {
+  width: 100%;
+  height: 85%;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
 @mixin section {
   width: 90%;
   max-width: 1200px;

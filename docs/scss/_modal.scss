@@ -25,29 +25,24 @@
     height: 90%;
     padding: 30px;
     background: #fff;
+    overflow: auto;
     &--contents {
       width: 100%;
       height: 100%;
-      &-image--pc {
-        width: 100%;
-        height: 85%;
-        background-image: url(../photo/Bootstrap4-pc.jpg);
-        background-size: contain;
-        background-position: center center;
-        background-repeat: no-repeat;
+      &-image {
+        background-image: url(../photo/TatkeOutMenu-g.png);
+        @include modal-bg;
       }
       &-image--sp {
-        width: 100%;
-        height: 85%;
         background-image: url(../photo/Bootstrap4-sp.jpg);
-        background-size: contain;
-        background-position: center center;
-        background-repeat: no-repeat;
+        @include modal-bg;
       }
-      hr {
-        margin: 15px 0;
+      &-image--pc {
+        background-image: url(../photo/Bootstrap4-pc.jpg);
+        @include modal-bg;
       }
       &-container {
+        margin-top: 30px;
         width: 100%;
         height: 15%;
         font-size: 16px;
