@@ -89,8 +89,7 @@ window.setTimeout('myFunc(0)', 4000);
   const modalArea = document.querySelector('.modal-area');
   const openModal = document.querySelector('.works__item--card--open');
   const closeModal = document.querySelector('.modal-area__wrap--close');
-  const modalBg = document.querySelector('.modal-area__bg');
-  const toggle = [openModal, closeModal, modalBg]; // クリックで発動する要素を配列に格納
+  const toggle = [modalArea, openModal, closeModal]; // クリックで発動する要素を配列に格納
 
   for(let i=0, len=toggle.length; i<len; i++) {
     toggle[i].addEventListener('click', () => {

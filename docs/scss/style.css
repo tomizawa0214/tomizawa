@@ -144,8 +144,8 @@ html, body {
   bottom: 0;
   opacity: 0;
   visibility: hidden;
-  transition: .4s;
-  background: rgba(200, 200, 30, 0.9);
+  transition: .7s;
+  background: rgba(7, 19, 30, 0.9);
 }
 
 .modal-area__wrap {
@@ -153,16 +153,50 @@ html, body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70%;
-  max-width: 500px;
-  padding: 10px 30px;
+  width: 90%;
+  max-width: 1200px;
+  height: 90%;
+  padding: 50px;
   background: #fff;
+}
+
+.modal-area__wrap--contents {
+  width: 100%;
+  height: 100%;
+}
+
+.modal-area__wrap--contents-image {
+  width: 100%;
+  height: 85%;
+  background-image: url(../photo/Bootstrap4__index.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.modal-area__wrap--contents-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: right;
+  width: 100%;
+  height: 15%;
+  font-size: 16px;
+  font-weight: 500;
+  color: #3D4451;
+  letter-spacing: .5px;
+  line-height: 1.2;
+  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
 }
 
 .modal-area__wrap--close {
   position: absolute;
-  top: 5px;
-  right: 10px;
+  top: 0;
+  right: 0;
+  margin: -15px 15px 0 0;
+  font-size: 50px;
+  color: #e8676b;
   cursor: pointer;
 }
 
@@ -556,7 +590,7 @@ html, body {
 }
 
 .works__item--card--open--box--mask:hover {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(7, 19, 30, 0.7);
 }
 
 .works__item--card--open--box--mask:hover h3 {
