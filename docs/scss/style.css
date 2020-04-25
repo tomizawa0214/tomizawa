@@ -144,7 +144,6 @@ html, body {
   bottom: 0;
   opacity: 0;
   display: none;
-  transition: .4s;
 }
 
 .modal-area__bg {
@@ -225,7 +224,18 @@ html, body {
 
 .modal-area__show {
   display: block;
-  opacity: 1;
+  animation: show .4s forwards;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .back-to-top {
