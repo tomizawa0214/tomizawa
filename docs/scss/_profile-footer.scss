@@ -1,7 +1,7 @@
 .profile {
   position: relative;
   padding: 50px;
-  background: #e8eaf6;
+  background: #D4D9F0;
   @include slide--from-bottom;
   &__container {
     max-width: 750px;
@@ -41,7 +41,10 @@
         letter-spacing: .5px;
       }
       &--info {
+        margin-top: 40px;
         &--box {
+          margin-right: 10vw;
+          text-align: center;
           &--arrow {
             display: inline-block;
             margin-right: -5px;
@@ -65,7 +68,7 @@
           }
           &--button {
             margin-left: 15px;
-            width: 200px;
+            width: 150px;
             height: 50px;
             padding: 0;
             border: none;
@@ -74,6 +77,9 @@
             cursor: pointer;
             overflow: hidden;
             transition: .5s;
+            &:focus {
+              outline: 0;
+            }
             &:hover {
               box-shadow: 0 2px 5px rgba(0,0,0,0.26);
               .profile__container--contact--info--box--button--effect {
@@ -106,7 +112,7 @@
           left: 0;
           right: 0;
           bottom: 0;
-          background: #c5cae9;
+          background: #8894D7;
           display: flex;
           justify-content: center;
           list-style: none;
@@ -138,7 +144,11 @@ footer {
   h5 {
     margin: 0;
     text-align: center;
+    color: $textColor;
     font-size: 12px;
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
     line-height: 3;
+    background: #dad9f0;
   }
 }

@@ -8,7 +8,7 @@
   right: 0;
   bottom: 0;
   opacity: 0;
-  visibility: hidden;
+  display: none;
   transition: .4s;
   &__bg {
     width: 100%;
@@ -66,7 +66,7 @@
     }
   }
   &__show {
-    visibility: visible;
+    display: block;
     opacity: 1;
   }
 }

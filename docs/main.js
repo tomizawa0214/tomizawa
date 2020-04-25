@@ -85,11 +85,15 @@ window.addEventListener('scroll', () => {
 window.setTimeout('myFunc(0)', 4000);
 
 // モーダルウィンドウ
-const modalFunc = Index => {
-  const modalArea = document.querySelectorAll('.modal-area')[Index];
-  const openModal = document.querySelectorAll('.works__item--card--open')[Index];
-  const closeModal = document.querySelectorAll('.modal-area__wrap--close')[Index];
-  const modalBg = document.querySelectorAll('.modal-area__bg')[Index];
+const modalFunc = () => {
+  // const modalArea = document.querySelectorAll('.modal-area')[Index];
+  // const openModal = document.querySelectorAll('.works__item--card--open')[Index];
+  // const closeModal = document.querySelectorAll('.modal-area__wrap--close')[Index];
+  // const modalBg = document.querySelectorAll('.modal-area__bg')[Index];
+  const modalArea = document.querySelector('.modal-area');
+  const openModal = document.querySelector('.works__item--card--open');
+  const closeModal = document.querySelector('.modal-area__wrap--close');
+  const modalBg = document.querySelector('.modal-area__bg');
   const toggle = [openModal, closeModal, modalBg]; // クリックで発動する要素を配列に格納
 
   for (let i = 0; i < toggle.length; i++) {
@@ -99,5 +103,4 @@ const modalFunc = Index => {
   }
 };
 // works毎にモーダルを設定
-modalFunc(0);
-modalFunc(1);
+modalFunc();

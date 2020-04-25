@@ -143,7 +143,7 @@ html, body {
   right: 0;
   bottom: 0;
   opacity: 0;
-  visibility: hidden;
+  display: none;
   transition: .4s;
 }
 
@@ -224,7 +224,7 @@ html, body {
 }
 
 .modal-area__show {
-  visibility: visible;
+  display: block;
   opacity: 1;
 }
 
@@ -874,7 +874,7 @@ html, body {
 .profile {
   position: relative;
   padding: 50px;
-  background: #e8eaf6;
+  background: #D4D9F0;
   opacity: 0;
   transform: translateY(50px);
   transition: .4s all ease-out;
@@ -923,6 +923,15 @@ html, body {
   letter-spacing: .5px;
 }
 
+.profile__container--contact--info {
+  margin-top: 40px;
+}
+
+.profile__container--contact--info--box {
+  margin-right: 10vw;
+  text-align: center;
+}
+
 .profile__container--contact--info--box--arrow {
   display: inline-block;
   margin-right: -5px;
@@ -948,7 +957,7 @@ html, body {
 
 .profile__container--contact--info--box--button {
   margin-left: 15px;
-  width: 200px;
+  width: 150px;
   height: 50px;
   padding: 0;
   border: none;
@@ -957,6 +966,10 @@ html, body {
   cursor: pointer;
   overflow: hidden;
   transition: .5s;
+}
+
+.profile__container--contact--info--box--button:focus {
+  outline: 0;
 }
 
 .profile__container--contact--info--box--button:hover {
@@ -993,7 +1006,7 @@ html, body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #c5cae9;
+  background: #8894D7;
   display: flex;
   justify-content: center;
   list-style: none;
@@ -1022,8 +1035,12 @@ html, body {
 footer h5 {
   margin: 0;
   text-align: center;
+  color: #3d4451;
   font-size: 12px;
+  font-weight: 400;
+  font-family: 'Lato', sans-serif;
   line-height: 3;
+  background: #dad9f0;
 }
 
 @media screen and (max-width: 369px) {
@@ -1036,8 +1053,8 @@ footer h5 {
   .title__text h2 {
     font-size: 25px;
   }
-  .profile__container--contact--info--box--button {
-    width: 150px;
+  .profile__container--contact--info--box {
+    margin: 0;
   }
 }
 
@@ -1076,6 +1093,15 @@ footer h5 {
   .profile__container--contact {
     grid-column: 2 / 3;
     grid-row: 1 / 3;
+  }
+  .profile__container--contact--info {
+    margin-top: 20px;
+  }
+  .profile__container--contact--info--box {
+    margin-right: 5vw;
+  }
+  .profile__container--contact--info--box--button {
+    width: 180px;
   }
 }
 
@@ -1139,6 +1165,10 @@ footer h5 {
   .profile__container--contact--info {
     display: flex;
     justify-content: space-between;
+    margin-top: 30px;
+  }
+  .profile__container--contact--info--box {
+    margin-right: 5vw;
   }
   .profile__container--contact--info--social {
     position: static;
@@ -1152,8 +1182,13 @@ footer h5 {
     height: 50px;
     margin: 0 10px;
     font-size: 30px;
-    color: #c5cae9;
+    color: #677288;
   }
+}
+
+footer h5 {
+  color: #fff;
+  background: #3949AB;
 }
 
 @media screen and (min-width: 992px) {
