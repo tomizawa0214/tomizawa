@@ -85,22 +85,33 @@ window.addEventListener('scroll', () => {
 window.setTimeout('myFunc(0)', 4000);
 
 // モーダルウィンドウ
-const modalFunc = () => {
-  // const modalArea = document.querySelectorAll('.modal-area')[Index];
-  // const openModal = document.querySelectorAll('.works__item--card--open')[Index];
-  // const closeModal = document.querySelectorAll('.modal-area__wrap--close')[Index];
-  // const modalBg = document.querySelectorAll('.modal-area__bg')[Index];
-  const modalArea = document.querySelector('.modal-area');
-  const openModal = document.querySelector('.works__item--card--open');
-  const closeModal = document.querySelector('.modal-area__wrap--close');
-  const modalBg = document.querySelector('.modal-area__bg');
-  const toggle = [openModal, closeModal, modalBg]; // クリックで発動する要素を配列に格納
-
-  for (let i = 0; i < toggle.length; i++) {
-    toggle[i].addEventListener('click', () => {
-      modalArea.classList.toggle('modal-area__show');
-    });
+(function () {
+  const openModal = document.querySelectorAll('.works__item--card--open');
+  const closeModal = document.querySelectorAll('.modal-area__wrap--close');
+  const modalBg = document.querySelectorAll('.modal-area__bg');
+  const modalArea = document.querySelectorAll('.modal-area');
+  for (let i = 0; i < openModal.length; i++) {
+    const toggle = [openModal[i], closeModal[i], modalBg[i]];
+    for (let j = 0; j < toggle.length; j++) {
+      toggle[j].addEventListener('click', () => {
+        modalArea[i].classList.toggle('modal-area__show');
+      });
+    }
   }
-};
+}());
+
+// const modalFunc = () => {
+//   const openModal = document.querySelector('.works__item--card--open');
+//   const closeModal = document.querySelector('.modal-area__wrap--close');
+//   const modalBg = document.querySelector('.modal-area__bg');
+//   const toggle = [openModal, closeModal, modalBg]; // クリックで発動する要素を配列に格納
+  
+//   for (let i = 0; i < toggle.length; i++) {
+//     toggle[i].addEventListener('click', () => {
+//       const modalArea = document.querySelector('.modal-area');
+//       modalArea.classList.toggle('modal-area__show');
+//     });
+//   }
+// };
 // works毎にモーダルを設定
-modalFunc();
+// modalFunc();
