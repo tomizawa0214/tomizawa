@@ -7,7 +7,6 @@
 html, body {
   width: 100%;
   height: 100%;
-  font-size: 62.5%;
   font-family: 'Quicksand', sans-serif;
   background: #efefef;
 }
@@ -1208,9 +1207,6 @@ footer h5 {
 }
 
 @media screen and (min-width: 1200px) {
-  html, body {
-    font-size: 80%;
-  }
   .back-to-top {
     right: 40px;
     bottom: 40px;

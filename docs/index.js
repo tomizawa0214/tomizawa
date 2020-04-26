@@ -1,5 +1,5 @@
 'use strict';
-import "./scss/style.scss";
+// import "./scss/style.scss";
 
 // スクロール量が300に達したらボタン表示。300未満は非表示
 window.addEventListener('scroll', () => {
