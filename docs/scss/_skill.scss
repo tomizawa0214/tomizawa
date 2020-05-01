@@ -191,10 +191,96 @@
             transform: rotate(0deg);
           }
           15% {
-            transform: rotate(70deg);
+            transform: rotate(120deg);
           }
           100% {
-            transform: rotate(70deg);
+            transform: rotate(120deg);
+          }
+        }
+      }
+    }
+    &--illustrator {
+      background: #ff8018;
+      &::before {
+        background: #fff0e5;
+        animation: rotate-circle-left-illustrator 7s linear infinite;
+        @keyframes rotate-circle-left-illustrator {
+          0% {
+            transform: rotate(0deg);
+          }
+          15% {
+            transform: rotate(0deg);
+          }
+          18% {
+            transform: rotate(100deg);
+          }
+          100% {
+            transform: rotate(100deg);
+          }
+        }
+      }
+      &::after {
+        background: #fff0e5;
+        animation: rotate-circle-right-illustrator 7s linear infinite;
+        @keyframes rotate-circle-right-illustrator {
+          0% {
+            transform: rotate(0deg);
+            background: #fff0e5;
+          }
+          15% {
+            transform: rotate(180deg);
+            background: #fff0e5;
+          }
+          15.01% {
+            transform: rotate(360deg);
+            background: #ff8018;
+          }
+          100% {
+            transform: rotate(360deg);
+            background: #ff8018;
+          }
+        }
+      }
+    }
+    &--photoshop {
+      background: #31c3f0;
+      &::before {
+        background: #e7f8fd;
+        animation: rotate-circle-left-photoshop 7s linear infinite;
+        @keyframes rotate-circle-left-photoshop {
+          0% {
+            transform: rotate(0deg);
+          }
+          15% {
+            transform: rotate(0deg);
+          }
+          18% {
+            transform: rotate(60deg);
+          }
+          100% {
+            transform: rotate(60deg);
+          }
+        }
+      }
+      &::after {
+        background: #e7f8fd;
+        animation: rotate-circle-right-photoshop 7s linear infinite;
+        @keyframes rotate-circle-right-photoshop {
+          0% {
+            transform: rotate(0deg);
+            background: #e7f8fd;
+          }
+          15% {
+            transform: rotate(180deg);
+            background: #e7f8fd;
+          }
+          15.01% {
+            transform: rotate(360deg);
+            background: #31c3f0;
+          }
+          100% {
+            transform: rotate(360deg);
+            background: #31c3f0;
           }
         }
       }
