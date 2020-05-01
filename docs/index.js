@@ -1,6 +1,7 @@
 'use strict';
 // import "./scss/style.scss";
 
+
 // スクロール量が300に達したらボタン表示。300未満は非表示
 window.addEventListener('scroll', () => {
   const pageTopBtn = document.querySelector('.back-to-top');
