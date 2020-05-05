@@ -29,15 +29,15 @@
       width: 100%;
       height: 100%;
       &-image {
-        background-image: url(../photo/TatkeOutMenu-g.png);
+        background-image: url("../img/TatkeOutMenu-g.png");
         @include modal-bg;
       }
       &-image--sp {
-        background-image: url(../photo/Bootstrap4-sp.jpg);
+        background-image: url("../img/Bootstrap4-sp.jpg");
         @include modal-bg;
       }
       &-image--pc {
-        background-image: url(../photo/Bootstrap4-pc.jpg);
+        background-image: url("../img/Bootstrap4-pc.jpg");
         @include modal-bg;
       }
       &-container {

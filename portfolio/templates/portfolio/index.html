@@ -1,4 +1,5 @@
 {% extends 'portfolio/base.html' %}
+{% load static %}
 
 {% block content %}
 <!-- Opening Fake Shutter -->
@@ -52,21 +53,21 @@
     <div class="service__icon--wrap">
       <h3>ヒアリング</h3>
       <h4>DIRECTION</h4>
-      <img src="photo/direction.svg">
+      <img src="{% static 'img/direction.svg' %}">
       <p class="service__icon--wrap--text">お客様のご要望・お悩み事をヒアリングさせていただき、効果的なプランをご提案させていただきます。</p>
     </div>
     <i class="service__icon--plus fas fa-plus" aria-hidden="true"></i>
     <div class="service__icon--wrap">
       <h3>デザイン</h3>
       <h4>DESIGN</h4>
-      <img src="photo/design.svg">
+      <img src="{% static 'img/design.svg' %}">
       <p class="service__icon--wrap--text">ヒアリングに基づきデザインを作成いたします。お客様の視点はもちろん、その先のエンドユーザーの視点にも立ってデザインを行います。</p>
     </div>
     <i class="service__icon--plus fas fa-plus" aria-hidden="true"></i>
     <div class="service__icon--wrap">
       <h3>プロダクション</h3>
       <h4>WEB & GRAPHIC</h4>
-      <img src="photo/image.svg">
+      <img src="{% static 'img/image.svg' %}">
       <p class="service__icon--wrap--text">webページ制作からポスター、チラシ、パンフレット、カタログ等々のグラフィック制作まで、お客様のご要望に応じてデザインを形にします。</p>
     </div>
   </div>
@@ -82,7 +83,7 @@
     <div class="works__item--card card rounded-0">
       <button class="works__item--card--open">
         <div class="works__item--card--open--box">
-          <img src="photo/Bootstrap4.png">
+          <img src="{% static 'img/Bootstrap4.png' %}">
           <div class="works__item--card--open--box--mask">
             <p>Web</p>
             <span></span>
@@ -94,7 +95,7 @@
     <div class="works__item--card card rounded-0">
       <button class="works__item--card--open">
         <div class="works__item--card--open--box">
-          <img src="photo/TatkeOutMenu.png">
+          <img src="{% static 'img/TatkeOutMenu.png' %}">
           <div class="works__item--card--open--box--mask">
             <p>Graphic</p>
             <span></span>
@@ -106,7 +107,7 @@
     <div class="works__item--card card rounded-0">
       <button class="works__item--card--open">
         <div class="works__item--card--open--box">
-          <img src="photo/Bootstrap4.png">
+          <img src="{% static 'img/Bootstrap4.png' %}">
           <div class="works__item--card--open--box--mask">
             <p>Web</p>
             <span></span>
@@ -118,7 +119,7 @@
     <div class="works__item--card card rounded-0">
       <button class="works__item--card--open">
         <div class="works__item--card--open--box">
-          <img src="photo/TatkeOutMenu.png">
+          <img src="{% static 'img/TatkeOutMenu.png' %}">
           <div class="works__item--card--open--box--mask">
             <p>Graphic</p>
             <span></span>
@@ -135,7 +136,7 @@
   <div class="modal-area__bg"></div>
   <div class="modal-area__wrap">
     <div class="modal-area__wrap--contents">
-      <a href="ResponsiveBootstrapWebsite/index.html" target="_blank">
+      <a href="https://tomizawa0214.github.io/test" target="_blank">
         <div class="modal-area__wrap--contents-image--sp d-md-none"></div>
         <div class="modal-area__wrap--contents-image--pc d-none d-md-block"></div>
       </a>
@@ -167,7 +168,7 @@
   <div class="modal-area__bg"></div>
   <div class="modal-area__wrap">
     <div class="modal-area__wrap--contents">
-      <a href="ResponsiveBootstrapWebsite/index.html" target="_blank">
+      <a href="https://tomizawa0214.github.io/test" target="_blank">
         <div class="modal-area__wrap--contents-image--sp d-md-none"></div>
         <div class="modal-area__wrap--contents-image--pc d-none d-md-block"></div>
       </a>
@@ -203,25 +204,25 @@
   <div class="skill__box">
     <div class="skill__box--circle skill__box--html">
       <div class="skill__box--circle--inner">
-        <img src="photo/html-5.svg" alt="HTML">
+        <img src="{% static 'img/html-5.svg' %}" alt="HTML">
         <span>HTML</span>
       </div>
     </div>
     <div class="skill__box--circle skill__box--css">
       <div class="skill__box--circle--inner">
-        <img src="photo/css-3.svg" alt="CSS">
+        <img src="{% static 'img/css-3.svg' %}" alt="CSS">
         <span>CSS・SASS</span>
       </div>
     </div>
     <div class="skill__box--circle skill__box--js">
       <div class="skill__box--circle--inner">
-        <img src="photo/javascript.svg" alt="JavaScript">
+        <img src="{% static 'img/javascript.svg' %}" alt="JavaScript">
         <span>JavaScript</span>
       </div>
     </div>
     <div class="skill__box--circle skill__box--python">
       <div class="skill__box--circle--inner">
-        <img src="photo/python.svg" alt="Python">
+        <img src="{% static 'img/python.svg' %}" alt="Python">
         <span>Python・Django</span>
       </div>
     </div>
@@ -242,7 +243,7 @@
 <!-- Profile -->
 <div class="profile" id="profile">
   <div class="profile__container">
-    <img src="photo/tomizawa.png" alt="冨澤潤 TOMIZAWA Junです">
+    <img src="{% static 'img/tomizawa.png' %}" alt="冨澤潤 TOMIZAWA Jun">
     <h1>冨澤 潤<span>TOMIZAWA Jun</span></h1>
     <hr class="d-block d-sm-none">
     <div class="profile__container--contact">
