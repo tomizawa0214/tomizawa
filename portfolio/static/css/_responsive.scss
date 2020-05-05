@@ -1,0 +1,250 @@
+@media screen and (max-width: 369px) {
+  .nav {
+    h1 {
+      font-size: 25px;
+    }
+  }
+
+  .opening {
+    &__text {
+      font-size: 23px;
+    }
+  }
+
+  .title {
+    &__text {
+      h2 {
+        font-size: 25px;
+      }
+    }
+  }
+
+  .profile {
+    &__container {
+      &--contact {
+        &--info {
+          &--box {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+// -----sm(Small)-----
+@media screen and (min-width: 576px) {
+  .title {
+    align-items: center;
+    &__text {
+      bottom: auto;
+      h4 {
+        margin: 15px 0 0 0;
+      }
+    }
+  }
+
+  .works {
+    &__item {
+    grid-template-columns: auto auto;
+    }
+  }
+
+  .skill {
+    &__box {
+      grid-template-columns: auto auto;
+    }
+  }
+
+  .profile {
+    &__container {
+      grid-template-columns: 170px auto;
+      grid-template-rows: 160px auto;
+      img {
+        grid-column: 1 / 2;
+        margin: 0 20px 0 0;
+      }
+      h1 {
+        grid-column: 1 / 2;
+        margin: 0 20px 0 0;
+        span {
+          display: block;
+          padding: 3px 0 0 0;
+        }
+      }
+      &--contact {
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+        &--info {
+          margin-top: 20px;
+          &--box {
+            margin-right: 5vw;
+            &--button {
+              width: 180px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// // -----md(Medium)-----
+@media screen and (min-width: 768px) {
+  .modal-area {
+    &__wrap {
+      padding: 50px;
+    }
+  }
+
+  .nav {
+    li {
+      padding: 0 70px 0 0;
+      &:nth-child(4) {
+        padding: 0 30px 0 0;
+      }
+    }
+  }
+
+  .title {
+    &__photo {
+      height: 700px;
+    }
+    &__text {
+      h2 {
+        font-size: 35px;
+      }
+      h3 {
+        font-size: 16px;
+      }
+    }
+  }
+  
+  .service {
+    padding: 50px;
+    &__message {
+      text-align: center;
+    }
+    &__icon {
+      grid-template-columns: auto auto auto auto auto;
+      column-gap: 20px;
+      &--wrap {
+        &--text {
+          width: 100%;
+          text-align: left;
+        }
+      }
+      &--plus {
+        margin-top: 90px;
+      }
+    }
+  }
+
+  .works {
+    padding: 50px;
+    &__message {
+      text-align: center;
+    }
+    &__item {
+      grid-template-columns: auto auto auto;
+    }
+  }
+
+  .skill {
+    padding: 50px;
+    &__box {
+      grid-template-columns: auto auto auto;
+    }
+  }
+
+  .profile {
+    &__container {
+      margin: 0 auto;
+      &--contact {
+        position: relative;
+        &--info {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 30px;
+          &--box {
+            margin-right: 5vw;
+          }
+          &--social {
+            position: static;
+            left: auto;
+            right: auto;
+            bottom: auto;
+            background: transparent;
+            a {
+              width: 50px;
+              height: 50px;
+              margin: 0 10px;
+              font-size: 30px;
+              color: #677288;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  h5 {
+    color: #fff;
+    background: #3949AB;
+  }
+}
+
+// -----lg(Large)-----
+@media screen and (min-width: 992px) {
+  .skill {
+    &__box {
+      grid-template-columns: auto auto auto auto;
+    }
+  }
+}
+
+// -----xl(Extra Large)-----
+@media screen and (min-width: 1200px) {
+
+  .back-to-top {
+    right: 40px;
+    bottom: 40px;
+  }
+
+  .opening {
+    &__text::after {
+      width: 350px;
+      height: 50px;
+    }
+  }
+
+  .title {
+    &__photo {
+      background-position: right 25% bottom 30%;
+    }
+    &__text {
+      h2 {
+        font-size: 45px;
+      }
+      h3 {
+        font-size: 20px;
+      }
+      h4 {
+        font-size: 16px;
+      }
+    }
+  }
+  
+  .service, .works, .skill {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+
+  .works {
+    &__item {
+      grid-template-columns: auto auto auto auto;
+    }
+  }
+}

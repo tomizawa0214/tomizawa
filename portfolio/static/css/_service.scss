@@ -1,0 +1,56 @@
+.service {
+  @include section;
+  @include slide--from-bottom;
+  h2 {
+    @include section__title;
+  }
+  hr {
+    @include section__border;
+  }
+  &__message {
+    @include section__message;
+  }
+  &__icon {
+    display: grid;
+    &--wrap {
+      text-align: center;
+      h3 {
+        margin-bottom: 10px;
+        line-height: 1;
+        font-size: 20px;
+        color: $textColor;
+        @include Japanese-font;
+      }
+      h4 {
+        margin: 0;
+        letter-spacing: 1.5px;
+        line-height: 1;
+        font-size: 12px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        color: #a5a5a5;
+      }
+      img {
+        width: 80px;
+        height: 80px;
+        margin: 15px 0;
+      }
+      &--text {
+        width: 80%;
+        margin: 0 auto;
+        text-align: left;
+        line-height: 1.9;
+        font-size: 14px;
+        font-weight: 500;
+        color: $textColor;
+        letter-spacing: .5px;
+        @include Japanese-font;
+      }
+    }
+    &--plus {
+      text-align: center;
+      font-size: 30px;
+      margin: 40px 0;
+    }
+  }
+}
