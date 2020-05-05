@@ -141,14 +141,15 @@
 }
 
 footer {
+  margin-top: auto;
   h5 {
     margin: 0;
     text-align: center;
-    color: $textColor;
+    color: #fff;
     font-size: 12px;
     font-weight: 400;
     font-family: 'Lato', sans-serif;
     line-height: 3;
-    background: #dad9f0;
+    background: #3949AB;
   }
 }

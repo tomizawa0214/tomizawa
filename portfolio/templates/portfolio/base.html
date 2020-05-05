@@ -14,6 +14,26 @@
   </head>
 
   <body>
+    {% block opening %}
+    {% endblock %}
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md">
+      <div class="nav container-fluid">
+        <h1>TOMIZAWA Jun</h1>
+        <button class="nav__toggler navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
+          <i class="nav__toggler--open fas fa-bars" aria-hidden="true"></i>
+          <p class="nav__toggler--close">×</p>
+        </button>
+        <div class="nav__item collapse navbar-collapse" id="navbarResponsive">
+          <ul class="nav__item--box navbar-nav">
+            {% block nav %}
+            {% endblock %}
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     {% block content %}
     {% endblock %}
 

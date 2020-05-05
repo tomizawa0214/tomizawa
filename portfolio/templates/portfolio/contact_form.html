@@ -1,5 +1,13 @@
 {% extends 'portfolio/base.html' %}
 
+{% block nav %}
+<li><a href="{% url 'index' %}">Home</a></li>
+<li><a href="{% url 'index' %}#service" class="nav__item--box--service">Service</a></li>
+<li><a href="{% url 'index' %}#works" class="nav__item--box--works">Works</a></li>
+<li><a href="{% url 'index' %}#skill" class="nav__item--box--skill">Skill</a></li>
+<li><a href="{% url 'index' %}#profile" class="nav__item--box--profile">Profile</a></li>
+{% endblock %}
+
 {% block content %}
 <div class="container">
   <div class="row">

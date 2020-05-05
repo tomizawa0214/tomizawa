@@ -1,7 +1,7 @@
 {% extends 'portfolio/base.html' %}
 {% load static %}
 
-{% block content %}
+{% block opening %}
 <!-- Opening Fake Shutter -->
 <div class="opening">
   <p class="opening__text">Thank you for coming!</p>
@@ -11,27 +11,17 @@
 <div class="back-to-top" data-toggle="tooltip" data-placement="left" title="Back to Top">
   <i class="fas fa-angle-up" aria-hidden="true"></i>
 </div>
+{% endblock %}
 
-<!-- Navigation -->
-<nav class="navbar navbar-expand-md">
-<div class="nav container-fluid">
-  <h1>TOMIZAWA Jun</h1>
-  <button class="nav__toggler navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
-    <i class="nav__toggler--open fas fa-bars" aria-hidden="true"></i>
-    <p class="nav__toggler--close">×</p>
-  </button>
-  <div class="nav__item collapse navbar-collapse" id="navbarResponsive">
-    <ul class="nav__item--box navbar-nav">
-      <li><a href="#service" class="nav__item--box--service">Service</a></li>
-      <li><a href="#works" class="nav__item--box--works">Works</a></li>
-      <li><a href="#skill" class="nav__item--box--skill">Skill</a></li>
-      <li><a href="#profile" class="nav__item--box--profile">Profile</a></li>
-      <li><a href="{% url 'contact_form' %}">Contact</a></li>
-    </ul>
-  </div>
-</div>
-</nav>
+{% block nav %}
+<li><a href="#service" class="nav__item--box--service">Service</a></li>
+<li><a href="#works" class="nav__item--box--works">Works</a></li>
+<li><a href="#skill" class="nav__item--box--skill">Skill</a></li>
+<li><a href="#profile" class="nav__item--box--profile">Profile</a></li>
+<li><a href="{% url 'contact_form' %}">Contact</a></li>
+{% endblock %}
 
+{% block content %}
 <!-- Title Image -->
 <div class="title">
   <div class="title__mask"></div>
