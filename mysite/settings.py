@@ -26,6 +26,11 @@ SECRET_KEY = '$e%(==pkb5ykui)d^^2w%1^vuc67h-b)59$al0_xx$3huzj*wc'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'j.tomizawa.japan@gmail.com'
+EMAIL_HOST_PASSWORD = 'tomijun0214'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 
 # Application definition
