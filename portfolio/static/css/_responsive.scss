@@ -99,8 +99,8 @@
 
   .nav {
     li {
-      padding: 0 70px 0 0;
-      &:nth-child(4) {
+      padding: 0 30px 0 0;
+      &:last-child {
         padding: 0 30px 0 0;
       }
     }
@@ -198,6 +198,15 @@ footer {
 
 // -----lg(Large)-----
 @media screen and (min-width: 992px) {
+  .nav {
+    li {
+      padding: 0 70px 0 0;
+      // &:last-child {
+      //   padding: 0 30px 0 0;
+      // }
+    }
+  }
+
   .skill {
     &__box {
       grid-template-columns: auto auto auto auto;

@@ -1,300 +1,270 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="keywords" content="群馬,デザイン,web,グラフィック,デザイナー,フリーランス,エンジニア,HTML,CSS,JavaScript,Python">
-    <meta name="discription" content="あなたのお悩み,解決に向けて尽力させてください！フリーランスで活動する群馬県在住のWeb&Graphicデザイナーです。どうぞお気軽にご連絡くださいませ。">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-    <link rel="icon" href="favicon/tomizawa.ico">
-    <title>TOMIZAWA Jun | Web & Graphic Designer</title>
-  </head>
+{% extends 'portfolio/base.html' %}
 
-  <body>
+{% block content %}
+<!-- Opening Fake Shutter -->
+<div class="opening">
+  <p class="opening__text">Thank you for coming!</p>
+</div>
 
-    <!-- Opening Fake Shutter -->
-    <div class="opening">
-      <p class="opening__text">Thank you for coming!</p>
+<!-- Back To Top -->
+<div class="back-to-top" data-toggle="tooltip" data-placement="left" title="Back to Top">
+  <i class="fas fa-angle-up" aria-hidden="true"></i>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md">
+<div class="nav container-fluid">
+  <h1>TOMIZAWA Jun</h1>
+  <button class="nav__toggler navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
+    <i class="nav__toggler--open fas fa-bars" aria-hidden="true"></i>
+    <p class="nav__toggler--close">×</p>
+  </button>
+  <div class="nav__item collapse navbar-collapse" id="navbarResponsive">
+    <ul class="nav__item--box navbar-nav">
+      <li><a href="#service" class="nav__item--box--service">Service</a></li>
+      <li><a href="#works" class="nav__item--box--works">Works</a></li>
+      <li><a href="#skill" class="nav__item--box--skill">Skill</a></li>
+      <li><a href="#profile" class="nav__item--box--profile">Profile</a></li>
+      <li><a href="{% url 'contact_form' %}">Contact</a></li>
+    </ul>
+  </div>
+</div>
+</nav>
+
+<!-- Title Image -->
+<div class="title">
+  <div class="title__mask"></div>
+  <div class="title__photo"></div>
+  <div class="title__text">
+    <h2>サービスに、潤いを。</h2>
+    <h3>テクノロジーがどれだけ進化しても、<br>主役は必ず「人」のはず。<br>根底に流れるのは人の「想い」です。<br>テクノロジーで想いの幅を広げて、<br>クリエイティブで人に届ける。<br>人と人とを繋ぐ架け橋になれたなら、<br>私はこの上なく幸せです。</h3>
+    <h4>2020年　冨澤 潤</h4>
+  </div>
+</div>
+
+<!-- Service Section-->
+<div class="service" id="service">
+  <h2>Service</h2>
+  <hr>
+  <p class="service__message">webページのデザインから<br class="d-none d-md-block">ポスター、チラシ、パンフレット、カタログ等々のグラフィックデザインまで<br class="d-none d-md-block">お客様のお悩み事に寄り添い、解決に向けて尽力させていただきます。</p>
+  <!-- Service Three Column Section -->
+  <div class="service__icon">
+    <div class="service__icon--wrap">
+      <h3>ヒアリング</h3>
+      <h4>DIRECTION</h4>
+      <img src="photo/direction.svg">
+      <p class="service__icon--wrap--text">お客様のご要望・お悩み事をヒアリングさせていただき、効果的なプランをご提案させていただきます。</p>
     </div>
-
-    <!-- Back To Top -->
-    <div class="back-to-top" data-toggle="tooltip" data-placement="left" title="Back to Top">
-      <i class="fas fa-angle-up" aria-hidden="true"></i>
+    <i class="service__icon--plus fas fa-plus" aria-hidden="true"></i>
+    <div class="service__icon--wrap">
+      <h3>デザイン</h3>
+      <h4>DESIGN</h4>
+      <img src="photo/design.svg">
+      <p class="service__icon--wrap--text">ヒアリングに基づきデザインを作成いたします。お客様の視点はもちろん、その先のエンドユーザーの視点にも立ってデザインを行います。</p>
     </div>
+    <i class="service__icon--plus fas fa-plus" aria-hidden="true"></i>
+    <div class="service__icon--wrap">
+      <h3>プロダクション</h3>
+      <h4>WEB & GRAPHIC</h4>
+      <img src="photo/image.svg">
+      <p class="service__icon--wrap--text">webページ制作からポスター、チラシ、パンフレット、カタログ等々のグラフィック制作まで、お客様のご要望に応じてデザインを形にします。</p>
+    </div>
+  </div>
+</div>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-md">
-    <div class="nav container-fluid">
-      <h1>TOMIZAWA Jun</h1>
-      <button class="nav__toggler navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
-        <i class="nav__toggler--open fas fa-bars" aria-hidden="true"></i>
-        <p class="nav__toggler--close">×</p>
+<!-- Works Section-->
+<div class="works" id="works">
+  <h2>Works</h2>
+  <hr>
+  <p class="works__message">過去制作実績の一部です。<br class="d-none d-md-block">お力となれますよう最大限尽力させていただきます。</p>
+  <!-- Works Column Section -->
+  <div class="works__item">
+    <div class="works__item--card card rounded-0">
+      <button class="works__item--card--open">
+        <div class="works__item--card--open--box">
+          <img src="photo/Bootstrap4.png">
+          <div class="works__item--card--open--box--mask">
+            <p>Web</p>
+            <span></span>
+            <h3>Bootstrap4 模写</h3>
+          </div>
+        </div>
       </button>
-      <div class="nav__item collapse navbar-collapse" id="navbarResponsive">
-        <ul class="nav__item--box navbar-nav">
-          <li><a href="#service" class="nav__item--box--service">Service</a></li>
-          <li><a href="#works" class="nav__item--box--works">Works</a></li>
-          <li><a href="#skill" class="nav__item--box--skill">Skill</a></li>
-          <li><a href="#profile" class="nav__item--box--profile">Profile</a></li>
-          <!-- <li><a href="#footer">Contact</a></li> -->
+    </div>
+    <div class="works__item--card card rounded-0">
+      <button class="works__item--card--open">
+        <div class="works__item--card--open--box">
+          <img src="photo/TatkeOutMenu.png">
+          <div class="works__item--card--open--box--mask">
+            <p>Graphic</p>
+            <span></span>
+            <h3>カフェメニューのビラ</h3>
+          </div>
+        </div>
+      </button>
+    </div>
+    <div class="works__item--card card rounded-0">
+      <button class="works__item--card--open">
+        <div class="works__item--card--open--box">
+          <img src="photo/Bootstrap4.png">
+          <div class="works__item--card--open--box--mask">
+            <p>Web</p>
+            <span></span>
+            <h3>Bootstrap4 模写</h3>
+          </div>
+        </div>
+      </button>
+    </div>
+    <div class="works__item--card card rounded-0">
+      <button class="works__item--card--open">
+        <div class="works__item--card--open--box">
+          <img src="photo/TatkeOutMenu.png">
+          <div class="works__item--card--open--box--mask">
+            <p>Graphic</p>
+            <span></span>
+            <h3>カフェメニューのビラ</h3>
+          </div>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Works Modal -->
+<section class="modal-area">
+  <div class="modal-area__bg"></div>
+  <div class="modal-area__wrap">
+    <div class="modal-area__wrap--contents">
+      <a href="ResponsiveBootstrapWebsite/index.html" target="_blank">
+        <div class="modal-area__wrap--contents-image--sp d-md-none"></div>
+        <div class="modal-area__wrap--contents-image--pc d-none d-md-block"></div>
+      </a>
+      <div class="modal-area__wrap--contents-container">
+        <hr>
+        <p>HTML / CSS / Bootstrap4</p>
+        <p>2020.3</p>
+      </div>
+    </div>
+    <div class="modal-area__wrap--close">×</div>
+  </div>
+</section>
+<section class="modal-area">
+  <div class="modal-area__bg"></div>
+  <div class="modal-area__wrap">
+    <div class="modal-area__wrap--contents">
+        <div class="modal-area__wrap--contents-image"></div>
+      <div class="modal-area__wrap--contents-container">
+        <hr>
+        <p>30代～40代の主婦方をメインターゲットに制作、種類の豊富さをアピールしました。</p>
+        <p>ポスティングチラシ・店内掲示用チラシ / A5 / Adobe Illustrator</p>
+        <p>2020.3</p>
+      </div>
+    </div>
+    <div class="modal-area__wrap--close">×</div>
+  </div>
+</section>
+<section class="modal-area">
+  <div class="modal-area__bg"></div>
+  <div class="modal-area__wrap">
+    <div class="modal-area__wrap--contents">
+      <a href="ResponsiveBootstrapWebsite/index.html" target="_blank">
+        <div class="modal-area__wrap--contents-image--sp d-md-none"></div>
+        <div class="modal-area__wrap--contents-image--pc d-none d-md-block"></div>
+      </a>
+      <div class="modal-area__wrap--contents-container">
+        <hr>
+        <p>HTML / CSS / Bootstrap4</p>
+        <p>2020.3</p>
+      </div>
+    </div>
+    <div class="modal-area__wrap--close">×</div>
+  </div>
+</section>
+<section class="modal-area">
+  <div class="modal-area__bg"></div>
+  <div class="modal-area__wrap">
+    <div class="modal-area__wrap--contents">
+        <div class="modal-area__wrap--contents-image"></div>
+      <div class="modal-area__wrap--contents-container">
+        <hr>
+        <p>30代～40代の主婦方をメインターゲットに制作、種類の豊富さをアピールしました。</p>
+        <p>ポスティングチラシ・店内掲示用チラシ / A5 / Adobe Illustrator</p>
+        <p>2020.3</p>
+      </div>
+    </div>
+    <div class="modal-area__wrap--close">×</div>
+  </div>
+</section>
+
+<!-- Skill -->
+<div class="skill" id="skill">
+  <h2>Skill</h2>
+  <hr>
+  <div class="skill__box">
+    <div class="skill__box--circle skill__box--html">
+      <div class="skill__box--circle--inner">
+        <img src="photo/html-5.svg" alt="HTML">
+        <span>HTML</span>
+      </div>
+    </div>
+    <div class="skill__box--circle skill__box--css">
+      <div class="skill__box--circle--inner">
+        <img src="photo/css-3.svg" alt="CSS">
+        <span>CSS・SASS</span>
+      </div>
+    </div>
+    <div class="skill__box--circle skill__box--js">
+      <div class="skill__box--circle--inner">
+        <img src="photo/javascript.svg" alt="JavaScript">
+        <span>JavaScript</span>
+      </div>
+    </div>
+    <div class="skill__box--circle skill__box--python">
+      <div class="skill__box--circle--inner">
+        <img src="photo/python.svg" alt="Python">
+        <span>Python・Django</span>
+      </div>
+    </div>
+    <div class="skill__box--circle skill__box--illustrator">
+      <div class="skill__box--circle--inner">
+        <span>Adobe<br>Illustrator</span>
+      </div>
+    </div>
+    <div class="skill__box--circle skill__box--photoshop">
+      <div class="skill__box--circle--inner">
+        <span>Adobe<br>Photoshop</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Profile -->
+<div class="profile" id="profile">
+  <div class="profile__container">
+    <img src="photo/tomizawa.png" alt="冨澤潤 TOMIZAWA Junです">
+    <h1>冨澤 潤<span>TOMIZAWA Jun</span></h1>
+    <hr class="d-block d-sm-none">
+    <div class="profile__container--contact">
+      <p>都内の美術学校を卒業後、地元企業にて広告制作に携わる。その企業での経験を機にプログラミングに興味を持ち、休日を利用して都内のプログラミングスクールへ通う。30歳の節目にフリーランスとしての独立を決意。現在侍エンジニア塾でプログラミングを学習中。どうぞお気軽にご連絡くださいませ。</p>
+      <div class="profile__container--contact--info">
+        <div class="profile__container--contact--info--box">
+          <div class="profile__container--contact--info--box--arrow"></div>
+          <div class="profile__container--contact--info--box--arrow"></div>
+          <a href="{% url 'contact_form' %}">
+            <button class="profile__container--contact--info--box--button">
+              <span class="profile__container--contact--info--box--button--text">CONTACT ME</span>
+              <div class="profile__container--contact--info--box--button--effect"></div>
+            </button>
+          </a>
+        </div>
+        <ul class="profile__container--contact--info--social">
+          <li><a href="https://twitter.com/tomizawa0214" data-toggle="tooltip" data-placement="bottom" title="Twitter" target="_blank"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.facebook.com/tomizawa0214" data-toggle="tooltip" data-placement="bottom" title="Facebook" target="_blank"><i class="fab fa-facebook-f fa-fw" aria-hidden="true"></i></a></li>
+          <li><a href="https://github.com/tomizawa0214" data-toggle="tooltip" data-placement="bottom" title="GitHub" target="_blank"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a></li>
         </ul>
       </div>
     </div>
-    </nav>
-
-    <!-- Title Image -->
-    <div class="title">
-      <div class="title__mask"></div>
-      <div class="title__photo"></div>
-      <div class="title__text">
-        <h2>サービスに、潤いを。</h2>
-        <h3>テクノロジーがどれだけ進化しても、<br>主役は必ず「人」のはず。<br>根底に流れるのは人の「想い」です。<br>テクノロジーで想いの幅を広げて、<br>クリエイティブで人に届ける。<br>人と人とを繋ぐ架け橋になれたなら、<br>私はこの上なく幸せです。</h3>
-        <h4>2020年　冨澤 潤</h4>
-      </div>
-    </div>
-
-    <!-- Service Section-->
-    <div class="service" id="service">
-      <h2>Service</h2>
-      <hr>
-      <p class="service__message">webページのデザインから<br class="d-none d-md-block">ポスター、チラシ、パンフレット、カタログ等々のグラフィックデザインまで<br class="d-none d-md-block">お客様のお悩み事に寄り添い、解決に向けて尽力させていただきます。</p>
-      <!-- Service Three Column Section -->
-      <div class="service__icon">
-        <div class="service__icon--wrap">
-          <h3>ヒアリング</h3>
-          <h4>DIRECTION</h4>
-          <img src="photo/direction.svg">
-          <p class="service__icon--wrap--text">お客様のご要望・お悩み事をヒアリングさせていただき、効果的なプランをご提案させていただきます。</p>
-        </div>
-        <i class="service__icon--plus fas fa-plus" aria-hidden="true"></i>
-        <div class="service__icon--wrap">
-          <h3>デザイン</h3>
-          <h4>DESIGN</h4>
-          <img src="photo/design.svg">
-          <p class="service__icon--wrap--text">ヒアリングに基づきデザインを作成いたします。お客様の視点はもちろん、その先のエンドユーザーの視点にも立ってデザインを行います。</p>
-        </div>
-        <i class="service__icon--plus fas fa-plus" aria-hidden="true"></i>
-        <div class="service__icon--wrap">
-          <h3>プロダクション</h3>
-          <h4>WEB & GRAPHIC</h4>
-          <img src="photo/image.svg">
-          <p class="service__icon--wrap--text">webページ制作からポスター、チラシ、パンフレット、カタログ等々のグラフィック制作まで、お客様のご要望に応じてデザインを形にします。</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Works Section-->
-    <div class="works" id="works">
-      <h2>Works</h2>
-      <hr>
-      <p class="works__message">過去制作実績の一部です。<br class="d-none d-md-block">お力となれますよう最大限尽力させていただきます。</p>
-      <!-- Works Column Section -->
-      <div class="works__item">
-        <div class="works__item--card card rounded-0">
-          <button class="works__item--card--open">
-            <div class="works__item--card--open--box">
-              <img src="photo/Bootstrap4.png">
-              <div class="works__item--card--open--box--mask">
-                <p>Web</p>
-                <span></span>
-                <h3>Bootstrap4 模写</h3>
-              </div>
-            </div>
-          </button>
-        </div>
-        <div class="works__item--card card rounded-0">
-          <button class="works__item--card--open">
-            <div class="works__item--card--open--box">
-              <img src="photo/TatkeOutMenu.png">
-              <div class="works__item--card--open--box--mask">
-                <p>Graphic</p>
-                <span></span>
-                <h3>カフェメニューのビラ</h3>
-              </div>
-            </div>
-          </button>
-        </div>
-        <div class="works__item--card card rounded-0">
-          <button class="works__item--card--open">
-            <div class="works__item--card--open--box">
-              <img src="photo/Bootstrap4.png">
-              <div class="works__item--card--open--box--mask">
-                <p>Web</p>
-                <span></span>
-                <h3>Bootstrap4 模写</h3>
-              </div>
-            </div>
-          </button>
-        </div>
-        <div class="works__item--card card rounded-0">
-          <button class="works__item--card--open">
-            <div class="works__item--card--open--box">
-              <img src="photo/TatkeOutMenu.png">
-              <div class="works__item--card--open--box--mask">
-                <p>Graphic</p>
-                <span></span>
-                <h3>カフェメニューのビラ</h3>
-              </div>
-            </div>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Works Modal -->
-    <section class="modal-area">
-      <div class="modal-area__bg"></div>
-      <div class="modal-area__wrap">
-        <div class="modal-area__wrap--contents">
-          <a href="ResponsiveBootstrapWebsite/index.html" target="_blank">
-            <div class="modal-area__wrap--contents-image--sp d-md-none"></div>
-            <div class="modal-area__wrap--contents-image--pc d-none d-md-block"></div>
-          </a>
-          <div class="modal-area__wrap--contents-container">
-            <hr>
-            <p>HTML / CSS / Bootstrap4</p>
-            <p>2020.3</p>
-          </div>
-        </div>
-        <div class="modal-area__wrap--close">×</div>
-      </div>
-    </section>
-    <section class="modal-area">
-      <div class="modal-area__bg"></div>
-      <div class="modal-area__wrap">
-        <div class="modal-area__wrap--contents">
-            <div class="modal-area__wrap--contents-image"></div>
-          <div class="modal-area__wrap--contents-container">
-            <hr>
-            <p>30代～40代の主婦方をメインターゲットに制作、種類の豊富さをアピールしました。</p>
-            <p>ポスティングチラシ・店内掲示用チラシ / A5 / Adobe Illustrator</p>
-            <p>2020.3</p>
-          </div>
-        </div>
-        <div class="modal-area__wrap--close">×</div>
-      </div>
-    </section>
-    <section class="modal-area">
-      <div class="modal-area__bg"></div>
-      <div class="modal-area__wrap">
-        <div class="modal-area__wrap--contents">
-          <a href="ResponsiveBootstrapWebsite/index.html" target="_blank">
-            <div class="modal-area__wrap--contents-image--sp d-md-none"></div>
-            <div class="modal-area__wrap--contents-image--pc d-none d-md-block"></div>
-          </a>
-          <div class="modal-area__wrap--contents-container">
-            <hr>
-            <p>HTML / CSS / Bootstrap4</p>
-            <p>2020.3</p>
-          </div>
-        </div>
-        <div class="modal-area__wrap--close">×</div>
-      </div>
-    </section>
-    <section class="modal-area">
-      <div class="modal-area__bg"></div>
-      <div class="modal-area__wrap">
-        <div class="modal-area__wrap--contents">
-            <div class="modal-area__wrap--contents-image"></div>
-          <div class="modal-area__wrap--contents-container">
-            <hr>
-            <p>30代～40代の主婦方をメインターゲットに制作、種類の豊富さをアピールしました。</p>
-            <p>ポスティングチラシ・店内掲示用チラシ / A5 / Adobe Illustrator</p>
-            <p>2020.3</p>
-          </div>
-        </div>
-        <div class="modal-area__wrap--close">×</div>
-      </div>
-    </section>
-
-    <!-- Skill -->
-    <div class="skill" id="skill">
-      <h2>Skill</h2>
-      <hr>
-      <div class="skill__box">
-        <div class="skill__box--circle skill__box--html">
-          <div class="skill__box--circle--inner">
-            <img src="photo/html-5.svg" alt="HTML">
-            <span>HTML</span>
-          </div>
-        </div>
-        <div class="skill__box--circle skill__box--css">
-          <div class="skill__box--circle--inner">
-            <img src="photo/css-3.svg" alt="CSS">
-            <span>CSS・SASS</span>
-          </div>
-        </div>
-        <div class="skill__box--circle skill__box--js">
-          <div class="skill__box--circle--inner">
-            <img src="photo/javascript.svg" alt="JavaScript">
-            <span>JavaScript</span>
-          </div>
-        </div>
-        <div class="skill__box--circle skill__box--python">
-          <div class="skill__box--circle--inner">
-            <img src="photo/python.svg" alt="Python">
-            <span>Python・Django</span>
-          </div>
-        </div>
-        <div class="skill__box--circle skill__box--illustrator">
-          <div class="skill__box--circle--inner">
-            <span>Adobe<br>Illustrator</span>
-          </div>
-        </div>
-        <div class="skill__box--circle skill__box--photoshop">
-          <div class="skill__box--circle--inner">
-            <span>Adobe<br>Photoshop</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- Profile -->
-    <div class="profile" id="profile">
-      <div class="profile__container">
-        <img src="photo/tomizawa.png" alt="冨澤潤 TOMIZAWA Junです">
-        <h1>冨澤 潤<span>TOMIZAWA Jun</span></h1>
-        <hr class="d-block d-sm-none">
-        <div class="profile__container--contact">
-          <p>都内の美術学校を卒業後、地元企業にて広告制作に携わる。その企業での経験を機にプログラミングに興味を持ち、休日を利用して都内のプログラミングスクールへ通う。30歳の節目にフリーランスとしての独立を決意。現在侍エンジニア塾でプログラミングを学習中。どうぞお気軽にご連絡くださいませ。</p>
-          <div class="profile__container--contact--info">
-            <div class="profile__container--contact--info--box">
-              <div class="profile__container--contact--info--box--arrow"></div>
-              <div class="profile__container--contact--info--box--arrow"></div>
-              <a href="mailto:j.tomizawa.japan&#64gmail.com?body=■Name%0d%0a%0d%0a■Message">
-                <button class="profile__container--contact--info--box--button">
-                  <span class="profile__container--contact--info--box--button--text">CONTACT ME</span>
-                  <div class="profile__container--contact--info--box--button--effect"></div>
-                </button>
-              </a>
-            </div>
-            <ul class="profile__container--contact--info--social">
-              <li><a href="https://twitter.com/tomizawa0214" data-toggle="tooltip" data-placement="bottom" title="Twitter" target="_blank"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a></li>
-              <li><a href="https://www.facebook.com/tomizawa0214" data-toggle="tooltip" data-placement="bottom" title="Facebook" target="_blank"><i class="fab fa-facebook-f fa-fw" aria-hidden="true"></i></a></li>
-              <li><a href="https://github.com/tomizawa0214" data-toggle="tooltip" data-placement="bottom" title="GitHub" target="_blank"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-          <h5>&copy; 2020 TOMIZAWA Jun</h5>
-    </footer>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="smoothscroll.js"></script>
-    <script type="text/javascript" src="index.js"></script>
-    <!-- <script type="text/javascript" src="main.js"></script> -->
-    <script src="https://kit.fontawesome.com/a29680248f.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-  </body>
-</html>
+  </div>
+</div>
+{% endblock %}
