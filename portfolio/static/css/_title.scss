@@ -23,9 +23,7 @@
     color: #fff;
     bottom: 0;
     @include Japanese-font;
-    opacity: 0;
-    transform: translateX(-50px);
-    animation: slideIn .4s 4.3s forwards;
+    animation: slideIn .4s ease-out 4.3s forwards;
     @keyframes slideIn {
       0% {
         opacity: 0;

@@ -486,11 +486,8 @@ html, body {
   color: #fff;
   bottom: 0;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
-  opacity: 0;
-  -webkit-transform: translateX(-50px);
-          transform: translateX(-50px);
-  -webkit-animation: slideIn .4s 4.3s forwards;
-          animation: slideIn .4s 4.3s forwards;
+  -webkit-animation: slideIn .4s ease-out 4.3s forwards;
+          animation: slideIn .4s ease-out 4.3s forwards;
 }
 
 @-webkit-keyframes slideIn {
@@ -1587,6 +1584,69 @@ footer h5 {
   background: #3949AB;
 }
 
+.contact {
+  width: 90%;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #fff;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  -webkit-animation: slideBottomIn .4s ease-out forwards;
+          animation: slideBottomIn .4s ease-out forwards;
+}
+
+@-webkit-keyframes slideBottomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes slideBottomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.contact h2 {
+  margin-bottom: 2px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 100;
+  color: #3d4451;
+  letter-spacing: 2px;
+}
+
+.contact hr {
+  width: 200px;
+  border-top: 1px solid #b4b4b4;
+  margin: 0 auto;
+}
+
+.contact__message {
+  margin: 20px 0 80px;
+  line-height: 1.9;
+  font-size: 14px;
+  font-weight: 500;
+  color: #3d4451;
+  letter-spacing: .5px;
+  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+}
+
 @media screen and (max-width: 369px) {
   .nav h1 {
     font-size: 25px;
@@ -1749,6 +1809,12 @@ footer h5 {
     margin: 0 10px;
     font-size: 30px;
     color: #677288;
+  }
+  .contact {
+    padding: 50px;
+  }
+  .contact__message {
+    text-align: center;
   }
 }
 

@@ -10,16 +10,19 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
-  <div class="row">
-    <div class="col-md-8">
-      <h1>お問い合わせ</h1>
-      <p>お問い合わせフォームです。</p>
-      <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="btn btn-primary">送信</button>
-      </form>
+<div class="contact">
+  <h2>Contact me</h2>
+  <hr>
+  <p class="contact__message">制作のご依頼・ご相談など、どうぞお気軽にご連絡くださいませ。下記フォームにご記入をお願いします。</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <form method="POST">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button type="submit" class="btn btn-primary">送信</button>
+        </form>
+      </div>
     </div>
   </div>
 </div>

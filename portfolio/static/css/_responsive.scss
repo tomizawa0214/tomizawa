@@ -187,6 +187,13 @@
       }
     }
   }
+
+  .contact {
+    padding: 50px;
+    &__message {
+      text-align: center;
+    }
+  }
 }
 
 // -----lg(Large)-----
