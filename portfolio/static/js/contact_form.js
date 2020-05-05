@@ -11,3 +11,13 @@ document.querySelector('.nav__toggler--open').onclick = () => {
     close.style.visibility = 'hidden';
   }
 }
+
+// (function () {
+//   const navList = document.querySelectorAll('.nav__item--box--service, nav__item--box--works, nav__item--box--skill, nav__item--box--profile');
+//   for (let i = 0; i < navList.length; i++) {
+//     navList[i].addEventListener('click', () => {
+//       const opening = document.querySelector('.opening');
+//       opening.style.display = 'none';
+//     });
+//   }
+// }());
