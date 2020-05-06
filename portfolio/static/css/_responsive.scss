@@ -30,6 +30,12 @@
       }
     }
   }
+
+  .contact {
+    h2 {
+      font-size: 35px;
+    }
+  }
 }
 
 // -----sm(Small)-----
@@ -85,6 +91,12 @@
           }
         }
       }
+    }
+  }
+
+  .contact {
+    &__message {
+      text-align: center;
     }
   }
 }
@@ -185,13 +197,6 @@
           }
         }
       }
-    }
-  }
-
-  .contact {
-    padding: 50px;
-    &__message {
-      text-align: center;
     }
   }
 }

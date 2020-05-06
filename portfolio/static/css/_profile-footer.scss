@@ -76,12 +76,12 @@
             border-radius: 3%;
             cursor: pointer;
             overflow: hidden;
-            transition: .5s;
+            transition: .3s ease-out;
             &:focus {
               outline: 0;
             }
             &:hover {
-              box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+              box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
               .profile__container--contact--info--box--button--effect {
                 margin-left: 300px;
               }
@@ -141,7 +141,6 @@
 }
 
 footer {
-  margin-top: auto;
   h5 {
     margin: 0;
     text-align: center;

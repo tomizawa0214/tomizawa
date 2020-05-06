@@ -4,28 +4,9 @@ from django.core.mail import BadHeaderError, send_mail
 from django.http import HttpResponse
 
 class ContactForm(forms.Form):
-  name = forms.CharField (
-    label = '',
-    max_length = 100,
-    widget=forms.TextInput(attrs= {
-      'class': 'form-control',
-      'placeholder': "お名前",
-    }),
-  )
-  email = forms.EmailField (
-    label = '',
-    widget=forms.EmailInput(attrs= {
-      'class': 'form-control',
-      'placeholder': "メールアドレス",
-    }),
-  )
-  message = forms.CharField (
-    label = '',
-    widget=forms.Textarea(attrs= {
-      'class': 'form-control',
-      'placeholder': "お問い合わせ内容",
-    }),
-  )
+  name = forms.CharField (max_length = 100)
+  email = forms.EmailField ()
+  message = forms.CharField (widget=forms.Textarea)
 
   def send_email(self):
     subject = "お問い合わせ"

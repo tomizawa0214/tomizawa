@@ -1,5 +1,6 @@
 {% extends 'portfolio/base.html' %}
 {% load static %}
+{% load widget_tweaks %}
 
 {% block nav %}
 <li><a href="{% url 'index' %}">Home</a></li>
@@ -12,19 +13,36 @@
 {% block content %}
 <div class="contact">
   <h2>Contact me</h2>
-  <hr>
-  <p class="contact__message">制作のご依頼・ご相談など、どうぞお気軽にご連絡くださいませ。下記フォームにご記入をお願いします。</p>
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <form method="POST">
-          {% csrf_token %}
-          {{ form.as_p }}
-          <button type="submit" class="btn btn-primary">送信</button>
-        </form>
-      </div>
-    </div>
-  </div>
+  <p class="contact__message">制作のご依頼・ご相談など、どうぞお気軽にご連絡くださいませ。<br class="d-none d-sm-block">下記フォームにご記入をお願いします。</p>
+  <form method="POST">
+    {% csrf_token %}
+
+    <label for="{{ form.name.id_for_label }}">
+      <i class="fas fa-user fa-fw"></i>Name
+    </label>
+    {{ form.name|add_class:'form-control' }}
+    {% for error in form.name.errors %}
+      <span class="help-block">{{ error }}</span>
+    {% endfor %}
+    <label for="{{ form.email.id_for_label }}">
+      <i class="fas fa-envelope fa-fw"></i>Email
+    </label>
+    {{ form.email|add_class:'form-control' }}
+    {% for error in form.email.errors %}
+      <span class="help-block">{{ error }}</span>
+    {% endfor %}
+    <label for="{{ form.message.id_for_label }}">
+      <i class="fas fa-edit fa-fw"></i></i>Message
+    </label>
+    {{ form.message|add_class:'form-control' }}
+    {% for error in form.message.errors %}
+      <span class="help-block">{{ error }}</span>
+    {% endfor %}
+    
+    <button type="submit">
+      <i class="fas fa-paper-plane fa-fw"></i>Submit
+    </button>
+  </form>
 </div>
 {% endblock %}
 
