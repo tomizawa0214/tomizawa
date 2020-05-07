@@ -1,8 +1,4 @@
 .contact {
-  // position: relative;
-  // width: 100%;
-  // padding: 50px 0;
-  // box-sizing: border-box;
   min-height: 100vh;
   background-image: url("../img/contact-form-bg.png");
   background-size: cover;
@@ -10,23 +6,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // width: 100%;
-    // height: 100vh;
     min-height: 100vh;
     padding: 50px 0;
     background: rgba(16, 21, 54, .6);
     &--form {
-      // position: absolute;
-      // margin: 50px auto;
       width: 90%;
       max-width: 600px;
-      // top: 50%;
-      // left: 50%;
-      padding: 30px;
+      padding: 0 30px 30px;
       background: #fff; 
       box-shadow: 0 2px 5px rgba(0,0,0,0.26);
       opacity: 0;
-      // transform: translate(-50%, -20%);
       transform: translateY(80px);
       animation: slideBottomIn 1s ease-out forwards;
       @keyframes slideBottomIn {
@@ -35,20 +24,27 @@
         }
         100% {
           opacity: 1;
-          // transform: translate(-50%, -50%);
           transform: translateY(0);
         }
       }
       h2 {
-        @include section__title;
+        margin: 0 -30px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 400;
+        font-family: 'Lato', sans-serif;
+        letter-spacing: .5px;
+        line-height: 1.8;
+        color: #fff;
+        background: #e8676b;
       }
       p {
         @include section__message;
         margin-bottom: 50px;
       }
       form {
-        // display: flex;
-        // flex-direction: column;
+        display: flex;
+        flex-direction: column;
         max-width: 500px;
         margin: 0 auto;
         label {

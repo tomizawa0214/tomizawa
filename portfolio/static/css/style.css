@@ -1600,7 +1600,7 @@ footer h5 {
 .contact__wrap--form {
   width: 90%;
   max-width: 600px;
-  padding: 30px;
+  padding: 0 30px 30px;
   background: #fff;
   -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
@@ -1634,12 +1634,15 @@ footer h5 {
 }
 
 .contact__wrap--form h2 {
-  margin-bottom: 2px;
+  margin: 0 -30px;
   text-align: center;
-  font-size: 40px;
-  font-weight: 100;
-  color: #3d4451;
-  letter-spacing: 1px;
+  font-size: 30px;
+  font-weight: 400;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: .5px;
+  line-height: 1.8;
+  color: #fff;
+  background: #e8676b;
 }
 
 .contact__wrap--form p {
@@ -1654,6 +1657,13 @@ footer h5 {
 }
 
 .contact__wrap--form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   max-width: 500px;
   margin: 0 auto;
 }
@@ -1734,7 +1744,7 @@ footer h5 {
     margin: 0;
   }
   .contact__wrap h2 {
-    font-size: 35px;
+    font-size: 25px;
   }
 }
 
@@ -1797,7 +1807,7 @@ footer h5 {
   .profile__container--contact--info--box--button {
     width: 180px;
   }
-  .contact__wrap--message {
+  .contact__wrap p {
     text-align: center;
   }
 }

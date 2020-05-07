@@ -34,7 +34,7 @@
   .contact {
     &__wrap {
       h2 {
-        font-size: 35px;
+        font-size: 25px;
       }
     }
   }
@@ -98,7 +98,7 @@
 
   .contact {
     &__wrap {
-      &--message {
+      p {
         text-align: center;
       }
     }
