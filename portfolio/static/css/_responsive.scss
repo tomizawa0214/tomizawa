@@ -32,8 +32,10 @@
   }
 
   .contact {
-    h2 {
-      font-size: 35px;
+    &__wrap {
+      h2 {
+        font-size: 35px;
+      }
     }
   }
 }
@@ -95,8 +97,10 @@
   }
 
   .contact {
-    &__message {
-      text-align: center;
+    &__wrap {
+      &--message {
+        text-align: center;
+      }
     }
   }
 }
