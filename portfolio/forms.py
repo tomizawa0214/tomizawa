@@ -10,12 +10,12 @@ class ContactForm(forms.Form):
 
   def send_email(self):
     subject = "お問い合わせ"
-    message = self.cleaned_data['message']
     name = self.cleaned_data['name']
     email = self.cleaned_data['email']
+    message = self.cleaned_data['message']
     from_email = '{name} <{email}>'.format(name=name, email=email)
     recipient_list = [settings.EMAIL_HOST_USER]
     try:
-      send_mail(subject, message, from_email, recipient_list)
+      send_mail(subject, name, email, message, recipient_list)
     except BadHeaderError:
       return HttpResponse("無効なヘッダが検出されました。")

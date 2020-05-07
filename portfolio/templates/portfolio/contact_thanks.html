@@ -1,0 +1,24 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block nav %}
+<li><a href="{% url 'index' %}">Home</a></li>
+<li><a href="{% url 'index' %}#service" class="nav__item--box--service">Service</a></li>
+<li><a href="{% url 'index' %}#works" class="nav__item--box--works">Works</a></li>
+<li><a href="{% url 'index' %}#skill" class="nav__item--box--skill">Skill</a></li>
+<li><a href="{% url 'index' %}#profile" class="nav__item--box--profile">Profile</a></li>
+{% endblock %}
+
+{% block content %}
+<div class="contact-thanks">
+  <div class="contact-thanks__wrap">
+    <h2>Thank you!!</h2>
+    <p>ありがとうございます。<br>お問い合わせは正常に送信されました。</p>
+    <div></div>
+  </div>
+</div>
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'js/contact_form.js' %}"></script>
+{% endblock %}

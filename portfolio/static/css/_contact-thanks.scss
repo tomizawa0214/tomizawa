@@ -1,0 +1,25 @@
+.contact-thanks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 66px - 36px);
+  &__wrap {
+    @include section;
+    max-width: 400px;
+    h2 {
+      @include section__title;
+    }
+    p {
+      @include section__message;
+      margin: 20px 0px;
+      text-align: center;
+    }
+    div {
+      height: 200px;
+      background-image: url("../img/myillust.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+  }
+}

@@ -355,6 +355,7 @@ body {
 }
 
 .navbar {
+  height: 66px;
   padding: 15px;
   background: #fff;
   z-index: 10;
@@ -1577,7 +1578,7 @@ footer h5 {
 }
 
 .contact {
-  min-height: 100vh;
+  min-height: calc(100vh - 66px - 36px);
   background-image: url("../img/contact-form-bg.png");
   background-size: cover;
 }
@@ -1592,7 +1593,7 @@ footer h5 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 100vh;
+  min-height: calc(100vh - 66px - 36px);
   padding: 50px 0;
   background: rgba(16, 21, 54, 0.6);
 }
@@ -1779,6 +1780,59 @@ footer h5 {
 .contact__wrap--form form button:hover {
   -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
           box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+}
+
+.contact-thanks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: calc(100vh - 66px - 36px);
+}
+
+.contact-thanks__wrap {
+  width: 90%;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #fff;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  max-width: 400px;
+}
+
+.contact-thanks__wrap h2 {
+  margin-bottom: 2px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 100;
+  color: #3d4451;
+  letter-spacing: 1px;
+}
+
+.contact-thanks__wrap p {
+  margin: 20px 0 80px;
+  line-height: 1.9;
+  font-size: 14px;
+  font-weight: 500;
+  color: #3d4451;
+  letter-spacing: .5px;
+  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+  margin: 20px 0px;
+  text-align: center;
+}
+
+.contact-thanks__wrap div {
+  height: 200px;
+  background-image: url("../img/myillust.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 @media screen and (max-width: 369px) {

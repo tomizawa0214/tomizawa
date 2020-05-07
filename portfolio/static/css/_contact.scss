@@ -1,12 +1,14 @@
 .contact {
-  min-height: 100vh;
+  // min-height: 100vh;
+  min-height: calc(100vh - 66px - 36px);
   background-image: url("../img/contact-form-bg.png");
   background-size: cover;
   &__wrap {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    // min-height: 100vh;
+    min-height: calc(100vh - 66px - 36px);
     padding: 50px 0;
     background: rgba(16, 21, 54, .6);
     &--form {
