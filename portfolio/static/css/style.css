@@ -1656,69 +1656,120 @@ footer h5 {
   margin-bottom: 50px;
 }
 
+.contact__wrap--form p span {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(50%, yellow));
+  background: linear-gradient(transparent 50%, yellow 50%);
+}
+
 .contact__wrap--form form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  position: relative;
   max-width: 500px;
   margin: 0 auto;
 }
 
-.contact__wrap--form form label i {
-  margin-right: 5px;
-}
-
-.contact__wrap--form form label:not(:last-of-type) {
-  margin: 0;
-}
-
-.contact__wrap--form form input {
+.contact__wrap--form form div {
+  position: relative;
   margin-bottom: 3rem;
-  padding: .375rem 0;
-  border: none;
-  border-bottom: solid 1px #1a237e;
-  border-radius: 0;
+}
+
+.contact__wrap--form form div:last-of-type label {
+  top: 3px;
+  left: 5px;
+}
+
+.contact__wrap--form form div label {
+  display: block;
+  position: absolute;
+  top: 0;
+  color: #757575;
   -webkit-transition: .3s;
   transition: .3s;
 }
 
-.contact__wrap--form form input:focus {
+.contact__wrap--form form div label:hover {
+  cursor: text;
+}
+
+.contact__wrap--form form div label i {
+  margin-right: 3px;
+}
+
+.contact__wrap--form form div input {
+  width: 100%;
+  padding: 0 0 4px;
+  border: 0;
+  border-radius: 0;
+  border-bottom: solid 1px #1a237e;
+}
+
+.contact__wrap--form form div input:focus {
   outline: none;
+}
+
+.contact__wrap--form form div input:focus + label, .contact__wrap--form form div input:valid + label {
+  margin-top: -24px;
+  font-size: 14px;
+  color: #1a237e;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.contact__wrap--form form div input:focus ~ span {
+  width: 100%;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.contact__wrap--form form div span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  -webkit-transition: .4s;
+  transition: .4s;
+  background: #1a237e;
 }
 
 .contact__wrap--form form textarea {
-  margin-bottom: 3rem;
+  width: 100%;
+  padding: 4px;
   border: solid 1px #1a237e;
   border-radius: 0;
+}
+
+.contact__wrap--form form textarea:focus {
+  outline: 0;
+  border: solid 2px #1a237e;
+}
+
+.contact__wrap--form form textarea:focus + label, .contact__wrap--form form textarea:valid + label {
+  margin-top: -27px;
+  font-size: 14px;
+  color: #1a237e;
   -webkit-transition: .3s;
   transition: .3s;
 }
 
-.contact__wrap--form form textarea:focus {
-  outline: none;
-}
-
 .contact__wrap--form form button {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  display: block;
+  margin: 0 auto;
   width: 150px;
   padding: 10px 0;
-  border: none;
+  border: 0;
   background: #e8676b;
   border-radius: 3%;
   cursor: pointer;
-  overflow: hidden;
   -webkit-transition: .3s ease-out;
   transition: .3s ease-out;
   color: #fff;
   font-size: 16px;
   font-weight: 800;
   letter-spacing: 1px;
+}
+
+.contact__wrap--form form button i {
+  margin-right: 3px;
 }
 
 .contact__wrap--form form button:focus {
