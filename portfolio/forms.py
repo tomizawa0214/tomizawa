@@ -13,7 +13,7 @@ class ContactForm(forms.Form):
     email = self.cleaned_data['email']
     message = self.cleaned_data['message']
     subject = "お問い合わせありがとうございます"
-    message = '※このメールはシステムからの自動返信です。\n\n{0}様\n\nお問い合わせいただき、ありがとうございます。\n以下の内容でお問い合わせを受け付けいたしました。\n確認させていただき、ご入力いただいたメールアドレスにご連絡いたしますので\n今しばらくお待ちくださいませ。\n\n---------------\nName: {0}様\n\nEmail: {1}\n\nMessage:\n{2}\n---------------'.format(name, email, message)
+    message = '※このメールはシステムからの自動返信です。\n\n{0}様\n\nお問い合わせいただき、ありがとうございます。\n以下の内容でお問い合わせを受け付けいたしました。\n確認させていただき、ご入力いただいたメールアドレスにご連絡いたしますので今しばらくお待ちくださいませ。\n\n--------------------\nName: {0}様\n\nEmail: {1}\n\nMessage:\n{2}\n--------------------'.format(name, email, message)
     to_list = [settings.EMAIL_HOST_USER]
     cc_list = [email]
 
