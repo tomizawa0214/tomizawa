@@ -1,1 +1,1 @@
-web: gunicorn tomizawa.wsgi
+web: gunicorn mysite.wsgi
