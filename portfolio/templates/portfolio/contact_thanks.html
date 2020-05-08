@@ -1,6 +1,10 @@
 {% extends 'portfolio/base.html' %}
 {% load static %}
 
+{% block meta %}
+<meta http-equiv="refresh" content=" 5; url={% url 'index' %}">
+{% endblock %}
+
 {% block nav %}
 <li><a href="{% url 'index' %}">Home</a></li>
 <li><a href="{% url 'index' %}#service" class="nav__item--box--service">Service</a></li>
@@ -13,7 +17,7 @@
 <div class="contact-thanks">
   <div class="contact-thanks__wrap">
     <h2>Thank you!!</h2>
-    <p>ありがとうございます。<br>お問い合わせは正常に送信されました。</p>
+    <p>お問い合わせを受け付けました。<br>確認のため、お客様へ自動返信メールを<br class="d-none d-sm-block">お送りさせていただいております。<br>※この画面は5秒後にHOMEへ自動遷移します。</p>
     <div></div>
   </div>
 </div>

@@ -2,6 +2,9 @@
 {% load static %}
 {% load widget_tweaks %}
 
+{% block meta %}
+{% endblock %}
+
 {% block nav %}
 <li><a href="{% url 'index' %}">Home</a></li>
 <li><a href="{% url 'index' %}#service" class="nav__item--box--service">Service</a></li>

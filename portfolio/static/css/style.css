@@ -1824,7 +1824,6 @@ footer h5 {
   letter-spacing: .5px;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
   margin: 20px 0px;
-  text-align: center;
 }
 
 .contact-thanks__wrap div {
@@ -1913,6 +1912,9 @@ footer h5 {
     width: 180px;
   }
   .contact__wrap p {
+    text-align: center;
+  }
+  .contact-thanks p {
     text-align: center;
   }
 }
