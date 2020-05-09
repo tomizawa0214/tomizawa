@@ -15,49 +15,47 @@
 
 {% block content %}
 <div class="contact">
-  <div class="contact__wrap">
-    <div class="contact__wrap--form">
-      <h2>CONTACT ME</h2>
-      <p>制作のご依頼・ご相談など、どうぞお気軽にご連絡くださいませ。<br class="d-none d-sm-block">お手数ですが下記フォーム<span>すべて</span>にご記入をお願いします。</p>
-      <form method="POST">
-        {% csrf_token %}
-        <div>
-          {{ form.name }}
-          <label for="{{ form.name.id_for_label }}">
-            <i class="fas fa-user fa-fw"></i>Name
-          </label>
-          <span></span>
-          {% for error in form.name.errors %}
-            <span class="help-block">{{ error }}</span>
-          {% endfor %}
-        </div>
+  <div class="contact__form">
+    <h2>CONTACT ME</h2>
+    <p>制作のご依頼・ご相談など、どうぞお気軽にご連絡くださいませ。<br class="d-none d-sm-block">お手数ですが下記フォーム<span>すべて</span>にご記入をお願いします。</p>
+    <form method="POST">
+      {% csrf_token %}
+      <div>
+        {{ form.name }}
+        <label for="{{ form.name.id_for_label }}">
+          <i class="fas fa-user fa-fw"></i>Name
+        </label>
+        <span></span>
+        {% for error in form.name.errors %}
+          <span class="help-block">{{ error }}</span>
+        {% endfor %}
+      </div>
 
-        <div>
-          {{ form.email }}
-          <label for="{{ form.email.id_for_label }}">
-            <i class="fas fa-envelope fa-fw"></i>Email
-          </label>
-          <span></span>
-          {% for error in form.email.errors %}
-            <span class="help-block">{{ error }}</span>
-          {% endfor %}
-        </div>
+      <div>
+        {{ form.email }}
+        <label for="{{ form.email.id_for_label }}">
+          <i class="fas fa-envelope fa-fw"></i>Email
+        </label>
+        <span></span>
+        {% for error in form.email.errors %}
+          <span class="help-block">{{ error }}</span>
+        {% endfor %}
+      </div>
 
-        <div>
-          {{ form.message }}
-          <label for="{{ form.message.id_for_label }}">
-            <i class="fas fa-edit fa-fw"></i></i>Message
-          </label>
-          {% for error in form.message.errors %}
-            <span class="help-block">{{ error }}</span>
-          {% endfor %}
-        </div>
+      <div>
+        {{ form.message }}
+        <label for="{{ form.message.id_for_label }}">
+          <i class="fas fa-edit fa-fw"></i></i>Message
+        </label>
+        {% for error in form.message.errors %}
+          <span class="help-block">{{ error }}</span>
+        {% endfor %}
+      </div>
 
-        <button type="submit">
-          <i class="fas fa-paper-plane fa-fw"></i>Submit
-        </button>
-      </form>
-    </div>
+      <button type="submit">
+        <i class="fas fa-paper-plane fa-fw"></i>Submit
+      </button>
+    </form>
   </div>
 </div>
 {% endblock %}

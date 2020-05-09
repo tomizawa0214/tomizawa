@@ -1,145 +1,139 @@
 .contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: calc(100vh - 66px - 36px);
-  background-image: url("../img/contact-form-bg.png");
-  background-size: cover;
-  &__wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(100vh - 66px - 36px);
-    padding: 50px 0;
-    background: rgba(16, 21, 54, .6);
-    &--form {
-      width: 90%;
-      max-width: 600px;
-      padding: 0 30px 30px;
-      background: #fff; 
-      box-shadow: 0 2px 5px rgba(0,0,0,0.26);
-      opacity: 0;
-      transform: translateY(80px);
-      animation: slideBottomIn 1s ease-out forwards;
-      @keyframes slideBottomIn {
-        25% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
+  padding: 50px 0;
+  &__form {
+    width: 90%;
+    max-width: 600px;
+    padding: 0 30px 30px;
+    background: #fff; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+    opacity: 0;
+    transform: translateY(80px);
+    animation: slideBottomIn 1s ease-out forwards;
+    @keyframes slideBottomIn {
+      25% {
+        opacity: 0;
       }
-      h2 {
-        margin: 0 -30px;
-        text-align: center;
-        font-size: 30px;
-        font-weight: 400;
-        font-family: 'Lato', sans-serif;
-        letter-spacing: .5px;
-        line-height: 1.8;
-        color: #fff;
-        background: #e8676b;
+      100% {
+        opacity: 1;
+        transform: translateY(0);
       }
-      p {
-        @include section__message;
-        margin-bottom: 50px;
-        span {
-          background: linear-gradient(transparent 50%, yellow 50%);
-        }
+    }
+    h2 {
+      margin: 0 -30px;
+      text-align: center;
+      font-size: 30px;
+      font-weight: 400;
+      font-family: 'Lato', sans-serif;
+      letter-spacing: .5px;
+      line-height: 1.8;
+      color: #fff;
+      background: #e8676b;
+    }
+    p {
+      @include section__message;
+      margin-bottom: 50px;
+      span {
+        background: linear-gradient(transparent 50%, yellow 50%);
       }
-      form {
+    }
+    form {
+      position: relative;
+      max-width: 500px;
+      margin: 0 auto;
+      div {
         position: relative;
-        max-width: 500px;
-        margin: 0 auto;
-        div {
-          position: relative;
-          margin-bottom: 3rem;
-          &:last-of-type {
-            label {
-              top: 3px;
-              left: 5px;
-            }
-          }
+        margin-bottom: 3rem;
+        &:last-of-type {
           label {
-            display: block;
-            position: absolute;
-            top: 0;
-            color: #757575;
-            transition: .3s;
-            &:hover {
-              cursor: text;
-            }
-            i {
-              margin-right: 3px;
-            }
-          }
-          input {
-            width: 100%;
-            padding: 0 0 4px;
-            border: 0;
-            border-radius: 0;
-            border-bottom: solid 1px #1a237e;
-            &:focus {
-              outline: none;
-            }
-            &:focus + label, &:valid + label {
-              margin-top: -24px;
-              font-size: 14px;
-              color: #1a237e;
-              transition: .3s;
-            }
-            &:focus ~ span {
-              width: 100%;
-              transition: .4s;
-            }
-          }
-          span {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            transition: .4s;
-            background: #1a237e;
+            top: 3px;
+            left: 5px;
           }
         }
-        textarea {
+        label {
+          display: block;
+          position: absolute;
+          top: 0;
+          color: #757575;
+          transition: .3s;
+          &:hover {
+            cursor: text;
+          }
+          i {
+            margin-right: 3px;
+          }
+        }
+        input {
           width: 100%;
-          padding: 4px;
-          border: solid 1px #1a237e;
+          padding: 0 0 4px;
+          border: 0;
           border-radius: 0;
+          border-bottom: solid 1px #1a237e;
           &:focus {
-            outline: 0; 
-            border: solid 2px #1a237e;
+            outline: none;
           }
           &:focus + label, &:valid + label {
-            margin-top: -27px;
+            margin-top: -24px;
             font-size: 14px;
             color: #1a237e;
             transition: .3s;
           }
+          &:focus ~ span {
+            width: 100%;
+            transition: .4s;
+          }
         }
-        button {
-          display: block;
-          margin: 0 auto;
-          width: 150px;
-          padding: 10px 0;
-          border: 0;
-          background: #e8676b;
-          border-radius: 3%;
-          cursor: pointer;
-          transition: .3s ease-out;
-          color: #fff;
-          font-size: 16px;
-          font-weight: 800;
-          letter-spacing: 1px;
-          i {
-            margin-right: 3px;
-          }
-          &:focus {
-            outline: 0;
-          }
-          &:hover {
-            box-shadow: 0 3px 3px 0 rgba(0,0,0,.14), 0 1px 7px 0 rgba(0,0,0,.12), 0 3px 1px -1px rgba(0,0,0,.2);
-          }
+        span {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0;
+          height: 2px;
+          transition: .4s;
+          background: #1a237e;
+        }
+      }
+      textarea {
+        width: 100%;
+        padding: 4px;
+        border: solid 1px #1a237e;
+        border-radius: 0;
+        &:focus {
+          outline: 0; 
+          border: solid 2px #1a237e;
+        }
+        &:focus + label, &:valid + label {
+          margin-top: -27px;
+          font-size: 14px;
+          color: #1a237e;
+          transition: .3s;
+        }
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        width: 150px;
+        padding: 10px 0;
+        border: 0;
+        background: #e8676b;
+        border-radius: 3%;
+        cursor: pointer;
+        transition: .3s ease-out;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        i {
+          margin-right: 3px;
+        }
+        &:focus {
+          outline: 0;
+        }
+        &:hover {
+          box-shadow: 0 3px 3px 0 rgba(0,0,0,.14), 0 1px 7px 0 rgba(0,0,0,.12), 0 3px 1px -1px rgba(0,0,0,.2);
         }
       }
     }
