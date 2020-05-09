@@ -58,6 +58,16 @@
     }
   }
 
+  .modal-area {
+    &__wrap {
+      &--contents {
+        &-container {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
   .skill {
     &__box {
       grid-template-columns: auto auto;
