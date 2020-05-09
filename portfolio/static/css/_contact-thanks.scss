@@ -11,7 +11,8 @@
     }
     p {
       @include section__message;
-      margin: 20px 0px;
+      line-height: 1.5;
+      margin: 20px 0;
     }
     div {
       height: 200px;

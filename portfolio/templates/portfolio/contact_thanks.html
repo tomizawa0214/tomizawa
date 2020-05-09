@@ -1,23 +1,20 @@
 {% extends 'portfolio/base.html' %}
 {% load static %}
 
-{% block meta %}
-<meta http-equiv="refresh" content=" 5; url={% url 'index' %}">
-{% endblock %}
-
 {% block nav %}
 <li><a href="{% url 'index' %}">Home</a></li>
 <li><a href="{% url 'index' %}#service" class="nav__item--box--service">Service</a></li>
 <li><a href="{% url 'index' %}#works" class="nav__item--box--works">Works</a></li>
 <li><a href="{% url 'index' %}#skill" class="nav__item--box--skill">Skill</a></li>
 <li><a href="{% url 'index' %}#profile" class="nav__item--box--profile">Profile</a></li>
+<li><a href="{% url 'contact_form' %}">Contact</a></li>
 {% endblock %}
 
 {% block content %}
 <div class="contact-thanks">
   <div class="contact-thanks__wrap">
     <h2>Thank you!!</h2>
-    <p>お問い合わせを受け付けました。<br>確認のため、お客様へ自動返信メールを<br class="d-none d-sm-block">お送りさせていただいております。<br>※この画面は5秒後にHOMEへ自動遷移します。</p>
+    <p>お問い合わせを受け付けました。<br><br>確認のため、お客様へ受付完了メールを<br class="d-none d-sm-block">お送りしております。<br><br>後ほど改めてご連絡させていただきますので<br class="d-none d-sm-block">今しばらくお待ちくださいませ。</p>
     <div></div>
   </div>
 </div>

@@ -1840,7 +1840,8 @@ footer h5 {
   color: #3d4451;
   letter-spacing: .5px;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
-  margin: 20px 0px;
+  line-height: 1.5;
+  margin: 20px 0;
 }
 
 .contact-thanks__wrap div {
