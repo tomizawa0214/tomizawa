@@ -398,8 +398,13 @@ body {
   margin: 0;
   font-family: 'Archivo Black', sans-serif;
   font-size: 30px;
-  color: #1a237e;
   letter-spacing: .8px;
+}
+
+.nav h1 a {
+  color: #1a237e;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .nav__toggler {
@@ -1846,9 +1851,9 @@ footer h5 {
   margin: 20px 0;
 }
 
-.contact-thanks__wrap div {
+.contact-thanks__wrap--image {
   height: 200px;
-  background-image: url("../img/illust.svg");
+  background-image: url("../img/myillust.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
