@@ -241,15 +241,6 @@ body {
   overflow: auto;
 }
 
-.modal-area__wrap--contents-image {
-  background-image: url("../img/TatkeOutMenu-g.png");
-  width: 100%;
-  height: 85%;
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
 .modal-area__wrap--contents-image1--sp {
   background-image: url("../img/Blog-sp.jpg");
   width: 100%;
@@ -279,6 +270,24 @@ body {
 
 .modal-area__wrap--contents-image2--pc {
   background-image: url("../img/Bootstrap4-pc.jpg");
+  width: 100%;
+  height: 85%;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.modal-area__wrap--contents-image3 {
+  background-image: url("../img/TatkeOutMenu-g.png");
+  width: 100%;
+  height: 85%;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.modal-area__wrap--contents-image4 {
+  background-image: url("../img/wedding-g.png");
   width: 100%;
   height: 85%;
   background-size: contain;
