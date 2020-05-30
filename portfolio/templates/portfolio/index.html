@@ -1,6 +1,10 @@
 {% extends 'portfolio/base.html' %}
 {% load static %}
 
+{% block meta %}
+<title>TOMIZAWA Jun | Web & Graphic Designer</title>
+{% endblock %}
+
 {% block opening %}
 <!-- Opening Fake Shutter -->
 <div class="opening">
@@ -235,7 +239,7 @@
 <div class="profile" id="profile">
   <div class="profile__container">
     <img src="{% static 'img/tomizawa.png' %}" alt="冨澤潤 TOMIZAWA Jun">
-    <h1>冨澤 潤<span>TOMIZAWA Jun</span></h1>
+    <p class="profile__container--name">冨澤 潤<span>TOMIZAWA Jun</span></p>
     <hr class="d-block d-sm-none">
     <div class="profile__container--contact">
       <p>都内の美術学校を卒業後、地元企業にて広告制作に携わる。その企業での経験を機にプログラミングに興味を持ち、休日を利用して都内のプログラミングスクールへ通う。30歳の節目にフリーランスとしての独立を決意。現在侍エンジニア塾でプログラミングを学習中。どうぞお気軽にご連絡くださいませ。</p>

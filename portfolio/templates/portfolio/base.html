@@ -14,11 +14,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="keywords" content="群馬,デザイン,web,グラフィック,デザイナー,フリーランス,エンジニア,HTML,CSS,JavaScript,Python">
-    <meta name="discription" content="あなたのお悩み,解決に向けて尽力させてください！フリーランスで活動する群馬県在住のWeb&Graphicデザイナーです。どうぞお気軽にご連絡くださいませ。">
+    <meta name="description" content="あなたのお悩み,解決に向けて尽力させてください！フリーランスで活動する群馬県在住のWeb&Graphicデザイナーです。どうぞお気軽にご連絡くださいませ。">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <link rel="icon" href="{% static 'ico/tomizawa.ico' %}">
-    <title>TOMIZAWA Jun | Web & Graphic Designer</title>
+    {% block meta %}
+    {% endblock %}
   </head>
 
   <body>
@@ -47,7 +48,7 @@
 
     <!-- Footer -->
     <footer>
-      <h5>&copy; 2020 TOMIZAWA Jun</h5>
+      <small>&copy; 2020 TOMIZAWA Jun</small>
     </footer>
 
     {% block js %}

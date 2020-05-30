@@ -1416,7 +1416,7 @@ body {
   border-radius: 50%;
 }
 
-.profile__container h1 {
+.profile__container--name {
   margin: 0;
   text-align: center;
   color: #3d4451;
@@ -1424,7 +1424,7 @@ body {
   letter-spacing: 1px;
 }
 
-.profile__container h1 span {
+.profile__container--name span {
   padding-left: 10px;
   color: #3d4451;
   font-size: 12px;
@@ -1593,19 +1593,19 @@ body {
 
 footer {
   position: absolute;
-  bottom: 0;
   width: 100%;
+  bottom: 0;
+  text-align: center;
+  background: #3949AB;
 }
 
-footer h5 {
+footer small {
   margin: 0;
-  text-align: center;
   color: #fff;
   font-size: 12px;
   font-weight: 400;
   font-family: 'Lato', sans-serif;
   line-height: 3;
-  background: #3949AB;
 }
 
 .contact {
@@ -1912,13 +1912,13 @@ footer h5 {
     grid-column: 1 / 2;
     margin: 0 20px 0 0;
   }
-  .profile__container h1 {
+  .profile__container--name {
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-column: 1 / 2;
     margin: 0 20px 0 0;
   }
-  .profile__container h1 span {
+  .profile__container--name span {
     display: block;
     padding: 3px 0 0 0;
   }
