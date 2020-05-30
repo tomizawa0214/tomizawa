@@ -1,6 +1,10 @@
 {% extends 'portfolio/base.html' %}
 {% load static %}
 
+{% block meta %}
+<title>TOMIZAWA Jun | THANKS</title>
+{% endblock %}
+
 {% block nav %}
 <li><a href="{% url 'index' %}">Home</a></li>
 <li><a href="{% url 'index' %}#service" class="nav__item--box--service">Service</a></li>
