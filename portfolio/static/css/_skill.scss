@@ -181,7 +181,6 @@
       background: #366a94;
       &::before {
         background: #ecf3f8;
-        animation: rotate-circle-left-python 7s linear infinite;
       }
       &::after {
         background: #ecf3f8;
@@ -195,6 +194,27 @@
           }
           100% {
             transform: rotate(120deg);
+          }
+        }
+      }
+    }
+    &--xd {
+      background: #ff26be;
+      &::before {
+        background: #ffe5f7;
+      }
+      &::after {
+        background: #ffe5f7;
+        animation: rotate-circle-right-xd 7s linear infinite;
+        @keyframes rotate-circle-right-xd {
+          0% {
+            transform: rotate(0deg);
+          }
+          15% {
+            transform: rotate(170deg);
+          }
+          100% {
+            transform: rotate(170deg);
           }
         }
       }

@@ -1151,8 +1151,6 @@ body {
 
 .skill__box--python::before {
   background: #ecf3f8;
-  -webkit-animation: rotate-circle-left-python 7s linear infinite;
-          animation: rotate-circle-left-python 7s linear infinite;
 }
 
 .skill__box--python::after {
@@ -1188,6 +1186,50 @@ body {
   100% {
     -webkit-transform: rotate(120deg);
             transform: rotate(120deg);
+  }
+}
+
+.skill__box--xd {
+  background: #ff26be;
+}
+
+.skill__box--xd::before {
+  background: #ffe5f7;
+}
+
+.skill__box--xd::after {
+  background: #ffe5f7;
+  -webkit-animation: rotate-circle-right-xd 7s linear infinite;
+          animation: rotate-circle-right-xd 7s linear infinite;
+}
+
+@-webkit-keyframes rotate-circle-right-xd {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  15% {
+    -webkit-transform: rotate(170deg);
+            transform: rotate(170deg);
+  }
+  100% {
+    -webkit-transform: rotate(170deg);
+            transform: rotate(170deg);
+  }
+}
+
+@keyframes rotate-circle-right-xd {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  15% {
+    -webkit-transform: rotate(170deg);
+            transform: rotate(170deg);
+  }
+  100% {
+    -webkit-transform: rotate(170deg);
+            transform: rotate(170deg);
   }
 }
 
