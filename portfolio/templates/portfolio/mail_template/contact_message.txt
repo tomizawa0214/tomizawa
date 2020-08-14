@@ -1,0 +1,22 @@
+{{ name }} 様
+
+お問い合わせいただき、ありがとうございます。
+以下の内容でお問い合わせを受付いたしました。
+確認させていただき、ご入力いただいたメールアドレスにご連絡いたしますので今しばらくお待ちくださいませ。
+
+＜お問い合わせ内容＞
+●【お名前】{{ name }} 様
+●【メールアドレス
+{{ email }}
+●【メッセージ】
+{{ message }}
+
+
+----------------------------------------------
+冨澤 潤 TOMIZAWA Jun
+
+URL: https://tomizawajun.com
+Twitter: https://twitter.com/tomizawa0214
+Facebook: https://www.facebook.com/tomizawa0214
+GitHub: https://github.com/tomizawa0214
+----------------------------------------------
