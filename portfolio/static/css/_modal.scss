@@ -52,6 +52,14 @@
         background-image: url("../img/wedding-g.png");
         @include modal-bg;
       }
+      &-image5--sp {
+        background-image: url("../img/spoon-sp.png");
+        @include modal-bg;
+      }
+      &-image5--pc {
+        background-image: url("../img/spoon-pc.png");
+        @include modal-bg;
+      }
       &-container {
         width: 100%;
         height: 10%;
