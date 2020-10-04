@@ -202,6 +202,21 @@
       background: #ff26be;
       &::before {
         background: #ffe5f7;
+        animation: rotate-circle-left-xd 7s linear infinite;
+        @keyframes rotate-circle-left-xd {
+          0% {
+            transform: rotate(0deg);
+          }
+          15% {
+            transform: rotate(0deg);
+          }
+          18% {
+            transform: rotate(30deg);
+          }
+          100% {
+            transform: rotate(30deg);
+          }
+        }
       }
       &::after {
         background: #ffe5f7;
@@ -209,12 +224,19 @@
         @keyframes rotate-circle-right-xd {
           0% {
             transform: rotate(0deg);
+            background: #ffe5f7;
           }
           15% {
-            transform: rotate(170deg);
+            transform: rotate(180deg);
+            background: #ffe5f7;
+          }
+          15.01% {
+            transform: rotate(360deg);
+            background: #ff26be;
           }
           100% {
-            transform: rotate(170deg);
+            transform: rotate(360deg);
+            background: #ff26be;
           }
         }
       }

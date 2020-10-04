@@ -1213,6 +1213,46 @@ body {
 
 .skill__box--xd::before {
   background: #ffe5f7;
+  -webkit-animation: rotate-circle-left-xd 7s linear infinite;
+          animation: rotate-circle-left-xd 7s linear infinite;
+}
+
+@-webkit-keyframes rotate-circle-left-xd {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  15% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  18% {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+  100% {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+}
+
+@keyframes rotate-circle-left-xd {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  15% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  18% {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+  100% {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
 }
 
 .skill__box--xd::after {
@@ -1225,14 +1265,22 @@ body {
   0% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
+    background: #ffe5f7;
   }
   15% {
-    -webkit-transform: rotate(170deg);
-            transform: rotate(170deg);
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    background: #ffe5f7;
+  }
+  15.01% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    background: #ff26be;
   }
   100% {
-    -webkit-transform: rotate(170deg);
-            transform: rotate(170deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    background: #ff26be;
   }
 }
 
@@ -1240,14 +1288,22 @@ body {
   0% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
+    background: #ffe5f7;
   }
   15% {
-    -webkit-transform: rotate(170deg);
-            transform: rotate(170deg);
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    background: #ffe5f7;
+  }
+  15.01% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    background: #ff26be;
   }
   100% {
-    -webkit-transform: rotate(170deg);
-            transform: rotate(170deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    background: #ff26be;
   }
 }
 
@@ -2136,3 +2192,4 @@ footer small {
         grid-template-columns: auto auto auto auto;
   }
 }
+/*# sourceMappingURL=style.css.map */
