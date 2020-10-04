@@ -7,14 +7,14 @@
 
 {% block opening %}
 <!-- Opening Fake Shutter -->
-<div class="opening">
+<article class="opening">
   <p class="opening__text">Thank you for coming!</p>
-</div>
+</article>
 
 <!-- Back To Top -->
-<div class="back-to-top" data-toggle="tooltip" data-placement="left" title="Back to Top">
+<article class="back-to-top" data-toggle="tooltip" data-placement="left" title="Back to Top">
   <i class="fas fa-angle-up" aria-hidden="true"></i>
-</div>
+</article>
 {% endblock %}
 
 {% block nav %}
@@ -27,7 +27,7 @@
 
 {% block content %}
 <!-- Title Image -->
-<div class="title">
+<section class="title">
   <div class="title__mask"></div>
   <div class="title__photo"></div>
   <div class="title__text">
@@ -35,10 +35,10 @@
     <h3>テクノロジーがどれだけ進化しても、<br>主役は必ず「人」のはず。<br>根底に流れるのは人の「想い」です。<br>テクノロジーで想いの幅を広げて、<br>クリエイティブで人に届ける。<br>人と人とを繋ぐ架け橋になれたなら、<br>私はこの上なく幸せです。</h3>
     <h4>2020年　冨澤 潤</h4>
   </div>
-</div>
+</section>
 
 <!-- Service Section-->
-<div class="service" id="service">
+<section class="service" id="service">
   <h2>Service</h2>
   <hr>
   <p class="service__message">webページのデザインから<br class="d-none d-md-block">ポスター、チラシ、パンフレット、カタログ等々のグラフィックデザインまで<br class="d-none d-md-block">お客様のお悩み事に寄り添い、解決に向けて尽力させていただきます。</p>
@@ -65,10 +65,10 @@
       <p class="service__icon--wrap--text">webページ制作からポスター、チラシ、パンフレット、カタログ等々のグラフィック制作まで、お客様のご要望に応じてデザインを形にします。</p>
     </div>
   </div>
-</div>
+</section>
 
 <!-- Works Section-->
-<div class="works" id="works">
+<section class="works" id="works">
   <h2>Works</h2>
   <hr>
   <p class="works__message">過去制作実績の一部です。<br class="d-none d-md-block">お力となれますよう最大限尽力させていただきます。</p>
@@ -135,7 +135,7 @@
       </button>
     </div>
   </div>
-</div>
+</section>
 
 <!-- Works Modal -->
 <section class="modal-area">
@@ -223,7 +223,7 @@
 </section>
 
 <!-- Skill -->
-<div class="skill" id="skill">
+<section class="skill" id="skill">
   <h2>Skill</h2>
   <hr>
   <div class="skill__box">
@@ -267,11 +267,11 @@
       </div>
     </div>
   </div>
-</div>
+</section>
 
 
 <!-- Profile -->
-<div class="profile" id="profile">
+<section class="profile" id="profile">
   <div class="profile__container">
     <img src="{% static 'img/tomizawa.png' %}" alt="冨澤潤 TOMIZAWA Jun">
     <p class="profile__container--name">冨澤 潤<span>TOMIZAWA Jun</span></p>
@@ -297,7 +297,7 @@
       </div>
     </div>
   </div>
-</div>
+</section>
 {% endblock %}
 
 {% block js %}
