@@ -25,8 +25,8 @@ body {
   right: 0;
   bottom: 0;
   background: #07131e;
-  -webkit-animation: shutter 4s forwards;
-          animation: shutter 4s forwards;
+  -webkit-animation: shutter 4.3s forwards;
+          animation: shutter 4.3s forwards;
 }
 
 @-webkit-keyframes shutter {
