@@ -25,8 +25,8 @@ body {
   right: 0;
   bottom: 0;
   background: #07131e;
-  -webkit-animation: shutter 4.6s forwards;
-          animation: shutter 4.6s forwards;
+  -webkit-animation: shutter 4s forwards;
+          animation: shutter 4s forwards;
 }
 
 @-webkit-keyframes shutter {
@@ -61,8 +61,8 @@ body {
   bottom: 0;
   margin: auto;
   background: #fff;
-  -webkit-animation: shutterOpen 4.6s forwards;
-          animation: shutterOpen 4.6s forwards;
+  -webkit-animation: shutterOpen 4s forwards;
+          animation: shutterOpen 4s forwards;
 }
 
 @-webkit-keyframes shutterOpen {
@@ -123,8 +123,8 @@ body {
   background: -webkit-linear-gradient(#fff 50%, #38495a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-animation: textAnime1 .2s linear 2.3s forwards;
-          animation: textAnime1 .2s linear 2.3s forwards;
+  -webkit-animation: textAnime1 .2s linear 2s forwards;
+          animation: textAnime1 .2s linear 2s forwards;
 }
 
 @-webkit-keyframes textAnime1 {
