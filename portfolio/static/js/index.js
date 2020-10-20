@@ -86,7 +86,7 @@ window.addEventListener('scroll', () => {
 // 4.6秒後に発動
 window.setTimeout(function() {
   myFunc(0);
-}, 4000);
+}, 4600);
 
 // モーダルウィンドウ
 (function () {
