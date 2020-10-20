@@ -4,6 +4,7 @@
 
 {% block meta %}
 <title>お問い合わせ | 冨澤潤 TOMIZAWA Jun</title>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 {% endblock %}
 
 {% block nav %}
@@ -52,6 +53,8 @@
           <span class="help-block">{{ error }}</span>
         {% endfor %}
       </div>
+
+      <div class="contact__form--captcha">{{ form.captcha }}</div>
 
       <button type="submit">
         <i class="fas fa-paper-plane fa-fw"></i>Submit

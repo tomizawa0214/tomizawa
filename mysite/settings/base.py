@@ -17,6 +17,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'portfolio',
     'widget_tweaks',
+    'snowpenguin.django.recaptcha2',
 ]
 
 MIDDLEWARE = [

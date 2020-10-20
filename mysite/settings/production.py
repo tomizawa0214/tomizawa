@@ -20,3 +20,6 @@ DATABASES = {
 STATIC_ROOT = '/usr/share/nginx/html/static'
 
 MEDIA_ROOT = '/usr/share/nginx/html/media'
+
+RECAPTCHA_PRIVATE_KEY = env('RECAPTCHA_PRIVATE_KEY')
+RECAPTCHA_PUBLIC_KEY = env('RECAPTCHA_PUBLIC_KEY')
