@@ -137,9 +137,11 @@
         }
       }
     }
-    &--captcha {
-      width: 304px;
-      margin: 0 auto;
-    }
   }
+}
+#recaptcha-captcha {
+  width: 212.8px;
+  margin: 0 auto;
+  transform-origin: 0% 0%;
+  transform: scale(.7);
 }

@@ -47,14 +47,14 @@
       <div>
         {{ form.message }}
         <label for="{{ form.message.id_for_label }}">
-          <i class="fas fa-edit fa-fw"></i></i>Message
+          <i class="fas fa-edit fa-fw ml-1"></i></i>Message
         </label>
         {% for error in form.message.errors %}
           <span class="help-block">{{ error }}</span>
         {% endfor %}
       </div>
 
-      <div class="contact__form--captcha">{{ form.captcha }}</div>
+      <div>{{ form.captcha }}</div>
 
       <button type="submit">
         <i class="fas fa-paper-plane fa-fw"></i>Submit

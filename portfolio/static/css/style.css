@@ -1922,9 +1922,13 @@ footer small {
           box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
 }
 
-.contact__form--captcha {
-  width: 304px;
+#recaptcha-captcha {
+  width: 212.8px;
   margin: 0 auto;
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
 }
 
 .contact-thanks {
@@ -2062,6 +2066,11 @@ footer small {
   }
   .contact__wrap p {
     text-align: center;
+  }
+  #recaptcha-captcha {
+    width: 304px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   .contact-thanks p {
     text-align: center;
