@@ -29,6 +29,8 @@ body {
           animation-name: shutter;
   -webkit-animation-duration: 4.6s;
           animation-duration: 4.6s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -69,6 +71,8 @@ body {
           animation-name: shutterOpen;
   -webkit-animation-duration: 4.6s;
           animation-duration: 4.6s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -131,8 +135,8 @@ body {
   background: -webkit-linear-gradient(#fff 50%, #38495a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-animation: textAnime1 .2s linear 2.3s forwards;
-          animation: textAnime1 .2s linear 2.3s forwards;
+  -webkit-animation: textAnime1 .2s linear 3.3s forwards;
+          animation: textAnime1 .2s linear 3.3s forwards;
 }
 
 @-webkit-keyframes textAnime1 {
@@ -171,8 +175,8 @@ body {
   right: 0;
   margin: auto;
   background: #07131e;
-  -webkit-animation: textAnime2 2s forwards;
-          animation: textAnime2 2s forwards;
+  -webkit-animation: textAnime2 2s 1s forwards;
+          animation: textAnime2 2s 1s forwards;
 }
 
 @-webkit-keyframes textAnime2 {
@@ -544,8 +548,8 @@ body {
   opacity: 0;
   -webkit-transform: translateX(-50px);
           transform: translateX(-50px);
-  -webkit-animation: slideIn .4s ease-out 4.3s forwards;
-          animation: slideIn .4s ease-out 4.3s forwards;
+  -webkit-animation: slideIn .4s ease-out 5.6s forwards;
+          animation: slideIn .4s ease-out 5.6s forwards;
 }
 
 @-webkit-keyframes slideIn {

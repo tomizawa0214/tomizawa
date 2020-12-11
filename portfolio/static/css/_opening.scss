@@ -10,6 +10,7 @@
   background: #07131e;
   animation-name: shutter;
   animation-duration: 4.6s;
+  animation-delay: 1s;
   animation-fill-mode: forwards;
   @keyframes shutter {
     70% {
@@ -33,6 +34,7 @@
     background: #fff;
     animation-name: shutterOpen;
     animation-duration: 4.6s;
+    animation-delay: 1s;
     animation-fill-mode: forwards;
     @keyframes shutterOpen {
       0% {
@@ -73,7 +75,7 @@
     background: -webkit-linear-gradient(#fff 50%, #38495a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: textAnime1 .2s linear 2.3s forwards;
+    animation: textAnime1 .2s linear 3.3s forwards;
     @keyframes textAnime1 {
       0% {
         opacity: 1;
@@ -97,7 +99,7 @@
       right: 0;
       margin: auto;
       background: #07131e;
-      animation: textAnime2 2s forwards;
+      animation: textAnime2 2s 1s forwards;
       @keyframes textAnime2 {
         0% {
           opacity: 1;

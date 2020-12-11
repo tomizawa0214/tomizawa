@@ -83,10 +83,11 @@ const myFunc = BottomHeight => {
 window.addEventListener('scroll', () => {
   myFunc(100);
 });
-// 4.6秒後に発動
+
+// 5.6秒後に発動
 window.setTimeout(function() {
   myFunc(0);
-}, 4600);
+}, 5600);
 
 // モーダルウィンドウ
 (function () {
