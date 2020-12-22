@@ -65,7 +65,7 @@ document.querySelector('.nav__toggler--open').onclick = () => {
 
 // 指定要素が画面内に入ったらフェードイン
 const myFunc = BottomHeight => {
-  const myFade = document.querySelectorAll('.service, .works, .skill, .profile');
+  const myFade = document.querySelectorAll('.news, .service, .works, .skill, .profile');
   let scroll = document.documentElement.scrollTop || document.body.scrollTop;
   let windowHeight = window.innerHeight;
   for (let i = 0; i < myFade.length; i++) {

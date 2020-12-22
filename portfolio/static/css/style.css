@@ -1996,6 +1996,73 @@ footer small {
   background-position: center;
 }
 
+.news {
+  width: 90%;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #fff;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  margin-top: 80px;
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  -webkit-transition: .4s all ease-out;
+  transition: .4s all ease-out;
+}
+
+.news h2 {
+  margin-bottom: 2px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 100;
+  color: #3d4451;
+  letter-spacing: 1px;
+}
+
+.news hr {
+  width: 200px;
+  border-top: 1px solid #b4b4b4;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.news__wrap--topic--date {
+  color: #a5a5a5;
+  letter-spacing: 1.2px;
+}
+
+.news__wrap--topic--content {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
+  color: #304ffe;
+  font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
+}
+
+.news__wrap--topic--content:hover {
+  color: #e8676b;
+  text-decoration: none;
+}
+
+.news__wrap--topic--content:after {
+  background-color: #e8676b;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  -webkit-transition: .5s;
+  transition: .5s;
+  width: 0;
+}
+
+.news__wrap--topic--content:hover::after {
+  width: 100%;
+}
+
 @media screen and (max-width: 369px) {
   .nav h1 {
     font-size: 25px;
@@ -2107,6 +2174,9 @@ footer small {
   }
   .title__text h3 {
     font-size: 16px;
+  }
+  .news {
+    padding: 50px;
   }
   .service {
     padding: 50px;
