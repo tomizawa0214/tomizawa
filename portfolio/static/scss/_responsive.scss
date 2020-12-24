@@ -52,6 +52,18 @@
     }
   }
 
+  .news {
+    &__wrap {
+        &--topic {
+            &--img {
+              &--photo {
+                width: 280px;
+              }
+            }
+        }
+    }
+  }
+
   .works {
     &__item {
     grid-template-columns: auto auto;

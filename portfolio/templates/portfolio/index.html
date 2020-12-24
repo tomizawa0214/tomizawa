@@ -7,9 +7,9 @@
 
 {% block opening %}
 <!-- Opening Fake Shutter -->
-<!-- <article class="opening">
+<article class="opening">
   <p class="opening__text">Thank you for coming!</p>
-</article> -->
+</article>
 
 <!-- Back To Top -->
 <article class="back-to-top" data-toggle="tooltip" data-placement="left" title="Back to Top">
@@ -42,9 +42,19 @@
   <h2>News</h2>
   <hr>
   <ul class="news__wrap p-0 m-0 list-unstyled">
-    <li class="news__wrap--topic d-sm-flex justify-content-sm-center">
-      <p class="news__wrap--topic--date m-0">2020.12.15</p>
-      <a href="https://www.sejuku.net/blog/128366" class="news__wrap--topic--content m-0 ml-sm-3">侍エンジニア塾様からのインタビュー記事を掲載いただきました</a>
+    <li class="news__wrap--topic d-sm-flex justify-content-center">
+      <div class="news__wrap--topic--content mr-sm-5 mb-3 mb-sm-0">
+        <p class="news__wrap--topic--content--date mb-1">2020.12.15</p>
+        <p class="news__wrap--topic--content--text m-0 p-0">日本初マンツーマン専門指導のプログラミングスクール「侍エンジニア塾」様より、インタビュー記事を掲載いただきました。</a>
+      </div>
+      <div class="news__wrap--topic--img">
+        <img src="{% static 'img/samurai-interview.jpg' %}" class="news__wrap--topic--img--photo" alt="侍エンジニア塾インタビュー記事">
+        <a href="https://www.sejuku.net/blog/128366" class="news__wrap--topic--img--mask">
+          <p>Interview</p>
+          <span></span>
+          <p>30代未経験からフリーランスエンジニアとして地方で活躍できた理由</p>
+        </a>
+      </div>
     </li>
   </ul>
 </section>
