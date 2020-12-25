@@ -26,6 +26,18 @@
                     @include Japanese-font;
                 }
             }
+            &--video {
+                position: relative;
+                width: 100%;
+                padding-top: 56.25%;
+                iframe {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
             &--img {
                 position: relative;
                 cursor: pointer;

@@ -2043,6 +2043,20 @@ footer small {
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
 }
 
+.news__wrap--topic--video {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.news__wrap--topic--video iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .news__wrap--topic--img {
   position: relative;
   cursor: pointer;
