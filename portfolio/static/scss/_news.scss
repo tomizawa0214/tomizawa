@@ -22,20 +22,24 @@
                     display: inline-block;
                     padding-bottom: 4px;
                     font-size: 14px;
+                    font-weight: 500;
+                    line-height: 1.9;
                     color: $textColor;
                     @include Japanese-font;
                 }
             }
             &--video {
                 position: relative;
-                width: 100%;
-                padding-top: 56.25%;
-                iframe {
-                    position: absolute;
-                    top: 0;
-                    right: 0;
+                &--movie {
                     width: 100%;
-                    height: 100%;
+                    padding-top: 56.25%;
+                    iframe {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
                 }
             }
             &--img {
@@ -43,7 +47,7 @@
                 cursor: pointer;
                 &--photo {
                     width: 100%;
-                    height: 200px;
+                    height: auto;
                     object-fit: cover;
                 }
                 &--mask {

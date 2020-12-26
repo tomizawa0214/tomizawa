@@ -2039,20 +2039,25 @@ footer small {
   display: inline-block;
   padding-bottom: 4px;
   font-size: 14px;
+  font-weight: 500;
+  line-height: 1.9;
   color: #3d4451;
   font-family: Helvetica, '游ゴシック', 'Yu Gothic', YuGothic, HiraKakuProN-W3, 'メイリオ', Meiryo, sans-serif;
 }
 
 .news__wrap--topic--video {
   position: relative;
+}
+
+.news__wrap--topic--video--movie {
   width: 100%;
   padding-top: 56.25%;
 }
 
-.news__wrap--topic--video iframe {
+.news__wrap--topic--video--movie iframe {
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 }
@@ -2064,7 +2069,7 @@ footer small {
 
 .news__wrap--topic--img--photo {
   width: 100%;
-  height: 200px;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -2171,6 +2176,9 @@ footer small {
   }
   .title__text h4 {
     margin: 15px 0 0 0;
+  }
+  .news__wrap--topic--video--movie {
+    width: 280px;
   }
   .news__wrap--topic--img--photo {
     width: 280px;

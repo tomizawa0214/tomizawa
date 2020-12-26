@@ -55,6 +55,11 @@
   .news {
     &__wrap {
         &--topic {
+          &--video {
+            &--movie {
+              width: 280px;
+            }
+          }
           &--img {
             &--photo {
               width: 280px;
