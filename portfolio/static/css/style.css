@@ -494,10 +494,6 @@ body {
   top: 16px;
 }
 
-.nav__toggler:hover {
-  color: #eee;
-}
-
 .nav__toggler:focus {
   outline: none;
 }
