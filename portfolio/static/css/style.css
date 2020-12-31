@@ -468,25 +468,30 @@ body {
 .nav__toggler {
   position: relative;
   padding: 0 17px;
+  width: 59px;
+  height: 17px;
+  border: 0;
 }
 
-.nav__toggler--open {
-  right: 0;
-  top: 2px;
-  font-size: 30px;
-  color: #3d4451;
-  border-color: rgba(0, 0, 0, 0);
-  visibility: visible;
-}
-
-.nav__toggler--close {
+.nav__toggler span {
+  display: block;
   position: absolute;
+  width: 25px;
+  border-bottom: solid 2px #212529;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.nav__toggler span:nth-child(1) {
   top: 0;
-  right: 0;
-  margin: -12px 17px 0 0;
-  font-size: 50px;
-  color: #e8676b;
-  visibility: hidden;
+}
+
+.nav__toggler span:nth-child(2) {
+  top: 8px;
+}
+
+.nav__toggler span:nth-child(3) {
+  top: 16px;
 }
 
 .nav__toggler:hover {
@@ -495,6 +500,20 @@ body {
 
 .nav__toggler:focus {
   outline: none;
+}
+
+.nav__toggler-active span:nth-child(1) {
+  top: 8px;
+  border-color: #e8676b;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.nav__toggler-active span:nth-child(2), .nav__toggler-active span:nth-child(3) {
+  top: 8px;
+  border-color: #e8676b;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .nav ul {

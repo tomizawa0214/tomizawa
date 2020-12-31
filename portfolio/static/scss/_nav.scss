@@ -44,28 +44,62 @@
   &__toggler {
     position: relative;
     padding: 0 17px;
-    &--open {
-      right: 0;
-      top: 2px;
-      font-size: 30px;
-      color: $textColor;
-      border-color: rgba(0, 0, 0, 0);
-      visibility: visible;
-    }
-    &--close {
+    width: 59px;
+    height: 17px;
+    border: 0;
+    span {
+      display: block;
       position: absolute;
-      top: 0;
-      right: 0;
-      margin: -12px 17px 0 0;
-      font-size: 50px;
-      color: #e8676b;
-      visibility: hidden;
+      width: 25px;
+      border-bottom: solid 2px rgb(33, 37, 41);
+      transition: .2s;
+      &:nth-child(1) {
+        top: 0;
+      }
+      &:nth-child(2) {
+        top: 8px;
+      }
+      &:nth-child(3) {
+        top: 16px;
+      }
     }
+    // &--open {
+    //   right: 0;
+    //   top: 2px;
+    //   font-size: 30px;
+    //   color: $textColor;
+    //   border-color: rgba(0, 0, 0, 0);
+    //   visibility: visible;
+    // }
+    // &--close {
+    //   position: absolute;
+    //   top: 0;
+    //   right: 0;
+    //   margin: -12px 17px 0 0;
+    //   font-size: 50px;
+    //   color: #e8676b;
+    //   visibility: hidden;
+    // }
     &:hover {
       color: #eee;
     }
     &:focus {
       outline: none;
+    }
+  }
+  &__toggler-active {
+    span {
+      &:nth-child(1) {
+        top: 8px;
+        border-color: #e8676b;
+        transform: rotate(-45deg);
+      }
+      &:nth-child(2),
+      &:nth-child(3) {
+        top: 8px;
+        border-color: #e8676b;
+        transform: rotate(45deg);
+      }
     }
   }
   ul {
