@@ -42,7 +42,12 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-md">
       <div class="nav container-fluid">
-        <h1><a href="{% url 'index' %}">TOMIZAWA Jun</a></h1>
+        <h1 class="nav__logo">
+          <a href="{% url 'index' %}">
+            <img src="{% static 'img/header-logo.svg' %}" alt="TOMIZAWA Jun 冨澤潤">
+          </a>
+          <div class="nav__logo--effect"></div>
+        </h1>
         <button class="nav__toggler navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
           <i class="nav__toggler--open fas fa-bars" aria-hidden="true"></i>
           <p class="nav__toggler--close">×</p>
