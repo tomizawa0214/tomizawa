@@ -34,7 +34,6 @@ $textColor: #3d4451;
   font-size: 40px;
   font-weight: 100;
   color: $textColor;
-  letter-spacing: 1px;
 }
 
 @mixin section__border {
@@ -49,7 +48,6 @@ $textColor: #3d4451;
   font-size: 14px;
   font-weight: 500;
   color: $textColor;
-  letter-spacing: .5px;
   @include Japanese-font;
 }
 
@@ -67,4 +65,8 @@ body {
   font-family: 'Quicksand', sans-serif;
   background: #efefef;
   box-sizing: border-box;
+}
+
+* {
+  letter-spacing: .05em;
 }

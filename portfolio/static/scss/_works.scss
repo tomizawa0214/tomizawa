@@ -40,7 +40,6 @@
               z-index: 2;
               padding: 5px 20px 0 0;
               text-align: center;
-              letter-spacing: .5px;
               font-size: 14px;
               font-weight: 600;
               @include Japanese-font;
@@ -70,7 +69,6 @@
               font-weight: 600;
               @include Japanese-font;
               color: #fff;
-              letter-spacing: .5px;
               background: #e8676b;
               opacity: 0;
               transform: translateY(30px);

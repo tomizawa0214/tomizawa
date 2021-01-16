@@ -38,7 +38,6 @@
         font-weight: 500;
         color: $textColor;
         @include Japanese-font;
-        letter-spacing: .5px;
       }
       &--info {
         margin-top: 40px;
