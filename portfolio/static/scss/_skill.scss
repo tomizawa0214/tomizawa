@@ -74,7 +74,7 @@
       background: #f16529;
       &::before {
         background: #fdede7;
-        animation: rotate-circle-left-html 7s linear infinite;
+        animation: rotate-circle-left-html 5s linear infinite;
         @keyframes rotate-circle-left-html {
           0% {
             transform: rotate(0deg);
@@ -83,16 +83,16 @@
             transform: rotate(0deg);
           }
           18% {
-            transform: rotate(10deg);
+            transform: rotate(70deg);
           }
           100% {
-            transform: rotate(10deg);
+            transform: rotate(70deg);
           }
         }
       }
       &::after {
         background: #fdede7;
-        animation: rotate-circle-right-html 7s linear infinite;
+        animation: rotate-circle-right-html 5s linear infinite;
         @keyframes rotate-circle-right-html {
           0% {
             transform: rotate(0deg);
@@ -117,7 +117,7 @@
       background: #2965f1;
       &::before {
         background: #e7edfd;
-        animation: rotate-circle-left-css 7s linear infinite;
+        animation: rotate-circle-left-css 5s linear infinite;
         @keyframes rotate-circle-left-css {
           0% {
             transform: rotate(0deg);
@@ -126,16 +126,16 @@
             transform: rotate(0deg);
           }
           18% {
-            transform: rotate(40deg);
+            transform: rotate(80deg);
           }
           100% {
-            transform: rotate(40deg);
+            transform: rotate(80deg);
           }
         }
       }
       &::after {
         background: #e7edfd;
-        animation: rotate-circle-right-css 7s linear infinite;
+        animation: rotate-circle-right-css 5s linear infinite;
         @keyframes rotate-circle-right-css {
           0% {
             transform: rotate(0deg);
@@ -160,19 +160,41 @@
       background: #f7de1e;
       &::before {
         background: #fefbe6;
-      }
-      &::after {
-        background: #fefbe6;
-        animation: rotate-circle-right-js 7s linear infinite;
-        @keyframes rotate-circle-right-js {
+        animation: rotate-circle-left-js 5s linear infinite;
+        @keyframes rotate-circle-left-js {
           0% {
             transform: rotate(0deg);
           }
           15% {
-            transform: rotate(160deg);
+            transform: rotate(0deg);
+          }
+          18% {
+            transform: rotate(70deg);
           }
           100% {
-            transform: rotate(160deg);
+            transform: rotate(70deg);
+          }
+        }
+      }
+      &::after {
+        background: #fefbe6;
+        animation: rotate-circle-right-js 5s linear infinite;
+        @keyframes rotate-circle-right-js {
+          0% {
+            transform: rotate(0deg);
+            background: #fefbe6;
+          }
+          15% {
+            transform: rotate(180deg);
+            background: #fefbe6;
+          }
+          15.01% {
+            transform: rotate(360deg);
+            background: #f7de1e;
+          }
+          100% {
+            transform: rotate(360deg);
+            background: #f7de1e;
           }
         }
       }
@@ -184,7 +206,7 @@
       }
       &::after {
         background: #ecf3f8;
-        animation: rotate-circle-right-python 7s linear infinite;
+        animation: rotate-circle-right-python 5s linear infinite;
         @keyframes rotate-circle-right-python {
           0% {
             transform: rotate(0deg);
@@ -202,7 +224,7 @@
       background: #ff26be;
       &::before {
         background: #ffe5f7;
-        animation: rotate-circle-left-xd 7s linear infinite;
+        animation: rotate-circle-left-xd 5s linear infinite;
         @keyframes rotate-circle-left-xd {
           0% {
             transform: rotate(0deg);
@@ -211,16 +233,16 @@
             transform: rotate(0deg);
           }
           18% {
-            transform: rotate(30deg);
+            transform: rotate(130deg);
           }
           100% {
-            transform: rotate(30deg);
+            transform: rotate(130deg);
           }
         }
       }
       &::after {
         background: #ffe5f7;
-        animation: rotate-circle-right-xd 7s linear infinite;
+        animation: rotate-circle-right-xd 5s linear infinite;
         @keyframes rotate-circle-right-xd {
           0% {
             transform: rotate(0deg);
@@ -245,7 +267,7 @@
       background: #ff8018;
       &::before {
         background: #fff0e5;
-        animation: rotate-circle-left-illustrator 7s linear infinite;
+        animation: rotate-circle-left-illustrator 5s linear infinite;
         @keyframes rotate-circle-left-illustrator {
           0% {
             transform: rotate(0deg);
@@ -254,16 +276,16 @@
             transform: rotate(0deg);
           }
           18% {
-            transform: rotate(100deg);
+            transform: rotate(140deg);
           }
           100% {
-            transform: rotate(100deg);
+            transform: rotate(140deg);
           }
         }
       }
       &::after {
         background: #fff0e5;
-        animation: rotate-circle-right-illustrator 7s linear infinite;
+        animation: rotate-circle-right-illustrator 5s linear infinite;
         @keyframes rotate-circle-right-illustrator {
           0% {
             transform: rotate(0deg);
@@ -288,7 +310,7 @@
       background: #31c3f0;
       &::before {
         background: #e7f8fd;
-        animation: rotate-circle-left-photoshop 7s linear infinite;
+        animation: rotate-circle-left-photoshop 5s linear infinite;
         @keyframes rotate-circle-left-photoshop {
           0% {
             transform: rotate(0deg);
@@ -306,7 +328,7 @@
       }
       &::after {
         background: #e7f8fd;
-        animation: rotate-circle-right-photoshop 7s linear infinite;
+        animation: rotate-circle-right-photoshop 5s linear infinite;
         @keyframes rotate-circle-right-photoshop {
           0% {
             transform: rotate(0deg);

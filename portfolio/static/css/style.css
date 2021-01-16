@@ -974,8 +974,8 @@ body {
 
 .skill__box--html::before {
   background: #fdede7;
-  -webkit-animation: rotate-circle-left-html 7s linear infinite;
-          animation: rotate-circle-left-html 7s linear infinite;
+  -webkit-animation: rotate-circle-left-html 5s linear infinite;
+          animation: rotate-circle-left-html 5s linear infinite;
 }
 
 @-webkit-keyframes rotate-circle-left-html {
@@ -988,12 +988,12 @@ body {
             transform: rotate(0deg);
   }
   18% {
-    -webkit-transform: rotate(10deg);
-            transform: rotate(10deg);
+    -webkit-transform: rotate(70deg);
+            transform: rotate(70deg);
   }
   100% {
-    -webkit-transform: rotate(10deg);
-            transform: rotate(10deg);
+    -webkit-transform: rotate(70deg);
+            transform: rotate(70deg);
   }
 }
 
@@ -1007,19 +1007,19 @@ body {
             transform: rotate(0deg);
   }
   18% {
-    -webkit-transform: rotate(10deg);
-            transform: rotate(10deg);
+    -webkit-transform: rotate(70deg);
+            transform: rotate(70deg);
   }
   100% {
-    -webkit-transform: rotate(10deg);
-            transform: rotate(10deg);
+    -webkit-transform: rotate(70deg);
+            transform: rotate(70deg);
   }
 }
 
 .skill__box--html::after {
   background: #fdede7;
-  -webkit-animation: rotate-circle-right-html 7s linear infinite;
-          animation: rotate-circle-right-html 7s linear infinite;
+  -webkit-animation: rotate-circle-right-html 5s linear infinite;
+          animation: rotate-circle-right-html 5s linear infinite;
 }
 
 @-webkit-keyframes rotate-circle-right-html {
@@ -1074,8 +1074,8 @@ body {
 
 .skill__box--css::before {
   background: #e7edfd;
-  -webkit-animation: rotate-circle-left-css 7s linear infinite;
-          animation: rotate-circle-left-css 7s linear infinite;
+  -webkit-animation: rotate-circle-left-css 5s linear infinite;
+          animation: rotate-circle-left-css 5s linear infinite;
 }
 
 @-webkit-keyframes rotate-circle-left-css {
@@ -1088,12 +1088,12 @@ body {
             transform: rotate(0deg);
   }
   18% {
-    -webkit-transform: rotate(40deg);
-            transform: rotate(40deg);
+    -webkit-transform: rotate(80deg);
+            transform: rotate(80deg);
   }
   100% {
-    -webkit-transform: rotate(40deg);
-            transform: rotate(40deg);
+    -webkit-transform: rotate(80deg);
+            transform: rotate(80deg);
   }
 }
 
@@ -1107,19 +1107,19 @@ body {
             transform: rotate(0deg);
   }
   18% {
-    -webkit-transform: rotate(40deg);
-            transform: rotate(40deg);
+    -webkit-transform: rotate(80deg);
+            transform: rotate(80deg);
   }
   100% {
-    -webkit-transform: rotate(40deg);
-            transform: rotate(40deg);
+    -webkit-transform: rotate(80deg);
+            transform: rotate(80deg);
   }
 }
 
 .skill__box--css::after {
   background: #e7edfd;
-  -webkit-animation: rotate-circle-right-css 7s linear infinite;
-          animation: rotate-circle-right-css 7s linear infinite;
+  -webkit-animation: rotate-circle-right-css 5s linear infinite;
+          animation: rotate-circle-right-css 5s linear infinite;
 }
 
 @-webkit-keyframes rotate-circle-right-css {
@@ -1174,26 +1174,74 @@ body {
 
 .skill__box--js::before {
   background: #fefbe6;
+  -webkit-animation: rotate-circle-left-js 5s linear infinite;
+          animation: rotate-circle-left-js 5s linear infinite;
+}
+
+@-webkit-keyframes rotate-circle-left-js {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  15% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  18% {
+    -webkit-transform: rotate(70deg);
+            transform: rotate(70deg);
+  }
+  100% {
+    -webkit-transform: rotate(70deg);
+            transform: rotate(70deg);
+  }
+}
+
+@keyframes rotate-circle-left-js {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  15% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  18% {
+    -webkit-transform: rotate(70deg);
+            transform: rotate(70deg);
+  }
+  100% {
+    -webkit-transform: rotate(70deg);
+            transform: rotate(70deg);
+  }
 }
 
 .skill__box--js::after {
   background: #fefbe6;
-  -webkit-animation: rotate-circle-right-js 7s linear infinite;
-          animation: rotate-circle-right-js 7s linear infinite;
+  -webkit-animation: rotate-circle-right-js 5s linear infinite;
+          animation: rotate-circle-right-js 5s linear infinite;
 }
 
 @-webkit-keyframes rotate-circle-right-js {
   0% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
+    background: #fefbe6;
   }
   15% {
-    -webkit-transform: rotate(160deg);
-            transform: rotate(160deg);
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    background: #fefbe6;
+  }
+  15.01% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    background: #f7de1e;
   }
   100% {
-    -webkit-transform: rotate(160deg);
-            transform: rotate(160deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    background: #f7de1e;
   }
 }
 
@@ -1201,14 +1249,22 @@ body {
   0% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
+    background: #fefbe6;
   }
   15% {
-    -webkit-transform: rotate(160deg);
-            transform: rotate(160deg);
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    background: #fefbe6;
+  }
+  15.01% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    background: #f7de1e;
   }
   100% {
-    -webkit-transform: rotate(160deg);
-            transform: rotate(160deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    background: #f7de1e;
   }
 }
 
@@ -1222,8 +1278,8 @@ body {
 
 .skill__box--python::after {
   background: #ecf3f8;
-  -webkit-animation: rotate-circle-right-python 7s linear infinite;
-          animation: rotate-circle-right-python 7s linear infinite;
+  -webkit-animation: rotate-circle-right-python 5s linear infinite;
+          animation: rotate-circle-right-python 5s linear infinite;
 }
 
 @-webkit-keyframes rotate-circle-right-python {
@@ -1262,8 +1318,8 @@ body {
 
 .skill__box--xd::before {
   background: #ffe5f7;
-  -webkit-animation: rotate-circle-left-xd 7s linear infinite;
-          animation: rotate-circle-left-xd 7s linear infinite;
+  -webkit-animation: rotate-circle-left-xd 5s linear infinite;
+          animation: rotate-circle-left-xd 5s linear infinite;
 }
 
 @-webkit-keyframes rotate-circle-left-xd {
@@ -1276,12 +1332,12 @@ body {
             transform: rotate(0deg);
   }
   18% {
-    -webkit-transform: rotate(30deg);
-            transform: rotate(30deg);
+    -webkit-transform: rotate(130deg);
+            transform: rotate(130deg);
   }
   100% {
-    -webkit-transform: rotate(30deg);
-            transform: rotate(30deg);
+    -webkit-transform: rotate(130deg);
+            transform: rotate(130deg);
   }
 }
 
@@ -1295,19 +1351,19 @@ body {
             transform: rotate(0deg);
   }
   18% {
-    -webkit-transform: rotate(30deg);
-            transform: rotate(30deg);
+    -webkit-transform: rotate(130deg);
+            transform: rotate(130deg);
   }
   100% {
-    -webkit-transform: rotate(30deg);
-            transform: rotate(30deg);
+    -webkit-transform: rotate(130deg);
+            transform: rotate(130deg);
   }
 }
 
 .skill__box--xd::after {
   background: #ffe5f7;
-  -webkit-animation: rotate-circle-right-xd 7s linear infinite;
-          animation: rotate-circle-right-xd 7s linear infinite;
+  -webkit-animation: rotate-circle-right-xd 5s linear infinite;
+          animation: rotate-circle-right-xd 5s linear infinite;
 }
 
 @-webkit-keyframes rotate-circle-right-xd {
@@ -1362,8 +1418,8 @@ body {
 
 .skill__box--illustrator::before {
   background: #fff0e5;
-  -webkit-animation: rotate-circle-left-illustrator 7s linear infinite;
-          animation: rotate-circle-left-illustrator 7s linear infinite;
+  -webkit-animation: rotate-circle-left-illustrator 5s linear infinite;
+          animation: rotate-circle-left-illustrator 5s linear infinite;
 }
 
 @-webkit-keyframes rotate-circle-left-illustrator {
@@ -1376,12 +1432,12 @@ body {
             transform: rotate(0deg);
   }
   18% {
-    -webkit-transform: rotate(100deg);
-            transform: rotate(100deg);
+    -webkit-transform: rotate(140deg);
+            transform: rotate(140deg);
   }
   100% {
-    -webkit-transform: rotate(100deg);
-            transform: rotate(100deg);
+    -webkit-transform: rotate(140deg);
+            transform: rotate(140deg);
   }
 }
 
@@ -1395,19 +1451,19 @@ body {
             transform: rotate(0deg);
   }
   18% {
-    -webkit-transform: rotate(100deg);
-            transform: rotate(100deg);
+    -webkit-transform: rotate(140deg);
+            transform: rotate(140deg);
   }
   100% {
-    -webkit-transform: rotate(100deg);
-            transform: rotate(100deg);
+    -webkit-transform: rotate(140deg);
+            transform: rotate(140deg);
   }
 }
 
 .skill__box--illustrator::after {
   background: #fff0e5;
-  -webkit-animation: rotate-circle-right-illustrator 7s linear infinite;
-          animation: rotate-circle-right-illustrator 7s linear infinite;
+  -webkit-animation: rotate-circle-right-illustrator 5s linear infinite;
+          animation: rotate-circle-right-illustrator 5s linear infinite;
 }
 
 @-webkit-keyframes rotate-circle-right-illustrator {
@@ -1462,8 +1518,8 @@ body {
 
 .skill__box--photoshop::before {
   background: #e7f8fd;
-  -webkit-animation: rotate-circle-left-photoshop 7s linear infinite;
-          animation: rotate-circle-left-photoshop 7s linear infinite;
+  -webkit-animation: rotate-circle-left-photoshop 5s linear infinite;
+          animation: rotate-circle-left-photoshop 5s linear infinite;
 }
 
 @-webkit-keyframes rotate-circle-left-photoshop {
@@ -1506,8 +1562,8 @@ body {
 
 .skill__box--photoshop::after {
   background: #e7f8fd;
-  -webkit-animation: rotate-circle-right-photoshop 7s linear infinite;
-          animation: rotate-circle-right-photoshop 7s linear infinite;
+  -webkit-animation: rotate-circle-right-photoshop 5s linear infinite;
+          animation: rotate-circle-right-photoshop 5s linear infinite;
 }
 
 @-webkit-keyframes rotate-circle-right-photoshop {
