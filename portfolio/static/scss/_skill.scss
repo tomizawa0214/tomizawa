@@ -55,10 +55,6 @@
         background: #fff;
         border-radius: 50%;
         z-index: 4;
-        img {
-          width: 50px;
-          height: auto;
-        }
         span {
           margin-top: 5px;
           line-height: 1;
@@ -71,6 +67,10 @@
       }
     }
     &--html {
+      img {
+        width: 50px;
+        height: auto;
+      }
       background: #f16529;
       &::before {
         background: #fdede7;
@@ -114,6 +114,10 @@
       }
     }
     &--css {
+      img {
+        width: 50px;
+        height: auto;
+      }
       background: #2965f1;
       &::before {
         background: #e7edfd;
@@ -157,6 +161,10 @@
       }
     }
     &--js {
+      img {
+        width: 50px;
+        height: auto;
+      }
       background: #f7de1e;
       &::before {
         background: #fefbe6;
@@ -200,6 +208,10 @@
       }
     }
     &--python {
+      img {
+        width: 50px;
+        height: auto;
+      }
       background: #366a94;
       &::before {
         background: #ecf3f8;
@@ -216,6 +228,53 @@
           }
           100% {
             transform: rotate(120deg);
+          }
+        }
+      }
+    }
+    &--jimdo {
+      img {
+        width: 80px;
+        height: auto;
+      }
+      background: #006678;
+      &::before {
+        background: #E5FBFF;
+        animation: rotate-circle-left-jimdo 5s linear infinite;
+        @keyframes rotate-circle-left-jimdo {
+          0% {
+            transform: rotate(0deg);
+          }
+          15% {
+            transform: rotate(0deg);
+          }
+          18% {
+            transform: rotate(150deg);
+          }
+          100% {
+            transform: rotate(150deg);
+          }
+        }
+      }
+      &::after {
+        background: #E5FBFF;
+        animation: rotate-circle-right-jimdo 5s linear infinite;
+        @keyframes rotate-circle-right-jimdo {
+          0% {
+            transform: rotate(0deg);
+            background: #E5FBFF;
+          }
+          15% {
+            transform: rotate(180deg);
+            background: #E5FBFF;
+          }
+          15.01% {
+            transform: rotate(360deg);
+            background: #006678;
+          }
+          100% {
+            transform: rotate(360deg);
+            background: #006678;
           }
         }
       }
