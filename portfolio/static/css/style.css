@@ -257,24 +257,6 @@ body {
   overflow: auto;
 }
 
-.modal-area__wrap--contents-image1--sp {
-  background-image: url("../img/Blog-sp.jpg");
-  width: 100%;
-  height: 85%;
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
-.modal-area__wrap--contents-image1--pc {
-  background-image: url("../img/Blog-pc.jpg");
-  width: 100%;
-  height: 85%;
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
 .modal-area__wrap--contents-image2--sp {
   background-image: url("../img/Bootstrap4-sp.jpg");
   width: 100%;
@@ -322,6 +304,24 @@ body {
 
 .modal-area__wrap--contents-image5--pc {
   background-image: url("../img/spoon-pc.jpg");
+  width: 100%;
+  height: 85%;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.modal-area__wrap--contents-image6--sp {
+  background-image: url("../img/nemoto-kenzai-sp.jpg");
+  width: 100%;
+  height: 85%;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.modal-area__wrap--contents-image6--pc {
+  background-image: url("../img/nemoto-kenzai-pc.jpg");
   width: 100%;
   height: 85%;
   background-size: contain;
