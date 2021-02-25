@@ -60,6 +60,14 @@
         background-image: url("../img/nemoto-kenzai-pc.jpg");
         @include modal-bg;
       }
+      &-image7--sp {
+        background-image: url("../img/ses-sp.jpg");
+        @include modal-bg;
+      }
+      &-image7--pc {
+        background-image: url("../img/ses-pc.jpg");
+        @include modal-bg;
+      }
       &-container {
         width: 100%;
         height: 10%;
