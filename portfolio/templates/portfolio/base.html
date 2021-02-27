@@ -11,8 +11,9 @@
       gtag('config', 'UA-166960620-1');
     </script>
     <meta charset="utf-8">
+    <meta name="viewport-extra" content="width=device-width,initial-scale=1,min-width=375">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
     <meta name="description" content="フルスタックwebエンジニア兼グラフィックデザイナーとして活動する冨澤潤と申します。テクノロジーとクリエイティブの力を駆使した課題解決に尽力いたします。どうぞお気軽にご連絡くださいませ。">
     <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#"></head>
     <meta property="og:title" content="サービスに、潤いを。 | 冨澤潤 TOMIZAWA Jun">
@@ -31,6 +32,7 @@
     <link rel="icon" href="{% static 'ico/favicon.ico' %}">
     <link rel="apple-touch-icon" href="{% static 'ico/apple-touch-icon.png' %}" sizes="180x180">
     <link rel="icon" type="image/jpg" href="{% static 'ico/android-touch-icon.png' %}" sizes="192x192">
+    <script src="https://cdn.jsdelivr.net/npm/viewport-extra@2.0.1/dist/iife/viewport-extra.min.js" async></script>
     {% block meta %}
     {% endblock %}
   </head>
