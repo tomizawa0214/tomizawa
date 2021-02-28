@@ -1345,6 +1345,55 @@ body {
   }
 }
 
+.skill__box--wp {
+  background: #32373c;
+}
+
+.skill__box--wp img {
+  width: 50px;
+  height: auto;
+}
+
+.skill__box--wp::before {
+  background: #eee;
+}
+
+.skill__box--wp::after {
+  background: #eee;
+  -webkit-animation: rotate-circle-right-wp 5s linear infinite;
+          animation: rotate-circle-right-wp 5s linear infinite;
+}
+
+@-webkit-keyframes rotate-circle-right-wp {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  15% {
+    -webkit-transform: rotate(120deg);
+            transform: rotate(120deg);
+  }
+  100% {
+    -webkit-transform: rotate(120deg);
+            transform: rotate(120deg);
+  }
+}
+
+@keyframes rotate-circle-right-wp {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  15% {
+    -webkit-transform: rotate(120deg);
+            transform: rotate(120deg);
+  }
+  100% {
+    -webkit-transform: rotate(120deg);
+            transform: rotate(120deg);
+  }
+}
+
 .skill__box--jimdo {
   background: #006678;
 }
