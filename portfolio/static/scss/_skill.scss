@@ -83,10 +83,10 @@
             transform: rotate(0deg);
           }
           18% {
-            transform: rotate(150deg);
+            transform: rotate(160deg);
           }
           100% {
-            transform: rotate(150deg);
+            transform: rotate(160deg);
           }
         }
       }
@@ -130,10 +130,10 @@
             transform: rotate(0deg);
           }
           18% {
-            transform: rotate(150deg);
+            transform: rotate(160deg);
           }
           100% {
-            transform: rotate(150deg);
+            transform: rotate(160deg);
           }
         }
       }
@@ -177,10 +177,10 @@
             transform: rotate(0deg);
           }
           18% {
-            transform: rotate(70deg);
+            transform: rotate(130deg);
           }
           100% {
-            transform: rotate(70deg);
+            transform: rotate(130deg);
           }
         }
       }
@@ -215,6 +215,21 @@
       background: #366a94;
       &::before {
         background: #ecf3f8;
+        animation: rotate-circle-left-python 5s linear infinite;
+        @keyframes rotate-circle-left-python {
+          0% {
+            transform: rotate(0deg);
+          }
+          15% {
+            transform: rotate(0deg);
+          }
+          18% {
+            transform: rotate(120deg);
+          }
+          100% {
+            transform: rotate(120deg);
+          }
+        }
       }
       &::after {
         background: #ecf3f8;
@@ -222,12 +237,19 @@
         @keyframes rotate-circle-right-python {
           0% {
             transform: rotate(0deg);
+            background: #ecf3f8;
           }
           15% {
             transform: rotate(180deg);
+            background: #ecf3f8;
+          }
+          15.01% {
+            transform: rotate(360deg);
+            background: #366a94;
           }
           100% {
-            transform: rotate(180deg);
+            transform: rotate(360deg);
+            background: #366a94;
           }
         }
       }
@@ -240,6 +262,21 @@
       background: #32373c;
       &::before {
         background: #eee;
+        animation: rotate-circle-left-wp 5s linear infinite;
+        @keyframes rotate-circle-left-wp {
+          0% {
+            transform: rotate(0deg);
+          }
+          15% {
+            transform: rotate(0deg);
+          }
+          18% {
+            transform: rotate(140deg);
+          }
+          100% {
+            transform: rotate(140deg);
+          }
+        }
       }
       &::after {
         background: #eee;
@@ -247,12 +284,19 @@
         @keyframes rotate-circle-right-wp {
           0% {
             transform: rotate(0deg);
+            background: #eee;
           }
           15% {
-            transform: rotate(120deg);
+            transform: rotate(180deg);
+            background: #eee;
+          }
+          15.01% {
+            transform: rotate(360deg);
+            background: #32373c;
           }
           100% {
-            transform: rotate(120deg);
+            transform: rotate(360deg);
+            background: #32373c;
           }
         }
       }
@@ -274,10 +318,10 @@
             transform: rotate(0deg);
           }
           18% {
-            transform: rotate(150deg);
+            transform: rotate(160deg);
           }
           100% {
-            transform: rotate(150deg);
+            transform: rotate(160deg);
           }
         }
       }
@@ -317,10 +361,10 @@
             transform: rotate(0deg);
           }
           18% {
-            transform: rotate(150deg);
+            transform: rotate(160deg);
           }
           100% {
-            transform: rotate(150deg);
+            transform: rotate(160deg);
           }
         }
       }
@@ -360,10 +404,10 @@
             transform: rotate(0deg);
           }
           18% {
-            transform: rotate(150deg);
+            transform: rotate(160deg);
           }
           100% {
-            transform: rotate(150deg);
+            transform: rotate(160deg);
           }
         }
       }
@@ -403,10 +447,10 @@
             transform: rotate(0deg);
           }
           18% {
-            transform: rotate(60deg);
+            transform: rotate(160deg);
           }
           100% {
-            transform: rotate(60deg);
+            transform: rotate(160deg);
           }
         }
       }
