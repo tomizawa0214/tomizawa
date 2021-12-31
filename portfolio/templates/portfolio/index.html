@@ -33,7 +33,7 @@
   <div class="title__text">
     <h2>サービスに、潤いを。</h2>
     <h3>テクノロジーがどれだけ進化しても、<br>主役は必ず「人」のはず。<br>根底に流れるのは人の「想い」です。<br>テクノロジーで想いの幅を広げて、<br>クリエイティブで人に届ける。<br>人と人とを繋ぐ架け橋になれたなら、<br>私はこの上なく幸せです。</h3>
-    <h4>2021年　冨澤 潤</h4>
+    <h4><span id="title_year"></span>年　冨澤 潤</h4>
   </div>
 </section>
 
@@ -398,4 +398,13 @@
 {% block js %}
 <script src="{% static 'js/smoothscroll.js' %}"></script>
 <script src="{% static 'js/index.js' %}"></script>
+<script>
+  'use strict';
+
+  // コピーライトの年を設定
+  var currentTime = new Date();
+  var year = currentTime.getFullYear()
+  var copy_year = document.getElementById('title_year');
+  copy_year.innerHTML = year;
+</script>
 {% endblock %}
