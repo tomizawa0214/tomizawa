@@ -6,12 +6,16 @@ from .sitemaps import (
     StaticViewSitemap,
 )
 
+admin.site.site_header = 'TOMIZAWA Jun'
+admin.site.index_title = 'TOMIZAWA Jun'
+
 sitemaps = {
     'static': StaticViewSitemap,
 }
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('management/', admin.site.urls),
     path('', include('portfolio.urls')),
+    path('nakanojo/', include('nakanojo.urls')),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
 ]

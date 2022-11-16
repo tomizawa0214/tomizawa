@@ -1,0 +1,49 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block body %}
+<body>
+  <main>
+    <section class="search-list">
+      <h2 class="search-list__title">実行委員の活動日一覧</h2>
+      <form class="search-list__form" method="POST" action="">
+        {% csrf_token %}
+        <div class="search-list__form--select">
+          {% render_field form.month %}
+        </div>
+        <button type="submit" class="search-list__form--submit">
+          <span>検索</span>
+        </button>
+      </form>
+    </section>
+    <div class="table">
+      <table class="table__content">
+        <tr class="table__content--header">
+          <th>名前</th>
+          <th>活動日数</th>
+          <th>活動日</th>
+        </tr>
+        {% for user_working_day in user_working_days_data %}
+          <tr class="table__content--body">
+            <td>{{ user_working_day.0 }}</td>
+            <td>{{ user_working_day|length|add:"-1"}}<span>日</span></td>
+            <td>
+              {% for day in user_working_day %}
+                {% if not forloop.first %}
+                  {{ day }}
+                {% endif %}
+                {% if not forloop.first and not forloop.last %},{% endif %}
+              {% endfor %}
+            </td>
+          </tr>
+        {% empty %}
+          <tr class="table__content--body">
+            <td colspan="3">現在、登録がありません。</td>
+          </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </main>
+  {% include 'app/inc/footer.html' %}
+  {% endblock %}

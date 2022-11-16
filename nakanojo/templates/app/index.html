@@ -1,0 +1,34 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block body %}
+<body>
+  <main>
+    <section class="selection">
+      <h2 class="selection__title">活動日の登録</h2>
+      <form name="user" class="selection__form" method="POST" action="">
+        {% csrf_token %}
+        <div class="selection__form--select">
+          {% render_field form_user.user %}
+        </div>
+        <button type="submit" class="selection__form--submit login" onClick="dispLogin('名前を選択してください。')">
+          <span>ログイン</span>
+        </button>
+      </form>
+    </section>
+    <section class="selection">
+      <h2 class="selection__title">実行委員の活動日一覧</h2>
+      <form name="working_days" class="selection__form" method="POST" action="">
+        {% csrf_token %}
+        <div class="selection__form--select">
+          {% render_field form_working_days.month %}
+        </div>
+        <button type="submit" class="selection__form--submit search">
+          <span>検索</span>
+        </button>
+      </form>
+    </section>
+  </main>
+  {% include 'app/inc/footer_home.html' %}
+  {% endblock %}

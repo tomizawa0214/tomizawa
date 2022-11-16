@@ -1,0 +1,121 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block body %}
+<body>
+  <main>
+    <section class="greeting">
+      <h3 class="greeting__title">{{ user_data.name }}さん、お疲れ様です。</h3>
+    </section>
+    <section class="selection">
+      <h2 class="selection__title">活動日の登録</h2>
+      <form class="selection__form" method="POST" action="">
+        {% csrf_token %}
+        <div class="selection__form--date">
+          {% bootstrap_javascript jquery='full' %} 
+          {{ form.media }}
+          {% render_field form.date %}
+        </div>
+        <button type="submit" class="selection__form--submit register">
+          <span>登録</span>
+        </button>
+      </form>
+    </section>
+    <section class="selection list">
+      <h2 class="selection__title">活動日の一覧</h2>
+      <ul class="selection__list">
+        {% for working_day in working_days_list %}
+          <li class="selection__list--col">{{ working_day }}</li>
+        {% empty %}
+          <li class="selection__list--empty">現在、登録がありません。</li>
+        {% endfor %}
+      </ul>
+    </section>
+  </main>
+  {% include 'app/inc/footer.html' %}
+  {% endblock %}
+  
+  {% block extrajs %}
+  <script>
+    // CSRF対策
+    function getCookie(name) {
+      if (document.cookie && document.cookie !== '') {
+        for (const cookie of document.cookie.split(';')) {
+          const [key, value] = cookie.trim().split('=')
+          if (key === name) {
+            return decodeURIComponent(value)
+          }
+        }
+      }
+    }
+    const csrftoken = getCookie('csrftoken')
+
+    $('.selection__form').on('submit', function(e) {
+      e.preventDefault()
+      const url = '{% url "app:add" %}'
+      let add_date = $('#id_date')
+      // URLのクエリパラメータを管理
+      const body = new URLSearchParams()
+      let array_url = location.href.split('/');  
+      let user_id = array_url[array_url.length -2];  
+      body.append('add_date', add_date.val().split(' / ').join('-'))
+      body.append('user_id', user_id)
+  
+      fetch(url, {
+        method: 'POST',
+        body: body,
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8',
+          'X-CSRFToken': csrftoken,
+        },
+      })
+        .then((response) => {
+          return response.json() // JSON形式に変換
+        })
+        .then((response) => {
+
+          if (response.judge == 'true') {
+            // 登録完了の表示
+            $('body').prepend(
+              '<div class="success">\
+                <div class="success__bg" onclick="successClose()"></div>\
+                <div class="success__content">\
+                  <p class="success__content--title">登録完了</p>\
+                </div>\
+                <button class="success__close" onclick="successClose()"></button>\
+              </div>'
+            ).hide().fadeIn(500)
+  
+            // 登録した日付を表示
+            let add_date = response.add_date.split('-').join(' / ')
+            $('.selection__list--empty').remove();
+            $('.selection__list').prepend(`<li class="selection__list--col"><span class="selection__list--col--add">追加</span>${add_date}</li>`)
+  
+            // 3.5秒後に完了通知は削除
+            setTimeout(function(){
+              $('.success').fadeOut('fast').queue(function() {
+                this.remove();
+              });
+            }, 3500);
+          } else {
+            let add_date = response.add_date.split('-').join(' / ')
+            alert(`${add_date} は既に登録済みです。`)
+          }
+
+        })
+        .catch((error) => {
+          console.log(error)
+        })
+    })
+
+    // ===================================================
+    // 完了通知を削除
+    // ===================================================
+    function successClose() {
+      $('.success').fadeOut('fast').queue(function() {
+        this.remove();
+      });
+    }
+  </script>
+  {% endblock %}
