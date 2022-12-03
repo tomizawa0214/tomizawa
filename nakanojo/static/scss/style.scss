@@ -26,6 +26,7 @@ html {
 
 body {
   position: relative;
+  width: 100%;
   height: 100%;
   min-height: 100vh;
   box-sizing: border-box;
@@ -153,6 +154,16 @@ main {
         color: $accent-color;
         font-weight: bold;
       }
+      &--delete {
+        display: inline-block;
+        margin: 0 0 0 16px;
+        padding: 8px 16px;
+        color: $accent-color;
+        font-size: 1.4rem;
+        background-color: $white;
+        border: 1px solid $accent-color;
+        border-radius: 4px;
+      }
       &:last-of-type {
         border-bottom: solid 1px #ccc;
       }
@@ -257,6 +268,81 @@ main {
     width: 24px;
     height: 24px;
     background-image: url(../img/icon_close.svg);
+  }
+}
+
+// Dialog
+.dialog {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  &__bg {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, .65);
+  }
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 24px;
+    width: 100%;
+    max-width: 256px;
+    text-align: center;
+    background-color: $white;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+    &--text {
+      margin: 0 0 24px;
+      text-align: center;
+      color: $black;
+      font-size: 1.6rem;
+      line-height: 1.5;
+      &::before {
+        content: "";
+        display: block;
+        margin: 0 auto 24px;
+        height: 80px;
+        width: 80px;
+        background: url(../img/icon_delete.svg) center center/contain no-repeat;
+      }
+    }
+    &--form {
+      display: flex;
+      &--cancel {
+        margin: 0 16px 0 0;
+        padding: 8px 10px;
+        width: 120px;
+        color: $accent-color;
+        font-size: 1.4rem;
+        background-color: $white;
+        border: 1px solid $accent-color;
+        border-radius: 4px;
+      }
+      &--delete {
+        padding: 8px 10px;
+        width: 120px;
+        color: $white;
+        font-size: 1.4rem;
+        background-color: $accent-color;
+        border: 1px solid $accent-color;
+        border-radius: 4px;
+      }
+    }
+  }
+}
+@supports(-webkit-touch-callout: none){
+  /* iPhoneの表示のみ指定を上書き */
+  .modal {
+    height: -webkit-fill-available;
+    &__bg {
+      height: -webkit-fill-available;
+    }
   }
 }
 
@@ -475,6 +561,20 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
+  .selection {
+    &__list {
+      &--col {
+        &--delete {
+          transition: $hover-transition;
+          &:hover {
+            color: $white;
+            background-color: $accent-color;
+          }
+        }
+      }
+    }
+  }
+
   .search-list {
     margin: 0 auto;
     max-width: 728px;
@@ -497,6 +597,26 @@ footer {
           }
           &:nth-of-type(3) {
             width: 68%;
+          }
+        }
+      }
+    }
+  }
+
+  // Dialog
+  .dialog {
+    &__content {
+      &--form {
+        &--cancel {
+          transition: $hover-transition;
+          &:hover {
+            opacity: $hover-opacity;
+          }
+        }
+        &--delete {
+          transition: $hover-transition;
+          &:hover {
+            opacity: $hover-opacity;
           }
         }
       }

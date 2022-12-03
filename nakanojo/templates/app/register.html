@@ -3,7 +3,7 @@
 {% load widget_tweaks %}
 
 {% block body %}
-<body>
+<body style="padding: 0 0 92px;">
   <main>
     <section class="greeting">
       <h3 class="greeting__title">{{ user_data.name }}さん、お疲れ様です。</h3>
@@ -25,8 +25,25 @@
     <section class="selection list">
       <h2 class="selection__title">活動日の一覧</h2>
       <ul class="selection__list">
-        {% for working_day in working_days_list %}
-          <li class="selection__list--col">{{ working_day }}</li>
+        {% for working_day in working_days_data %}
+          <li class="selection__list--col">
+            {{ working_day.working_at|date:"Y / m / d" }}
+            <a class="selection__list--col--delete" href="#" data-target="{{ working_day.id }}">削除</a>
+          </li>
+          <!-- Dialog -->
+          <div id="{{ working_day.id }}" class="dialog">
+            <div class="dialog__bg"></div>
+            <div class="dialog__content">
+              <p class="dialog__content--text">{{ working_day.working_at|date:"Y / m / d" }} を<br>削除してよろしいですか？</p>
+              <form class="dialog__content--form" method="POST" action="">
+                {% csrf_token %}
+                <button type="button" class="dialog__content--form--cancel">キャンセル</button>
+                <button type="submit" class="dialog__content--form--delete">削除する</button>
+                <input type="hidden" name="hidden_data" value="{{ working_day.id }}">
+              </form>
+            </div>
+          </div>
+          <!-- //Dialog -->
         {% empty %}
           <li class="selection__list--empty">現在、登録がありません。</li>
         {% endfor %}
@@ -51,14 +68,17 @@
     }
     const csrftoken = getCookie('csrftoken')
 
+    // ===================================================
+    // 登録
+    // ===================================================
     $('.selection__form').on('submit', function(e) {
       e.preventDefault()
       const url = '{% url "app:add" %}'
       let add_date = $('#id_date')
       // URLのクエリパラメータを管理
       const body = new URLSearchParams()
-      let array_url = location.href.split('/');  
-      let user_id = array_url[array_url.length -2];  
+      let array_url = location.href.split('/')
+      let user_id = array_url[array_url.length -2]
       body.append('add_date', add_date.val().split(' / ').join('-'))
       body.append('user_id', user_id)
   
@@ -89,15 +109,15 @@
   
             // 登録した日付を表示
             let add_date = response.add_date.split('-').join(' / ')
-            $('.selection__list--empty').remove();
+            $('.selection__list--empty').remove()
             $('.selection__list').prepend(`<li class="selection__list--col"><span class="selection__list--col--add">追加</span>${add_date}</li>`)
   
             // 3.5秒後に完了通知は削除
             setTimeout(function(){
               $('.success').fadeOut('fast').queue(function() {
-                this.remove();
-              });
-            }, 3500);
+                this.remove()
+              })
+            }, 3500)
           } else {
             let add_date = response.add_date.split('-').join(' / ')
             alert(`${add_date} は既に登録済みです。`)
@@ -114,8 +134,71 @@
     // ===================================================
     function successClose() {
       $('.success').fadeOut('fast').queue(function() {
-        this.remove();
-      });
+        this.remove()
+      })
     }
+
+    // ===================================================
+    // 削除
+    // ===================================================
+    $('.dialog__content--form').on('submit', function(e) {
+      e.preventDefault()
+      const url = '{% url "app:delete" %}'
+      // URLのクエリパラメータを管理
+      const body = new URLSearchParams()
+      let working_id = $('input:hidden[name="hidden_data"]').val()
+      body.append('working_id', working_id)
+
+      fetch(url, {
+        method: 'POST',
+        body: body,
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8',
+          'X-CSRFToken': csrftoken,
+        },
+      })
+        .then((response) => {
+          return response.json() // JSON形式に変換
+        })
+        .then((response) => {
+
+          // 削除確認の表示を消す
+          $('.dialog').fadeOut(300)
+          $('body').css({
+            position: 'relative',
+            top: 0,
+            left: 0,
+            height: '100%'
+          })
+
+          let delete_date = response.delete_date.split('-').join(' / ')
+
+          // 削除完了の表示
+          $('body').prepend(
+            `<div class="success">\
+              <div class="success__bg" onclick="successClose()"></div>\
+              <div class="success__content">\
+                <p class="success__content--title" style="font-weight: normal; font-size: 1.6rem; color: #2D2D2D; line-height: 1.5">${delete_date} を<br>削除しました</p>\
+              </div>\
+              <button class="success__close" onclick="successClose()"></button>\
+            </div>`
+          ).hide().fadeIn(500)
+
+          // 削除した日付を表示
+          $('.selection__list--empty').remove()
+          $('.selection__list').prepend(`<li class="selection__list--col"><span class="selection__list--col--add">削除済み</span>${delete_date}</li>`)
+
+          // 3.5秒後に完了通知は削除
+          setTimeout(function(){
+            $('.success').fadeOut('fast').queue(function() {
+              this.remove()
+            })
+          }, 3500)
+        })
+        .catch((error) => {
+          alert('すでに削除済みです。')
+          console.log(error)
+        })
+    })
   </script>
   {% endblock %}

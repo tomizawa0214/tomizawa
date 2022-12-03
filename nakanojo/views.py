@@ -71,7 +71,9 @@ class IndexView(View):
             'form_working_days': form_working_days,
         })
 
+# ============================================================
 # 活動日の登録ページ
+# ============================================================
 class RegisterView(View):
     def get(self, request, *args, **kwargs):
         user_data = get_object_or_404(Member, pk=self.kwargs['pk'])
@@ -82,21 +84,18 @@ class RegisterView(View):
             initial={'date': d_today}
         )
 
-        # 重複を避けて活動日を取得
+        # 活動日を取得
         working_days_data = WorkingDays.objects.filter(user__name=user_data.name).order_by('-working_at') # 活動日の新しいものが上
-        working_days_list = []
-        for working_day in working_days_data:
-            day = working_day.working_at.strftime('%Y / %m / %d')
-            if not day in working_days_list:
-                working_days_list.append(day)
 
         return render(request, 'app/register.html', {
             'user_data': user_data,
-            'working_days_list': working_days_list,
+            'working_days_data': working_days_data,
             'form': form
         })
 
+# ============================================================
 # 活動日の登録ページの非同期処理
+# ============================================================
 class AddView(View):
     def post(self, request, *args, **kwargs):
         add_date = request.POST.get('add_date')
@@ -121,7 +120,29 @@ class AddView(View):
         
         return JsonResponse(data)
 
+# ============================================================
+# 活動日削除の非同期処理
+# ============================================================
+class DeleteView(View):
+    def post(self, request, *args, **kwargs):
+        working_id = request.POST.get('working_id')
+
+        # 該当の活動日を削除
+        try:
+            working_data = WorkingDays.objects.get(id=int(working_id))
+            delete_date = working_data.working_at
+            working_data.delete()
+            data = {
+                'delete_date': delete_date
+            }
+            return JsonResponse(data)
+
+        except Exception:
+            return redirect('app:index')
+
+# ============================================================
 # 実行委員の活動日一覧ページ
+# ============================================================
 class SearchView(View):
     def get(self, request, *args, **kwargs):
         year = str(self.kwargs['pk'])[:4]
