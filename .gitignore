@@ -4,7 +4,7 @@ db.sqlite3
 __pycache__
 *.pyc
 .DS_Store
-local.py
 .env
-Python-3.8.10
-Python-3.8.10.tar.xz
+media
+local_settings.py
+crontab_error.log

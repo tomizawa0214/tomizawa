@@ -1,9 +1,11 @@
 {% extends "admin/base.html" %}
-
+<!-- TODO: title tag -->
 {% block title %}
-  {% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | 冨澤潤 TOMIZAWA Jun
+  {% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | 管理画面
 {% endblock %}
+<!-- //TODO: title tag -->
 
+<!-- TODO: style -->
 {% block extrastyle %}
 <style type="text/css">
   #header {
@@ -36,9 +38,13 @@
   }
 </style>
 {% endblock %}
+<!-- //TODO: style -->
 
 {% block branding %}
 <h1 id="site-name"><a href="{% url 'admin:index' %}">{{ site_header|default:_('Django administration') }}</a></h1>
+{% if user.is_anonymous %}
+  {% include "admin/color_theme_toggle.html" %}
+{% endif %}
 {% endblock %}
 
 {% block nav-global %}{% endblock %}

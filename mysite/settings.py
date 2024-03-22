@@ -1,14 +1,10 @@
+from pathlib import Path
 import os
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 INSTALLED_APPS = [
-    'django.contrib.sites',
-    'django.contrib.sitemaps',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -16,11 +12,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'portfolio',
-    'widget_tweaks',
-    'snowpenguin.django.recaptcha2',
     'nakanojo',
     'bootstrap4',
     'bootstrap_datepicker_plus',
+    'widget_tweaks',
+    'django_recaptcha',
+    # 'app.apps.AppNameConfig',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
 ]
 
 MIDDLEWARE = [
@@ -91,6 +90,54 @@ STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
 
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 SITE_ID = 1
 
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+DEBUG = False
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
+
+if DEBUG:
+    ALLOWED_HOSTS = ['*']
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+    # メール送信
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+else:
+    # 環境変数の設定ファイルを読み込む
+    import environ
+    env = environ.Env()
+    env.read_env(os.path.join(BASE_DIR,'.env'))
+
+    SECRET_KEY = env('SECRET_KEY')
+    ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
+    STATIC_ROOT = '/usr/share/nginx/html/static'
+    MEDIA_ROOT = '/usr/share/nginx/html/media'
+
+    DATABASES = {
+        'default':env.db(),
+    }
+
+    # メール送信
+    SITE_NAME = 'TOMIZAWA Jun'
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_PORT = 587
+    EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+    EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+    EMAIL_USE_TLS = True
+    FROM_EMAIL = SITE_NAME + '<' + EMAIL_HOST_USER + '>'
+
+    # reCAPTCHA
+    RECAPTCHA_PUBLIC_KEY = env('RECAPTCHA_PUBLIC_KEY')
+    RECAPTCHA_PRIVATE_KEY = env('RECAPTCHA_PRIVATE_KEY')

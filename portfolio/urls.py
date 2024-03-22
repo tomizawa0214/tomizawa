@@ -6,5 +6,4 @@ urlpatterns = [
   path('', IndexView.as_view(), name='index'),
   path('contact/', ContactFormView.as_view(), name='contact_form'),
   path('contact/thanks/', ContactThanksView.as_view(), name='contact_thanks'),
-  path('callback/', views.CallbackView.as_view(), name='callback_view'),
 ]

@@ -1,17 +1,16 @@
 from django.contrib import admin
 from django.urls import path, include
 from django.contrib.sitemaps.views import sitemap
-
 from .sitemaps import (
     StaticViewSitemap,
 )
 
-admin.site.site_header = 'TOMIZAWA Jun'
-admin.site.index_title = 'TOMIZAWA Jun'
-
 sitemaps = {
     'static': StaticViewSitemap,
 }
+
+admin.site.site_header = 'TOMIZAWA Jun'
+admin.site.index_title = 'TOMIZAWA Jun'
 
 urlpatterns = [
     path('management/', admin.site.urls),

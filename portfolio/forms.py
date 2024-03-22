@@ -1,10 +1,10 @@
 from django import forms
-from snowpenguin.django.recaptcha2.fields import ReCaptchaField
-from snowpenguin.django.recaptcha2.widgets import ReCaptchaWidget
+from django_recaptcha.widgets import ReCaptchaV3
+from django_recaptcha.fields import ReCaptchaField
 
 
 class ContactForm(forms.Form):
   name = forms.CharField (max_length=30)
   email = forms.EmailField (min_length=7, max_length=256)
   message = forms.CharField (widget=forms.Textarea)
-  captcha = ReCaptchaField(widget=ReCaptchaWidget())
+  captcha = ReCaptchaField(widget=ReCaptchaV3)
