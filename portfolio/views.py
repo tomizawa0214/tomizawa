@@ -42,7 +42,13 @@ class ContactFormView(View):
             try:
                 # ひらがなを含む場合のみメール送信
                 if re.search('[ぁ-ん]', message) != None:
-                    message = EmailMessage(subject=subject, body=body, to=to_list, bcc=bcc_list)
+                    message = EmailMessage(
+                        subject=subject,
+                        body=body,
+                        to=to_list,
+                        bcc=bcc_list,
+                        from_email=settings.FROM_EMAIL,
+                    )
                     message.send()
                 else:
                     return HttpResponse("メッセージ内容に問題が発生したため、送信がキャンセルされました。")
