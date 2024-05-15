@@ -9,8 +9,8 @@ sitemaps = {
     'static': StaticViewSitemap,
 }
 
-admin.site.site_header = 'TOMIZAWA Jun'
-admin.site.index_title = 'TOMIZAWA Jun'
+admin.site.site_header = 'AlkUnelma'
+admin.site.index_title = 'AlkUnelma'
 
 urlpatterns = [
     path('management/', admin.site.urls),
