@@ -95,3 +95,18 @@ window.setTimeout(function() {
     }
   }
 }());
+
+// 初回アクセス時のみ表示
+document.addEventListener('DOMContentLoaded', function() {
+  const sessionKey = 'accesed';
+  const sessionValue = true;
+  
+  //sessionStorageにsessionKeyというデータの有無を判別
+  if (!sessionStorage.getItem(sessionKey)) {
+    //初回アクセス時の処理
+    sessionStorage.setItem(sessionKey, sessionValue);
+  } else {
+    //ここに通常アクセス時の処理
+    document.querySelector('.opening').style.display = 'none';
+  }
+});
