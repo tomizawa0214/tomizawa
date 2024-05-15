@@ -52,7 +52,7 @@
               width: 0;
               left: 0;
               border-left: 0;
-              border-top: solid 30px  #E02855;
+              border-top: solid 30px  #008C56;
               border-right: solid 20px transparent;
               border-bottom: 0;
               opacity: 0;
@@ -69,13 +69,13 @@
               font-weight: 600;
               @include Japanese-font;
               color: #fff;
-              background:  #E02855;
+              background:  #008C56;
               opacity: 0;
               transform: translateY(30px);
               transition: all .4s ease-in-out;
             }
             &:hover {
-              background: rgba(7, 19, 30, .7);
+              background: rgba(33, 37, 41, .7);
               h3 {
                 opacity: 1;
                 transform: translateY(0);

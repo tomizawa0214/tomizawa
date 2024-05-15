@@ -1,7 +1,7 @@
 .profile {
   position: relative;
   padding: 50px;
-  background: rgba(0, 130, 76, .15);
+  background: rgba(80, 100, 110, .15);
   @include slide--from-bottom;
   &__container {
     max-width: 750px;
@@ -49,8 +49,8 @@
             margin-right: -5px;
             width: 20px;
             height: 20px;
-            border-top: solid 5px  #E02855;
-            border-right: solid 5px  #E02855;
+            border-top: solid 5px  #008C56;
+            border-right: solid 5px  #008C56;
             transform: rotate(45deg);
             animation: slide 1s linear infinite;
             @keyframes slide {
@@ -71,7 +71,7 @@
             height: 50px;
             padding: 0;
             border: none;
-            background:  #E02855;
+            background:  #008C56;
             border-radius: 3%;
             cursor: pointer;
             overflow: hidden;
@@ -111,7 +111,7 @@
           left: 0;
           right: 0;
           bottom: 0;
-          background: rgba(0, 130, 76, .6);
+          background: rgba(80, 100, 110, .6);
           display: flex;
           justify-content: center;
           list-style: none;
@@ -130,7 +130,7 @@
             text-decoration: none;
             transition: .25s linear;
             &:hover {
-              background: rgba(0, 0, 0, 0.1);
+              background: rgba(20, 20, 20, 0.1);
             }
           }
         }
@@ -144,7 +144,7 @@ footer {
   width: 100%;
   bottom: 0;
   text-align: center;
-  background:  #008C56 ;
+  background: #50646E;
   small {
     margin: 0;
     color: #fff;
