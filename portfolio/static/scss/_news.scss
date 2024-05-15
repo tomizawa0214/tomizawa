@@ -75,7 +75,7 @@
                         width: 0;
                         left: 0;
                         border-left: 0;
-                        border-top: solid 30px #e8676b;
+                        border-top: solid 30px  #E02855;
                         border-right: solid 20px transparent;
                         border-bottom: 0;
                         opacity: 0;
@@ -91,7 +91,7 @@
                         font-weight: 600;
                         @include Japanese-font;
                         color: #fff;
-                        background: #e8676b;
+                        background:  #E02855;
                         opacity: 0;
                         transform: translateY(30px);
                         transition: all .4s ease-in-out;

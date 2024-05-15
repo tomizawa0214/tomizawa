@@ -1,15 +1,35 @@
 {% extends 'portfolio/base.html' %}
 {% load static %}
 
-{% block meta %}
-<title>サービスに、潤いを。 | 冨澤潤 TOMIZAWA Jun</title>
+{% block robots %}
+<meta name="robots" content="index, follow">
+{% endblock %}
+
+{% block title %}
+<title>AlkUnelma（アルクネルマ） | 想いと歩く、夢のカタチ。</title>
+{% endblock %}
+
+{% block description %}
+<meta name="description" content="AlkUnelma（アルクネルマ）は群馬を拠点にWEBシステム、デザイン制作等を手掛けています。人の想いに寄り添う伴走者として、想いをカタチにするサービスを提供していきます。">
+{% endblock %}
+
+{% block canonical %}
+<link rel="canonical" href="https://tomizawajun.com/">
+{% endblock %}
+
+{% block og %}
+<meta property="og:title" content="AlkUnelma（アルクネルマ） | 想いと歩く、夢のカタチ。">
+<meta property="og:description" content="AlkUnelma（アルクネルマ）は群馬を拠点にWEBシステム、デザイン制作等を手掛けています。人の想いに寄り添う伴走者として、想いをカタチにするサービスを提供していきます。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tomizawajun.com/">
+<meta property="og:image" content="https://tomizawajun.com/static/img/ogp.png">
 {% endblock %}
 
 {% block opening %}
 <!-- Opening Fake Shutter -->
-<article class="opening">
+<!-- <article class="opening">
   <p class="opening__text">Thank you for coming!</p>
-</article>
+</article> -->
 
 <!-- Back To Top -->
 <article class="back-to-top" data-toggle="tooltip" data-placement="left" title="Back to Top">
@@ -31,8 +51,9 @@
   <div class="title__mask"></div>
   <div class="title__photo"></div>
   <div class="title__text">
-    <h2>サービスに、潤いを。</h2>
-    <h3>テクノロジーがどれだけ進化しても、<br>主役は必ず「人」のはず。<br>根底に流れるのは人の「想い」です。<br>テクノロジーで想いの幅を広げて、<br>クリエイティブで人に届ける。<br>人と人とを繋ぐ架け橋になれたなら、<br>私はこの上なく幸せです。</h3>
+    <h2>想いと歩く、夢のカタチ。</h2>
+    <!-- <h3>テクノロジーがどれだけ進化しても、<br>主役は必ず「人」のはず。<br>根底に流れるのは人の「想い」です。<br>テクノロジーで想いの幅を広げて、<br>クリエイティブで人に届ける。<br>人と人とを繋ぐ架け橋になれたなら、<br>私はこの上なく幸せです。</h3> -->
+    <h3><ruby>AlkUnelma<rt>アルクネルマ</rt></ruby>は人の想いに寄り添う伴走者です。<br>社会へ向けて、仲間へ向けて<br>デザインとITの力で<br>人の想いをカタチとして表現します。</h3>
     <h4><span id="title_year"></span>年　冨澤 潤</h4>
   </div>
 </section>
@@ -413,7 +434,7 @@
           </a>
         </div>
         <ul class="profile__container--contact--info--social">
-          <li><a href="https://twitter.com/tomizawa0214" data-toggle="tooltip" data-placement="bottom" title="Twitter" target="_blank" rel="noopenner"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a></li>
+          <li><a href="https://twitter.com/tomizawa0214" data-toggle="tooltip" data-placement="bottom" title="X (旧ツイッター)" target="_blank" rel="noopenner"><i class="fa-brands fa-x-twitter fa-fw" aria-hidden="true"></i></a></li>
           <li><a href="https://www.instagram.com/tomizawa0214" data-toggle="tooltip" data-placement="bottom" title="Instagram" target="_blank" rel="noopenner"><i class="fab fa-instagram fa-fw" aria-hidden="true"></i></a></li>
           <li><a href="https://github.com/tomizawa0214" data-toggle="tooltip" data-placement="bottom" title="GitHub" target="_blank" rel="noopenner"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a></li>
         </ul>

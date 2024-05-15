@@ -12,7 +12,8 @@ body {
   width: 100%;
   height: 100%;
   min-height: 100vh;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background-color: #F1C8D5;
 }
 
@@ -54,8 +55,13 @@ main {
   letter-spacing: 0.15em;
 }
 .selection__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .selection__form--select {
   position: relative;
@@ -77,16 +83,23 @@ main {
   height: 0;
   top: 50%;
   right: 16px;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
   border-top: 12px solid #949494;
   pointer-events: none;
 }
 .selection__form--submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 12px 0 0;
   width: 100%;
   height: 46px;
@@ -96,6 +109,7 @@ main {
   font-weight: bold;
   background-color: #E45384;
   border-radius: 4px;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .selection__form--submit:hover {
@@ -159,8 +173,12 @@ main {
 
 .input-group.dbdp {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 14px 16px;
   width: 100%;
   height: 46px;
@@ -180,7 +198,8 @@ main {
   position: absolute;
   top: 50%;
   right: 16px;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .err {
@@ -223,7 +242,8 @@ main {
   text-align: center;
   background-color: #FFF;
   border-radius: 20px;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   z-index: 9999;
 }
 .success__content--title {
@@ -278,7 +298,8 @@ main {
   text-align: center;
   background-color: #FFF;
   border-radius: 20px;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 .dialog__content--text {
   margin: 0 0 24px;
@@ -296,6 +317,8 @@ main {
   background: url(../img/icon_delete.svg) center center/contain no-repeat;
 }
 .dialog__content--form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .dialog__content--form--cancel {
@@ -343,6 +366,8 @@ main {
   letter-spacing: 0.15em;
 }
 .search-list__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 8px;
   background-color: #FDF3F6;
@@ -370,16 +395,23 @@ main {
   height: 0;
   top: 50%;
   right: 16px;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
   border-top: 12px solid #949494;
   pointer-events: none;
 }
 .search-list__form--submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0 0 0 16px;
   width: 100px;
   height: 46px;
@@ -389,6 +421,7 @@ main {
   font-weight: bold;
   background-color: #E45384;
   border-radius: 4px;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .search-list__form--submit:hover {
@@ -474,9 +507,15 @@ main {
   text-align: center;
 }
 .home a {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: 44px;
   line-height: 44px;
@@ -485,6 +524,7 @@ main {
   font-weight: bold;
   background-color: #FFF;
   border-radius: 4px;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .home a:hover {
@@ -529,6 +569,7 @@ footer small {
 }
 @media screen and (min-width: 768px) {
   .selection__list--col--delete {
+    -webkit-transition: 0.3s;
     transition: 0.3s;
   }
   .selection__list--col--delete:hover {
@@ -560,12 +601,14 @@ footer small {
     width: 68%;
   }
   .dialog__content--form--cancel {
+    -webkit-transition: 0.3s;
     transition: 0.3s;
   }
   .dialog__content--form--cancel:hover {
     opacity: 0.65;
   }
   .dialog__content--form--delete {
+    -webkit-transition: 0.3s;
     transition: 0.3s;
   }
   .dialog__content--form--delete:hover {

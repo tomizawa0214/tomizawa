@@ -2,37 +2,21 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-166960620-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-166960620-1');
-    </script>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport-extra" content="width=device-width,initial-scale=1,min-width=375">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
-    <meta name="description" content="フルスタックwebエンジニア兼グラフィックデザイナーとして活動する冨澤潤と申します。テクノロジーとクリエイティブの力を駆使した課題解決に尽力いたします。どうぞお気軽にご連絡くださいませ。">
-    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#"></head>
-    <meta property="og:title" content="サービスに、潤いを。 | 冨澤潤 TOMIZAWA Jun">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tomizawajun.com">
-    <meta property="og:image" content="https://tomizawajun.com/static/img/sns.jpg">
-    <meta property="og:site_name" content="サービスに、潤いを。 | 冨澤潤 TOMIZAWA Jun">
-    <meta property="og:description" content="フルスタックwebエンジニア兼グラフィックデザイナーとして活動する冨澤潤と申します。テクノロジーとクリエイティブの力を駆使した課題解決に尽力いたします。どうぞお気軽にご連絡くださいませ。">
-    <meta property="og:locale" content="ja_JP">
-    <meta property="fb:app_id" content="559419788100736">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@tomizawa0214">
-    <meta name="twitter:creator" content="@tomizawa0214">
+    {% block robots %} {% endblock %}
+    {% block title %} {% endblock %}
+    <meta name="format-detection" content="telephone=no">
+    {% block description %} {% endblock %}
+    {% block canonical %} {% endblock %}
+    <head prefix="og: https://ogp.me/ns#">
+    <meta property="og:site_name" content="AlkUnelma（アルクネルマ） | 想いと歩く、夢のカタチ。">
+    {% block og %} {% endblock %}
+    <link rel="icon" href="{% static 'ico/favicon.ico' %}">
+    <link rel="apple-touch-icon" href="{% static 'ico/apple-touch-icon.png' %}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/style.min.css' %}" />
-    <link rel="icon" href="{% static 'ico/favicon.ico' %}">
-    <link rel="apple-touch-icon" href="{% static 'ico/apple-touch-icon.png' %}" sizes="180x180">
-    <link rel="icon" type="image/jpg" href="{% static 'ico/android-touch-icon.png' %}" sizes="192x192">
-    <script src="https://cdn.jsdelivr.net/npm/viewport-extra@2.0.1/dist/iife/viewport-extra.min.js" async></script>
+    <link  rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
     {% block meta %}
     {% endblock %}
   </head>
@@ -46,9 +30,8 @@
       <div class="nav container-fluid">
         <h1 class="nav__logo">
           <a href="{% url 'index' %}">
-            <img src="{% static 'img/header-logo.svg' %}" alt="TOMIZAWA Jun 冨澤潤">
+            <img src="{% static 'img/alkunelma_logo.svg' %}" alt="AlkUnelma（アルクネルマ）- 想いと歩く、夢のカタチ。">
           </a>
-          <div class="nav__logo--effect"></div>
         </h1>
         <button class="nav__toggler navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
           <span></span>
@@ -69,12 +52,12 @@
 
     <!-- Footer -->
     <footer>
-      <small>&copy; <span id="copy_year"></span> TOMIZAWA Jun</small>
+      <small>&copy; <span id="copy_year"></span> AlkUnelma</small>
     </footer>
 
     {% block js %}
     {% endblock %}
-    <script src="https://kit.fontawesome.com/a29680248f.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/viewport-extra@2.0.1/dist/iife/viewport-extra.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>

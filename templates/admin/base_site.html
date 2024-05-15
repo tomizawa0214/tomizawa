@@ -1,7 +1,7 @@
 {% extends "admin/base.html" %}
 <!-- TODO: title tag -->
 {% block title %}
-  {% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | 管理画面
+{% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | 管理画面
 {% endblock %}
 <!-- //TODO: title tag -->
 
@@ -11,27 +11,38 @@
   #header {
     background: #1a237e;
   }
-  .module caption, .inline-group h2 {
+
+  .module caption,
+  .inline-group h2 {
     background: #1a237e;
   }
+
   div.breadcrumbs {
-    color: #3d4451;
+    color: #141414;
     background: #e8eaf6;
   }
+
   div.breadcrumbs a {
-    color: #e8676b;
+    color: #E02855;
     text-decoration: underline;
   }
+
   div.breadcrumbs a:hover {
-    color: #e8676b;
+    color: #E02855;
     opacity: .65;
   }
-  th, td {
+
+  th,
+  td {
     white-space: nowrap;
   }
-  #branding h1, #branding h1 a:link, #branding h1 a:visited {
+
+  #branding h1,
+  #branding h1 a:link,
+  #branding h1 a:visited {
     color: #fff;
   }
+
   .app-sites.module,
   .app-auth.module {
     display: none;
@@ -43,7 +54,7 @@
 {% block branding %}
 <h1 id="site-name"><a href="{% url 'admin:index' %}">{{ site_header|default:_('Django administration') }}</a></h1>
 {% if user.is_anonymous %}
-  {% include "admin/color_theme_toggle.html" %}
+{% include "admin/color_theme_toggle.html" %}
 {% endif %}
 {% endblock %}
 

@@ -2,9 +2,28 @@
 {% load static %}
 {% load widget_tweaks %}
 
-{% block meta %}
-<title>お問い合わせ | 冨澤潤 TOMIZAWA Jun</title>
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+{% block robots %}
+<meta name="robots" content="index, follow">
+{% endblock %}
+
+{% block title %}
+<title>お問い合わせ | AlkUnelma（アルクネルマ）</title>
+{% endblock %}
+
+{% block description %}
+<meta name="description" content="AlkUnelma（アルクネルマ）のサービスに関するご質問、お問い合わせ等に対応させていただきます。">
+{% endblock %}
+
+{% block canonical %}
+<link rel="canonical" href="https://tomizawajun.com/contact/">
+{% endblock %}
+
+{% block og %}
+<meta property="og:title" content="お問い合わせ | AlkUnelma（アルクネルマ）">
+<meta property="og:description" content="AlkUnelma（アルクネルマ）のサービスに関するご質問、お問い合わせ等に対応させていただきます。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://tomizawajun.com/contact/">
+<meta property="og:image" content="https://tomizawajun.com/static/img/ogp.png">
 {% endblock %}
 
 {% block nav %}
@@ -65,5 +84,6 @@
 {% endblock %}
 
 {% block js %}
+<script src="https://www.google.com/recaptcha/api.js"></script>
 <script src="{% static 'js/contact_form.js' %}"></script>
 {% endblock %}
