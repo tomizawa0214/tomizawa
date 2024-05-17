@@ -348,6 +348,49 @@
         }
       }
     }
+    &--figma {
+      background: #0D99FF;
+      &::before {
+        background: #E5F4FF;
+        animation: rotate-circle-left-figma 5s linear infinite;
+        @keyframes rotate-circle-left-figma {
+          0% {
+            transform: rotate(0deg);
+          }
+          15% {
+            transform: rotate(0deg);
+          }
+          18% {
+            transform: rotate(160deg);
+          }
+          100% {
+            transform: rotate(160deg);
+          }
+        }
+      }
+      &::after {
+        background: #E5F4FF;
+        animation: rotate-circle-right-figma 5s linear infinite;
+        @keyframes rotate-circle-right-figma {
+          0% {
+            transform: rotate(0deg);
+            background: #E5F4FF;
+          }
+          15% {
+            transform: rotate(180deg);
+            background: #E5F4FF;
+          }
+          15.01% {
+            transform: rotate(360deg);
+            background: #0D99FF;
+          }
+          100% {
+            transform: rotate(360deg);
+            background: #0D99FF;
+          }
+        }
+      }
+    }
     &--xd {
       background: #ff26be;
       &::before {

@@ -1482,6 +1482,99 @@ body {
     background: #006678;
   }
 }
+.skill__box--figma {
+  background: #0D99FF;
+}
+.skill__box--figma::before {
+  background: #E5F4FF;
+  -webkit-animation: rotate-circle-left-figma 5s linear infinite;
+          animation: rotate-circle-left-figma 5s linear infinite;
+}
+@-webkit-keyframes rotate-circle-left-figma {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  15% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  18% {
+    -webkit-transform: rotate(160deg);
+            transform: rotate(160deg);
+  }
+  100% {
+    -webkit-transform: rotate(160deg);
+            transform: rotate(160deg);
+  }
+}
+@keyframes rotate-circle-left-figma {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  15% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  18% {
+    -webkit-transform: rotate(160deg);
+            transform: rotate(160deg);
+  }
+  100% {
+    -webkit-transform: rotate(160deg);
+            transform: rotate(160deg);
+  }
+}
+.skill__box--figma::after {
+  background: #E5F4FF;
+  -webkit-animation: rotate-circle-right-figma 5s linear infinite;
+          animation: rotate-circle-right-figma 5s linear infinite;
+}
+@-webkit-keyframes rotate-circle-right-figma {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    background: #E5F4FF;
+  }
+  15% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    background: #E5F4FF;
+  }
+  15.01% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    background: #0D99FF;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    background: #0D99FF;
+  }
+}
+@keyframes rotate-circle-right-figma {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    background: #E5F4FF;
+  }
+  15% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    background: #E5F4FF;
+  }
+  15.01% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    background: #0D99FF;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    background: #0D99FF;
+  }
+}
 .skill__box--xd {
   background: #ff26be;
 }
