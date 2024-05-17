@@ -76,21 +76,21 @@
     }
   }
 
-  .works {
-    &__item {
-    grid-template-columns: auto auto;
-    }
-  }
+  // .works {
+  //   &__item {
+  //   grid-template-columns: auto auto;
+  //   }
+  // }
 
-  .modal-area {
-    &__wrap {
-      &--contents {
-        &-container {
-          font-size: 16px;
-        }
-      }
-    }
-  }
+  // .modal-area {
+  //   &__wrap {
+  //     &--contents {
+  //       &-container {
+  //         font-size: 16px;
+  //       }
+  //     }
+  //   }
+  // }
 
   .skill {
     &__box {
@@ -151,11 +151,11 @@
 
 // // -----md(Medium)-----
 @media screen and (min-width: 768px) {
-  .modal-area {
-    &__wrap {
-      padding: 50px;
-    }
-  }
+  // .modal-area {
+  //   &__wrap {
+  //     padding: 50px;
+  //   }
+  // }
 
   .nav {
     height: 70px;
@@ -217,7 +217,7 @@
       text-align: center;
     }
     &__item {
-      grid-template-columns: auto auto auto;
+      grid-template-columns: auto auto;
     }
   }
 
@@ -314,7 +314,7 @@
 
   .works {
     &__item {
-      grid-template-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto;
     }
   }
 }

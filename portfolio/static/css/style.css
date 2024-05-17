@@ -208,171 +208,6 @@ body {
   }
 }
 
-.modal-area {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  z-index: 9999;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0;
-  display: none;
-}
-.modal-area__bg {
-  width: 100%;
-  height: 100vh;
-  background: rgba(33, 37, 41, 0.9);
-}
-.modal-area__wrap {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 90%;
-  max-width: 1200px;
-  height: 90%;
-  padding: 30px;
-  background: #fff;
-}
-.modal-area__wrap--contents {
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-}
-.modal-area__wrap--contents-image2--sp {
-  background-image: url("../img/Bootstrap4-sp.jpg");
-  width: 100%;
-  height: 85%;
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-.modal-area__wrap--contents-image2--pc {
-  background-image: url("../img/Bootstrap4-pc.jpg");
-  width: 100%;
-  height: 85%;
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-.modal-area__wrap--contents-image3 {
-  background-image: url("../img/TatkeOutMenu-g.jpg");
-  width: 100%;
-  height: 85%;
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-.modal-area__wrap--contents-image4 {
-  background-image: url("../img/wedding-g.jpg");
-  width: 100%;
-  height: 85%;
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-.modal-area__wrap--contents-image5--sp {
-  background-image: url("../img/spoon-sp.jpg");
-  width: 100%;
-  height: 85%;
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-.modal-area__wrap--contents-image5--pc {
-  background-image: url("../img/spoon-pc.jpg");
-  width: 100%;
-  height: 85%;
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-.modal-area__wrap--contents-image6--sp {
-  background-image: url("../img/nemoto-kenzai-sp.jpg");
-  width: 100%;
-  height: 85%;
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-.modal-area__wrap--contents-image6--pc {
-  background-image: url("../img/nemoto-kenzai-pc.jpg");
-  width: 100%;
-  height: 85%;
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-.modal-area__wrap--contents-image7--sp {
-  background-image: url("../img/ses-sp.jpg");
-  width: 100%;
-  height: 85%;
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-.modal-area__wrap--contents-image7--pc {
-  background-image: url("../img/ses-pc.jpg");
-  width: 100%;
-  height: 85%;
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-.modal-area__wrap--contents-container {
-  width: 100%;
-  height: 10%;
-  font-size: 14px;
-  font-weight: 500;
-  color: #141414;
-  line-height: 1.2;
-  font-family: Helvetica, "游ゴシック", "Yu Gothic", YuGothic, HiraKakuProN-W3, "メイリオ", Meiryo, sans-serif;
-}
-.modal-area__wrap--contents-container p {
-  margin-bottom: 5px;
-}
-.modal-area__wrap--close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: -25px 6px 0 0;
-  font-size: 50px;
-  color: #E02855;
-  cursor: pointer;
-}
-.modal-area__show {
-  display: block;
-  -webkit-animation: show 0.4s forwards;
-          animation: show 0.4s forwards;
-}
-@-webkit-keyframes show {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-@keyframes show {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
 .back-to-top {
   display: block;
   position: fixed;
@@ -720,85 +555,10 @@ body {
   display: grid;
   gap: 30px;
 }
-.works__item--card--open {
-  padding: 0;
-  outline: none;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-.works__item--card--open:focus {
-  outline: 0;
-}
-.works__item--card--open--box {
-  position: relative;
-}
-.works__item--card--open--box img {
-  width: 100%;
-}
-.works__item--card--open--box--mask {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-.works__item--card--open--box--mask p {
-  position: absolute;
-  width: 40%;
-  z-index: 2;
-  padding: 5px 20px 0 0;
-  text-align: center;
-  font-size: 14px;
-  font-weight: 600;
-  font-family: Helvetica, "游ゴシック", "Yu Gothic", YuGothic, HiraKakuProN-W3, "メイリオ", Meiryo, sans-serif;
-  color: #fff;
-  opacity: 0;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-.works__item--card--open--box--mask span {
-  position: absolute;
-  width: 0;
-  left: 0;
-  border-left: 0;
-  border-top: solid 30px #008C56;
-  border-right: solid 20px transparent;
-  border-bottom: 0;
-  opacity: 0;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-.works__item--card--open--box--mask h3 {
-  position: absolute;
-  width: 100%;
-  margin: 0;
-  padding: 10px;
-  bottom: 0;
-  text-align: center;
-  font-size: 14px;
-  font-weight: 600;
-  font-family: Helvetica, "游ゴシック", "Yu Gothic", YuGothic, HiraKakuProN-W3, "メイリオ", Meiryo, sans-serif;
-  color: #fff;
-  background: #008C56;
-  opacity: 0;
-  -webkit-transform: translateY(30px);
-          transform: translateY(30px);
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-.works__item--card--open--box--mask:hover {
-  background: rgba(33, 37, 41, 0.7);
-}
-.works__item--card--open--box--mask:hover h3 {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-}
-.works__item--card--open--box--mask:hover p, .works__item--card--open--box--mask:hover span {
-  opacity: 1;
-  width: 40%;
+.works__item iframe {
+  margin: 0 !important;
+  width: 100% !important;
+  min-width: auto !important;
 }
 
 .skill {
@@ -2450,12 +2210,6 @@ footer small {
   .news__wrap--topic--img--photo {
     width: 280px;
   }
-  .works__item {
-    grid-template-columns: auto auto;
-  }
-  .modal-area__wrap--contents-container {
-    font-size: 16px;
-  }
   .skill__box {
     grid-template-columns: auto auto;
   }
@@ -2501,9 +2255,6 @@ footer small {
   }
 }
 @media screen and (min-width: 768px) {
-  .modal-area__wrap {
-    padding: 50px;
-  }
   .nav {
     height: 70px;
   }
@@ -2557,7 +2308,7 @@ footer small {
     text-align: center;
   }
   .works__item {
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
   }
   .skill {
     padding: 50px;
@@ -2632,6 +2383,6 @@ footer small {
     margin-bottom: 80px;
   }
   .works__item {
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto;
   }
 }/*# sourceMappingURL=style.css.map */

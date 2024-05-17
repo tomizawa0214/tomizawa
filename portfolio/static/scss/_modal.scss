@@ -1,108 +1,72 @@
-.modal-area {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  z-index: 9999;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0;
-  display: none;
-  &__bg {
-    width: 100%;
-    height: 100vh;
-    background: rgba(33, 37, 41, .9);
-  }
-  &__wrap {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    max-width: 1200px;
-    height: 90%;
-    padding: 30px;
-    background: #fff;
-    &--contents {
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      &-image2--sp {
-        background-image: url("../img/Bootstrap4-sp.jpg");
-        @include modal-bg;
-      }
-      &-image2--pc {
-        background-image: url("../img/Bootstrap4-pc.jpg");
-        @include modal-bg;
-      }
-      &-image3 {
-        background-image: url("../img/TatkeOutMenu-g.jpg");
-        @include modal-bg;
-      }
-      &-image4 {
-        background-image: url("../img/wedding-g.jpg");
-        @include modal-bg;
-      }
-      &-image5--sp {
-        background-image: url("../img/spoon-sp.jpg");
-        @include modal-bg;
-      }
-      &-image5--pc {
-        background-image: url("../img/spoon-pc.jpg");
-        @include modal-bg;
-      }
-      &-image6--sp {
-        background-image: url("../img/nemoto-kenzai-sp.jpg");
-        @include modal-bg;
-      }
-      &-image6--pc {
-        background-image: url("../img/nemoto-kenzai-pc.jpg");
-        @include modal-bg;
-      }
-      &-image7--sp {
-        background-image: url("../img/ses-sp.jpg");
-        @include modal-bg;
-      }
-      &-image7--pc {
-        background-image: url("../img/ses-pc.jpg");
-        @include modal-bg;
-      }
-      &-container {
-        width: 100%;
-        height: 10%;
-        font-size: 14px;
-        font-weight: 500;
-        color: $textColor;
-        line-height: 1.2;
-        @include Japanese-font;
-        p {
-          margin-bottom: 5px;
-        }
-      }
-    }
-    &--close {
-      position: absolute;
-      top: 0;
-      right: 0;
-      margin: -25px 6px 0 0;
-      font-size: 50px;
-      color:  #E02855;
-      cursor: pointer;
-    }
-  }
-  &__show {
-    display: block;
-    animation: show .4s forwards;
-    @keyframes show {
-      0% {
-        opacity: 0;
-        transform: scale(0);
-      }
-      100% {
-        opacity: 1;
-        transform: scale(1);
-      }
-    } 
-  }
-}
+// .modal-area {
+//   position: fixed;
+//   width: 100%;
+//   height: 100vh;
+//   z-index: 9999;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   opacity: 0;
+//   display: none;
+//   &__bg {
+//     width: 100%;
+//     height: 100vh;
+//     background: rgba(33, 37, 41, .9);
+//   }
+//   &__wrap {
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     width: 90%;
+//     max-width: 1200px;
+//     height: 90%;
+//     padding: 30px;
+//     background: #fff;
+//     &--contents {
+//       width: 100%;
+//       height: 100%;
+//       overflow: auto;
+//       &-image01 {
+//         background-image: url("../img/TatkeOutMenu-g.jpg");
+//         @include modal-bg;
+//       }
+//       &-container {
+//         width: 100%;
+//         height: 10%;
+//         font-size: 14px;
+//         font-weight: 500;
+//         color: $textColor;
+//         line-height: 1.2;
+//         @include Japanese-font;
+//         p {
+//           margin-bottom: 5px;
+//         }
+//       }
+//     }
+//     &--close {
+//       position: absolute;
+//       top: 0;
+//       right: 0;
+//       margin: -25px 6px 0 0;
+//       font-size: 50px;
+//       color:  #E02855;
+//       cursor: pointer;
+//     }
+//   }
+//   &__show {
+//     display: block;
+//     animation: show .4s forwards;
+//     @keyframes show {
+//       0% {
+//         opacity: 0;
+//         transform: scale(0);
+//       }
+//       100% {
+//         opacity: 1;
+//         transform: scale(1);
+//       }
+//     } 
+//   }
+// }
