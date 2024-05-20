@@ -1,22 +1,27 @@
 {{ name }} 様
 
-お問い合わせいただき、ありがとうございます。
-以下の内容でお問い合わせを受付いたしました。
-確認させていただき、ご入力いただいたメールアドレスにご連絡いたしますので今しばらくお待ちくださいませ。
+お問い合わせいただき、誠にありがとうございます。
+お問い合わせ内容を確認させていただきました後、
+ご入力いただいたメールアドレスへご連絡させていただきます。
+今しばらくお待ちくださいませ。
 
-＜お問い合わせ内容＞
-●【お名前】{{ name }} 様
-●【メールアドレス】
-{{ email }}
-●【メッセージ】
+＜ お問い合わせ内容 ＞
+お名前：{{ name }} 様
+メールアドレス：{{ email }}
+メッセージ：
 {{ message }}
 
 
-----------------------------------------------
-冨澤 潤 TOMIZAWA Jun
+＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
 
-URL: https://tomizawajun.com
-Twitter: https://twitter.com/tomizawa0214
-Facebook: https://www.facebook.com/tomizawa0214
-GitHub: https://github.com/tomizawa0214
-----------------------------------------------
+  A l k U n e l m a（ アルクネルマ ）
+  冨  澤　  潤  /  Tomizawa  Jun
+
+  〒371-0835
+  群馬県前橋市前箱田町387-1
+  TMO×3happy105号室
+  URL：https://tomizawajun.com
+  Instagram：https://www.instagram.com/tomizawa0214
+  X(旧Twitter)：https://x.com/tomizawa0214
+
+＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
