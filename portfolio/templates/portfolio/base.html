@@ -20,10 +20,13 @@
     {% block canonical %} {% endblock %}
     <meta name="thumbnail" content="{% static 'ico/apple-touch-icon.png' %}">
     <head prefix="og: https://ogp.me/ns#">
-    <meta property="og:site_name" content="AlkUnelma（アルクネルマ） | 想いと歩く、夢のカタチ。">
+    <meta property="og:site_name" content="AlkUnelma（アルクネルマ）">
     {% block og %} {% endblock %}
-    <link rel="icon" href="{% static 'ico/favicon.ico' %}?20240516">
-    <link rel="apple-touch-icon" href="{% static 'ico/apple-touch-icon.png' %}?20240516">
+    <link rel="icon" href="{% static 'ico/favicon.ico' %}?20240516" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'ico/apple-touch-icon.png' %}?20240516">
+    <link rel="manifest" href="{% static 'ico/manifest.json' %}">
+    <meta name="apple-mobile-web-app-title" content="AlkUnelma">
+    <meta name="application-name" content="AlkUnelma">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/style.min.css' %}?20240515" />
     <link  rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
