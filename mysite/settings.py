@@ -141,3 +141,16 @@ else:
     # reCAPTCHA
     RECAPTCHA_PUBLIC_KEY = env('RECAPTCHA_PUBLIC_KEY')
     RECAPTCHA_PRIVATE_KEY = env('RECAPTCHA_PRIVATE_KEY')
+
+    # Error Alert
+    import sentry_sdk
+    sentry_sdk.init(
+        dsn="https://7b1bf2b77500c5f6539e73dc07d7c8b9@o4508029413621760.ingest.us.sentry.io/4508029414408192",
+        # Set traces_sample_rate to 1.0 to capture 100%
+        # of transactions for tracing.
+        traces_sample_rate=1.0,
+        # Set profiles_sample_rate to 1.0 to profile 100%
+        # of sampled transactions.
+        # We recommend adjusting this value in production.
+        profiles_sample_rate=1.0,
+    )
