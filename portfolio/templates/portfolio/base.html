@@ -1,7 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
+  <head prefix="og: http://ogp.me/ns#">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FXXSLJBCJ8"></script>
     <script>
@@ -19,8 +19,10 @@
     {% block description %} {% endblock %}
     {% block canonical %} {% endblock %}
     <meta name="thumbnail" content="{% static 'ico/apple-touch-icon.png' %}">
-    <head prefix="og: https://ogp.me/ns#">
     <meta property="og:site_name" content="AlkUnelma（アルクネルマ）">
+    <meta property="og:image" content="{% static 'img/ogp.png' %}?20241009">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="{% static 'img/ogp.png' %}?20241009">
     {% block og %} {% endblock %}
     <link rel="icon" href="{% static 'ico/favicon.ico' %}?20240516" type="image/x-icon">
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'ico/apple-touch-icon.png' %}?20240516">
