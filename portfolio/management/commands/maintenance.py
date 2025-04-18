@@ -12,7 +12,6 @@ class Command(BaseCommand):
         # 保守管理ページ
         url_data = {
             'SunAlps LINEチャットボット': 'https://sunalps.work/callback/',
-            'ever rice LINEチャットボット': 'https://everrice.work/callback/',
             'LINE灯油モバイルあんしん便': 'https://anshinbin.work/callback',
             '株式会社FABコーポレートサイト': 'https://www.fab-4.co.jp/'
         }
